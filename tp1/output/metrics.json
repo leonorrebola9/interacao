@@ -1,0 +1,2135 @@
+{
+    "store_summary": {
+        "total_visitors": 569,
+        "avg_visit_duration_seconds": 24.63,
+        "conversion_rate": 0.9192
+    },
+    "zone_analysis": {
+        "Z_C1": {
+            "total_visitors": 482,
+            "avg_dwell_time": 23.66160520607375,
+            "stop_rate": 0.9564315352697096
+        },
+        "Z_C2": {
+            "total_visitors": 489,
+            "avg_dwell_time": 24.051724137931036,
+            "stop_rate": 0.9488752556237219
+        },
+        "Z_C3": {
+            "total_visitors": 452,
+            "avg_dwell_time": 24.079625292740047,
+            "stop_rate": 0.9446902654867256
+        },
+        "Z_CK": {
+            "total_visitors": 438,
+            "avg_dwell_time": 180.44811320754718,
+            "stop_rate": 0.9680365296803652
+        },
+        "Z_S5": {
+            "total_visitors": 327,
+            "avg_dwell_time": 99.8112582781457,
+            "stop_rate": 0.9235474006116208
+        },
+        "Z_N1": {
+            "total_visitors": 320,
+            "avg_dwell_time": 184.21639344262294,
+            "stop_rate": 0.953125
+        },
+        "Z_E1": {
+            "total_visitors": 418,
+            "avg_dwell_time": 15.978319783197833,
+            "stop_rate": 0.8827751196172249
+        },
+        "Z_N10": {
+            "total_visitors": 361,
+            "avg_dwell_time": 190.32848837209303,
+            "stop_rate": 0.9529085872576177
+        },
+        "Z_E2": {
+            "total_visitors": 424,
+            "avg_dwell_time": 15.746556473829202,
+            "stop_rate": 0.8561320754716981
+        },
+        "Z_S3": {
+            "total_visitors": 319,
+            "avg_dwell_time": 195.65131578947367,
+            "stop_rate": 0.9529780564263323
+        },
+        "Z_N5": {
+            "total_visitors": 366,
+            "avg_dwell_time": 182.90285714285713,
+            "stop_rate": 0.9562841530054644
+        },
+        "Z_S4": {
+            "total_visitors": 276,
+            "avg_dwell_time": 196.70703125,
+            "stop_rate": 0.927536231884058
+        },
+        "Z_S6": {
+            "total_visitors": 269,
+            "avg_dwell_time": 192.74603174603175,
+            "stop_rate": 0.9368029739776952
+        },
+        "Z_S2": {
+            "total_visitors": 228,
+            "avg_dwell_time": 198.8095238095238,
+            "stop_rate": 0.9210526315789473
+        },
+        "Z_N8": {
+            "total_visitors": 348,
+            "avg_dwell_time": 180.846875,
+            "stop_rate": 0.9195402298850575
+        },
+        "Z_N7": {
+            "total_visitors": 328,
+            "avg_dwell_time": 190.13504823151126,
+            "stop_rate": 0.948170731707317
+        },
+        "Z_N3": {
+            "total_visitors": 324,
+            "avg_dwell_time": 185.78246753246754,
+            "stop_rate": 0.9506172839506173
+        },
+        "Z_N2": {
+            "total_visitors": 344,
+            "avg_dwell_time": 182.06269592476488,
+            "stop_rate": 0.9273255813953488
+        },
+        "Z_N9": {
+            "total_visitors": 351,
+            "avg_dwell_time": 195.47560975609755,
+            "stop_rate": 0.9344729344729344
+        },
+        "Z_N6": {
+            "total_visitors": 350,
+            "avg_dwell_time": 200.77399380804954,
+            "stop_rate": 0.9228571428571428
+        },
+        "Z_S7": {
+            "total_visitors": 250,
+            "avg_dwell_time": 184.5344827586207,
+            "stop_rate": 0.928
+        },
+        "Z_N4": {
+            "total_visitors": 314,
+            "avg_dwell_time": 184.2551724137931,
+            "stop_rate": 0.9235668789808917
+        },
+        "Z_S1": {
+            "total_visitors": 283,
+            "avg_dwell_time": 197.49618320610688,
+            "stop_rate": 0.9257950530035336
+        }
+    },
+    "anomalies": [
+        {
+            "zone_id": "Z_C1",
+            "hour": 9,
+            "observed": 3,
+            "expected": 20.0,
+            "deviation_pct": -85.0
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 10,
+            "observed": 2,
+            "expected": 18.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 11,
+            "observed": 1,
+            "expected": 26.0,
+            "deviation_pct": -96.15
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 12,
+            "observed": 2,
+            "expected": 22.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 13,
+            "observed": 4,
+            "expected": 39.0,
+            "deviation_pct": -89.74
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 14,
+            "observed": 5,
+            "expected": 43.0,
+            "deviation_pct": -88.37
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 15,
+            "observed": 6,
+            "expected": 32.0,
+            "deviation_pct": -81.25
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 16,
+            "observed": 5,
+            "expected": 15.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 17,
+            "observed": 2,
+            "expected": 27.0,
+            "deviation_pct": -92.59
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 18,
+            "observed": 3,
+            "expected": 30.0,
+            "deviation_pct": -90.0
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 19,
+            "observed": 5,
+            "expected": 38.0,
+            "deviation_pct": -86.84
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 20,
+            "observed": 9,
+            "expected": 59.0,
+            "deviation_pct": -84.75
+        },
+        {
+            "zone_id": "Z_C1",
+            "hour": 21,
+            "observed": 14,
+            "expected": 52.0,
+            "deviation_pct": -73.08
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 9,
+            "observed": 5,
+            "expected": 24.0,
+            "deviation_pct": -79.17
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 10,
+            "observed": 2,
+            "expected": 19.0,
+            "deviation_pct": -89.47
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 11,
+            "observed": 1,
+            "expected": 26.0,
+            "deviation_pct": -96.15
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 12,
+            "observed": 2,
+            "expected": 22.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 13,
+            "observed": 3,
+            "expected": 37.0,
+            "deviation_pct": -91.89
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 14,
+            "observed": 5,
+            "expected": 43.0,
+            "deviation_pct": -88.37
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 15,
+            "observed": 6,
+            "expected": 30.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 16,
+            "observed": 5,
+            "expected": 15.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 17,
+            "observed": 2,
+            "expected": 23.0,
+            "deviation_pct": -91.3
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 18,
+            "observed": 3,
+            "expected": 32.0,
+            "deviation_pct": -90.62
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 19,
+            "observed": 5,
+            "expected": 42.0,
+            "deviation_pct": -88.1
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 20,
+            "observed": 9,
+            "expected": 59.0,
+            "deviation_pct": -84.75
+        },
+        {
+            "zone_id": "Z_C2",
+            "hour": 21,
+            "observed": 15,
+            "expected": 54.0,
+            "deviation_pct": -72.22
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 9,
+            "observed": 2,
+            "expected": 20.0,
+            "deviation_pct": -90.0
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 10,
+            "observed": 1,
+            "expected": 18.0,
+            "deviation_pct": -94.44
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 11,
+            "observed": 2,
+            "expected": 21.0,
+            "deviation_pct": -90.48
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 12,
+            "observed": 2,
+            "expected": 22.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 13,
+            "observed": 2,
+            "expected": 36.0,
+            "deviation_pct": -94.44
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 14,
+            "observed": 5,
+            "expected": 39.0,
+            "deviation_pct": -87.18
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 15,
+            "observed": 5,
+            "expected": 23.0,
+            "deviation_pct": -78.26
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 16,
+            "observed": 7,
+            "expected": 19.0,
+            "deviation_pct": -63.16
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 17,
+            "observed": 2,
+            "expected": 26.0,
+            "deviation_pct": -92.31
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 18,
+            "observed": 3,
+            "expected": 28.0,
+            "deviation_pct": -89.29
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 19,
+            "observed": 7,
+            "expected": 45.0,
+            "deviation_pct": -84.44
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 20,
+            "observed": 11,
+            "expected": 60.0,
+            "deviation_pct": -81.67
+        },
+        {
+            "zone_id": "Z_C3",
+            "hour": 21,
+            "observed": 10,
+            "expected": 36.0,
+            "deviation_pct": -72.22
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 9,
+            "observed": 2,
+            "expected": 10.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 10,
+            "observed": 1,
+            "expected": 17.0,
+            "deviation_pct": -94.12
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 11,
+            "observed": 3,
+            "expected": 22.0,
+            "deviation_pct": -86.36
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 12,
+            "observed": 1,
+            "expected": 24.0,
+            "deviation_pct": -95.83
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 13,
+            "observed": 2,
+            "expected": 34.0,
+            "deviation_pct": -94.12
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 14,
+            "observed": 4,
+            "expected": 37.0,
+            "deviation_pct": -89.19
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 15,
+            "observed": 7,
+            "expected": 26.0,
+            "deviation_pct": -73.08
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 16,
+            "observed": 4,
+            "expected": 14.0,
+            "deviation_pct": -71.43
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 17,
+            "observed": 2,
+            "expected": 18.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 18,
+            "observed": 3,
+            "expected": 34.0,
+            "deviation_pct": -91.18
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 19,
+            "observed": 5,
+            "expected": 41.0,
+            "deviation_pct": -87.8
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 20,
+            "observed": 14,
+            "expected": 63.0,
+            "deviation_pct": -77.78
+        },
+        {
+            "zone_id": "Z_CK",
+            "hour": 21,
+            "observed": 9,
+            "expected": 41.0,
+            "deviation_pct": -78.05
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 9,
+            "observed": 1,
+            "expected": 11.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 10,
+            "observed": 1,
+            "expected": 17.0,
+            "deviation_pct": -94.12
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 11,
+            "observed": 1,
+            "expected": 15.0,
+            "deviation_pct": -93.33
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 12,
+            "observed": 3,
+            "expected": 22.0,
+            "deviation_pct": -86.36
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 13,
+            "observed": 1,
+            "expected": 31.0,
+            "deviation_pct": -96.77
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 14,
+            "observed": 6,
+            "expected": 39.0,
+            "deviation_pct": -84.62
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 15,
+            "observed": 5,
+            "expected": 26.0,
+            "deviation_pct": -80.77
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 16,
+            "observed": 5,
+            "expected": 15.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 17,
+            "observed": 2,
+            "expected": 23.0,
+            "deviation_pct": -91.3
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 18,
+            "observed": 3,
+            "expected": 34.0,
+            "deviation_pct": -91.18
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 19,
+            "observed": 5,
+            "expected": 34.0,
+            "deviation_pct": -85.29
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 20,
+            "observed": 11,
+            "expected": 66.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_E1",
+            "hour": 21,
+            "observed": 8,
+            "expected": 33.0,
+            "deviation_pct": -75.76
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 9,
+            "observed": 1,
+            "expected": 17.0,
+            "deviation_pct": -94.12
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 10,
+            "observed": 1,
+            "expected": 7.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 11,
+            "observed": 1,
+            "expected": 19.0,
+            "deviation_pct": -94.74
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 12,
+            "observed": 1,
+            "expected": 23.0,
+            "deviation_pct": -95.65
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 13,
+            "observed": 3,
+            "expected": 43.0,
+            "deviation_pct": -93.02
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 14,
+            "observed": 3,
+            "expected": 32.0,
+            "deviation_pct": -90.62
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 15,
+            "observed": 7,
+            "expected": 26.0,
+            "deviation_pct": -73.08
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 16,
+            "observed": 5,
+            "expected": 14.0,
+            "deviation_pct": -64.29
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 17,
+            "observed": 2,
+            "expected": 23.0,
+            "deviation_pct": -91.3
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 18,
+            "observed": 3,
+            "expected": 26.0,
+            "deviation_pct": -88.46
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 19,
+            "observed": 8,
+            "expected": 42.0,
+            "deviation_pct": -80.95
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 20,
+            "observed": 13,
+            "expected": 70.0,
+            "deviation_pct": -81.43
+        },
+        {
+            "zone_id": "Z_E2",
+            "hour": 21,
+            "observed": 6,
+            "expected": 28.0,
+            "deviation_pct": -78.57
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 9,
+            "observed": 1,
+            "expected": 7.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 10,
+            "observed": 1,
+            "expected": 7.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 11,
+            "observed": 1,
+            "expected": 11.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 12,
+            "observed": 3,
+            "expected": 23.0,
+            "deviation_pct": -86.96
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 13,
+            "observed": 1,
+            "expected": 35.0,
+            "deviation_pct": -97.14
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 14,
+            "observed": 4,
+            "expected": 14.0,
+            "deviation_pct": -71.43
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 15,
+            "observed": 6,
+            "expected": 17.0,
+            "deviation_pct": -64.71
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 16,
+            "observed": 4,
+            "expected": 14.0,
+            "deviation_pct": -71.43
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 17,
+            "observed": 3,
+            "expected": 18.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 18,
+            "observed": 3,
+            "expected": 21.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 19,
+            "observed": 8,
+            "expected": 48.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 20,
+            "observed": 6,
+            "expected": 42.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N1",
+            "hour": 21,
+            "observed": 5,
+            "expected": 17.0,
+            "deviation_pct": -70.59
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 10,
+            "observed": 2,
+            "expected": 9.0,
+            "deviation_pct": -77.78
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 11,
+            "observed": 2,
+            "expected": 14.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 12,
+            "observed": 2,
+            "expected": 18.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 13,
+            "observed": 1,
+            "expected": 32.0,
+            "deviation_pct": -96.88
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 14,
+            "observed": 8,
+            "expected": 27.0,
+            "deviation_pct": -70.37
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 15,
+            "observed": 4,
+            "expected": 25.0,
+            "deviation_pct": -84.0
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 16,
+            "observed": 4,
+            "expected": 12.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 17,
+            "observed": 1,
+            "expected": 25.0,
+            "deviation_pct": -96.0
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 18,
+            "observed": 3,
+            "expected": 29.0,
+            "deviation_pct": -89.66
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 19,
+            "observed": 10,
+            "expected": 42.0,
+            "deviation_pct": -76.19
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 20,
+            "observed": 12,
+            "expected": 53.0,
+            "deviation_pct": -77.36
+        },
+        {
+            "zone_id": "Z_N10",
+            "hour": 21,
+            "observed": 2,
+            "expected": 13.0,
+            "deviation_pct": -84.62
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 9,
+            "observed": 1,
+            "expected": 6.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 10,
+            "observed": 1,
+            "expected": 13.0,
+            "deviation_pct": -92.31
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 11,
+            "observed": 1,
+            "expected": 16.0,
+            "deviation_pct": -93.75
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 12,
+            "observed": 2,
+            "expected": 19.0,
+            "deviation_pct": -89.47
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 13,
+            "observed": 2,
+            "expected": 27.0,
+            "deviation_pct": -92.59
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 14,
+            "observed": 8,
+            "expected": 29.0,
+            "deviation_pct": -72.41
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 15,
+            "observed": 3,
+            "expected": 17.0,
+            "deviation_pct": -82.35
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 16,
+            "observed": 2,
+            "expected": 15.0,
+            "deviation_pct": -86.67
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 18,
+            "observed": 5,
+            "expected": 35.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 19,
+            "observed": 7,
+            "expected": 40.0,
+            "deviation_pct": -82.5
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 20,
+            "observed": 9,
+            "expected": 51.0,
+            "deviation_pct": -82.35
+        },
+        {
+            "zone_id": "Z_N2",
+            "hour": 21,
+            "observed": 4,
+            "expected": 7.0,
+            "deviation_pct": -42.86
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 10,
+            "observed": 1,
+            "expected": 10.0,
+            "deviation_pct": -90.0
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 11,
+            "observed": 3,
+            "expected": 13.0,
+            "deviation_pct": -76.92
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 12,
+            "observed": 1,
+            "expected": 16.0,
+            "deviation_pct": -93.75
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 13,
+            "observed": 3,
+            "expected": 31.0,
+            "deviation_pct": -90.32
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 14,
+            "observed": 6,
+            "expected": 22.0,
+            "deviation_pct": -72.73
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 15,
+            "observed": 4,
+            "expected": 11.0,
+            "deviation_pct": -63.64
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 16,
+            "observed": 2,
+            "expected": 15.0,
+            "deviation_pct": -86.67
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 18,
+            "observed": 4,
+            "expected": 27.0,
+            "deviation_pct": -85.19
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 19,
+            "observed": 8,
+            "expected": 43.0,
+            "deviation_pct": -81.4
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 20,
+            "observed": 11,
+            "expected": 51.0,
+            "deviation_pct": -78.43
+        },
+        {
+            "zone_id": "Z_N3",
+            "hour": 21,
+            "observed": 4,
+            "expected": 12.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 9,
+            "observed": 1,
+            "expected": 4.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 10,
+            "observed": 2,
+            "expected": 9.0,
+            "deviation_pct": -77.78
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 12,
+            "observed": 1,
+            "expected": 13.0,
+            "deviation_pct": -92.31
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 13,
+            "observed": 4,
+            "expected": 26.0,
+            "deviation_pct": -84.62
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 14,
+            "observed": 6,
+            "expected": 23.0,
+            "deviation_pct": -73.91
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 15,
+            "observed": 1,
+            "expected": 12.0,
+            "deviation_pct": -91.67
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 16,
+            "observed": 4,
+            "expected": 15.0,
+            "deviation_pct": -73.33
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 17,
+            "observed": 4,
+            "expected": 24.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 18,
+            "observed": 3,
+            "expected": 30.0,
+            "deviation_pct": -90.0
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 19,
+            "observed": 4,
+            "expected": 42.0,
+            "deviation_pct": -90.48
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 20,
+            "observed": 10,
+            "expected": 44.0,
+            "deviation_pct": -77.27
+        },
+        {
+            "zone_id": "Z_N4",
+            "hour": 21,
+            "observed": 4,
+            "expected": 11.0,
+            "deviation_pct": -63.64
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 9,
+            "observed": 2,
+            "expected": 10.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 10,
+            "observed": 2,
+            "expected": 9.0,
+            "deviation_pct": -77.78
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 11,
+            "observed": 3,
+            "expected": 18.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 12,
+            "observed": 1,
+            "expected": 21.0,
+            "deviation_pct": -95.24
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 13,
+            "observed": 2,
+            "expected": 29.0,
+            "deviation_pct": -93.1
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 14,
+            "observed": 7,
+            "expected": 24.0,
+            "deviation_pct": -70.83
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 15,
+            "observed": 5,
+            "expected": 20.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 16,
+            "observed": 2,
+            "expected": 14.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 17,
+            "observed": 1,
+            "expected": 33.0,
+            "deviation_pct": -96.97
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 18,
+            "observed": 4,
+            "expected": 20.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 19,
+            "observed": 8,
+            "expected": 48.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 20,
+            "observed": 9,
+            "expected": 57.0,
+            "deviation_pct": -84.21
+        },
+        {
+            "zone_id": "Z_N5",
+            "hour": 21,
+            "observed": 4,
+            "expected": 13.0,
+            "deviation_pct": -69.23
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 9,
+            "observed": 2,
+            "expected": 9.0,
+            "deviation_pct": -77.78
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 10,
+            "observed": 1,
+            "expected": 13.0,
+            "deviation_pct": -92.31
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 11,
+            "observed": 2,
+            "expected": 14.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 12,
+            "observed": 2,
+            "expected": 24.0,
+            "deviation_pct": -91.67
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 13,
+            "observed": 4,
+            "expected": 36.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 14,
+            "observed": 4,
+            "expected": 17.0,
+            "deviation_pct": -76.47
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 15,
+            "observed": 6,
+            "expected": 15.0,
+            "deviation_pct": -60.0
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 16,
+            "observed": 2,
+            "expected": 15.0,
+            "deviation_pct": -86.67
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 17,
+            "observed": 2,
+            "expected": 22.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 18,
+            "observed": 3,
+            "expected": 24.0,
+            "deviation_pct": -87.5
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 19,
+            "observed": 7,
+            "expected": 56.0,
+            "deviation_pct": -87.5
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 20,
+            "observed": 14,
+            "expected": 43.0,
+            "deviation_pct": -67.44
+        },
+        {
+            "zone_id": "Z_N6",
+            "hour": 21,
+            "observed": 3,
+            "expected": 10.0,
+            "deviation_pct": -70.0
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 9,
+            "observed": 1,
+            "expected": 2.0,
+            "deviation_pct": -50.0
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 10,
+            "observed": 1,
+            "expected": 7.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 11,
+            "observed": 2,
+            "expected": 15.0,
+            "deviation_pct": -86.67
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 12,
+            "observed": 3,
+            "expected": 18.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 13,
+            "observed": 2,
+            "expected": 30.0,
+            "deviation_pct": -93.33
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 14,
+            "observed": 6,
+            "expected": 22.0,
+            "deviation_pct": -72.73
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 15,
+            "observed": 3,
+            "expected": 14.0,
+            "deviation_pct": -78.57
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 16,
+            "observed": 3,
+            "expected": 15.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 17,
+            "observed": 1,
+            "expected": 24.0,
+            "deviation_pct": -95.83
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 18,
+            "observed": 3,
+            "expected": 29.0,
+            "deviation_pct": -89.66
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 19,
+            "observed": 9,
+            "expected": 46.0,
+            "deviation_pct": -80.43
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 20,
+            "observed": 11,
+            "expected": 46.0,
+            "deviation_pct": -76.09
+        },
+        {
+            "zone_id": "Z_N7",
+            "hour": 21,
+            "observed": 3,
+            "expected": 12.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 9,
+            "observed": 1,
+            "expected": 5.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 10,
+            "observed": 1,
+            "expected": 13.0,
+            "deviation_pct": -92.31
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 12,
+            "observed": 1,
+            "expected": 22.0,
+            "deviation_pct": -95.45
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 13,
+            "observed": 2,
+            "expected": 35.0,
+            "deviation_pct": -94.29
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 14,
+            "observed": 6,
+            "expected": 25.0,
+            "deviation_pct": -76.0
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 15,
+            "observed": 7,
+            "expected": 15.0,
+            "deviation_pct": -53.33
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 16,
+            "observed": 2,
+            "expected": 11.0,
+            "deviation_pct": -81.82
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 17,
+            "observed": 3,
+            "expected": 28.0,
+            "deviation_pct": -89.29
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 18,
+            "observed": 4,
+            "expected": 20.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 19,
+            "observed": 7,
+            "expected": 46.0,
+            "deviation_pct": -84.78
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 20,
+            "observed": 10,
+            "expected": 48.0,
+            "deviation_pct": -79.17
+        },
+        {
+            "zone_id": "Z_N8",
+            "hour": 21,
+            "observed": 5,
+            "expected": 19.0,
+            "deviation_pct": -73.68
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 9,
+            "observed": 1,
+            "expected": 8.0,
+            "deviation_pct": -87.5
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 10,
+            "observed": 2,
+            "expected": 6.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 11,
+            "observed": 1,
+            "expected": 15.0,
+            "deviation_pct": -93.33
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 12,
+            "observed": 1,
+            "expected": 30.0,
+            "deviation_pct": -96.67
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 13,
+            "observed": 6,
+            "expected": 25.0,
+            "deviation_pct": -76.0
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 14,
+            "observed": 2,
+            "expected": 27.0,
+            "deviation_pct": -92.59
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 15,
+            "observed": 6,
+            "expected": 16.0,
+            "deviation_pct": -62.5
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 16,
+            "observed": 3,
+            "expected": 11.0,
+            "deviation_pct": -72.73
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 18,
+            "observed": 5,
+            "expected": 33.0,
+            "deviation_pct": -84.85
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 19,
+            "observed": 9,
+            "expected": 42.0,
+            "deviation_pct": -78.57
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 20,
+            "observed": 9,
+            "expected": 53.0,
+            "deviation_pct": -83.02
+        },
+        {
+            "zone_id": "Z_N9",
+            "hour": 21,
+            "observed": 4,
+            "expected": 12.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 11,
+            "observed": 1,
+            "expected": 12.0,
+            "deviation_pct": -91.67
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 12,
+            "observed": 2,
+            "expected": 24.0,
+            "deviation_pct": -91.67
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 13,
+            "observed": 3,
+            "expected": 22.0,
+            "deviation_pct": -86.36
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 14,
+            "observed": 9,
+            "expected": 16.0,
+            "deviation_pct": -43.75
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 15,
+            "observed": 2,
+            "expected": 10.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 16,
+            "observed": 2,
+            "expected": 13.0,
+            "deviation_pct": -84.62
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 17,
+            "observed": 1,
+            "expected": 25.0,
+            "deviation_pct": -96.0
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 18,
+            "observed": 4,
+            "expected": 31.0,
+            "deviation_pct": -87.1
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 19,
+            "observed": 8,
+            "expected": 37.0,
+            "deviation_pct": -78.38
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 20,
+            "observed": 6,
+            "expected": 34.0,
+            "deviation_pct": -82.35
+        },
+        {
+            "zone_id": "Z_S1",
+            "hour": 21,
+            "observed": 2,
+            "expected": 8.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 11,
+            "observed": 1,
+            "expected": 11.0,
+            "deviation_pct": -90.91
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 12,
+            "observed": 4,
+            "expected": 23.0,
+            "deviation_pct": -82.61
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 13,
+            "observed": 2,
+            "expected": 18.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 14,
+            "observed": 4,
+            "expected": 9.0,
+            "deviation_pct": -55.56
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 15,
+            "observed": 3,
+            "expected": 11.0,
+            "deviation_pct": -72.73
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 16,
+            "observed": 3,
+            "expected": 17.0,
+            "deviation_pct": -82.35
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 17,
+            "observed": 3,
+            "expected": 20.0,
+            "deviation_pct": -85.0
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 18,
+            "observed": 5,
+            "expected": 18.0,
+            "deviation_pct": -72.22
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 19,
+            "observed": 6,
+            "expected": 33.0,
+            "deviation_pct": -81.82
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 20,
+            "observed": 5,
+            "expected": 14.0,
+            "deviation_pct": -64.29
+        },
+        {
+            "zone_id": "Z_S2",
+            "hour": 21,
+            "observed": 3,
+            "expected": 6.0,
+            "deviation_pct": -50.0
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 9,
+            "observed": 1,
+            "expected": 8.0,
+            "deviation_pct": -87.5
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 10,
+            "observed": 1,
+            "expected": 3.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 11,
+            "observed": 1,
+            "expected": 16.0,
+            "deviation_pct": -93.75
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 12,
+            "observed": 3,
+            "expected": 22.0,
+            "deviation_pct": -86.36
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 13,
+            "observed": 5,
+            "expected": 32.0,
+            "deviation_pct": -84.38
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 14,
+            "observed": 1,
+            "expected": 18.0,
+            "deviation_pct": -94.44
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 15,
+            "observed": 6,
+            "expected": 13.0,
+            "deviation_pct": -53.85
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 16,
+            "observed": 1,
+            "expected": 15.0,
+            "deviation_pct": -93.33
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 17,
+            "observed": 1,
+            "expected": 26.0,
+            "deviation_pct": -96.15
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 18,
+            "observed": 2,
+            "expected": 28.0,
+            "deviation_pct": -92.86
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 19,
+            "observed": 8,
+            "expected": 50.0,
+            "deviation_pct": -84.0
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 20,
+            "observed": 10,
+            "expected": 36.0,
+            "deviation_pct": -72.22
+        },
+        {
+            "zone_id": "Z_S3",
+            "hour": 21,
+            "observed": 3,
+            "expected": 9.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 11,
+            "observed": 1,
+            "expected": 16.0,
+            "deviation_pct": -93.75
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 12,
+            "observed": 3,
+            "expected": 18.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 13,
+            "observed": 4,
+            "expected": 28.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 14,
+            "observed": 4,
+            "expected": 14.0,
+            "deviation_pct": -71.43
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 15,
+            "observed": 6,
+            "expected": 11.0,
+            "deviation_pct": -45.45
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 16,
+            "observed": 2,
+            "expected": 6.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 17,
+            "observed": 3,
+            "expected": 17.0,
+            "deviation_pct": -82.35
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 18,
+            "observed": 3,
+            "expected": 18.0,
+            "deviation_pct": -83.33
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 19,
+            "observed": 8,
+            "expected": 51.0,
+            "deviation_pct": -84.31
+        },
+        {
+            "zone_id": "Z_S4",
+            "hour": 20,
+            "observed": 4,
+            "expected": 34.0,
+            "deviation_pct": -88.24
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 10,
+            "observed": 1,
+            "expected": 9.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 11,
+            "observed": 2,
+            "expected": 16.0,
+            "deviation_pct": -87.5
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 12,
+            "observed": 2,
+            "expected": 14.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 13,
+            "observed": 2,
+            "expected": 40.0,
+            "deviation_pct": -95.0
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 14,
+            "observed": 5,
+            "expected": 17.0,
+            "deviation_pct": -70.59
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 15,
+            "observed": 6,
+            "expected": 20.0,
+            "deviation_pct": -70.0
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 16,
+            "observed": 1,
+            "expected": 9.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 18,
+            "observed": 2,
+            "expected": 29.0,
+            "deviation_pct": -93.1
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 19,
+            "observed": 8,
+            "expected": 44.0,
+            "deviation_pct": -81.82
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 20,
+            "observed": 9,
+            "expected": 50.0,
+            "deviation_pct": -82.0
+        },
+        {
+            "zone_id": "Z_S5",
+            "hour": 21,
+            "observed": 4,
+            "expected": 8.0,
+            "deviation_pct": -50.0
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 9,
+            "observed": 1,
+            "expected": 5.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 10,
+            "observed": 2,
+            "expected": 3.0,
+            "deviation_pct": -33.33
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 12,
+            "observed": 3,
+            "expected": 14.0,
+            "deviation_pct": -78.57
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 13,
+            "observed": 3,
+            "expected": 27.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 14,
+            "observed": 2,
+            "expected": 18.0,
+            "deviation_pct": -88.89
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 15,
+            "observed": 4,
+            "expected": 13.0,
+            "deviation_pct": -69.23
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 16,
+            "observed": 2,
+            "expected": 14.0,
+            "deviation_pct": -85.71
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 17,
+            "observed": 2,
+            "expected": 31.0,
+            "deviation_pct": -93.55
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 18,
+            "observed": 3,
+            "expected": 19.0,
+            "deviation_pct": -84.21
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 19,
+            "observed": 9,
+            "expected": 32.0,
+            "deviation_pct": -71.88
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 20,
+            "observed": 3,
+            "expected": 31.0,
+            "deviation_pct": -90.32
+        },
+        {
+            "zone_id": "Z_S6",
+            "hour": 21,
+            "observed": 3,
+            "expected": 9.0,
+            "deviation_pct": -66.67
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 9,
+            "observed": 1,
+            "expected": 4.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 11,
+            "observed": 1,
+            "expected": 12.0,
+            "deviation_pct": -91.67
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 12,
+            "observed": 4,
+            "expected": 20.0,
+            "deviation_pct": -80.0
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 13,
+            "observed": 1,
+            "expected": 18.0,
+            "deviation_pct": -94.44
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 14,
+            "observed": 6,
+            "expected": 16.0,
+            "deviation_pct": -62.5
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 15,
+            "observed": 4,
+            "expected": 15.0,
+            "deviation_pct": -73.33
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 16,
+            "observed": 2,
+            "expected": 8.0,
+            "deviation_pct": -75.0
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 17,
+            "observed": 1,
+            "expected": 18.0,
+            "deviation_pct": -94.44
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 18,
+            "observed": 3,
+            "expected": 32.0,
+            "deviation_pct": -90.62
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 19,
+            "observed": 9,
+            "expected": 34.0,
+            "deviation_pct": -73.53
+        },
+        {
+            "zone_id": "Z_S7",
+            "hour": 20,
+            "observed": 4,
+            "expected": 25.0,
+            "deviation_pct": -84.0
+        }
+    ],
+    "demographics": {
+        "F_adult": 235,
+        "F_child": 95,
+        "F_middle_aged": 226,
+        "F_senior": 121,
+        "F_teenager": 89,
+        "F_young_adult": 193,
+        "M_adult": 245,
+        "M_child": 87,
+        "M_middle_aged": 241,
+        "M_senior": 121,
+        "M_teenager": 104,
+        "M_young_adult": 178
+    },
+    "top_sequences": [
+        [
+            "Z_C2"
+        ],
+        [
+            "Z_N4"
+        ],
+        [
+            "Z_N10"
+        ],
+        [
+            "Z_CK"
+        ],
+        [
+            "Z_E2"
+        ],
+        [
+            "Z_CK",
+            "Z_E2"
+        ],
+        [
+            "Z_S3"
+        ],
+        [
+            "Z_N7"
+        ],
+        [
+            "Z_N10",
+            "Z_C2"
+        ],
+        [
+            "Z_CK",
+            "Z_E1"
+        ]
+    ]
+}
