@@ -9,7 +9,7 @@ def calculate_analytics(input_csv, output_json):
     df['entry_time'] = pd.to_datetime(df['entry_time'])
     df['exit_time'] = pd.to_datetime(df['exit_time'])
     
-    # 1. Métricas de Tráfego Geral [cite: 113, 114]
+    # 1. Métricas de Tráfego Geral
     total_visitors = int(df['person_id'].nunique())
     avg_visit_duration = float((df['exit_time'] - df['entry_time']).dt.total_seconds().mean())
     
@@ -28,7 +28,7 @@ def calculate_analytics(input_csv, output_json):
         }
 
     # 3. Deteção de Anomalias (Dia 7 vs Média Dias 1-6) 
-    # O dataset cobre 7 dias consecutivos [cite: 26]
+    # O dataset cobre 7 dias consecutivos
     df['day_index'] = df['entry_time'].dt.dayofyear
     days = sorted(df['day_index'].unique())
     
@@ -47,7 +47,7 @@ def calculate_analytics(input_csv, output_json):
             hist_match = history_stats[(history_stats['zone_id'] == row['zone_id']) & (history_stats['hour_of_day'] == row['hour_of_day'])]
             if not hist_match.empty:
                 avg = hist_match.iloc[0]['person_id']
-                # Desvio > 20% da média [cite: 123]
+                # Desvio > 20% da média
                 diff = abs(row['person_id'] - avg)
                 if diff > (avg * 0.20):
                     anomalies.append({
@@ -58,16 +58,16 @@ def calculate_analytics(input_csv, output_json):
                         "deviation_pct": round(float((row['person_id'] - avg) / avg * 100), 2)
                     })
 
-    # 4. Funil de Cliente e Conversão [cite: 117]
-    # Zonas de checkout: Z_C1, Z_C2, Z_C3 [cite: 42]
+    # 4. Funil de Cliente e Conversão
+    # Zonas de checkout: Z_C1, Z_C2, Z_C3
     checkout_zones = ['Z_C1', 'Z_C2', 'Z_C3']
     visitors_at_checkout = df[df['zone_id'].isin(checkout_zones)]['person_id'].nunique()
     conversion_rate = float(visitors_at_checkout / total_visitors if total_visitors > 0 else 0)
 
-    # 5. Segmentação Demográfica [cite: 118]
+    # 5. Segmentação Demográfica
     demo_dist = df.groupby(['gender', 'age_range'])['person_id'].nunique().to_dict()
 
-    # Estrutura final do metrics.json [cite: 124, 125]
+    # Estrutura final do metrics.json
     metrics = {
         "store_summary": {
             "total_visitors": total_visitors,

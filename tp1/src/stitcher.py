@@ -19,7 +19,7 @@ class Stitcher:
 
     def calculate_affinity(self, journey, event):
         last_event = journey[-1]
-        # O dataset está ordenado, mas garantimos a consistência temporal [cite: 68]
+        # O dataset está ordenado, mas garantimos a consistência temporal
         time_diff = (event['timestamp'] - last_event['timestamp']).total_seconds()
         
         if time_diff < 0: return -1
@@ -30,7 +30,7 @@ class Stitcher:
 
         if time_diff > self.max_gap: return -1
 
-        # Score baseado em atributos [cite: 72]
+        # Score baseado em atributos
         score = 1.0
         if event['gender'] != last_event['gender']: score *= 0.5
         if event['age_range'] != last_event['age_range']: score *= 0.7
@@ -48,7 +48,7 @@ class Stitcher:
         
         for i, event in enumerate(events_list):
             if i % 25000 == 0:
-                print(f"Progresso: {i/total*100:.1f}%...")
+                print(f"Progresso: {i/total*100:.1f}%")
 
             current_time = event['timestamp']
             best_p_id = None
@@ -85,7 +85,7 @@ class Stitcher:
     def save_journeys(self, output_csv):
         final_data = []
         for p_id, events in self.completed_trajectories:
-            # Agrupar por zona para cumprir o schema do journeys.csv [cite: 78, 83]
+            # Agrupar por zona para cumprir o schema do journeys.csv
             zones_visited = {}
             for e in events:
                 z = e['zone_id']
