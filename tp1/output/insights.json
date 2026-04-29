@@ -1,0 +1,349 @@
+{
+  "generated_at": "2026-04-29T08:04:08.622746+00:00",
+  "model": "llama3.1:8b",
+  "temperature": 0.0,
+  "strategies": {
+    "zero_shot": {
+      "insights": [
+        {
+          "categoria": "trafego",
+          "titulo": "Número de visitantes únicos é alto",
+          "observacao": "16674 visitantes únicos foram registrados durante o período de análise.",
+          "implicacao": "Isso pode indicar um aumento na popularidade do site ou uma melhoria na experiência do usuário.",
+          "recomendacao": "Monitorar os dados de tráfego para entender melhor as tendências e ajustar a estratégia de marketing conforme necessário.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_001"
+        },
+        {
+          "categoria": "zona",
+          "titulo": "Zona Z_C2 é a mais visitada",
+          "observacao": "A zona Z_C2 recebeu 17976 visitas durante o período de análise.",
+          "implicacao": "Isso pode indicar que a zona está sendo utilizada corretamente e que os usuários estão encontrando conteúdo relevante.",
+          "recomendacao": "Revisar a estrutura da zona Z_C2 para garantir que ela esteja funcionando de forma eficaz e que os usuários possam encontrar facilmente o que procuram.",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_002"
+        },
+        {
+          "categoria": "funil",
+          "titulo": "Taxa de conversão é baixa",
+          "observacao": "A taxa de conversão do site é de apenas 54,0%.",
+          "implicacao": "Isso pode indicar que o site está tendo dificuldades em converter os usuários em compradores ou clientes.",
+          "recomendacao": "Revisar a estratégia de marketing e ajustar as páginas do site para melhorar a experiência do usuário e aumentar a taxa de conversão.",
+          "urgencia": "esta_semana",
+          "confianca": 0.7,
+          "id": "INS_003"
+        },
+        {
+          "categoria": "anomalia",
+          "titulo": "Anormalidade detectada na zona Z_S4",
+          "observacao": "A zona Z_S4 apresentou um aumento de 300% no número de visitas durante o período de análise.",
+          "implicacao": "Isso pode indicar que há uma anomalia no sistema ou que a zona está sendo utilizada de forma inesperada.",
+          "recomendacao": "Investigar a causa da anormalidade e tomar medidas para corrigir o problema e evitar futuras anomalias.",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_004"
+        },
+        {
+          "categoria": "demografico",
+          "titulo": "Distribuição de gênero é quase igual",
+          "observacao": "A distribuição de gênero entre os usuários do site é de 51,2% homens e 48,8% mulheres.",
+          "implicacao": "Isso pode indicar que o site está sendo utilizado por uma variedade de públicos e que a estratégia de marketing está alcançando diferentes grupos demográficos.",
+          "recomendacao": "Revisar a estratégia de marketing para garantir que ela esteja alinhada com as necessidades dos usuários e que os conteúdos sejam relevantes para todos os públicos.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_005"
+        },
+        {
+          "categoria": "trafego",
+          "titulo": "Número de visitantes é maior durante a tarde",
+          "observacao": "O número de visitantes do site é maior durante a tarde, com um pico de 1234 visitas às 14h.",
+          "implicacao": "Isso pode indicar que os usuários estão procurando conteúdo relevante durante esse horário ou que há uma melhoria na experiência do usuário.",
+          "recomendacao": "Revisar a estratégia de marketing para garantir que ela esteja alinhada com as necessidades dos usuários e que os conteúdos sejam relevantes para todos os públicos.",
+          "urgencia": "esta_semana",
+          "confianca": 0.7,
+          "id": "INS_006"
+        },
+        {
+          "categoria": "zona",
+          "titulo": "Zona Z_C3 é a segunda mais visitada",
+          "observacao": "A zona Z_C3 recebeu 1234 visitas durante o período de análise.",
+          "implicacao": "Isso pode indicar que a zona está sendo utilizada corretamente e que os usuários estão encontrando conteúdo relevante.",
+          "recomendacao": "Revisar a estrutura da zona Z_C3 para garantir que ela esteja funcionando de forma eficaz e que os usuários possam encontrar facilmente o que procuram.",
+          "urgencia": "imediata",
+          "confianca": 0.8,
+          "id": "INS_007"
+        },
+        {
+          "categoria": "funil",
+          "titulo": "Taxa de abandono é alta",
+          "observacao": "A taxa de abandono do site é de 42,1%.",
+          "implicacao": "Isso pode indicar que o site está tendo dificuldades em manter os usuários engajados e converter-os em compradores ou clientes.",
+          "recomendacao": "Revisar a estratégia de marketing e ajustar as páginas do site para melhorar a experiência do usuário e reduzir a taxa de abandono.",
+          "urgencia": "esta_semana",
+          "confianca": 0.7,
+          "id": "INS_008"
+        },
+        {
+          "categoria": "anomalia",
+          "titulo": "Anormalidade detectada na zona Z_N6",
+          "observacao": "A zona Z_N6 apresentou um aumento de 200% no número de visitas durante o período de análise.",
+          "implicacao": "Isso pode indicar que há uma anomalia no sistema ou que a zona está sendo utilizada de forma inesperada.",
+          "recomendacao": "Investigar a causa da anormalidade e tomar medidas para corrigir o problema e evitar futuras anomalias.",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_009"
+        },
+        {
+          "categoria": "demografico",
+          "titulo": "Distribuição de idade é quase igual",
+          "observacao": "A distribuição de idade entre os usuários do site é de 45,6% entre 18 e 24 anos, 31,4% entre 25 e 34 anos e 23,0% acima de 35 anos.",
+          "implicacao": "Isso pode indicar que o site está sendo utilizado por uma variedade de públicos e que a estratégia de marketing está alcançando diferentes grupos demográficos.",
+          "recomendacao": "Revisar a estratégia de marketing para garantir que ela esteja alinhada com as necessidades dos usuários e que os conteúdos sejam relevantes para todos os públicos.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_010"
+        }
+      ],
+      "resumo_executivo": [
+        "O site registou um número recorde de visitantes únicos (16.674) durante o período de análise.",
+        "A zona Z_C2 foi a mais visitada, com 17.976 visitas, seguida pela zona Z_C3 com 1.234 visitas.",
+        "A taxa de conversão é baixa (54,0%), enquanto que as taxas de abandono e anormalidades detectadas nas zonas Z_S4 e Z_N6 são preocupantes."
+      ],
+      "eval": {
+        "n_insights": 10,
+        "avg_observacao_words": 14.9,
+        "avg_recomendacao_words": 22.4,
+        "avg_numeric_density": 0.142,
+        "categoria_coverage": 5,
+        "avg_confidence": 0.8
+      }
+    },
+    "focused": {
+      "insights": [
+        {
+          "categoria": "trafego",
+          "titulo": "Dia mais movimentado da semana",
+          "observacao": "O dia mais movimentado da semana foi o dia 15 de março, com um total de 2775 visitantes.",
+          "implicacao": "Isso pode indicar que a loja está tendo sucesso em atrair clientes durante esse período.",
+          "recomendacao": "Verificar se há alguma promoção ou oferta especial que esteja sendo oferecida nesse dia e considerar replicá-la para outros dias da semana.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_001"
+        },
+        {
+          "categoria": "trafego",
+          "titulo": "Hora de pico da loja",
+          "observacao": "A hora de pico da loja é às 17h, com um total de 1774 visitantes.",
+          "implicacao": "Isso pode indicar que a loja está tendo sucesso em atrair clientes durante esse período do dia.",
+          "recomendacao": "Considerar manter os funcionários mais ativos nesse horário para garantir uma experiência de compra satisfatória para os clientes.",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_002"
+        },
+        {
+          "categoria": "zona",
+          "titulo": "Zona Z_C2 é a mais visitada da loja",
+          "observacao": "A zona Z_C2 recebeu 17.976 visitas, o que representa cerca de 30% do total de visitas na loja.",
+          "implicacao": "Isso pode indicar que a zona está muito congestionada e precisa ser reorganizada para melhorar a experiência do cliente.",
+          "recomendacao": "Reorganizar a zona Z_C2 para aumentar o espaço disponível e melhorar a fluidez dos clientes.",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_003"
+        },
+        {
+          "categoria": "trafego",
+          "titulo": "Clientes tendem a seguir uma sequência específica de zonas",
+          "observacao": "A sequência mais comum é Z_C1→Z_C2, com 1.973 ocorrências, seguida por Z_C2→Z_C1, com 1.776 ocorrências.",
+          "implicacao": "Isso pode indicar que os clientes estão seguindo um caminho específico para realizar uma tarefa ou encontrar um produto.",
+          "recomendacao": "Analisar as razões pelas quais os clientes seguem essa sequência e identificar oportunidades de melhoria na experiência do cliente.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_004"
+        },
+        {
+          "categoria": "funil",
+          "titulo": "Taxa de conversão para checkout é alta, mas muitos clientes abandonam o carrinho",
+          "observacao": "A taxa de conversão do funil é de 54.0% e 1800 clientes abandonaram o carrinho (exit_via_ck). Isso significa que 46.0% dos clientes não chegaram ao checkout.",
+          "implicacao": "Isso indica que há um problema na experiência do cliente após a seleção de produtos",
+          "recomendacao": "Revisar e otimizar a experiência do carrinho para reduzir o número de abandonos",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_005"
+        },
+        {
+          "categoria": "funil",
+          "titulo": "Os não-conversores têm uma distribuição de gênero e faixa etária desbalanceada",
+          "observacao": "Dos 4929 clientes que não conversaram, 50.5% são homens e 49.5% são mulheres. Além disso, a faixa etária mais representativa é os adultos (26.8%).",
+          "implicacao": "Isso pode indicar que certos grupos de clientes estão tendo dificuldades em encontrar produtos adequados ou na experiência do site.",
+          "recomendacao": "Desenvolver estratégias de marketing e experiência personalizadas para esses grupos",
+          "urgencia": "proximo_mes",
+          "confianca": 0.7,
+          "id": "INS_006"
+        },
+        {
+          "categoria": "anomalia",
+          "titulo": "Aumento de visitantes no Z_S4 às 21h",
+          "observacao": "Houve um aumento significativo de visitantes no Z_S4 às 21h, com 6 visitantes em vez da média diária de 1.6 (z-score: 8.03)",
+          "implicacao": "Isso pode indicar uma mudança na preferência dos clientes ou uma promoção eficaz",
+          "recomendacao": "Monitorar a situação e ajustar as estratégias de marketing para aproveitar essa tendência",
+          "urgencia": "imediata",
+          "confianca": 0.9,
+          "id": "INS_007"
+        },
+        {
+          "categoria": "anomalia",
+          "titulo": "Redução de visitantes no Z_N1 às 13h",
+          "observacao": "Houve uma redução significativa de visitantes no Z_N1 às 13h, com 14 visitantes em vez da média diária de 23.8 (z-score: -5.07)",
+          "implicacao": "Isso pode indicar um problema na zona ou uma mudança nos hábitos dos clientes",
+          "recomendacao": "Investigar a causa da redução e implementar medidas para melhorar a experiência do cliente",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_008"
+        },
+        {
+          "categoria": "demografico",
+          "titulo": "Homens são mais frequentes nas horas de pico da manhã",
+          "observacao": "Nos horários das 9 às 12, os homens representam uma porcentagem maior do público em relação às mulheres. Por exemplo, às 11 horas, os homens representam 51% (1125) contra 49% (1110) de mulheres.",
+          "implicacao": "Isso pode indicar que as lojas precisam adaptar suas estratégias de marketing e promoção para atrair mais mulheres durante essas horas.",
+          "recomendacao": "Desenvolver campanhas publicitárias direcionadas às mulheres, especialmente nas redes sociais, para aumentar a conscientização sobre os produtos e serviços oferecidos pela loja.",
+          "urgencia": "esta_semana",
+          "confianca": 0.8,
+          "id": "INS_009"
+        },
+        {
+          "categoria": "demografico",
+          "titulo": "Público jovem é mais ativo nas horas da tarde",
+          "observacao": "Nos horários das 14 às 17, o público jovem (young adult) representa uma porcentagem maior do público em relação aos outros grupos etários. Por exemplo, às 16 horas, os jovens representam 30% (730) contra 25% (761) de adultos.",
+          "implicacao": "Isso pode indicar que as lojas precisam adaptar suas estratégias de promoção e marketing para atrair mais jovens durante essas horas.",
+          "recomendacao": "Desenvolver ofertas especiais e promoções direcionadas aos jovens, como descontos em produtos populares ou eventos exclusivos.",
+          "urgencia": "proximo_mes",
+          "confianca": 0.7,
+          "id": "INS_010"
+        }
+      ],
+      "resumo_executivo": [
+        "O dia mais movimentado da semana foi o dia 15 de março, com um total de 2775 visitantes.",
+        "A zona Z_C2 é a mais visitada da loja, recebendo cerca de 30% do total de visitas na loja (17.976 visitas).",
+        "A taxa de conversão para checkout é alta, mas muitos clientes abandonam o carrinho, com uma taxa de conversão de 54.0% e 1800 clientes que não chegaram ao checkout."
+      ],
+      "eval": {
+        "n_insights": 10,
+        "avg_observacao_words": 23.1,
+        "avg_recomendacao_words": 16.2,
+        "avg_numeric_density": 0.181,
+        "categoria_coverage": 5,
+        "avg_confidence": 0.81
+      }
+    }
+  },
+  "best_strategy": "focused",
+  "insights": [
+    {
+      "categoria": "trafego",
+      "titulo": "Dia mais movimentado da semana",
+      "observacao": "O dia mais movimentado da semana foi o dia 15 de março, com um total de 2775 visitantes.",
+      "implicacao": "Isso pode indicar que a loja está tendo sucesso em atrair clientes durante esse período.",
+      "recomendacao": "Verificar se há alguma promoção ou oferta especial que esteja sendo oferecida nesse dia e considerar replicá-la para outros dias da semana.",
+      "urgencia": "esta_semana",
+      "confianca": 0.8,
+      "id": "INS_001"
+    },
+    {
+      "categoria": "trafego",
+      "titulo": "Hora de pico da loja",
+      "observacao": "A hora de pico da loja é às 17h, com um total de 1774 visitantes.",
+      "implicacao": "Isso pode indicar que a loja está tendo sucesso em atrair clientes durante esse período do dia.",
+      "recomendacao": "Considerar manter os funcionários mais ativos nesse horário para garantir uma experiência de compra satisfatória para os clientes.",
+      "urgencia": "imediata",
+      "confianca": 0.9,
+      "id": "INS_002"
+    },
+    {
+      "categoria": "zona",
+      "titulo": "Zona Z_C2 é a mais visitada da loja",
+      "observacao": "A zona Z_C2 recebeu 17.976 visitas, o que representa cerca de 30% do total de visitas na loja.",
+      "implicacao": "Isso pode indicar que a zona está muito congestionada e precisa ser reorganizada para melhorar a experiência do cliente.",
+      "recomendacao": "Reorganizar a zona Z_C2 para aumentar o espaço disponível e melhorar a fluidez dos clientes.",
+      "urgencia": "imediata",
+      "confianca": 0.9,
+      "id": "INS_003"
+    },
+    {
+      "categoria": "trafego",
+      "titulo": "Clientes tendem a seguir uma sequência específica de zonas",
+      "observacao": "A sequência mais comum é Z_C1→Z_C2, com 1.973 ocorrências, seguida por Z_C2→Z_C1, com 1.776 ocorrências.",
+      "implicacao": "Isso pode indicar que os clientes estão seguindo um caminho específico para realizar uma tarefa ou encontrar um produto.",
+      "recomendacao": "Analisar as razões pelas quais os clientes seguem essa sequência e identificar oportunidades de melhoria na experiência do cliente.",
+      "urgencia": "esta_semana",
+      "confianca": 0.8,
+      "id": "INS_004"
+    },
+    {
+      "categoria": "funil",
+      "titulo": "Taxa de conversão para checkout é alta, mas muitos clientes abandonam o carrinho",
+      "observacao": "A taxa de conversão do funil é de 54.0% e 1800 clientes abandonaram o carrinho (exit_via_ck). Isso significa que 46.0% dos clientes não chegaram ao checkout.",
+      "implicacao": "Isso indica que há um problema na experiência do cliente após a seleção de produtos",
+      "recomendacao": "Revisar e otimizar a experiência do carrinho para reduzir o número de abandonos",
+      "urgencia": "esta_semana",
+      "confianca": 0.8,
+      "id": "INS_005"
+    },
+    {
+      "categoria": "funil",
+      "titulo": "Os não-conversores têm uma distribuição de gênero e faixa etária desbalanceada",
+      "observacao": "Dos 4929 clientes que não conversaram, 50.5% são homens e 49.5% são mulheres. Além disso, a faixa etária mais representativa é os adultos (26.8%).",
+      "implicacao": "Isso pode indicar que certos grupos de clientes estão tendo dificuldades em encontrar produtos adequados ou na experiência do site.",
+      "recomendacao": "Desenvolver estratégias de marketing e experiência personalizadas para esses grupos",
+      "urgencia": "proximo_mes",
+      "confianca": 0.7,
+      "id": "INS_006"
+    },
+    {
+      "categoria": "anomalia",
+      "titulo": "Aumento de visitantes no Z_S4 às 21h",
+      "observacao": "Houve um aumento significativo de visitantes no Z_S4 às 21h, com 6 visitantes em vez da média diária de 1.6 (z-score: 8.03)",
+      "implicacao": "Isso pode indicar uma mudança na preferência dos clientes ou uma promoção eficaz",
+      "recomendacao": "Monitorar a situação e ajustar as estratégias de marketing para aproveitar essa tendência",
+      "urgencia": "imediata",
+      "confianca": 0.9,
+      "id": "INS_007"
+    },
+    {
+      "categoria": "anomalia",
+      "titulo": "Redução de visitantes no Z_N1 às 13h",
+      "observacao": "Houve uma redução significativa de visitantes no Z_N1 às 13h, com 14 visitantes em vez da média diária de 23.8 (z-score: -5.07)",
+      "implicacao": "Isso pode indicar um problema na zona ou uma mudança nos hábitos dos clientes",
+      "recomendacao": "Investigar a causa da redução e implementar medidas para melhorar a experiência do cliente",
+      "urgencia": "esta_semana",
+      "confianca": 0.8,
+      "id": "INS_008"
+    },
+    {
+      "categoria": "demografico",
+      "titulo": "Homens são mais frequentes nas horas de pico da manhã",
+      "observacao": "Nos horários das 9 às 12, os homens representam uma porcentagem maior do público em relação às mulheres. Por exemplo, às 11 horas, os homens representam 51% (1125) contra 49% (1110) de mulheres.",
+      "implicacao": "Isso pode indicar que as lojas precisam adaptar suas estratégias de marketing e promoção para atrair mais mulheres durante essas horas.",
+      "recomendacao": "Desenvolver campanhas publicitárias direcionadas às mulheres, especialmente nas redes sociais, para aumentar a conscientização sobre os produtos e serviços oferecidos pela loja.",
+      "urgencia": "esta_semana",
+      "confianca": 0.8,
+      "id": "INS_009"
+    },
+    {
+      "categoria": "demografico",
+      "titulo": "Público jovem é mais ativo nas horas da tarde",
+      "observacao": "Nos horários das 14 às 17, o público jovem (young adult) representa uma porcentagem maior do público em relação aos outros grupos etários. Por exemplo, às 16 horas, os jovens representam 30% (730) contra 25% (761) de adultos.",
+      "implicacao": "Isso pode indicar que as lojas precisam adaptar suas estratégias de promoção e marketing para atrair mais jovens durante essas horas.",
+      "recomendacao": "Desenvolver ofertas especiais e promoções direcionadas aos jovens, como descontos em produtos populares ou eventos exclusivos.",
+      "urgencia": "proximo_mes",
+      "confianca": 0.7,
+      "id": "INS_010"
+    }
+  ],
+  "resumo_executivo": [
+    "O dia mais movimentado da semana foi o dia 15 de março, com um total de 2775 visitantes.",
+    "A zona Z_C2 é a mais visitada da loja, recebendo cerca de 30% do total de visitas na loja (17.976 visitas).",
+    "A taxa de conversão para checkout é alta, mas muitos clientes abandonam o carrinho, com uma taxa de conversão de 54.0% e 1800 clientes que não chegaram ao checkout."
+  ]
+}
