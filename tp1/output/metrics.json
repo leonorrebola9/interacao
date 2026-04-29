@@ -1,0 +1,1013 @@
+{
+  "meta": {
+    "generated_from": "output/journeys.csv",
+    "week_start": "2025-03-10",
+    "week_end": "2025-03-16",
+    "total_events": 84297
+  },
+  "traffic": {
+    "total_visitors_week": 10712,
+    "visitors_by_day": [
+      {
+        "date": "2025-03-10",
+        "day_name": "segunda",
+        "visitors": 1424
+      },
+      {
+        "date": "2025-03-11",
+        "day_name": "terça",
+        "visitors": 1204
+      },
+      {
+        "date": "2025-03-12",
+        "day_name": "quarta",
+        "visitors": 1488
+      },
+      {
+        "date": "2025-03-13",
+        "day_name": "quinta",
+        "visitors": 1558
+      },
+      {
+        "date": "2025-03-14",
+        "day_name": "sexta",
+        "visitors": 1430
+      },
+      {
+        "date": "2025-03-15",
+        "day_name": "sábado",
+        "visitors": 1896
+      },
+      {
+        "date": "2025-03-16",
+        "day_name": "domingo",
+        "visitors": 1712
+      }
+    ],
+    "visitors_by_hour": [
+      {
+        "hour": 9,
+        "visitors": 355
+      },
+      {
+        "hour": 10,
+        "visitors": 671
+      },
+      {
+        "hour": 11,
+        "visitors": 1030
+      },
+      {
+        "hour": 12,
+        "visitors": 1200
+      },
+      {
+        "hour": 13,
+        "visitors": 1185
+      },
+      {
+        "hour": 14,
+        "visitors": 928
+      },
+      {
+        "hour": 15,
+        "visitors": 832
+      },
+      {
+        "hour": 16,
+        "visitors": 900
+      },
+      {
+        "hour": 17,
+        "visitors": 1236
+      },
+      {
+        "hour": 18,
+        "visitors": 1165
+      },
+      {
+        "hour": 19,
+        "visitors": 1059
+      },
+      {
+        "hour": 20,
+        "visitors": 642
+      },
+      {
+        "hour": 21,
+        "visitors": 150
+      }
+    ],
+    "peak_hour": 17,
+    "quiet_hour": 21,
+    "busiest_day": {
+      "date": "2025-03-15",
+      "day_name": "sábado",
+      "visitors": 1896
+    },
+    "quietest_day": {
+      "date": "2025-03-11",
+      "day_name": "terça",
+      "visitors": 1204
+    },
+    "avg_visit_duration_min": 3.6
+  },
+  "zones": {
+    "by_zone": [
+      {
+        "zone_id": "Z_C1",
+        "unique_visitors": 2335,
+        "dwell_mean_s": 16.94,
+        "dwell_median_s": 15.0,
+        "linger_count": 13372,
+        "stop_rate": 0.978,
+        "description": "Caixas registadoras — bloco esquerdo"
+      },
+      {
+        "zone_id": "Z_C2",
+        "unique_visitors": 2334,
+        "dwell_mean_s": 16.07,
+        "dwell_median_s": 14.0,
+        "linger_count": 15566,
+        "stop_rate": 0.969,
+        "description": "Caixas registadoras — bloco central"
+      },
+      {
+        "zone_id": "Z_C3",
+        "unique_visitors": 2067,
+        "dwell_mean_s": 18.8,
+        "dwell_median_s": 17.0,
+        "linger_count": 8664,
+        "stop_rate": 0.966,
+        "description": "Caixas registadoras — bloco direito"
+      },
+      {
+        "zone_id": "Z_CK",
+        "unique_visitors": 1964,
+        "dwell_mean_s": 137.99,
+        "dwell_median_s": 130.0,
+        "linger_count": 3759,
+        "stop_rate": 0.966,
+        "description": "Corredor de saída após pagamento"
+      },
+      {
+        "zone_id": "Z_E1",
+        "unique_visitors": 5429,
+        "dwell_mean_s": 13.1,
+        "dwell_median_s": 13.0,
+        "linger_count": 5129,
+        "stop_rate": 0.945,
+        "description": "Entrada principal Norte — lado esquerdo"
+      },
+      {
+        "zone_id": "Z_E2",
+        "unique_visitors": 5283,
+        "dwell_mean_s": 13.08,
+        "dwell_median_s": 13.0,
+        "linger_count": 5019,
+        "stop_rate": 0.95,
+        "description": "Entrada principal Norte — lado direito"
+      },
+      {
+        "zone_id": "Z_N1",
+        "unique_visitors": 1010,
+        "dwell_mean_s": 159.39,
+        "dwell_median_s": 145.0,
+        "linger_count": 1623,
+        "stop_rate": 0.94,
+        "description": "Corredor — ala esquerda, linha 1"
+      },
+      {
+        "zone_id": "Z_N10",
+        "unique_visitors": 1256,
+        "dwell_mean_s": 155.82,
+        "dwell_median_s": 141.0,
+        "linger_count": 2274,
+        "stop_rate": 0.942,
+        "description": "Corredor traseiro — parede Sul"
+      },
+      {
+        "zone_id": "Z_N2",
+        "unique_visitors": 952,
+        "dwell_mean_s": 162.98,
+        "dwell_median_s": 155.0,
+        "linger_count": 1521,
+        "stop_rate": 0.935,
+        "description": "Corredor — centro, linha 1"
+      },
+      {
+        "zone_id": "Z_N3",
+        "unique_visitors": 1020,
+        "dwell_mean_s": 159.16,
+        "dwell_median_s": 146.0,
+        "linger_count": 1695,
+        "stop_rate": 0.958,
+        "description": "Corredor — ala direita, linha 1"
+      },
+      {
+        "zone_id": "Z_N4",
+        "unique_visitors": 936,
+        "dwell_mean_s": 159.72,
+        "dwell_median_s": 152.0,
+        "linger_count": 1428,
+        "stop_rate": 0.943,
+        "description": "Corredor — ala esquerda, linha 2"
+      },
+      {
+        "zone_id": "Z_N5",
+        "unique_visitors": 1230,
+        "dwell_mean_s": 146.44,
+        "dwell_median_s": 126.0,
+        "linger_count": 2264,
+        "stop_rate": 0.923,
+        "description": "Corredor — centro, linha 2"
+      },
+      {
+        "zone_id": "Z_N6",
+        "unique_visitors": 1096,
+        "dwell_mean_s": 156.27,
+        "dwell_median_s": 144.0,
+        "linger_count": 1815,
+        "stop_rate": 0.943,
+        "description": "Corredor — ala direita, linha 2"
+      },
+      {
+        "zone_id": "Z_N7",
+        "unique_visitors": 994,
+        "dwell_mean_s": 163.11,
+        "dwell_median_s": 150.5,
+        "linger_count": 1566,
+        "stop_rate": 0.943,
+        "description": "Corredor — ala esquerda, fundo"
+      },
+      {
+        "zone_id": "Z_N8",
+        "unique_visitors": 1190,
+        "dwell_mean_s": 155.11,
+        "dwell_median_s": 138.0,
+        "linger_count": 2033,
+        "stop_rate": 0.938,
+        "description": "Corredor — centro, fundo"
+      },
+      {
+        "zone_id": "Z_N9",
+        "unique_visitors": 1146,
+        "dwell_mean_s": 160.54,
+        "dwell_median_s": 149.5,
+        "linger_count": 1918,
+        "stop_rate": 0.927,
+        "description": "Corredor — ala direita, fundo"
+      },
+      {
+        "zone_id": "Z_S1",
+        "unique_visitors": 758,
+        "dwell_mean_s": 171.17,
+        "dwell_median_s": 164.0,
+        "linger_count": 980,
+        "stop_rate": 0.935,
+        "description": "Secção de frescos e lacticínios"
+      },
+      {
+        "zone_id": "Z_S2",
+        "unique_visitors": 474,
+        "dwell_mean_s": 190.84,
+        "dwell_median_s": 185.5,
+        "linger_count": 550,
+        "stop_rate": 0.956,
+        "description": "Secção de padaria e pastelaria"
+      },
+      {
+        "zone_id": "Z_S3",
+        "unique_visitors": 921,
+        "dwell_mean_s": 164.45,
+        "dwell_median_s": 150.0,
+        "linger_count": 1360,
+        "stop_rate": 0.952,
+        "description": "Secção de talho e charcutaria"
+      },
+      {
+        "zone_id": "Z_S4",
+        "unique_visitors": 777,
+        "dwell_mean_s": 173.28,
+        "dwell_median_s": 162.0,
+        "linger_count": 1028,
+        "stop_rate": 0.946,
+        "description": "Secção de produtos de higiene e limpeza"
+      },
+      {
+        "zone_id": "Z_S5",
+        "unique_visitors": 953,
+        "dwell_mean_s": 93.88,
+        "dwell_median_s": 85.0,
+        "linger_count": 1440,
+        "stop_rate": 0.948,
+        "description": "Secção de bebidas e conservas"
+      },
+      {
+        "zone_id": "Z_S6",
+        "unique_visitors": 642,
+        "dwell_mean_s": 179.21,
+        "dwell_median_s": 175.0,
+        "linger_count": 837,
+        "stop_rate": 0.963,
+        "description": "Secção de vinhos e destilados"
+      },
+      {
+        "zone_id": "Z_S7",
+        "unique_visitors": 581,
+        "dwell_mean_s": 180.07,
+        "dwell_median_s": 172.0,
+        "linger_count": 700,
+        "stop_rate": 0.947,
+        "description": "Secção de produtos congelados"
+      }
+    ],
+    "top_sequences": [
+      {
+        "sequence": "Z_C2 → Z_C1",
+        "count": 5367
+      },
+      {
+        "sequence": "Z_C1 → Z_C2",
+        "count": 4936
+      },
+      {
+        "sequence": "Z_C2 → Z_C3",
+        "count": 4033
+      },
+      {
+        "sequence": "Z_C3 → Z_C2",
+        "count": 2975
+      },
+      {
+        "sequence": "Z_C2 → Z_C2",
+        "count": 2854
+      },
+      {
+        "sequence": "Z_C1 → Z_C1",
+        "count": 2676
+      },
+      {
+        "sequence": "Z_C1 → Z_CK",
+        "count": 1389
+      },
+      {
+        "sequence": "Z_C3 → Z_C3",
+        "count": 1169
+      },
+      {
+        "sequence": "Z_C2 → Z_CK",
+        "count": 807
+      },
+      {
+        "sequence": "Z_CK → Z_C2",
+        "count": 744
+      }
+    ]
+  },
+  "funnel": {
+    "total_visitors": 10712,
+    "reached_navigation": {
+      "count": 2272,
+      "pct": 21.2
+    },
+    "reached_sections": {
+      "count": 1921,
+      "pct": 17.9
+    },
+    "reached_checkout": {
+      "count": 2517,
+      "pct": 23.5
+    },
+    "completed_purchase": {
+      "count": 1964,
+      "pct": 18.3
+    },
+    "no_checkout_profile": {
+      "gender_dist": {
+        "M": 4165,
+        "F": 4030
+      },
+      "age_dist": {
+        "adult": 2232,
+        "middle_aged": 1945,
+        "young_adult": 1638,
+        "senior": 974,
+        "teenager": 723,
+        "child": 683
+      },
+      "total": 8195
+    }
+  },
+  "demographics": {
+    "gender_distribution": {
+      "M": 5456,
+      "F": 5256
+    },
+    "age_distribution": {
+      "adult": 3054,
+      "middle_aged": 2638,
+      "young_adult": 2152,
+      "senior": 1174,
+      "teenager": 882,
+      "child": 812
+    },
+    "dwell_by_gender_zone": [
+      {
+        "gender": "F",
+        "zone_id": "Z_C1",
+        "avg_dwell_s": 16.87
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_C2",
+        "avg_dwell_s": 16.0
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_C3",
+        "avg_dwell_s": 18.82
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_CK",
+        "avg_dwell_s": 137.27
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_E1",
+        "avg_dwell_s": 13.24
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_E2",
+        "avg_dwell_s": 13.02
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N1",
+        "avg_dwell_s": 157.35
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N10",
+        "avg_dwell_s": 154.09
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N2",
+        "avg_dwell_s": 161.1
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N3",
+        "avg_dwell_s": 158.91
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N4",
+        "avg_dwell_s": 158.02
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N5",
+        "avg_dwell_s": 142.9
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N6",
+        "avg_dwell_s": 156.49
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N7",
+        "avg_dwell_s": 166.98
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N8",
+        "avg_dwell_s": 158.64
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_N9",
+        "avg_dwell_s": 157.66
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S1",
+        "avg_dwell_s": 175.62
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S2",
+        "avg_dwell_s": 179.6
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S3",
+        "avg_dwell_s": 160.86
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S4",
+        "avg_dwell_s": 173.13
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S5",
+        "avg_dwell_s": 95.17
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S6",
+        "avg_dwell_s": 178.77
+      },
+      {
+        "gender": "F",
+        "zone_id": "Z_S7",
+        "avg_dwell_s": 180.16
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_C1",
+        "avg_dwell_s": 17.01
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_C2",
+        "avg_dwell_s": 16.13
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_C3",
+        "avg_dwell_s": 18.78
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_CK",
+        "avg_dwell_s": 138.66
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_E1",
+        "avg_dwell_s": 12.97
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_E2",
+        "avg_dwell_s": 13.13
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N1",
+        "avg_dwell_s": 161.1
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N10",
+        "avg_dwell_s": 157.4
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N2",
+        "avg_dwell_s": 164.67
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N3",
+        "avg_dwell_s": 159.4
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N4",
+        "avg_dwell_s": 161.41
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N5",
+        "avg_dwell_s": 149.71
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N6",
+        "avg_dwell_s": 156.08
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N7",
+        "avg_dwell_s": 159.15
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N8",
+        "avg_dwell_s": 151.85
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_N9",
+        "avg_dwell_s": 163.24
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S1",
+        "avg_dwell_s": 167.04
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S2",
+        "avg_dwell_s": 200.56
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S3",
+        "avg_dwell_s": 167.68
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S4",
+        "avg_dwell_s": 173.43
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S5",
+        "avg_dwell_s": 92.71
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S6",
+        "avg_dwell_s": 179.57
+      },
+      {
+        "gender": "M",
+        "zone_id": "Z_S7",
+        "avg_dwell_s": 179.97
+      }
+    ],
+    "gender_by_hour": [
+      {
+        "hour_of_day": 9,
+        "gender": "F",
+        "visitors": 177
+      },
+      {
+        "hour_of_day": 9,
+        "gender": "M",
+        "visitors": 178
+      },
+      {
+        "hour_of_day": 10,
+        "gender": "F",
+        "visitors": 336
+      },
+      {
+        "hour_of_day": 10,
+        "gender": "M",
+        "visitors": 335
+      },
+      {
+        "hour_of_day": 11,
+        "gender": "F",
+        "visitors": 511
+      },
+      {
+        "hour_of_day": 11,
+        "gender": "M",
+        "visitors": 519
+      },
+      {
+        "hour_of_day": 12,
+        "gender": "F",
+        "visitors": 595
+      },
+      {
+        "hour_of_day": 12,
+        "gender": "M",
+        "visitors": 605
+      },
+      {
+        "hour_of_day": 13,
+        "gender": "F",
+        "visitors": 574
+      },
+      {
+        "hour_of_day": 13,
+        "gender": "M",
+        "visitors": 611
+      },
+      {
+        "hour_of_day": 14,
+        "gender": "F",
+        "visitors": 424
+      },
+      {
+        "hour_of_day": 14,
+        "gender": "M",
+        "visitors": 504
+      },
+      {
+        "hour_of_day": 15,
+        "gender": "F",
+        "visitors": 408
+      },
+      {
+        "hour_of_day": 15,
+        "gender": "M",
+        "visitors": 424
+      },
+      {
+        "hour_of_day": 16,
+        "gender": "F",
+        "visitors": 466
+      },
+      {
+        "hour_of_day": 16,
+        "gender": "M",
+        "visitors": 434
+      },
+      {
+        "hour_of_day": 17,
+        "gender": "F",
+        "visitors": 625
+      },
+      {
+        "hour_of_day": 17,
+        "gender": "M",
+        "visitors": 611
+      },
+      {
+        "hour_of_day": 18,
+        "gender": "F",
+        "visitors": 546
+      },
+      {
+        "hour_of_day": 18,
+        "gender": "M",
+        "visitors": 619
+      },
+      {
+        "hour_of_day": 19,
+        "gender": "F",
+        "visitors": 515
+      },
+      {
+        "hour_of_day": 19,
+        "gender": "M",
+        "visitors": 544
+      },
+      {
+        "hour_of_day": 20,
+        "gender": "F",
+        "visitors": 313
+      },
+      {
+        "hour_of_day": 20,
+        "gender": "M",
+        "visitors": 329
+      },
+      {
+        "hour_of_day": 21,
+        "gender": "F",
+        "visitors": 66
+      },
+      {
+        "hour_of_day": 21,
+        "gender": "M",
+        "visitors": 84
+      }
+    ],
+    "avg_dwell_by_age": {
+      "adult": 69.94,
+      "child": 46.68,
+      "middle_aged": 73.97,
+      "senior": 60.71,
+      "teenager": 56.87,
+      "young_adult": 65.06
+    }
+  },
+  "anomalies": {
+    "total_anomalies": 42,
+    "anomalies": [
+      {
+        "zone_id": "Z_S3",
+        "zone_desc": "Secção de talho e charcutaria",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.8,
+        "baseline_std": 0.4,
+        "z_score": 4.92,
+        "direction": "acima",
+        "description": "Zona Z_S3 às 21h teve 4 visitantes no dia 7, vs média de 1.8 nos dias 1-6 (z=4.92, acima da média)"
+      },
+      {
+        "zone_id": "Z_N10",
+        "zone_desc": "Corredor traseiro — parede Sul",
+        "hour": 10,
+        "visitors_d7": 16,
+        "baseline_mean": 11.0,
+        "baseline_std": 1.1,
+        "z_score": 4.56,
+        "direction": "acima",
+        "description": "Zona Z_N10 às 10h teve 16 visitantes no dia 7, vs média de 11.0 nos dias 1-6 (z=4.56, acima da média)"
+      },
+      {
+        "zone_id": "Z_S6",
+        "zone_desc": "Secção de vinhos e destilados",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.8,
+        "baseline_std": 0.5,
+        "z_score": 4.5,
+        "direction": "acima",
+        "description": "Zona Z_S6 às 21h teve 4 visitantes no dia 7, vs média de 1.8 nos dias 1-6 (z=4.5, acima da média)"
+      },
+      {
+        "zone_id": "Z_C2",
+        "zone_desc": "Caixas registadoras — bloco central",
+        "hour": 21,
+        "visitors_d7": 11,
+        "baseline_mean": 5.0,
+        "baseline_std": 1.9,
+        "z_score": 3.16,
+        "direction": "acima",
+        "description": "Zona Z_C2 às 21h teve 11 visitantes no dia 7, vs média de 5.0 nos dias 1-6 (z=3.16, acima da média)"
+      },
+      {
+        "zone_id": "Z_S1",
+        "zone_desc": "Secção de frescos e lacticínios",
+        "hour": 19,
+        "visitors_d7": 17,
+        "baseline_mean": 10.5,
+        "baseline_std": 2.1,
+        "z_score": 3.13,
+        "direction": "acima",
+        "description": "Zona Z_S1 às 19h teve 17 visitantes no dia 7, vs média de 10.5 nos dias 1-6 (z=3.13, acima da média)"
+      },
+      {
+        "zone_id": "Z_N8",
+        "zone_desc": "Corredor — centro, fundo",
+        "hour": 19,
+        "visitors_d7": 27,
+        "baseline_mean": 16.7,
+        "baseline_std": 3.4,
+        "z_score": 3.05,
+        "direction": "acima",
+        "description": "Zona Z_N8 às 19h teve 27 visitantes no dia 7, vs média de 16.7 nos dias 1-6 (z=3.05, acima da média)"
+      },
+      {
+        "zone_id": "Z_C3",
+        "zone_desc": "Caixas registadoras — bloco direito",
+        "hour": 13,
+        "visitors_d7": 55,
+        "baseline_mean": 33.8,
+        "baseline_std": 6.9,
+        "z_score": 3.05,
+        "direction": "acima",
+        "description": "Zona Z_C3 às 13h teve 55 visitantes no dia 7, vs média de 33.8 nos dias 1-6 (z=3.05, acima da média)"
+      },
+      {
+        "zone_id": "Z_N4",
+        "zone_desc": "Corredor — ala esquerda, linha 2",
+        "hour": 12,
+        "visitors_d7": 20,
+        "baseline_mean": 14.3,
+        "baseline_std": 1.9,
+        "z_score": 3.04,
+        "direction": "acima",
+        "description": "Zona Z_N4 às 12h teve 20 visitantes no dia 7, vs média de 14.3 nos dias 1-6 (z=3.04, acima da média)"
+      },
+      {
+        "zone_id": "Z_N6",
+        "zone_desc": "Corredor — ala direita, linha 2",
+        "hour": 14,
+        "visitors_d7": 25,
+        "baseline_mean": 12.5,
+        "baseline_std": 4.3,
+        "z_score": 2.89,
+        "direction": "acima",
+        "description": "Zona Z_N6 às 14h teve 25 visitantes no dia 7, vs média de 12.5 nos dias 1-6 (z=2.89, acima da média)"
+      },
+      {
+        "zone_id": "Z_S2",
+        "zone_desc": "Secção de padaria e pastelaria",
+        "hour": 10,
+        "visitors_d7": 7,
+        "baseline_mean": 3.5,
+        "baseline_std": 1.2,
+        "z_score": 2.86,
+        "direction": "acima",
+        "description": "Zona Z_S2 às 10h teve 7 visitantes no dia 7, vs média de 3.5 nos dias 1-6 (z=2.86, acima da média)"
+      },
+      {
+        "zone_id": "Z_N9",
+        "zone_desc": "Corredor — ala direita, fundo",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.7,
+        "baseline_std": 0.8,
+        "z_score": 2.86,
+        "direction": "acima",
+        "description": "Zona Z_N9 às 21h teve 4 visitantes no dia 7, vs média de 1.7 nos dias 1-6 (z=2.86, acima da média)"
+      },
+      {
+        "zone_id": "Z_S4",
+        "zone_desc": "Secção de produtos de higiene e limpeza",
+        "hour": 10,
+        "visitors_d7": 14,
+        "baseline_mean": 6.8,
+        "baseline_std": 2.6,
+        "z_score": 2.72,
+        "direction": "acima",
+        "description": "Zona Z_S4 às 10h teve 14 visitantes no dia 7, vs média de 6.8 nos dias 1-6 (z=2.72, acima da média)"
+      },
+      {
+        "zone_id": "Z_N4",
+        "zone_desc": "Corredor — ala esquerda, linha 2",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.6,
+        "baseline_std": 0.9,
+        "z_score": 2.68,
+        "direction": "acima",
+        "description": "Zona Z_N4 às 21h teve 4 visitantes no dia 7, vs média de 1.6 nos dias 1-6 (z=2.68, acima da média)"
+      },
+      {
+        "zone_id": "Z_S4",
+        "zone_desc": "Secção de produtos de higiene e limpeza",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.8,
+        "baseline_std": 0.8,
+        "z_score": 2.63,
+        "direction": "acima",
+        "description": "Zona Z_S4 às 21h teve 4 visitantes no dia 7, vs média de 1.8 nos dias 1-6 (z=2.63, acima da média)"
+      },
+      {
+        "zone_id": "Z_N3",
+        "zone_desc": "Corredor — ala direita, linha 1",
+        "hour": 21,
+        "visitors_d7": 4,
+        "baseline_mean": 1.8,
+        "baseline_std": 0.8,
+        "z_score": 2.63,
+        "direction": "acima",
+        "description": "Zona Z_N3 às 21h teve 4 visitantes no dia 7, vs média de 1.8 nos dias 1-6 (z=2.63, acima da média)"
+      },
+      {
+        "zone_id": "Z_CK",
+        "zone_desc": "Corredor de saída após pagamento",
+        "hour": 21,
+        "visitors_d7": 9,
+        "baseline_mean": 4.8,
+        "baseline_std": 1.6,
+        "z_score": 2.6,
+        "direction": "acima",
+        "description": "Zona Z_CK às 21h teve 9 visitantes no dia 7, vs média de 4.8 nos dias 1-6 (z=2.6, acima da média)"
+      },
+      {
+        "zone_id": "Z_C2",
+        "zone_desc": "Caixas registadoras — bloco central",
+        "hour": 13,
+        "visitors_d7": 67,
+        "baseline_mean": 40.5,
+        "baseline_std": 10.3,
+        "z_score": 2.58,
+        "direction": "acima",
+        "description": "Zona Z_C2 às 13h teve 67 visitantes no dia 7, vs média de 40.5 nos dias 1-6 (z=2.58, acima da média)"
+      },
+      {
+        "zone_id": "Z_S4",
+        "zone_desc": "Secção de produtos de higiene e limpeza",
+        "hour": 18,
+        "visitors_d7": 17,
+        "baseline_mean": 11.7,
+        "baseline_std": 2.2,
+        "z_score": 2.47,
+        "direction": "acima",
+        "description": "Zona Z_S4 às 18h teve 17 visitantes no dia 7, vs média de 11.7 nos dias 1-6 (z=2.47, acima da média)"
+      },
+      {
+        "zone_id": "Z_S5",
+        "zone_desc": "Secção de bebidas e conservas",
+        "hour": 14,
+        "visitors_d7": 20,
+        "baseline_mean": 11.0,
+        "baseline_std": 3.7,
+        "z_score": 2.44,
+        "direction": "acima",
+        "description": "Zona Z_S5 às 14h teve 20 visitantes no dia 7, vs média de 11.0 nos dias 1-6 (z=2.44, acima da média)"
+      },
+      {
+        "zone_id": "Z_N10",
+        "zone_desc": "Corredor traseiro — parede Sul",
+        "hour": 13,
+        "visitors_d7": 30,
+        "baseline_mean": 19.0,
+        "baseline_std": 4.6,
+        "z_score": 2.41,
+        "direction": "acima",
+        "description": "Zona Z_N10 às 13h teve 30 visitantes no dia 7, vs média de 19.0 nos dias 1-6 (z=2.41, acima da média)"
+      }
+    ]
+  }
+}
