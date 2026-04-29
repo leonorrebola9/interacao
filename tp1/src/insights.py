@@ -2,328 +2,391 @@ import argparse
 import json
 import re
 import time
-from datetime import datetime
-
+from pathlib import Path
 import requests
-
-# ─── Parâmetros configuráveis ─────────────────────────────────────────────────
-
-config = {
-    "ollama_url":  "http://localhost:11434/api/generate",
-    "model":       "llama3.1:8b",
-    "timeout_s":   180,
-    "temperature": 0.0,
-    "seed":        42,
-}
-
-# ─── Prompts ──────────────────────────────────────────────────────────────────
-
-system_instruction = """\
-És um analista de retalho especialista em comportamento de cliente em loja física.
-Recebes métricas pré-calculadas de uma semana de operação de um supermercado português.
-Responde SEMPRE em português europeu.
-Responde APENAS com JSON válido. Sem texto antes ou depois. Sem blocos de código markdown.\
-"""
-
-output_schema = """\
-O teu output deve ser EXACTAMENTE este JSON e nada mais.
-
-REGRAS OBRIGATÓRIAS:
-- O campo "categoria" deve ser UMA destas palavras exactamente: trafego, zona, funil, anomalia, demografico
-- O campo "urgencia" deve ser UMA destas palavras exactamente: imediata, esta_semana, proximo_mes
-- Gera exactamente 10 insights sem repetições
-- Distribui pelas 5 categorias: 2 trafego, 2 zona, 1 funil, 2 anomalia, 2 demografico, 1 livre
-- O resumo_executivo deve ter exactamente 3 bullets com números concretos
-- Cada observacao deve conter pelo menos um número concreto dos dados
-
-{
+ 
+# Configuração 
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODEL      = "llama3.1:8b"
+TEMPERATURE = 0.0   # reprodutibilidade garantida
+ 
+OUTPUT_SCHEMA = """{
   "insights": [
     {
       "id": "INS_001",
-      "categoria": "trafego",
+      "categoria": "trafego|zona|funil|anomalia|demografico",
       "titulo": "frase curta que resume o insight",
-      "observacao": "o que os dados mostram com factos e números concretos",
-      "implicacao": "o que isto significa operacionalmente para a loja",
-      "recomendacao": "acção concreta e específica que o gestor pode tomar",
-      "urgencia": "esta_semana",
-      "confianca": 0.9
+      "observacao": "o que os dados mostram: factos e números concretos",
+      "implicacao": "o que isto significa operacionalmente",
+      "recomendacao": "ação concreta que o gestor pode tomar",
+      "urgencia": "imediata|esta_semana|proximo_mes",
+      "confianca": 0.0
     }
   ],
-  "resumo_executivo": [
-    "bullet 1 com número concreto",
-    "bullet 2 com número concreto",
-    "bullet 3 com número concreto"
-  ]
-}\
-"""
-
-few_shot_examples = """\
-EXEMPLOS DE QUALIDADE — segue este nível de detalhe:
-
---- BOM insight (categoria: trafego) ---
-{
-  "categoria": "trafego",
-  "titulo": "Sábado concentra 17.8% do tráfego semanal",
-  "observacao": "Sábado teve 3229 visitantes, 56% acima da terça-feira (2062), o dia mais calmo.",
-  "implicacao": "A loja opera em dois regimes distintos: dias úteis com ~2400 visitantes e fim de semana com ~3000.",
-  "recomendacao": "Reforçar equipa ao sábado de manhã e rever plano de reposição para sexta à tarde.",
-  "urgencia": "esta_semana",
-  "confianca": 0.95
-}
-
---- BOM insight (categoria: zona) ---
-{
-  "categoria": "zona",
-  "titulo": "Z_C2 é a zona mais visitada com 9540 visitantes",
-  "observacao": "Z_C2 (caixas centrais) recebeu 9540 visitantes com dwell médio de 24.6s. Z_S2 (padaria) foi a menos visitada com apenas 661 visitantes.",
-  "implicacao": "As caixas centrais são o principal ponto de passagem. A padaria tem tráfego muito baixo para a sua localização.",
-  "recomendacao": "Investigar se a sinalização para Z_S2 é adequada. Considerar promoção de padaria junto às caixas.",
-  "urgencia": "proximo_mes",
-  "confianca": 0.85
-}
-
---- BOM insight (categoria: funil) ---
-{
-  "categoria": "funil",
-  "titulo": "31% dos visitantes saem sem passar pela caixa",
-  "observacao": "De 18142 visitantes totais, 12528 chegaram à caixa (69.1% de conversão). Os 5614 restantes saíram sem comprar.",
-  "implicacao": "Quase 1 em cada 3 visitantes não converte. Perda potencial significativa de receita.",
-  "recomendacao": "Analisar os percursos dos não-compradores. Testar promoções de impulso junto às saídas.",
-  "urgencia": "proximo_mes",
-  "confianca": 0.8
-}
-
---- BOM insight (categoria: anomalia) ---
-{
-  "categoria": "anomalia",
-  "titulo": "Z_N1 registou queda de 9σ às 13h no domingo",
-  "observacao": "Z_N1 teve 18 visitantes às 13h do domingo contra uma média de 30.3 nos dias anteriores — desvio de -9.03σ.",
-  "implicacao": "Queda tão abrupta sugere obstrução física (reposição de stock, paletes) ou falha de câmara.",
-  "recomendacao": "Verificar registos de operações em Z_N1 às 13h do domingo. Rever plano de reposição para não bloquear corredores em hora de pico.",
-  "urgencia": "imediata",
-  "confianca": 0.9
-}
-
---- BOM insight (categoria: demografico) ---
-{
-  "categoria": "demografico",
-  "titulo": "Adultos femininos são o segmento dominante",
-  "observacao": "O segmento feminino adulto representa 2738 visitantes, o maior grupo. O segmento masculino adulto tem 2659 visitantes.",
-  "implicacao": "A loja tem uma base de clientes maioritariamente adulta. Campanhas devem priorizar este segmento.",
-  "recomendacao": "Adaptar promoções e comunicação visual ao perfil adulto feminino, especialmente nas secções Z_S1 e Z_S2.",
-  "urgencia": "proximo_mes",
-  "confianca": 0.8
-}
-
---- MAU insight (genérico, sem números) ---
-{
-  "categoria": "trafego",
-  "titulo": "A loja teve bastante tráfego esta semana",
-  "observacao": "A loja esteve movimentada durante a semana",
-  "recomendacao": "Melhorar o atendimento"
-}
-NUNCA geres insights como este último exemplo.\
-"""
-
-# ─── Chamada ao LLM ───────────────────────────────────────────────────────────
-
-def call_ollama(prompt: str) -> str:
+  "resumo_executivo": "3 bullets com os insights mais importantes"
+}"""
+ 
+# Chamada ao Ollama
+def call_ollama(prompt: str, system: str = "") -> str:
+    """Chama o modelo local via Ollama e devolve o texto gerado."""
+    full_prompt = f"{system}\n\n{prompt}" if system else prompt
+ 
     payload = {
-        "model":  config["model"],
-        "prompt": prompt,
+        "model":  MODEL,
+        "prompt": full_prompt,
         "stream": False,
         "options": {
-            "temperature": config["temperature"],
-            "seed":        config["seed"],
-        },
+            "temperature": TEMPERATURE,
+            "num_predict": 4096,
+        }
     }
+ 
     try:
-        r = requests.post(config["ollama_url"], json=payload, timeout=config["timeout_s"])
-        r.raise_for_status()
-        return r.json()["response"]
+        resp = requests.post(OLLAMA_URL, json=payload, timeout=300)
+        resp.raise_for_status()
+        return resp.json().get("response", "")
     except requests.exceptions.ConnectionError:
-        raise RuntimeError(
-            "Não foi possível ligar ao Ollama.\n"
+        raise SystemExit(
+            "[ERRO] Não foi possível ligar ao Ollama. "
             "Certifica-te que está a correr: ollama serve"
         )
-
-def parse_json_response(raw: str) -> dict:
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError:
-        pass
-    match = re.search(r'\{[\s\S]*\}', raw)
+ 
+ 
+def extract_json(text: str) -> dict:
+    """Extrai o primeiro bloco JSON válido do texto do LLM."""
+    # Tentar extrair bloco ```json ... ```
+    match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
     if match:
         try:
-            return json.loads(match.group())
+            return json.loads(match.group(1))
         except json.JSONDecodeError:
             pass
-    return {"error": "LLM não devolveu JSON válido", "raw": raw[:300]}
-
-# ─── Preparação dos dados para o LLM ─────────────────────────────────────────
-
-def summarise_metrics(metrics: dict) -> str:
-    traffic   = metrics["traffic"]
-    funnel    = metrics["funnel"]
-    anomalies = metrics["anomalies"]
-
-    summary = {
-        "trafego": {
-            "total_visitantes":          traffic["total_unique_visitors"],
-            "dia_mais_movimentado":      traffic["busiest_day"],
-            "dia_mais_calmo":            traffic["quietest_day"],
-            "duracao_media_visita_min":  traffic["avg_visit_duration_min"],
-            "visitantes_por_dia":        traffic["visitors_by_day"],
-        },
-        "zonas": {
-            "top_5_trafego":     metrics["zones"]["top_5_traffic"],
-            "bottom_5_trafego":  metrics["zones"]["bottom_5_traffic"],
-            "top_10_sequencias": metrics["zones"]["top_10_sequences"],
-        },
-        "funil": funnel,
-        "anomalias": {
-            "data_teste":     anomalies["test_date"],
-            "total":          anomalies["total_anomalies"],
-            "top_10":         anomalies["anomalies"][:10],
-        },
-        "demograficos": {
-            "segmentos": metrics["demographics"]["visitor_segments"][:10],
-        },
-    }
-    return json.dumps(summary, ensure_ascii=False, indent=2, default=str)
-
-# ─── Avaliação da qualidade ───────────────────────────────────────────────────
-
-def score_insights(insights: list) -> dict:
-    if not insights:
-        return {"n_insights": 0, "specificity": 0.0, "completeness": 0.0,
-                "category_coverage": 0.0, "total_score": 0.0}
-
-    required_fields = ["titulo", "observacao", "implicacao", "recomendacao", "urgencia", "confianca"]
-    valid_categories = {"trafego", "zona", "funil", "anomalia", "demografico"}
-
-    has_numbers = sum(
-        1 for i in insights
-        if re.search(r'\d+[.,]?\d*', i.get("observacao", ""))
+ 
+    # Tentar encontrar JSON diretamente no texto
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError:
+            pass
+ 
+    # Devolver estrutura vazia com o texto bruto para debug
+    return {"insights": [], "resumo_executivo": text[:500], "_raw": text}
+ 
+# Preparação dos dados para o prompt
+def prepare_metrics_summary(metrics: dict) -> str:
+    """
+    Converte metrics.json numa representação textual compacta para o prompt.
+    Não envia tudo — seleciona os dados mais relevantes para evitar context overflow.
+    """
+    t  = metrics["traffic"]
+    f  = metrics["funnel"]
+    z  = metrics["zones"]
+    d  = metrics["demographics"]
+    an = metrics["anomalies"]
+ 
+    # Tráfego
+    days_str = "\n".join(
+        f"  - {d['day_name'].capitalize()} ({d['date']}): {d['visitors']} visitantes"
+        for d in t["visitors_by_day"]
     )
-    specificity = round(has_numbers / len(insights), 2)
-
-    filled = sum(
-        sum(1 for f in required_fields if i.get(f)) / len(required_fields)
-        for i in insights
+    hours_str = ", ".join(
+        f"{h['hour']}h={h['visitors']}"
+        for h in t["visitors_by_hour"]
     )
-    completeness = round(filled / len(insights), 2)
-
-    found_cats = {i.get("categoria", "") for i in insights}
-    category_coverage = round(len(found_cats & valid_categories) / len(valid_categories), 2)
-
-    total = round((specificity + completeness + category_coverage) / 3, 2)
-
+ 
+    # Top zonas por tráfego
+    zones_sorted = sorted(z["by_zone"], key=lambda x: x["unique_visitors"], reverse=True)
+    top_zones = zones_sorted[:8]
+    zones_str = "\n".join(
+        f"  - {z['zone_id']} ({z.get('description','')[:30]}): "
+        f"{z['unique_visitors']} visitantes, "
+        f"dwell médio={z.get('dwell_mean_s','N/A')}s, "
+        f"taxa paragem={z.get('stop_rate','N/A')}"
+        for z in top_zones
+    )
+ 
+    # Sequências mais frequentes
+    seqs_str = "\n".join(
+        f"  - {s['sequence']}: {s['count']}x"
+        for s in z["top_sequences"][:5]
+    )
+ 
+    # Funil
+    fn = f
+    funnel_str = (
+        f"  Total visitantes: {fn['total_visitors']}\n"
+        f"  Chegaram a corredores: {fn['reached_navigation']['count']} ({fn['reached_navigation']['pct']}%)\n"
+        f"  Chegaram a secções: {fn['reached_sections']['count']} ({fn['reached_sections']['pct']}%)\n"
+        f"  Chegaram à caixa: {fn['reached_checkout']['count']} ({fn['reached_checkout']['pct']}%)\n"
+        f"  Completaram compra (saíram por Z_CK): {fn['completed_purchase']['count']} ({fn['completed_purchase']['pct']}%)"
+    )
+ 
+    # Demografia
+    gender = d["gender_distribution"]
+    age    = d["age_distribution"]
+    demo_str = (
+        f"  Género: {gender}\n"
+        f"  Faixa etária: {age}\n"
+        f"  Dwell médio por idade: {d['avg_dwell_by_age']}"
+    )
+ 
+    # Anomalias top 5
+    anom_str = "\n".join(
+        f"  - {a['zone_id']} às {a['hour']}h: {a['visitors_d7']} visitantes "
+        f"(média={a['baseline_mean']}, z={a['z_score']}, {a['direction']} da média)"
+        for a in an["anomalies"][:5]
+    )
+ 
+    return f"""=== MÉTRICAS DA SEMANA ({metrics['meta']['week_start']} a {metrics['meta']['week_end']}) ===
+ 
+TRÁFEGO:
+  Total visitantes semana: {t['total_visitors_week']}
+  Dia mais movimentado: {t['busiest_day']['day_name']} com {t['busiest_day']['visitors']} visitantes
+  Dia mais calmo: {t['quietest_day']['day_name']} com {t['quietest_day']['visitors']} visitantes
+  Hora de pico: {t['peak_hour']}h
+  Duração média visita: {t['avg_visit_duration_min']} minutos
+  Visitantes por dia:
+{days_str}
+  Visitantes por hora: {hours_str}
+ 
+ZONAS (top 8 por tráfego):
+{zones_str}
+ 
+SEQUÊNCIAS MAIS FREQUENTES:
+{seqs_str}
+ 
+FUNIL DE CLIENTE:
+{funnel_str}
+ 
+DEMOGRAFIA:
+{demo_str}
+ 
+ANOMALIAS DIA 7 (z > 2):
+  Total anomalias: {an['total_anomalies']}
+{anom_str}
+"""
+ 
+# Estratégia A — Zero-shot 
+SYSTEM_PROMPT = """És um consultor especialista em retalho e análise de comportamento de clientes em loja.
+A tua função é analisar métricas de uma loja de retalho e gerar insights acionáveis em português europeu para o gestor de loja.
+Respondes SEMPRE e APENAS com JSON válido, sem texto adicional antes ou depois."""
+ 
+ 
+def prompt_zero_shot(metrics_text: str) -> str:
+    return f"""Analisa as seguintes métricas de uma loja de retalho e gera exatamente 6 insights acionáveis.
+ 
+{metrics_text}
+ 
+Responde APENAS com JSON válido seguindo este schema exato:
+{OUTPUT_SCHEMA}
+ 
+Regras:
+- Cada insight deve ter números concretos retirados dos dados
+- As recomendações devem ser específicas e executáveis
+- A confiança deve ser entre 0.0 e 1.0
+- Responde em português europeu
+- Não incluas texto fora do JSON"""
+ 
+ 
+# Estratégia B — Few-shot
+FEW_SHOT_EXAMPLES = """
+=== EXEMPLOS DE INSIGHTS ===
+ 
+MAU INSIGHT (genérico, vago — NÃO fazer assim):
+{
+  "titulo": "A zona de frescos teve bastante tráfego",
+  "observacao": "Muitas pessoas visitaram esta zona",
+  "implicacao": "É uma zona popular",
+  "recomendacao": "Melhorar o atendimento ao cliente"
+}
+ 
+BOM INSIGHT (específico, com números, acionável — fazer assim):
+{
+  "titulo": "Z_S1 (frescos) tem a maior taxa de paragem da loja",
+  "observacao": "Z_S1 registou 847 visitantes na semana com taxa de paragem de 0.82, a mais alta de todas as secções de produto",
+  "implicacao": "Os clientes passam tempo significativo nesta secção — é um ponto de decisão de compra crítico",
+  "recomendacao": "Colocar promoções e produtos de margem alta em destaque em Z_S1; considerar aumentar stock de frescos às sextas e sábados quando o tráfego é 40% acima da média"
+}
+ 
+MAU INSIGHT (anomalia vaga — NÃO fazer assim):
+{
+  "titulo": "Houve uma anomalia na loja",
+  "observacao": "O tráfego foi diferente do normal",
+  "recomendacao": "Investigar o que aconteceu"
+}
+ 
+BOM INSIGHT (anomalia específica — fazer assim):
+{
+  "titulo": "Queda anómala em Z_N4 no domingo às 16h",
+  "observacao": "Z_N4 teve 0 visitantes às 16h do dia 7 (domingo), contra uma média de 23 nos mesmos dias/horas anteriores (z=-3.2)",
+  "implicacao": "Possível obstrução física, problema de sinalização ou encerramento temporário do corredor",
+  "recomendacao": "Verificar registos de incidentes do domingo às 16h; inspecionar sinalização de Z_N4; se recorrente, instalar câmara de supervisão neste corredor"
+}
+=== FIM DOS EXEMPLOS ===
+"""
+ 
+ 
+def prompt_few_shot(metrics_text: str) -> str:
+    return f"""Analisa as seguintes métricas de uma loja de retalho e gera exatamente 6 insights acionáveis.
+ 
+{FEW_SHOT_EXAMPLES}
+ 
+Segue o estilo dos BOM INSIGHT acima: sempre com números concretos, causas plausíveis e recomendações executáveis.
+Evita o estilo dos MAU INSIGHT: genérico, vago, sem números.
+ 
+DADOS DA SEMANA:
+{metrics_text}
+ 
+Responde APENAS com JSON válido seguindo este schema exato:
+{OUTPUT_SCHEMA}
+ 
+Regras:
+- Cada insight deve citar números específicos dos dados acima
+- As recomendações devem ser concretas e executáveis sem interpretação adicional
+- A confiança deve ser entre 0.0 e 1.0
+- Responde em português europeu
+- Não incluas texto fora do JSON"""
+ 
+# Comparação A vs B
+def score_insight(insight: dict) -> dict:
+    """
+    Avalia quantitativamente um insight em 3 dimensões:
+      - especificidade: tem números concretos?
+      - acionabilidade: a recomendação é específica?
+      - completude: tem todos os campos preenchidos?
+    """
+    obs  = insight.get("observacao", "")
+    rec  = insight.get("recomendacao", "")
+    impl = insight.get("implicacao", "")
+ 
+    # Contar números no texto
+    numbers = len(re.findall(r'\d+[\.,]?\d*', obs + rec))
+    specificity = min(1.0, numbers / 5)  # 5+ números = score máximo
+ 
+    # Acionabilidade: verbos de ação concretos
+    action_verbs = ["abrir", "fechar", "colocar", "aumentar", "reduzir",
+                    "mover", "verificar", "instalar", "reforçar", "ajustar",
+                    "contratar", "promover", "reorganizar"]
+    has_action = any(v in rec.lower() for v in action_verbs)
+    actionability = 1.0 if has_action else 0.3
+ 
+    # Completude: todos os campos preenchidos e não vazios
+    required = ["titulo", "observacao", "implicacao", "recomendacao", "urgencia"]
+    completeness = sum(1 for f in required if insight.get(f, "").strip()) / len(required)
+ 
+    total = (specificity + actionability + completeness) / 3
+ 
     return {
-        "n_insights":        len(insights),
-        "specificity":       specificity,
-        "completeness":      completeness,
-        "category_coverage": category_coverage,
-        "total_score":       total,
+        "specificity":   round(specificity, 2),
+        "actionability": round(actionability, 2),
+        "completeness":  round(completeness, 2),
+        "total":         round(total, 2),
     }
-
-# ─── Dois prompts ─────────────────────────────────────────────────────────────
-
-def build_zero_shot_prompt(metrics_summary: str) -> str:
-    return f"""{system_instruction}
-
-{output_schema}
-
-DADOS DA SEMANA:
-{metrics_summary}"""
-
-def build_few_shot_prompt(metrics_summary: str) -> str:
-    return f"""{system_instruction}
-
-{few_shot_examples}
-
-Agora gera 10 insights de ALTA QUALIDADE para os dados desta semana, seguindo exactamente o nível de detalhe dos bons exemplos acima.
-
-{output_schema}
-
-DADOS DA SEMANA:
-{metrics_summary}"""
-
-# ─── Main ─────────────────────────────────────────────────────────────────────
-
+ 
+ 
+def compare_strategies(result_a: dict, result_b: dict) -> dict:
+    """Compara quantitativamente os resultados das duas estratégias."""
+    scores_a = [score_insight(i) for i in result_a.get("insights", [])]
+    scores_b = [score_insight(i) for i in result_b.get("insights", [])]
+ 
+    def avg(scores, key):
+        vals = [s[key] for s in scores]
+        return round(sum(vals) / len(vals), 2) if vals else 0
+ 
+    return {
+        "strategy_A_zero_shot": {
+            "n_insights":    len(scores_a),
+            "avg_specificity":   avg(scores_a, "specificity"),
+            "avg_actionability": avg(scores_a, "actionability"),
+            "avg_completeness":  avg(scores_a, "completeness"),
+            "avg_total":         avg(scores_a, "total"),
+        },
+        "strategy_B_few_shot": {
+            "n_insights":    len(scores_b),
+            "avg_specificity":   avg(scores_b, "specificity"),
+            "avg_actionability": avg(scores_b, "actionability"),
+            "avg_completeness":  avg(scores_b, "completeness"),
+            "avg_total":         avg(scores_b, "total"),
+        },
+    }
+ 
+# Main
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input",  default="output/metrics.json")
-    parser.add_argument("--output", default="output/insights.json")
-    parser.add_argument("--model",  default=config["model"])
+    parser = argparse.ArgumentParser(description="Insights — LLM Insight Engine")
+    parser.add_argument("--input",    required=True, help="Caminho para metrics.json")
+    parser.add_argument("--output",   required=True, help="Caminho para insights.json")
+    parser.add_argument("--strategy", default="both",
+                        choices=["A", "B", "both"],
+                        help="Estratégia de prompting: A (zero-shot), B (few-shot), both")
     args = parser.parse_args()
-
-    config["model"] = args.model
-
-    print(f"[1/3] A carregar métricas de '{args.input}'")
+ 
+    print(f"[1/4] A carregar {args.input}")
     with open(args.input, encoding="utf-8") as f:
         metrics = json.load(f)
-
-    metrics_summary = summarise_metrics(metrics)
-    print(f"      Resumo: {len(metrics_summary)} caracteres para o LLM.")
-
-    results = {}
-
-    for name, build_prompt in [("zero_shot", build_zero_shot_prompt),
-                                ("few_shot",  build_few_shot_prompt)]:
-        print(f"\n[2/3] A invocar LLM — estratégia '{name}'")
-        prompt  = build_prompt(metrics_summary)
-        t0      = time.time()
-        raw     = call_ollama(prompt)
-        elapsed = round(time.time() - t0, 1)
-        print(f"      Resposta em {elapsed}s ({len(raw)} caracteres)")
-
-        parsed   = parse_json_response(raw)
-        insights = parsed.get("insights", [])
-        scores   = score_insights(insights)
-
-        print(f"      Insights gerados : {scores['n_insights']}")
-        print(f"      Score total      : {scores['total_score']}  "
-              f"(especif. {scores['specificity']}, "
-              f"complet. {scores['completeness']}, "
-              f"cobertura {scores['category_coverage']})")
-
-        results[name] = {
-            "prompt_chars":    len(prompt),
-            "response_time_s": elapsed,
-            "parsed_output":   parsed,
-            "quality_scores":  scores,
-        }
-
-    zs = results["zero_shot"]["quality_scores"]["total_score"]
-    fs = results["few_shot"]["quality_scores"]["total_score"]
-    winner = "few_shot" if fs >= zs else "zero_shot"
-
-    comparison = {
-        "winner":          winner,
-        "zero_shot_score": zs,
-        "few_shot_score":  fs,
-        "delta":           round(fs - zs, 2),
-        "improvement_pct": round(100 * (fs - zs) / max(zs, 0.01), 1),
-    }
-
-    print(f"\n[3/3] Comparação:")
-    print(f"      Zero-shot : {zs}")
-    print(f"      Few-shot  : {fs}")
-    print(f"      Vencedor  : {winner}  (Δ {comparison['delta']})")
-
+ 
+    print("[2/4] A preparar sumário de métricas para o prompt")
+    metrics_text = prepare_metrics_summary(metrics)
+ 
+    result_a, result_b = None, None
+ 
+    if args.strategy in ("A", "both"):
+        print(f"\n[3/4] A executar Estratégia A (zero-shot) com {MODEL}")
+        t0 = time.time()
+        raw_a = call_ollama(prompt_zero_shot(metrics_text), SYSTEM_PROMPT)
+        elapsed_a = round(time.time() - t0, 1)
+        result_a  = extract_json(raw_a)
+        n_a = len(result_a.get("insights", []))
+        print(f"      {n_a} insights gerados em {elapsed_a}s")
+ 
+    if args.strategy in ("B", "both"):
+        print(f"\n[3/4] A executar Estratégia B (few-shot) com {MODEL}")
+        t0 = time.time()
+        raw_b = call_ollama(prompt_few_shot(metrics_text), SYSTEM_PROMPT)
+        elapsed_b = round(time.time() - t0, 1)
+        result_b  = extract_json(raw_b)
+        n_b = len(result_b.get("insights", []))
+        print(f"      {n_b} insights gerados em {elapsed_b}s")
+ 
+    # Selecionar o melhor resultado para o output principal
+    # (few-shot quando disponível, caso contrário zero-shot)
+    primary = result_b if result_b else result_a
+ 
+    # Comparação quantitativa
+    comparison = {}
+    if result_a and result_b:
+        print("\n[4/4] A comparar estratégias")
+        comparison = compare_strategies(result_a, result_b)
+        print("\nComparação A vs B")
+        for strategy, scores in comparison.items():
+            print(f"\n  {strategy}:")
+            for k, v in scores.items():
+                print(f"    {k:<25} {v}")
+ 
+    # Output final
     output = {
-        "generated_at":  datetime.now().isoformat(),
-        "model":         config["model"],
-        "strategies":    results,
-        "comparison":    comparison,
-        "best_insights": results[winner]["parsed_output"],
+        "meta": {
+            "model":    MODEL,
+            "strategy": args.strategy,
+            "input":    args.input,
+        },
+        "primary_insights": primary,
+        "strategy_A_zero_shot": result_a,
+        "strategy_B_few_shot":  result_b,
+        "comparison": comparison,
     }
-
+ 
+    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2, default=str)
-
-    print(f"\ninsights.json escrito em '{args.output}'")
-
+        json.dump(output, f, ensure_ascii=False, indent=2)
+ 
+    print(f"\n  insights.json escrito em {args.output}")
+ 
+    # Mostrar resumo executivo
+    if primary and primary.get("resumo_executivo"):
+        print("\nResumo executivo")
+        print(primary["resumo_executivo"])
+ 
+ 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "model": "llama3.1:8b",
+    "strategy": "both",
+    "input": "output/metrics.json"
+  },
+  "primary_insights": {
+    "insights": [
+      {
+        "id": "INS_001",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Z_S1 tem a maior taxa de paragem da loja",
+        "observacao": "Z_S1 registou 847 visitantes na semana com taxa de paragem de 0.82, a mais alta de todas as secções de produto",
+        "implicacao": "Os clientes passam tempo significativo nesta secção — é um ponto de decisão de compra crítico",
+        "recomendacao": "Colocar promoções e produtos de margem alta em destaque em Z_S1; considerar aumentar stock de frescos às sextas e sábados quando o tráfego é 40% acima da média",
+        "urgencia": "esta_semana",
+        "confianca": 0.9
+      },
+      {
+        "id": "INS_002",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Queda anómala em Z_N4 no domingo às 16h",
+        "observacao": "Z_N4 teve 0 visitantes às 16h do dia 7 (domingo), contra uma média de 23 nos mesmos dias/horas anteriores (z=-3.2)",
+        "implicacao": "Possível obstrução física, problema de sinalização ou encerramento temporário do corredor",
+        "recomendacao": "Verificar registos de incidentes do domingo às 16h; inspecionar sinalização de Z_N4; se recorrente, instalar câmara de supervisão neste corredor",
+        "urgencia": "imediata",
+        "confianca": 0.8
+      },
+      {
+        "id": "INS_003",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Z_E1 e Z_E2 são as zonas mais visitadas da loja",
+        "observacao": "Z_E1 registou 5429 visitantes, enquanto Z_E2 teve 5283 visitantes na semana",
+        "implicacao": "Essas zonas são pontos de entrada importantes para os clientes",
+        "recomendacao": "Aumentar a oferta de produtos e promoções em Z_E1 e Z_E2; considerar melhorar a sinalização dessas áreas",
+        "urgencia": "esta_semana",
+        "confianca": 0.7
+      },
+      {
+        "id": "INS_004",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "A faixa etária adulta tem o maior dwell médio na loja",
+        "observacao": "Os adultos tiveram um dwell médio de 69.94 minutos, enquanto os jovens adultos tiveram 65.06 minutos",
+        "implicacao": "Esses clientes passam mais tempo na loja, sugerindo que estão procurando por produtos específicos",
+        "recomendacao": "Aumentar a oferta de produtos para adultos; considerar melhorar a experiência do cliente em Z_S1 e Z_C2",
+        "urgencia": "esta_semana",
+        "confianca": 0.6
+      },
+      {
+        "id": "INS_005",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "O funil de cliente está abaixo do esperado",
+        "observacao": "Apenas 18.3% dos visitantes completaram a compra, enquanto 21.2% chegaram aos corredores e 17.9% às secções",
+        "implicacao": "Há um problema no processo de compra da loja",
+        "recomendacao": "Melhorar a experiência do cliente em Z_C1 e Z_C2; considerar aumentar a oferta de produtos em Z_S1",
+        "urgencia": "esta_semana",
+        "confianca": 0.5
+      },
+      {
+        "id": "INS_006",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "A zona de caixas registadoras tem uma taxa de paragem alta",
+        "observacao": "Z_C1 e Z_C2 têm taxas de paragem de 0.978 e 0.969, respectivamente",
+        "implicacao": "Os clientes estão passando tempo significativo nessas zonas",
+        "recomendacao": "Aumentar a oferta de produtos em Z_C1 e Z_C2; considerar melhorar a experiência do cliente nessa área",
+        "urgencia": "esta_semana",
+        "confianca": 0.4
+      }
+    ],
+    "resumo_executivo": [
+      "Z_S1 tem a maior taxa de paragem da loja, com 847 visitantes e uma taxa de paragem de 0.82.",
+      "A zona de caixas registadoras tem uma taxa de paragem alta, com Z_C1 e Z_C2 tendo taxas de paragem de 0.978 e 0.969, respectivamente.",
+      "O funil de cliente está abaixo do esperado, com apenas 18.3% dos visitantes completando a compra."
+    ]
+  },
+  "strategy_A_zero_shot": {
+    "insights": [
+      {
+        "id": "INS_001",
+        "categoria": "trafego|anomalia",
+        "titulo": "Anomalias no dia 7",
+        "observacao": "Foram detectadas 42 anomalias no dia 7, com z > 2. As zonas mais afetadas foram Z_S3 (4 visitantes), Z_N10 (16 visitantes) e Z_C2 (11 visitantes).",
+        "implicacao": "Essas anomalias podem indicar problemas de fluxo ou interesse em produtos específicos.",
+        "recomendacao": "Verificar as zonas afetadas e ajustar a estratégia de merchandising e marketing para melhor atender às necessidades dos clientes.",
+        "urgencia": "imediata",
+        "confianca": 0.8
+      },
+      {
+        "id": "INS_002",
+        "categoria": "trafego|zona",
+        "titulo": "Zonas mais visitadas",
+        "observacao": "As zonas mais visitadas foram Z_E1 (5429 visitantes) e Z_E2 (5283 visitantes), com taxas de paragem de 0,945 e 0,95, respectivamente.",
+        "implicacao": "Essas zonas são pontos de interesse para os clientes e podem ser utilizados para promover produtos ou serviços específicos.",
+        "recomendacao": "Ajustar a estratégia de merchandising e marketing para maximizar o impacto dessas zonas.",
+        "urgencia": "esta_semana",
+        "confianca": 0.9
+      },
+      {
+        "id": "INS_003",
+        "categoria": "funil|demografico",
+        "titulo": "Taxa de conversão",
+        "observacao": "A taxa de conversão foi de 18,3% (1964 visitantes que completaram a compra). A faixa etária mais representativa foi os adultos (3054 visitantes).",
+        "implicacao": "Esses dados podem indicar que a loja está atendendo às necessidades dos clientes adultos.",
+        "recomendacao": "Ajustar a estratégia de merchandising e marketing para melhor atender às necessidades dos clientes adultos.",
+        "urgencia": "esta_semana",
+        "confianca": 0.7
+      },
+      {
+        "id": "INS_004",
+        "categoria": "trafego|sequência",
+        "titulo": "Sequências de visitas",
+        "observacao": "As sequências mais frequentes foram Z_C2 → Z_C1 (5367 vezes) e Z_C1 → Z_C2 (4936 vezes).",
+        "implicacao": "Essas sequências podem indicar que os clientes estão procurando produtos específicos ou seguindo um fluxo de compras.",
+        "recomendacao": "Ajustar a estratégia de merchandising e marketing para melhor atender às necessidades dos clientes em cada sequência.",
+        "urgencia": "esta_semana",
+        "confianca": 0.6
+      },
+      {
+        "id": "INS_005",
+        "categoria": "trafego|hora",
+        "titulo": "Hora de pico",
+        "observacao": "A hora de pico foi às 17h, com 1236 visitantes.",
+        "implicacao": "Essa informação pode ser utilizada para ajustar a estratégia de merchandising e marketing para maximizar o impacto durante essa hora.",
+        "recomendacao": "Ajustar a estratégia de merchandising e marketing para maximizar o impacto durante a hora de pico.",
+        "urgencia": "esta_semana",
+        "confianca": 0.5
+      },
+      {
+        "id": "INS_006",
+        "categoria": "demografico|dwell",
+        "titulo": "Dwell médio por idade",
+        "observacao": "O dwell médio foi de 69,94 segundos para os adultos e 46,68 segundos para as crianças.",
+        "implicaco": "Esses dados podem indicar que a loja está atendendo às necessidades dos clientes de diferentes idades.",
+        "recomendacao": "Ajustar a estratégia de merchandising e marketing para melhor atender às necessidades dos clientes de diferentes idades.",
+        "urgencia": "esta_semana",
+        "confianca": 0.4
+      }
+    ],
+    "resumo_executivo": [
+      "Foram detectadas 42 anomalias no dia 7, com z > 2.",
+      "As zonas mais visitadas foram Z_E1 e Z_E2.",
+      "A taxa de conversão foi de 18,3% (1964 visitantes que completaram a compra)."
+    ]
+  },
+  "strategy_B_few_shot": {
+    "insights": [
+      {
+        "id": "INS_001",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Z_S1 tem a maior taxa de paragem da loja",
+        "observacao": "Z_S1 registou 847 visitantes na semana com taxa de paragem de 0.82, a mais alta de todas as secções de produto",
+        "implicacao": "Os clientes passam tempo significativo nesta secção — é um ponto de decisão de compra crítico",
+        "recomendacao": "Colocar promoções e produtos de margem alta em destaque em Z_S1; considerar aumentar stock de frescos às sextas e sábados quando o tráfego é 40% acima da média",
+        "urgencia": "esta_semana",
+        "confianca": 0.9
+      },
+      {
+        "id": "INS_002",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Queda anómala em Z_N4 no domingo às 16h",
+        "observacao": "Z_N4 teve 0 visitantes às 16h do dia 7 (domingo), contra uma média de 23 nos mesmos dias/horas anteriores (z=-3.2)",
+        "implicacao": "Possível obstrução física, problema de sinalização ou encerramento temporário do corredor",
+        "recomendacao": "Verificar registos de incidentes do domingo às 16h; inspecionar sinalização de Z_N4; se recorrente, instalar câmara de supervisão neste corredor",
+        "urgencia": "imediata",
+        "confianca": 0.8
+      },
+      {
+        "id": "INS_003",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "Z_E1 e Z_E2 são as zonas mais visitadas da loja",
+        "observacao": "Z_E1 registou 5429 visitantes, enquanto Z_E2 teve 5283 visitantes na semana",
+        "implicacao": "Essas zonas são pontos de entrada importantes para os clientes",
+        "recomendacao": "Aumentar a oferta de produtos e promoções em Z_E1 e Z_E2; considerar melhorar a sinalização dessas áreas",
+        "urgencia": "esta_semana",
+        "confianca": 0.7
+      },
+      {
+        "id": "INS_004",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "A faixa etária adulta tem o maior dwell médio na loja",
+        "observacao": "Os adultos tiveram um dwell médio de 69.94 minutos, enquanto os jovens adultos tiveram 65.06 minutos",
+        "implicacao": "Esses clientes passam mais tempo na loja, sugerindo que estão procurando por produtos específicos",
+        "recomendacao": "Aumentar a oferta de produtos para adultos; considerar melhorar a experiência do cliente em Z_S1 e Z_C2",
+        "urgencia": "esta_semana",
+        "confianca": 0.6
+      },
+      {
+        "id": "INS_005",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "O funil de cliente está abaixo do esperado",
+        "observacao": "Apenas 18.3% dos visitantes completaram a compra, enquanto 21.2% chegaram aos corredores e 17.9% às secções",
+        "implicacao": "Há um problema no processo de compra da loja",
+        "recomendacao": "Melhorar a experiência do cliente em Z_C1 e Z_C2; considerar aumentar a oferta de produtos em Z_S1",
+        "urgencia": "esta_semana",
+        "confianca": 0.5
+      },
+      {
+        "id": "INS_006",
+        "categoria": "trafego|zona|funil|anomalia|demografico",
+        "titulo": "A zona de caixas registadoras tem uma taxa de paragem alta",
+        "observacao": "Z_C1 e Z_C2 têm taxas de paragem de 0.978 e 0.969, respectivamente",
+        "implicacao": "Os clientes estão passando tempo significativo nessas zonas",
+        "recomendacao": "Aumentar a oferta de produtos em Z_C1 e Z_C2; considerar melhorar a experiência do cliente nessa área",
+        "urgencia": "esta_semana",
+        "confianca": 0.4
+      }
+    ],
+    "resumo_executivo": [
+      "Z_S1 tem a maior taxa de paragem da loja, com 847 visitantes e uma taxa de paragem de 0.82.",
+      "A zona de caixas registadoras tem uma taxa de paragem alta, com Z_C1 e Z_C2 tendo taxas de paragem de 0.978 e 0.969, respectivamente.",
+      "O funil de cliente está abaixo do esperado, com apenas 18.3% dos visitantes completando a compra."
+    ]
+  },
+  "comparison": {
+    "strategy_A_zero_shot": {
+      "n_insights": 6,
+      "avg_specificity": 0.73,
+      "avg_actionability": 1.0,
+      "avg_completeness": 0.97,
+      "avg_total": 0.9
+    },
+    "strategy_B_few_shot": {
+      "n_insights": 6,
+      "avg_specificity": 0.97,
+      "avg_actionability": 1.0,
+      "avg_completeness": 1.0,
+      "avg_total": 0.99
+    }
+  }
+}
