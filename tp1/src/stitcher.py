@@ -1,3 +1,6 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
 import argparse
 import json
 import sys
@@ -463,9 +466,8 @@ def main():
  
     # Métricas de qualidade
     metrics = compute_quality_metrics(journeys, total_events, stitcher._unmatched_events)
-    print("\n Métricas de qualidade ")
     percent_keys = {"coverage", "consistency", "completeness"}
-    print("\n── Métricas de qualidade ──────────────────────────")
+    print("\n Métricas de qualidade ")
     for k, v in metrics.items():
         if k in percent_keys and v is not None:
             print(f"  {k:<30} {v * 100:.1f}%")
