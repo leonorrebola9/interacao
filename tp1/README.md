@@ -101,8 +101,8 @@ python evaluate.py --data events_validation.csv --output evaluation_report.json 
 ---
 
 ## Outputs
-Ao longo do trabalho, são gerados outputs que são guardados na pasta `outputs/`, onde cada um deles representa o seguinte:
-1. **journeys.csv'**: reconstrói as trajetórias, onde faz uma linha por visita a uma zona
+Ao longo do trabalho, são gerados outputs que são guardados na pasta `output/`, onde cada um deles representa o seguinte:
+1. **journeys.csv**: reconstrói as trajetórias, onde faz uma linha por visita a uma zona
 2. **metrics.json**: métricas calculadas em Python (tráfego, zonas, funil, anomalias)
 3. **insights.json**: insights gerados pelo LLM (estratégias A e B com comparação)
 4. **weekly_report.md**: briefing semanal para o gestor de loja
