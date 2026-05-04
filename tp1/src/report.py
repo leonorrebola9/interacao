@@ -74,7 +74,7 @@ def prepare_metrics_context(metrics: dict) -> str:
     )
  
     fn = f
-    return f"""=== NÚMEROS REAIS DA SEMANA — usa APENAS estes valores, nunca inventes outros ===
+    return f""" NÚMEROS REAIS DA SEMANA — usa APENAS estes valores, nunca inventes outros 
  
 TRÁFEGO:
   Total de visitantes na semana: {t.get('total_visitors_week')}
@@ -97,7 +97,7 @@ FUNIL:
  
 ANOMALIAS (top 3):
 {anom_str}
-=== FIM DOS NÚMEROS REAIS ==="""
+ FIM DOS NÚMEROS REAIS """
  
  
 SYSTEM_REPORT = """És um consultor especialista em retalho. Escreves briefings semanais

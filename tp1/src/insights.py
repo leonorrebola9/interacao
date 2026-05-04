@@ -141,7 +141,7 @@ def prepare_metrics_summary(metrics: dict) -> str:
         for a in an["anomalies"][:5]
     )
  
-    return f"""=== MÉTRICAS DA SEMANA ({metrics['meta']['week_start']} a {metrics['meta']['week_end']}) ===
+    return f""" MÉTRICAS DA SEMANA ({metrics['meta']['week_start']} a {metrics['meta']['week_end']})
  
 TRÁFEGO:
   Total visitantes semana: {t['total_visitors_week']}
@@ -194,7 +194,7 @@ Regras:
  
 # Estratégia B — Few-shot
 FEW_SHOT_EXAMPLES = """
-=== EXEMPLOS DE INSIGHTS ===
+ EXEMPLOS DE INSIGHTS 
  
 MAU INSIGHT (genérico, vago — NÃO fazer assim):
 {
@@ -226,7 +226,7 @@ BOM INSIGHT (anomalia específica — fazer assim):
   "implicacao": "Possível obstrução física, problema de sinalização ou encerramento temporário do corredor",
   "recomendacao": "Verificar registos de incidentes do domingo às 16h; inspecionar sinalização de Z_N4; se recorrente, instalar câmara de supervisão neste corredor"
 }
-=== FIM DOS EXEMPLOS ===
+ FIM DOS EXEMPLOS
 """
  
  
