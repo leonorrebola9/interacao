@@ -15,9 +15,9 @@ import pandas as pd
 ZONES_FILE = Path(__file__).parent.parent / "data" / "zones.json"
  
 # Limites temporais (segundos)
-MAX_GAP_S = 300          # Gap máximo entre zonas consecutivas (5 min)
+MAX_GAP_S = 600          # Gap máximo entre zonas consecutivas (5 min)
 MIN_GAP_S = 3            # Gap mínimo plausível entre zonas (evita teleporte)
-MAX_IDLE_S = 600         # Trajetória aberta sem eventos → fechar (10 min)
+MAX_IDLE_S = 1800        # Trajetória aberta sem eventos → fechar (10 min)
 MAX_VISIT_DURATION_S = 5400  # Duração máxima de uma visita (90 min)
 
 ATTR_MISMATCH_THRESHOLD = 2  # Tolerância a erros de classificação demográfica (8-12%)
@@ -265,16 +265,18 @@ class Stitcher:
         })
         self.open_trajs_by_zone[zone_id].append(best_traj)
 
-    # Processa um evento exit, atualizando a última visita da trajetória correspondente na mesma zona.
+# Processa um evento exit, atualizando a última visita da trajetória correspondente na mesma zona.
     def process_exit(self, row: pd.Series):
-        ts      = row["timestamp"]
-        zone_id = row["zone_id"]
-        gender  = row["gender"]
+        ts        = row["timestamp"]
+        zone_id   = row["zone_id"]
+        gender    = row["gender"]
+        age_range = row["age_range"] # Adicionado para melhor matching
+        event_id  = row["event_id"]  # Adicionado para guardar o evento
 
         candidates = self.open_trajs_by_zone.get(zone_id, [])
         best, best_score = None, (float("inf"), float("inf"))
 
-        # Procurar trajetória aberta na mesma zona, com atributo compatível
+        # 1. TENTATIVA NORMAL: Procurar trajetória aberta na MESMA ZONA
         for traj in candidates:
             # Se ainda não tem saída registada
             if traj.last_exit_ts is not None:
@@ -288,11 +290,52 @@ class Stitcher:
                 best_score = score
                 best       = traj
  
+        # 2. SALVAGUARDA (Inferred Entry): Câmaras falharam a entrada!
         if best is None:
-            self._unmatched_exit += 1
-            return
+            best_inferred = None
+            best_inferred_score = float("-inf")
+            
+            # Procurar em TODAS as pessoas ativas na loja, independentemente da zona
+            for traj in self._all_open():
+                # Ignorar se já estiver avaliado (na mesma zona mas com saída registada, etc)
+                if traj.last_zone == zone_id and traj.last_exit_ts is None:
+                    continue
+                
+                gap = (ts - traj.current_ts()).total_seconds()
+                walk = min_walk_time(self.graph, traj.last_zone, zone_id)
+                
+                # Regras de plausibilidade:
+                # O gap temporal tem de dar tempo para chegar lá (com 50% de margem) e não ser gigante
+                if gap > (walk * 0.5) and gap < MAX_GAP_S:
+                    # Avaliar compatibilidade de idade e género
+                    attr_score = traj.attr_score(gender, age_range)
+                    if attr_score >= 0.5: # Tem de ter pelo menos 1 atributo igual
+                        # Preferir quem estava demograficamente mais próximo
+                        if attr_score > best_inferred_score:
+                            best_inferred_score = attr_score
+                            best_inferred = traj
+            
+            if best_inferred is not None:
+                # Encontrámos um bom candidato noutra zona.
+                # Vamos forçar a entrada ("inferir" que ele entrou instantes antes de sair)
+                self.open_trajs_by_zone[best_inferred.last_zone].remove(best_inferred)
+                best_inferred.last_zone = zone_id
+                best_inferred.last_entry_ts = ts - pd.Timedelta(seconds=1) # Finge que entrou 1s antes
+                best_inferred.visits.append({
+                    "zone_id": zone_id,
+                    "entry_time": best_inferred.last_entry_ts,
+                    "exit_time": None,
+                    "dwell_s": 0,
+                    "event_ids": [] # A lista começa vazia porque falhámos o event_id do entry
+                })
+                self.open_trajs_by_zone[zone_id].append(best_inferred)
+                best = best_inferred
+            else:
+                # Se não encontrarmos mesmo ninguém compatível, aí sim, contamos como órfão
+                self._unmatched_exit += 1
+                return
  
-        # Atualiza a última visita com exit_time e calcula tempo de permanência (dwell_s)
+        # 3. Atualiza a última visita com exit_time e calcula tempo de permanência (dwell_s)
         best.last_exit_ts = ts
         if best.visits:
             last_visit = best.visits[-1]
@@ -300,45 +343,85 @@ class Stitcher:
                 last_visit["exit_time"] = ts
                 entry = last_visit["entry_time"]
                 last_visit["dwell_s"] = int((ts - entry).total_seconds())
+                last_visit["event_ids"].append(event_id) # Guardamos o exit
  
-        # Fechar trajetória se a saída for por porta ou caixa
+        # 4. Fechar trajetória se a saída for por porta ou caixa
         if zone_id in ("Z_E1", "Z_E2", "Z_CK"):
             self.open_trajs_by_zone[zone_id].remove(best)
             best.closed = True
             self.closed_trajs.append(best)
 
-    # Processa um evento do tipo linger (pessoa parada numa zona)
+# Processa um evento do tipo linger (pessoa parada numa zona)
     def process_linger(self, row: pd.Series):
         ts        = row["timestamp"]
         zone_id   = row["zone_id"]
         duration  = row["duration_s"]
         gender    = row["gender"]
+        age_range = row["age_range"] # Adicionado para melhor matching
+        event_id  = row["event_id"]
 
+        candidates = self.open_trajs_by_zone.get(zone_id, [])
         best, best_score = None, (float("inf"), float("inf"))
 
-        for traj in self.open_trajs_by_zone.get(zone_id, []):
-            # Se ainda não saiu
+        # 1. TENTATIVA NORMAL: Procurar na mesma zona
+        for traj in candidates:
             if traj.last_exit_ts is not None:
                 continue
             gap          = abs((ts - traj.last_entry_ts).total_seconds())
-            # Desempate por género
             gender_bonus = 0 if traj.gender == gender else 1
             score        = (gap, gender_bonus)
             if score < best_score:
                 best_score = score
                 best       = traj
 
-        # linger sem trajetória associada — ignorar silenciosamente
+        # 2. SALVAGUARDA (Inferred Entry): O sensor falhou a entrada, mas a pessoa está aqui parada!
         if best is None:
-            self._unmatched_linger += 1
-            return
+            best_inferred = None
+            best_inferred_score = float("-inf")
+            
+            for traj in self._all_open():
+                if traj.last_zone == zone_id and traj.last_exit_ts is None:
+                    continue
+                    
+                gap = (ts - traj.current_ts()).total_seconds()
+                walk = min_walk_time(self.graph, traj.last_zone, zone_id)
+                
+                # Regras de plausibilidade
+                if gap > (walk * 0.5) and gap < MAX_GAP_S:
+                    attr_score = traj.attr_score(gender, age_range)
+                    if attr_score >= 0.5:
+                        if attr_score > best_inferred_score:
+                            best_inferred_score = attr_score
+                            best_inferred = traj
+                            
+            if best_inferred is not None:
+                # Pescamos o candidato e forçamos a entrada
+                self.open_trajs_by_zone[best_inferred.last_zone].remove(best_inferred)
+                best_inferred.last_zone = zone_id
+                best_inferred.last_entry_ts = ts - pd.Timedelta(seconds=1) # Entrou instantes antes
+                best_inferred.visits.append({
+                    "zone_id": zone_id,
+                    "entry_time": best_inferred.last_entry_ts,
+                    "exit_time": None,
+                    "dwell_s": 0,
+                    "event_ids": [] 
+                })
+                self.open_trajs_by_zone[zone_id].append(best_inferred)
+                best = best_inferred
+            else:
+                # Ninguém compatível, é um fantasma
+                self._unmatched_linger += 1
+                return
 
+        # 3. ATUALIZAR TEMPO DE PERMANÊNCIA (dwell_s)
         if best.visits:
             last = best.visits[-1]
             if last["zone_id"] == zone_id:
+                # Atualiza a duração
                 last["dwell_s"] = max(last["dwell_s"], duration)
-                if row["event_id"] not in last["event_ids"]:
-                    last["event_ids"].append(row["event_id"])
+                # Guarda o event_id deste linger
+                if event_id not in last["event_ids"]:
+                    last["event_ids"].append(event_id)
  
     # Fecha todas as trajetórias ainda abertas no final do dataset
     def flush(self):

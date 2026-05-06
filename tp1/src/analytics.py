@@ -16,9 +16,6 @@ ENTRANCE_ZONES  = {"Z_E1", "Z_E2"}
 SECTION_ZONES   = {f"Z_S{i}" for i in range(1, 8)}
 NAV_ZONES       = {f"Z_N{i}" for i in range(1, 11)}
 ALL_ZONES       = ENTRANCE_ZONES | CHECKOUT_ZONES | NAV_ZONES | SECTION_ZONES | {"Z_CK"}
-
-# Mínimo de zonas visitadas para uma trajetória ser considerada completa no funil
-FUNNEL_MIN_ZONES = 2
  
 DAY_NAMES = {
     0: "segunda", 1: "terça", 2: "quarta", 3: "quinta",
@@ -67,8 +64,8 @@ def load_journeys(path: str) -> pd.DataFrame:
     return df
 
 
-def filter_complete_trajs(df: pd.DataFrame, min_zones: int = FUNNEL_MIN_ZONES) -> pd.DataFrame:
-    # Filtra trajetórias com pelo menos min_zones zonas visitadas
+def filter_complete_trajs(df: pd.DataFrame) -> pd.DataFrame:
+    # Filtra trajetórias que começam numa zona de entrada (Z_E) — mais fiáveis
     # Elimina trajetórias incompletas causadas por falhas de deteção no entry
     first_zone = df.sort_values("entry_time").groupby("person_id")["zone_id"].first()
     complete_ids = first_zone[first_zone.isin(ENTRANCE_ZONES)].index
@@ -188,7 +185,7 @@ def compute_zone_metrics(df: pd.DataFrame) -> dict:
     zones_list = zone_df.to_dict(orient="records")
  
     # Top-10 sequências de zonas mais frequentes — vetorizado com shift
-    df_sorted = df.sort_values(["person_id", "entry_time"])
+    df_sorted = df.sort_values(["person_id", "entry_time"]).copy()
     df_sorted["next_zone"] = df_sorted.groupby("person_id")["zone_id"].shift(-1)
     seq_df = df_sorted.dropna(subset=["next_zone"])
     seq_counts = (seq_df["zone_id"] + " → " + seq_df["next_zone"]).value_counts()
@@ -202,24 +199,47 @@ def compute_zone_metrics(df: pd.DataFrame) -> dict:
         "top_sequences": top_sequences,
     }
   
-# 3. Funil de cliente
+# 3. Funil de cliente — sequencial estrito
 def compute_funnel(df: pd.DataFrame) -> dict:
     # Total real de visitantes (todas as trajetórias)
     total_all = int(df["person_id"].nunique())
 
-    # Funil calculado sobre trajetórias completas (≥ FUNNEL_MIN_ZONES zonas)
+    # Funil calculado sobre trajetórias que começam em Z_E (mais fiáveis)
     # Elimina distorção causada por trajetórias incompletas
     df_complete = filter_complete_trajs(df)
     total = int(df_complete["person_id"].nunique())
     discarded = total_all - total
 
-    # Visitantes que chegaram a cada tipo de zona
-    reached_nav      = int(df_complete[df_complete["zone_id"].isin(NAV_ZONES)]["person_id"].nunique())
-    reached_sections = int(df_complete[df_complete["zone_id"].isin(SECTION_ZONES)]["person_id"].nunique())
-    reached_checkout = int(df_complete[df_complete["zone_id"].isin(CHECKOUT_ZONES)]["person_id"].nunique())
-    reached_ck_exit  = int(df_complete[df_complete["zone_id"] == "Z_CK"]["person_id"].nunique())
- 
-    # Perfil de quem NÃO chegou à caixa (dentro das trajetórias completas)
+    # Funil sequencial estrito — a pessoa tem de passar pelas zonas em ordem
+    # antes de chegar à caixa
+    reached_nav = 0
+    reached_sections = 0
+    reached_checkout = 0
+    reached_ck_exit = 0
+
+    for pid, group in df_complete.groupby("person_id"):
+        zones = group.sort_values("entry_time")["zone_id"].tolist()
+
+        # Encontrar quando chegou à caixa (primeiro evento de checkout)
+        checkout_idx = next(
+            (i for i, z in enumerate(zones) if z in CHECKOUT_ZONES),
+            len(zones)  # se nunca chegou à caixa, usa o fim
+        )
+        zones_before_checkout = zones[:checkout_idx]
+
+        hit_nav      = any(z in NAV_ZONES      for z in zones_before_checkout)
+        hit_sections = any(z in SECTION_ZONES  for z in zones_before_checkout)
+        hit_checkout = any(z in CHECKOUT_ZONES for z in zones)
+        hit_ck_exit  = "Z_CK" in zones
+
+        if hit_nav:      reached_nav      += 1
+        if hit_sections: reached_sections += 1
+        if hit_checkout: reached_checkout += 1
+        if hit_ck_exit:  reached_ck_exit  += 1
+
+    def pct(n): return safe_round(n / total * 100, 1)
+
+    # Perfil de quem não chegou à caixa (dentro das trajetórias completas)
     no_checkout = df_complete[~df_complete["person_id"].isin(
         df_complete[df_complete["zone_id"].isin(CHECKOUT_ZONES)]["person_id"]
     )]
@@ -231,9 +251,7 @@ def compute_funnel(df: pd.DataFrame) -> dict:
             "age_dist":    nc_people["age_range"].value_counts().to_dict(),
             "total":       int(nc_people["person_id"].nunique()),
         }
- 
-    def pct(n): return safe_round(n / total * 100, 1)
- 
+
     return {
         "total_visitors": total,
         "reached_navigation": {"count": reached_nav,      "pct": pct(reached_nav)},
@@ -247,10 +265,10 @@ def compute_funnel(df: pd.DataFrame) -> dict:
             "trajectories_used":      total,
             "trajectories_discarded": discarded,
             "pct_discarded":          safe_round(discarded / total_all * 100, 1),
-            "min_zones_threshold":    FUNNEL_MIN_ZONES,
+            "funnel_type":            "sequencial_estrito",
             "warning": (
-                f"{discarded} trajetórias com menos de {FUNNEL_MIN_ZONES} zonas visitadas "
-                f"foram excluídas do funil ({safe_round(discarded / total_all * 100, 1)}% do total). "
+                f"{discarded} trajetórias que não começam em Z_E foram excluídas do funil "
+                f"({safe_round(discarded / total_all * 100, 1)}% do total). "
                 "Causa provável: falhas de deteção no sensor de entrada."
             ),
         },
