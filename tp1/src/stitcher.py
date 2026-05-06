@@ -113,7 +113,7 @@ class Stitcher:
         self._person_counter = 0
         self._unmatched_entry = 0
         self._unmatched_exit = 0
-        self._unmatched_linger = 0 # eventos não associados a nenhuma trajetória
+        self._unmatched_linger = 0
 
     # Helper para iterar sobre todas as trajetórias abertas
     def _all_open(self) -> list[OpenTrajectory]:
@@ -152,7 +152,7 @@ class Stitcher:
         if gap < walk * 0.6:  # margem de 40% para correr/sensor lag
             return float("-inf")
  
-        # Filtro 4: demasiadas erros demográficos - associação de eventos de pessoas diferentes
+        # Filtro 4: demasiados erros demográficos - associação de eventos de pessoas diferentes
         if traj.attr_mismatches >= ATTR_MISMATCH_THRESHOLD:
             attr_s = traj.attr_score(gender, age_range)
             if attr_s < 0.5:  # ambos os atributos divergem
@@ -303,12 +303,9 @@ class Stitcher:
  
         # Fechar trajetória se a saída for por porta ou caixa
         if zone_id in ("Z_E1", "Z_E2", "Z_CK"):
-            already_shopped = any(v["zone_id"] not in {"Z_E1", "Z_E2"} for v in best.visits)
-            is_quick_exit   = (ts - best.start_ts).total_seconds() < 60
-            if already_shopped or is_quick_exit:
-                self.open_trajs_by_zone[zone_id].remove(best)
-                best.closed = True
-                self.closed_trajs.append(best)
+            self.open_trajs_by_zone[zone_id].remove(best)
+            best.closed = True
+            self.closed_trajs.append(best)
 
     # Processa um evento do tipo linger (pessoa parada numa zona)
     def process_linger(self, row: pd.Series):
@@ -369,8 +366,8 @@ def build_journeys_df(trajs: list[OpenTrajectory]) -> pd.DataFrame:
                 "dwell_s":     visit["dwell_s"],
                 "gender":      traj.gender,
                 "age_range":   traj.age_range,
-                "visit_date":  entry_ts.date() if entry_ts else None, # para facilitar análises futuras
-                "hour_of_day": entry_ts.hour if entry_ts else None, # para facilitar análises futuras
+                "visit_date":  entry_ts.date() if entry_ts else None,
+                "hour_of_day": entry_ts.hour if entry_ts else None,
             })
     return pd.DataFrame(rows)
  
@@ -379,7 +376,6 @@ def compute_quality_metrics(df: pd.DataFrame, total_events: int, unmatched: int)
     n_trajs = df["person_id"].nunique()
  
     # Cobertura: eventos atribuídos / total de eventos no csv
-    # Usa o contador real de eventos não associados para evitar sobrestimação
     coverage = 1.0 - (unmatched / total_events) if total_events > 0 else 0.0
  
     # Consistência: sem sobreposição temporal
@@ -471,7 +467,8 @@ def main():
     print(f"      {len(journeys):,} linhas escritas.")
  
     # Métricas de qualidade
-    metrics = compute_quality_metrics(journeys, total_events, stitcher._unmatched_exit + stitcher._unmatched_linger)
+    total_unmatched = stitcher._unmatched_exit + stitcher._unmatched_linger
+    metrics = compute_quality_metrics(journeys, total_events, total_unmatched)
     percent_keys = {"coverage", "consistency", "completeness"}
     print("\n Métricas de qualidade ")
     for k, v in metrics.items():
@@ -481,7 +478,6 @@ def main():
             print(f"  {k:<30} {v}")
 
     # Distribuição de eventos não associados
-    total_unmatched = stitcher._unmatched_exit + stitcher._unmatched_linger
     print("\n Eventos não associados ")
     print(f"  {'exit':<30} {stitcher._unmatched_exit:,}")
     print(f"  {'linger':<30} {stitcher._unmatched_linger:,}")

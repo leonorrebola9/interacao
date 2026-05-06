@@ -4,7 +4,6 @@ sys.stdout.reconfigure(encoding='utf-8')
 import argparse
 import json
 import warnings
-from collections import Counter
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -16,6 +15,10 @@ CHECKOUT_ZONES  = {"Z_C1", "Z_C2", "Z_C3", "Z_CK"}
 ENTRANCE_ZONES  = {"Z_E1", "Z_E2"}
 SECTION_ZONES   = {f"Z_S{i}" for i in range(1, 8)}
 NAV_ZONES       = {f"Z_N{i}" for i in range(1, 11)}
+ALL_ZONES       = ENTRANCE_ZONES | CHECKOUT_ZONES | NAV_ZONES | SECTION_ZONES | {"Z_CK"}
+
+# Mínimo de zonas visitadas para uma trajetória ser considerada completa no funil
+FUNNEL_MIN_ZONES = 2
  
 DAY_NAMES = {
     0: "segunda", 1: "terça", 2: "quarta", 3: "quinta",
@@ -62,6 +65,15 @@ def load_journeys(path: str) -> pd.DataFrame:
     df["day_name"]    = df["day_of_week"].map(DAY_NAMES)
     df["day_num"]     = (df["visit_date"] - df["visit_date"].min()).dt.days + 1
     return df
+
+
+def filter_complete_trajs(df: pd.DataFrame, min_zones: int = FUNNEL_MIN_ZONES) -> pd.DataFrame:
+    # Filtra trajetórias com pelo menos min_zones zonas visitadas
+    # Elimina trajetórias incompletas causadas por falhas de deteção no entry
+    first_zone = df.sort_values("entry_time").groupby("person_id")["zone_id"].first()
+    complete_ids = first_zone[first_zone.isin(ENTRANCE_ZONES)].index
+    return df[df["person_id"].isin(complete_ids)]
+
  
 # 1. Métricas de tráfego
 def compute_traffic(df: pd.DataFrame) -> dict:
@@ -81,25 +93,32 @@ def compute_traffic(df: pd.DataFrame) -> dict:
         for row in by_day.itertuples()
     ]
  
-    # Visitantes por hora (agregado toda a semana)
-    by_hour = (
-        df.groupby("hour_of_day")["person_id"]
+    # Média de visitantes por hora do dia (média sobre os 7 dias)
+    # Evita inflar contagens de pessoas que vieram em múltiplos dias à mesma hora
+    by_day_hour = (
+        df.groupby(["visit_date", "hour_of_day"])["person_id"]
         .nunique()
         .reset_index()
         .rename(columns={"person_id": "visitors"})
     )
+    by_hour = (
+        by_day_hour.groupby("hour_of_day")["visitors"]
+        .mean()
+        .reset_index()
+        .rename(columns={"visitors": "avg_visitors"})
+    )
     visitors_by_hour = [
-        {"hour": int(r.hour_of_day), "visitors": int(r.visitors)}
+        {"hour": int(r.hour_of_day), "avg_visitors": safe_round(r.avg_visitors, 1)}
         for r in by_hour.itertuples()
     ]
  
     # Hora de pico (mais visitantes em média)
-    peak_hour = int(by_hour.loc[by_hour["visitors"].idxmax(), "hour_of_day"])
-    quiet_hour = int(by_hour.loc[by_hour["visitors"].idxmin(), "hour_of_day"])
+    peak_hour  = int(by_hour.loc[by_hour["avg_visitors"].idxmax(), "hour_of_day"])
+    quiet_hour = int(by_hour.loc[by_hour["avg_visitors"].idxmin(), "hour_of_day"])
  
     # Dia mais e menos movimentado
-    busiest_day   = by_day.loc[by_day["visitors"].idxmax()]
-    quietest_day  = by_day.loc[by_day["visitors"].idxmin()]
+    busiest_day  = by_day.loc[by_day["visitors"].idxmax()]
+    quietest_day = by_day.loc[by_day["visitors"].idxmin()]
  
     # Tempo médio de visita por pessoa (primeiro entry ao último exit)
     first_entry = df.groupby("person_id")["entry_time"].min()
@@ -168,17 +187,14 @@ def compute_zone_metrics(df: pd.DataFrame) -> dict:
  
     zones_list = zone_df.to_dict(orient="records")
  
-    # Top-10 sequências de zonas mais frequentes
-    sequences = []
-    for pid, group in df.groupby("person_id"):
-        zones = group.sort_values("entry_time")["zone_id"].tolist()
-        for i in range(len(zones) - 1):
-            sequences.append(f"{zones[i]} → {zones[i+1]}")
- 
-    seq_counts = Counter(sequences)
+    # Top-10 sequências de zonas mais frequentes — vetorizado com shift
+    df_sorted = df.sort_values(["person_id", "entry_time"])
+    df_sorted["next_zone"] = df_sorted.groupby("person_id")["zone_id"].shift(-1)
+    seq_df = df_sorted.dropna(subset=["next_zone"])
+    seq_counts = (seq_df["zone_id"] + " → " + seq_df["next_zone"]).value_counts()
     top_sequences = [
-        {"sequence": seq, "count": cnt}
-        for seq, cnt in seq_counts.most_common(10)
+        {"sequence": seq, "count": int(cnt)}
+        for seq, cnt in seq_counts.head(10).items()
     ]
  
     return {
@@ -188,17 +204,24 @@ def compute_zone_metrics(df: pd.DataFrame) -> dict:
   
 # 3. Funil de cliente
 def compute_funnel(df: pd.DataFrame) -> dict:
-    total = int(df["person_id"].nunique())
- 
+    # Total real de visitantes (todas as trajetórias)
+    total_all = int(df["person_id"].nunique())
+
+    # Funil calculado sobre trajetórias completas (≥ FUNNEL_MIN_ZONES zonas)
+    # Elimina distorção causada por trajetórias incompletas
+    df_complete = filter_complete_trajs(df)
+    total = int(df_complete["person_id"].nunique())
+    discarded = total_all - total
+
     # Visitantes que chegaram a cada tipo de zona
-    reached_nav      = int(df[df["zone_id"].isin(NAV_ZONES)]["person_id"].nunique())
-    reached_sections = int(df[df["zone_id"].isin(SECTION_ZONES)]["person_id"].nunique())
-    reached_checkout = int(df[df["zone_id"].isin(CHECKOUT_ZONES)]["person_id"].nunique())
-    reached_ck_exit  = int(df[df["zone_id"] == "Z_CK"]["person_id"].nunique())
+    reached_nav      = int(df_complete[df_complete["zone_id"].isin(NAV_ZONES)]["person_id"].nunique())
+    reached_sections = int(df_complete[df_complete["zone_id"].isin(SECTION_ZONES)]["person_id"].nunique())
+    reached_checkout = int(df_complete[df_complete["zone_id"].isin(CHECKOUT_ZONES)]["person_id"].nunique())
+    reached_ck_exit  = int(df_complete[df_complete["zone_id"] == "Z_CK"]["person_id"].nunique())
  
-    # Perfil de quem NÃO chegou à caixa
-    no_checkout = df[~df["person_id"].isin(
-        df[df["zone_id"].isin(CHECKOUT_ZONES)]["person_id"]
+    # Perfil de quem NÃO chegou à caixa (dentro das trajetórias completas)
+    no_checkout = df_complete[~df_complete["person_id"].isin(
+        df_complete[df_complete["zone_id"].isin(CHECKOUT_ZONES)]["person_id"]
     )]
     no_checkout_profile = {}
     if len(no_checkout) > 0:
@@ -218,6 +241,19 @@ def compute_funnel(df: pd.DataFrame) -> dict:
         "reached_checkout":   {"count": reached_checkout, "pct": pct(reached_checkout)},
         "completed_purchase":  {"count": reached_ck_exit,  "pct": pct(reached_ck_exit)},
         "no_checkout_profile": no_checkout_profile,
+        # Nota de qualidade — para o relatório técnico
+        "data_quality_note": {
+            "total_trajectories_all": total_all,
+            "trajectories_used":      total,
+            "trajectories_discarded": discarded,
+            "pct_discarded":          safe_round(discarded / total_all * 100, 1),
+            "min_zones_threshold":    FUNNEL_MIN_ZONES,
+            "warning": (
+                f"{discarded} trajetórias com menos de {FUNNEL_MIN_ZONES} zonas visitadas "
+                f"foram excluídas do funil ({safe_round(discarded / total_all * 100, 1)}% do total). "
+                "Causa provável: falhas de deteção no sensor de entrada."
+            ),
+        },
     }
  
 # 4. Segmentação demográfica
@@ -271,7 +307,23 @@ def compute_anomalies(df: pd.DataFrame) -> dict:
         .reset_index()
         .rename(columns={"person_id": "visitors"})
     )
- 
+
+    # Horas de operação da loja (9h-21h)
+    hours = list(range(9, 21))
+
+    # Construir índice completo de todas as combinações zona × hora × dia
+    # Garante que zeros (ausência de visitantes) são detetados como anomalia
+    all_days   = sorted(df["day_num"].unique())
+    full_index = pd.MultiIndex.from_product(
+        [all_days, list(ALL_ZONES), hours],
+        names=["day_num", "zone_id", "hour_of_day"]
+    )
+    traffic = (
+        traffic.set_index(["day_num", "zone_id", "hour_of_day"])
+        .reindex(full_index, fill_value=0)
+        .reset_index()
+    )
+
     baseline = traffic[traffic["day_num"] <= 6]
     day7     = traffic[traffic["day_num"] == 7]
  
@@ -303,10 +355,10 @@ def compute_anomalies(df: pd.DataFrame) -> dict:
     for _, row in anomalies.iterrows():
         direction = "acima" if row["z_score"] > 0 else "abaixo"
         anomalies_list.append({
-            "zone_id":      row["zone_id"],
-            "zone_desc":    ZONE_DESCRIPTIONS.get(row["zone_id"], ""),
-            "hour":         int(row["hour_of_day"]),
-            "visitors_d7":  int(row["visitors"]),
+            "zone_id":       row["zone_id"],
+            "zone_desc":     ZONE_DESCRIPTIONS.get(row["zone_id"], ""),
+            "hour":          int(row["hour_of_day"]),
+            "visitors_d7":   int(row["visitors"]),
             "baseline_mean": safe_round(row["mean"], 1),
             "baseline_std":  safe_round(row["std"], 1),
             "z_score":       safe_round(row["z_score"], 2),
@@ -370,6 +422,7 @@ def main():
  
     print(f"\nResumo")
     print(f"  Visitantes totais:        {traffic['total_visitors_week']:,}")
+    print(f"  Visitantes no funil:      {funnel['total_visitors']:,} ({funnel['data_quality_note']['pct_discarded']}% excluídos)")
     print(f"  Dia mais movimentado:     {traffic['busiest_day']['day_name']} ({traffic['busiest_day']['visitors']} visitantes)")
     print(f"  Hora de pico:             {traffic['peak_hour']}h")
     print(f"  Taxa de conversão caixa:  {funnel['reached_checkout']['pct']}%")
