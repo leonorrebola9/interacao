@@ -107,10 +107,17 @@ class OpenTrajectory:
 class Stitcher:
     def __init__(self, zone_graph: dict):
         self.graph = zone_graph
-        self.open_trajs: list[OpenTrajectory] = []
+        # Substitui open_trajs por índice zona → trajetórias
+        self.open_trajs_by_zone: dict[str, list[OpenTrajectory]] = defaultdict(list)
         self.closed_trajs: list[OpenTrajectory] = []
         self._person_counter = 0
-        self._unmatched_events = 0  # eventos não associados a nenhuma trajetória
+        self._unmatched_entry = 0
+        self._unmatched_exit = 0
+        self._unmatched_linger = 0 # eventos não associados a nenhuma trajetória
+
+    # Helper para iterar sobre todas as trajetórias abertas
+    def _all_open(self) -> list[OpenTrajectory]:
+        return [t for trajs in self.open_trajs_by_zone.values() for t in trajs]
     
     # Gera um ID sintético para cada pessoa
     def _new_person_id(self) -> str:
@@ -161,29 +168,29 @@ class Stitcher:
  
         return W_GAP * gap_score + W_ATTR * attr_s + W_ADJ * adj_bonus
 
-# Mantém lista de trajetórias abertas pequena         
-# Fecha trajetórias abertas há mais de MAX_IDLE_S sem atividade.
+    # Mantém lista de trajetórias abertas pequena         
+    # Fecha trajetórias abertas há mais de MAX_IDLE_S sem atividade.
     def _expire_old_trajs(self, current_ts: pd.Timestamp):
-        still_open = []
-        for traj in self.open_trajs:
-            idle = (current_ts - traj.current_ts()).total_seconds()
-            total_duration = (current_ts - traj.start_ts).total_seconds()
-            # Se a trajetória não recebe eventos há mais de 10 minitos e dura mais de 90 minutos desde o começo, fechar
-            if idle > MAX_IDLE_S or total_duration > MAX_VISIT_DURATION_S:
-                traj.closed = True
-                self.closed_trajs.append(traj)
-            else:
-                still_open.append(traj)
-        self.open_trajs = still_open
+        new_index = defaultdict(list)
+        for zone, trajs in self.open_trajs_by_zone.items():
+            for traj in trajs:
+                idle = (current_ts - traj.current_ts()).total_seconds()
+                total = (current_ts - traj.start_ts).total_seconds()
+                # Se a trajetória não recebe eventos há mais de 10 minutos e dura mais de 90 minutos desde o começo, fechar
+                if idle > MAX_IDLE_S or total > MAX_VISIT_DURATION_S:
+                    traj.closed = True
+                    self.closed_trajs.append(traj)
+                else:
+                    new_index[zone].append(traj)
+        self.open_trajs_by_zone = new_index
  
     # Processa um evento entry e associa-o à melhor trajetória aberta
     def process_entry(self, row: pd.Series):
-
-        ts       = row["timestamp"]
-        zone_id  = row["zone_id"]
-        gender   = row["gender"]
+        ts        = row["timestamp"]
+        zone_id   = row["zone_id"]
+        gender    = row["gender"]
         age_range = row["age_range"]
-        event_id = row["event_id"]
+        event_id  = row["event_id"]
  
         self._expire_old_trajs(ts) # Limpa trajetórias antigas
  
@@ -205,67 +212,84 @@ class Stitcher:
                 "dwell_s": 0,
                 "event_ids": [event_id],
             })
-            self.open_trajs.append(traj)
+            self.open_trajs_by_zone[zone_id].append(traj)
             return
  
         # Se começar noutra, percorrer todas as trajetórias abertas
-        best_traj = None
+        best_traj  = None
         best_score = float("-inf")
 
         # Calcular score de cada trajetória aberta e associar ao melhor candidato
-        for traj in self.open_trajs:
+        for traj in self._all_open():
             score = self._score_candidate(traj, ts, zone_id, gender, age_range)
             if score > best_score:
                 best_score = score
-                best_traj = traj
+                best_traj  = traj
         
-        # Se nenhuma trajetória for compatível, contar o evento como não associado
+        # Se nenhuma trajetória for compatível, criar trajetória incompleta
         if best_traj is None:
-            self._unmatched_events += 1
+            traj = OpenTrajectory(
+                person_id=self._new_person_id(),
+                gender=gender,
+                age_range=age_range,
+                start_ts=ts,
+                last_zone=zone_id,
+                last_entry_ts=ts,
+                last_exit_ts=None,
+            )
+            traj.visits.append({
+                "zone_id":    zone_id,
+                "entry_time": ts,
+                "exit_time":  None,
+                "dwell_s":    0,
+                "event_ids":  [event_id],
+            })
+            self.open_trajs_by_zone[zone_id].append(traj)
             return
  
         # Registar inconsistência demográfica se existir
         if best_traj.attr_score(gender, age_range) < 1.0:
             best_traj.attr_mismatches += 1
  
-        # Atualizar a trajetória
-        best_traj.last_zone = zone_id
-        best_traj.last_entry_ts = ts
-        best_traj.last_exit_ts = None
+        # Remove da zona antiga, adiciona na nova
+        self.open_trajs_by_zone[best_traj.last_zone].remove(best_traj)
+        best_traj.last_zone      = zone_id
+        best_traj.last_entry_ts  = ts
+        best_traj.last_exit_ts   = None
         best_traj.visits.append({
-            "zone_id": zone_id,
+            "zone_id":    zone_id,
             "entry_time": ts,
-            "exit_time": None,
-            "dwell_s": 0,
-            "event_ids": [event_id],
+            "exit_time":  None,
+            "dwell_s":    0,
+            "event_ids":  [event_id],
         })
+        self.open_trajs_by_zone[zone_id].append(best_traj)
 
     # Processa um evento exit, atualizando a última visita da trajetória correspondente na mesma zona.
     def process_exit(self, row: pd.Series):
-        ts       = row["timestamp"]
-        zone_id  = row["zone_id"]
-        gender   = row["gender"]
- 
+        ts      = row["timestamp"]
+        zone_id = row["zone_id"]
+        gender  = row["gender"]
+
+        candidates = self.open_trajs_by_zone.get(zone_id, [])
+        best, best_score = None, (float("inf"), float("inf"))
+
         # Procurar trajetória aberta na mesma zona, com atributo compatível
-        best = None
-        best_gap = float("inf")
- 
-        for traj in self.open_trajs:
-            # Se está na mesma zona
-            if traj.last_zone != zone_id:
-                continue
+        for traj in candidates:
             # Se ainda não tem saída registada
             if traj.last_exit_ts is not None:
-                continue  # já tem exit nesta zona
+                continue
             # O entry_time está mais próximo do exit_time atual
             gap = abs((ts - traj.last_entry_ts).total_seconds())
-            attr_ok = (traj.gender == gender) or True  # tolerante no exit
-            if gap < best_gap:
-                best_gap = gap
-                best = traj
+            # Desempate por género
+            gender_bonus = 0 if traj.gender == gender else 1
+            score        = (gap, gender_bonus)
+            if score < best_score:
+                best_score = score
+                best       = traj
  
         if best is None:
-            self._unmatched_events += 1
+            self._unmatched_exit += 1
             return
  
         # Atualiza a última visita com exit_time e calcula tempo de permanência (dwell_s)
@@ -280,10 +304,10 @@ class Stitcher:
         # Fechar trajetória se a saída for por porta ou caixa
         if zone_id in ("Z_E1", "Z_E2", "Z_CK"):
             already_shopped = any(v["zone_id"] not in {"Z_E1", "Z_E2"} for v in best.visits)
-            is_quick_exit = (ts - best.start_ts).total_seconds() < 60
+            is_quick_exit   = (ts - best.start_ts).total_seconds() < 60
             if already_shopped or is_quick_exit:
+                self.open_trajs_by_zone[zone_id].remove(best)
                 best.closed = True
-                self.open_trajs.remove(best)
                 self.closed_trajs.append(best)
 
     # Processa um evento do tipo linger (pessoa parada numa zona)
@@ -292,31 +316,39 @@ class Stitcher:
         zone_id   = row["zone_id"]
         duration  = row["duration_s"]
         gender    = row["gender"]
- 
-        for traj in self.open_trajs:
-            # Se está na mesma zona
-            if traj.last_zone != zone_id:
-                continue
+
+        best, best_score = None, (float("inf"), float("inf"))
+
+        for traj in self.open_trajs_by_zone.get(zone_id, []):
             # Se ainda não saiu
             if traj.last_exit_ts is not None:
                 continue
-            attr_ok = (traj.gender == gender) or True
-            if not attr_ok:
-                continue
-            if traj.visits:
-                last = traj.visits[-1]
-                if last["zone_id"] == zone_id:
-                    last["dwell_s"] = max(last["dwell_s"], duration)
-                    if "linger" not in last["event_ids"]:
-                        last["event_ids"].append(row["event_id"])
-            break  # associar à primeira trajetória compatível encontrada
+            gap          = abs((ts - traj.last_entry_ts).total_seconds())
+            # Desempate por género
+            gender_bonus = 0 if traj.gender == gender else 1
+            score        = (gap, gender_bonus)
+            if score < best_score:
+                best_score = score
+                best       = traj
+
+        # linger sem trajetória associada — ignorar silenciosamente
+        if best is None:
+            self._unmatched_linger += 1
+            return
+
+        if best.visits:
+            last = best.visits[-1]
+            if last["zone_id"] == zone_id:
+                last["dwell_s"] = max(last["dwell_s"], duration)
+                if row["event_id"] not in last["event_ids"]:
+                    last["event_ids"].append(row["event_id"])
  
     # Fecha todas as trajetórias ainda abertas no final do dataset
     def flush(self):
-        for traj in self.open_trajs:
+        for traj in self._all_open():
             traj.closed = True
             self.closed_trajs.append(traj)
-        self.open_trajs = []
+        self.open_trajs_by_zone.clear()
     
     # Devolve lista completa de trajetórias fechadas para ser convertida em csv
     def all_trajectories(self) -> list[OpenTrajectory]:
@@ -439,7 +471,7 @@ def main():
     print(f"      {len(journeys):,} linhas escritas.")
  
     # Métricas de qualidade
-    metrics = compute_quality_metrics(journeys, total_events, stitcher._unmatched_events)
+    metrics = compute_quality_metrics(journeys, total_events, stitcher._unmatched_exit + stitcher._unmatched_linger)
     percent_keys = {"coverage", "consistency", "completeness"}
     print("\n Métricas de qualidade ")
     for k, v in metrics.items():
@@ -447,6 +479,13 @@ def main():
             print(f"  {k:<30} {v * 100:.1f}%")
         else:
             print(f"  {k:<30} {v}")
+
+    # Distribuição de eventos não associados
+    total_unmatched = stitcher._unmatched_exit + stitcher._unmatched_linger
+    print("\n Eventos não associados ")
+    print(f"  {'exit':<30} {stitcher._unmatched_exit:,}")
+    print(f"  {'linger':<30} {stitcher._unmatched_linger:,}")
+    print(f"  {'total':<30} {total_unmatched:,} ({total_unmatched/total_events*100:.1f}%)")
     print(f"\nTempo total: {time.time() - t0:.1f}s")
  
  
