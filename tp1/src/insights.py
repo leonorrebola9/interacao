@@ -194,7 +194,7 @@ Regras:
  
 # Estratégia B — Few-shot
 FEW_SHOT_EXAMPLES = """
- EXEMPLOS DE INSIGHTS 
+ EXEMPLOS DE INSIGHTS (dados fictícios — apenas para ilustrar o formato)
  
 MAU INSIGHT (genérico, vago — NÃO fazer assim):
 {
@@ -206,10 +206,10 @@ MAU INSIGHT (genérico, vago — NÃO fazer assim):
  
 BOM INSIGHT (específico, com números, acionável — fazer assim):
 {
-  "titulo": "Z_S1 (frescos) tem a maior taxa de paragem da loja",
-  "observacao": "Z_S1 registou 847 visitantes na semana com taxa de paragem de 0.82, a mais alta de todas as secções de produto",
-  "implicacao": "Os clientes passam tempo significativo nesta secção — é um ponto de decisão de compra crítico",
-  "recomendacao": "Colocar promoções e produtos de margem alta em destaque em Z_S1; considerar aumentar stock de frescos às sextas e sábados quando o tráfego é 40% acima da média"
+  "titulo": "Z_X9 (vinhos) tem dwell time 3x acima da média da loja",
+  "observacao": "Z_X9 registou dwell médio de 187s vs média de 62s nas restantes secções; taxa de paragem de 0.91 com 312 visitantes na semana",
+  "implicacao": "Clientes passam muito tempo a decidir — secção com alto potencial de venda assistida",
+  "recomendacao": "Colocar promotor em Z_X9 às sextas e sábados entre 16h-19h quando o tráfego é 45% acima da média semanal"
 }
  
 MAU INSIGHT (anomalia vaga — NÃO fazer assim):
@@ -221,12 +221,12 @@ MAU INSIGHT (anomalia vaga — NÃO fazer assim):
  
 BOM INSIGHT (anomalia específica — fazer assim):
 {
-  "titulo": "Queda anómala em Z_N4 no domingo às 16h",
-  "observacao": "Z_N4 teve 0 visitantes às 16h do dia 7 (domingo), contra uma média de 23 nos mesmos dias/horas anteriores (z=-3.2)",
-  "implicacao": "Possível obstrução física, problema de sinalização ou encerramento temporário do corredor",
-  "recomendacao": "Verificar registos de incidentes do domingo às 16h; inspecionar sinalização de Z_N4; se recorrente, instalar câmara de supervisão neste corredor"
+  "titulo": "Pico anómalo em Z_M3 na terça às 11h",
+  "observacao": "Z_M3 teve 89 visitantes na terça às 11h vs média de 31 nos mesmos dias/horas anteriores (z=+4.1, acima da média)",
+  "implicacao": "Possível evento promocional não registado ou redirecionamento de fluxo por obra noutro corredor",
+  "recomendacao": "Cruzar com registos de promoções e obras da terça-feira; se recorrente nas terças, reforçar stock em Z_M3 antes das 11h"
 }
- FIM DOS EXEMPLOS
+ FIM DOS EXEMPLOS — usa APENAS os dados reais fornecidos abaixo para gerar os insights
 """
  
  
@@ -237,15 +237,17 @@ def prompt_few_shot(metrics_text: str) -> str:
  
 Segue o estilo dos BOM INSIGHT acima: sempre com números concretos, causas plausíveis e recomendações executáveis.
 Evita o estilo dos MAU INSIGHT: genérico, vago, sem números.
+IMPORTANTE: Os exemplos acima são fictícios. Gera insights NOVOS baseados EXCLUSIVAMENTE nos dados abaixo.
  
 DADOS DA SEMANA:
 {metrics_text}
  
-Responde APENAS com JSON válido seguindo este schema exato:
+Responde APENAS com JSON válido seguindo este schema exato, com UMA categoria por insight:
 {OUTPUT_SCHEMA}
  
 Regras:
 - Cada insight deve citar números específicos dos dados acima
+- Cada insight deve ter exatamente UMA categoria: trafego, zona, funil, anomalia, ou demografico
 - As recomendações devem ser concretas e executáveis sem interpretação adicional
 - A confiança deve ser entre 0.0 e 1.0
 - Responde em português europeu

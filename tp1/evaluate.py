@@ -240,7 +240,7 @@ def main():
         ok = run_module(INSIGHTS, [
             "--input",    metrics_path,
             "--output",   insights_path,
-            "--strategy", "B",  # usar sempre few-shot para avaliação
+            "--strategy", "both",  # MUDANÇA AQUI: usar "both" para avaliar ambas e popular primary_insights
         ], "insights.py")
         if not ok:
             print("[AVISO] insights.py falhou — métricas de anomalia não disponíveis.")
@@ -255,7 +255,7 @@ def main():
             ], "report.py")
  
         # ── Avaliação
-        print("Calcular métricas de avaliação")
+        print("\nCalcular métricas de avaliação")
  
         evaluation = {
             "meta": {
@@ -275,7 +275,7 @@ def main():
  
         # Métricas de stitching
         if Path(journeys_path).exists():
-            print("\n  A avaliar qualidade do stitching")
+            print("  A avaliar qualidade do stitching")
             evaluation["stitching"] = evaluate_stitching(args.data, journeys_path)
         else:
             evaluation["stitching"] = {"error": "journeys.csv não foi produzido"}
@@ -291,7 +291,7 @@ def main():
  
         # Métricas de alucinação
         if Path(report_path).exists() and Path(metrics_path).exists():
-            print("A avaliar alucinação no relatório")
+            print("  A avaliar alucinação no relatório")
             evaluation["hallucination"] = evaluate_hallucination(report_path, metrics_path)
         else:
             evaluation["hallucination"] = {"error": "weekly_report.md não disponível"}
@@ -316,7 +316,7 @@ def main():
             json.dump(evaluation, f, ensure_ascii=False, indent=2)
  
         # Imprimir resumo
-        print("  Resultados:")
+        print("\n  Resultados:")
         for k, v in evaluation["summary"].items():
             print(f"  {k:<30} {v}")
         print(f"\n  Relatório completo em {args.output}")

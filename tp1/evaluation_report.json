@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "data_file": "data/events.csv",
+    "evaluated_at": "2026-05-06 19:40:25",
+    "pipeline": {
+      "stitcher": "src\\stitcher.py",
+      "analytics": "src\\analytics.py",
+      "insights": "src\\insights.py"
+    }
+  },
+  "stitching": {
+    "trajectories_total": 14390,
+    "events_total": 250015,
+    "consistency": 0.9997,
+    "consistency_pct": "100.0%",
+    "coverage": 1.0,
+    "coverage_pct": "100.0%",
+    "completeness": 0.8722,
+    "completeness_pct": "87.2%",
+    "overlaps_found": 5,
+    "gap_median_s": 9.0,
+    "gap_p95_s": 31.0
+  },
+  "anomaly_detection": {
+    "anomalies_in_metrics": 22,
+    "anomaly_insights_generated": 5,
+    "numeric_precision": 1.0,
+    "numeric_precision_pct": "100.0%",
+    "numeric_checks_total": 12,
+    "numeric_checks_ok": 12,
+    "top_anomalies": [
+      {
+        "zone_id": "Z_N6",
+        "hour": 14,
+        "z_score": 3.79,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_C2",
+        "hour": 12,
+        "z_score": 3.47,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_S6",
+        "hour": 19,
+        "z_score": 2.89,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_N8",
+        "hour": 14,
+        "z_score": 2.87,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_N4",
+        "hour": 12,
+        "z_score": 2.66,
+        "direction": "acima"
+      }
+    ]
+  },
+  "hallucination": {
+    "numbers_checked": 31,
+    "numbers_verified": 30,
+    "hallucination_rate": 0.032,
+    "hallucination_pct": "3.2%",
+    "note": "Taxa de alucinação = % de números no relatório não verificáveis nos dados reais"
+  },
+  "summary": {
+    "consistency": "100.0%",
+    "coverage": "100.0%",
+    "completeness": "87.2%",
+    "anomalies_detected": 22,
+    "numeric_precision": "100.0%",
+    "hallucination_rate": "3.2%",
+    "total_time_s": 104.6
+  }
+}
