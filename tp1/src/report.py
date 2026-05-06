@@ -170,16 +170,18 @@ def main():
     meta = insights_data.get("meta", {})
  
     metrics_context = ""
+    metrics = {}
     if args.metrics:
         print(f"      A carregar métricas de {args.metrics}")
         with open(args.metrics, encoding="utf-8") as f:
             metrics = json.load(f)
         metrics_context = prepare_metrics_context(metrics)
     else:
-        print("      [AVISO] --metrics não fornecido. Recomendado para evitar alucinações.")
+        print("[AVISO] --metrics não fornecido. Recomendado para evitar alucinações.")
  
-    week_start = "10 de março de 2025"
-    week_end   = "16 de março de 2025"
+    # Datas lidas do metrics.json para evitar valores hardcoded
+    week_start = metrics.get("meta", {}).get("week_start", "início da semana")
+    week_end   = metrics.get("meta", {}).get("week_end",   "fim da semana")
  
     print("[2/3] A gerar relatório com LLM")
     insights_context = prepare_insights_context(insights_data)

@@ -101,10 +101,10 @@ def compute_traffic(df: pd.DataFrame) -> dict:
     busiest_day   = by_day.loc[by_day["visitors"].idxmax()]
     quietest_day  = by_day.loc[by_day["visitors"].idxmin()]
  
-    # Tempo médio de visita por pessoa (primeiro ao último evento)
-    visit_duration = df.groupby("person_id")["entry_time"].agg(
-        lambda x: (x.max() - x.min()).total_seconds()
-    )
+    # Tempo médio de visita por pessoa (primeiro entry ao último exit)
+    first_entry = df.groupby("person_id")["entry_time"].min()
+    last_exit   = df.groupby("person_id")["exit_time"].max()
+    visit_duration = (last_exit - first_entry).dt.total_seconds()
     avg_visit_min = safe_round(visit_duration.mean() / 60, 1)
  
     # Total de visitantes únicos na semana
