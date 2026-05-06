@@ -11,7 +11,6 @@ from pathlib import Path
 from typing import Optional
 import pandas as pd
  
-# Constantes e configuração
 # Caminho para o mapa de zonas (lido uma vez no início)
 ZONES_FILE = Path(__file__).parent.parent / "data" / "zones.json"
  
@@ -20,11 +19,8 @@ MAX_GAP_S = 300          # Gap máximo entre zonas consecutivas (5 min)
 MIN_GAP_S = 3            # Gap mínimo plausível entre zonas (evita teleporte)
 MAX_IDLE_S = 600         # Trajetória aberta sem eventos → fechar (10 min)
 MAX_VISIT_DURATION_S = 5400  # Duração máxima de uma visita (90 min)
- 
-# Tolerância a erros de classificação demográfica (8-12% segundo o enunciado)
-# Uma trajetória com >ATTR_MISMATCH_THRESHOLD inconsistências é penalizada,
-# mas não rejeitada imediatamente (pode ser erro do sensor).
-ATTR_MISMATCH_THRESHOLD = 2
+
+ATTR_MISMATCH_THRESHOLD = 2  # Tolerância a erros de classificação demográfica (8-12%)
  
 # Score weights para o ranker de candidatos
 W_GAP      = 0.5   # Penalidade pelo gap temporal (normalizado)
@@ -36,7 +32,7 @@ def load_zone_graph(path: Path) -> dict:
     """
     Carrega zones.json e devolve um dicionário com:
       zone_graph[z1][z2] = walk_seconds  (tempo mínimo de deslocação)
-    Para zonas não adjacentes, calcula distância mínima via BFS (1 hop).
+    Para zonas não adjacentes, calcula distância mínima via BFS.
     """
     if not path.exists():
         # Se o ficheiro não existir, assume grafo vazio (sem penalidade de adj.)
@@ -56,46 +52,45 @@ def load_zone_graph(path: Path) -> dict:
  
 def min_walk_time(graph: dict, z1: str, z2: str) -> int:
     """
-    Tempo mínimo de caminhada entre z1 e z2.
-    Devolve o valor direto se adjacentes, ou estimativa via BFS (máximo 2 hops).
-    Se desconhecido, devolve MIN_GAP_S como floor conservador.
+    Tempo mínimo entre z1 e z2.
+    Devolve o valor direto se adjacentes, ou estimativa via BFS.
+    Se desconhecido, devolve MIN_GAP_S.
     """
+    # Se as zonas forem as mesmas
     if z1 == z2:
         return 0
+    # Se as zonas são adjacentes no mapa
     if z1 in graph and z2 in graph[z1]:
         return graph[z1][z2]
-    # 1-hop intermediário
+    # Se as zonas não são adjacentes no mapa, então encontra um caminho com zona intermédia
     if z1 in graph:
         for mid, t1 in graph[z1].items():
             if mid in graph and z2 in graph[mid]:
                 return t1 + graph[mid][z2]
-    return MIN_GAP_S  # floor conservador
+    # Se não encontrar nada
+    return MIN_GAP_S
  
  
 def is_adjacent(graph: dict, z1: str, z2: str) -> bool:
     return z1 in graph and z2 in graph[z1]
  
-# Estrutura de dados: Trajetória aberta
+# Estrutura dos dados
 @dataclass
 class OpenTrajectory:
-    person_id: str
-    gender: str
-    age_range: str
+    person_id: str                  # Exemplo: "P_00001"
+    gender: str                     # "M" ou "F"
+    age_range: str                  # Exemplo: "adult"
  
-    # Última zona visitada e timestamps
-    last_zone: str
-    start_ts: pd.Timestamp       # Timestamp de início da visita à loja
-    last_entry_ts: pd.Timestamp
-    last_exit_ts: Optional[pd.Timestamp]   # None se ainda dentro da zona
+    last_zone: str                  # Zona atual
+    start_ts: pd.Timestamp          # Timestamp de início da visita à loja
+    last_entry_ts: pd.Timestamp     # Quando entrou na zona atual
+    last_exit_ts: Optional[pd.Timestamp]   # Quando saiu (None se ainda dentro da zona)
  
-    # Historial de visitas a zonas (uma por zona)
-    visits: list = field(default_factory=list)
+    visits: list = field(default_factory=list) # Lista de todas as zonas visitadas
  
-    # Contador de inconsistências demográficas detetadas
-    attr_mismatches: int = 0
+    attr_mismatches: int = 0        # Contador de inconsistências demográficas detetadas
  
-    # Flag: esta trajetória já foi fechada?
-    closed: bool = False
+    closed: bool = False # True se já saiu da loja
  
     def current_ts(self) -> pd.Timestamp:
         """Timestamp mais recente desta trajetória."""
@@ -116,7 +111,7 @@ class OpenTrajectory:
         a_ok = (self.age_range == age_range)
         return (g_ok + a_ok) / 2.0
  
-# Motor de stitching
+# Stitcher
 class Stitcher:
     def __init__(self, zone_graph: dict):
         self.graph = zone_graph
@@ -144,36 +139,31 @@ class Stitcher:
         """
         gap = (event_ts - traj.current_ts()).total_seconds()
  
-        # Hard constraints
- 
-        # 1. Sobreposição temporal: pessoa ainda dentro de uma zona
-        #    (não saiu) e recebe novo entry → impossível (seria duas zonas ao mesmo tempo).
+        """ Fase 1: eliminação imediata"""
+        # Filtro 1: sobreposição temporal - pessoa ainda está dentro de uma zona
         if traj.is_in_zone() and gap < 5:
             return float("-inf")
  
-        # 2. Gap demasiado grande → trajetória provavelmente já terminou
+        # Filtro 2: gap demasiado grande - trajetória provavelmente já terminou
         if gap > MAX_GAP_S:
             return float("-inf")
  
-        # 3. Gap mínimo: verificar se é fisicamente possível chegar à zona
+        # Filtro 3: chegou rápido demais - verificar se é fisicamente possível chegar à zona
         walk = min_walk_time(self.graph, traj.last_zone, zone_id)
         if gap < walk * 0.6:  # margem de 40% para correr/sensor lag
             return float("-inf")
  
-        # 4. Demasiadas inconsistências de atributos acumuladas
+        # Filtro 4: demasiadas erros demográficos - associação de eventos de pessoas diferentes
         if traj.attr_mismatches >= ATTR_MISMATCH_THRESHOLD:
             attr_s = traj.attr_score(gender, age_range)
             if attr_s < 0.5:  # ambos os atributos divergem
                 return float("-inf")
- 
-        # ── Soft scoring ─────────────────────────────────────────────────────
- 
+
+        """ Fase 2: decidir qual é o melhor candidato"""
         # Penalidade pelo gap (normalizado entre 0 e MAX_GAP_S)
         gap_score = 1.0 - (gap / MAX_GAP_S)
- 
         # Bónus de atributos
         attr_s = traj.attr_score(gender, age_range)
- 
         # Bónus de adjacência
         adj_bonus = 1.0 if is_adjacent(self.graph, traj.last_zone, zone_id) else 0.0
  
@@ -188,6 +178,7 @@ class Stitcher:
         for traj in self.open_trajs:
             idle = (current_ts - traj.current_ts()).total_seconds()
             total_duration = (current_ts - traj.start_ts).total_seconds()
+            # Se a trajetória não recebe eventos há mais de 10 minitos e dura mais de 90 minutos desde o começo, fechar
             if idle > MAX_IDLE_S or total_duration > MAX_VISIT_DURATION_S:
                 traj.closed = True
                 self.closed_trajs.append(traj)
@@ -195,18 +186,18 @@ class Stitcher:
                 still_open.append(traj)
         self.open_trajs = still_open
  
+    """Processa um entry e associa-o à melhor trajetória aberta."""
     def process_entry(self, row: pd.Series):
-        """Processa um evento entry e associa-o à melhor trajetória aberta."""
+
         ts       = row["timestamp"]
         zone_id  = row["zone_id"]
         gender   = row["gender"]
         age_range = row["age_range"]
         event_id = row["event_id"]
  
-        # Expirar trajetórias muito antigas (mantém a lista pequena)
-        self._expire_old_trajs(ts)
+        self._expire_old_trajs(ts) # Limpa trajetórias antigas
  
-        # ── Caso especial: entrada numa zona Z_E → nova trajetória ──────────
+        # Caso especial: entrada numa zona Z_E → nova trajetória
         # Uma nova pessoa entrou na loja. Não tentamos associar a trajetórias
         # existentes porque entradas pela porta são pontos de início bem definidos.
         if zone_id.startswith("Z_E"):
@@ -229,7 +220,7 @@ class Stitcher:
             self.open_trajs.append(traj)
             return
  
-        # ── Caso geral: associar a melhor trajetória aberta ─────────────────
+        # Caso geral: associar a melhor trajetória aberta
         best_traj = None
         best_score = float("-inf")
  
@@ -240,7 +231,7 @@ class Stitcher:
                 best_traj = traj
  
         if best_traj is None:
-            # Nenhuma trajetória compatível → evento perdido (contado para métricas)
+            # Nenhuma trajetória compatível - evento perdido (contado para métricas)
             self._unmatched_events += 1
             return
  
@@ -259,12 +250,12 @@ class Stitcher:
             "dwell_s": 0,
             "event_ids": [event_id],
         })
- 
+
+    """ 2. Processa um evento exit, atualizando a última visita da trajetória
+    correspondente na mesma zona.
+    """
     def process_exit(self, row: pd.Series):
-        """
-        Processa um evento exit, atualizando a última visita da trajetória
-        correspondente na mesma zona.
-        """
+
         ts       = row["timestamp"]
         zone_id  = row["zone_id"]
         gender   = row["gender"]
@@ -274,10 +265,13 @@ class Stitcher:
         best_gap = float("inf")
  
         for traj in self.open_trajs:
+            # Se está na mesma zona
             if traj.last_zone != zone_id:
                 continue
+            # Se ainda não tem saída registada
             if traj.last_exit_ts is not None:
                 continue  # já tem exit nesta zona
+            # O entry_time está mais próximo do exit_time atual
             gap = abs((ts - traj.last_entry_ts).total_seconds())
             attr_ok = (traj.gender == gender) or True  # tolerante no exit
             if gap < best_gap:
@@ -288,7 +282,7 @@ class Stitcher:
             self._unmatched_events += 1
             return
  
-        # Atualizar a última visita com exit_time e dwell_s
+        # Atualiza  a última visita com exit_time e calcula dwell_s (entry - exit)
         best.last_exit_ts = ts
         if best.visits:
             last_visit = best.visits[-1]
@@ -302,12 +296,12 @@ class Stitcher:
             best.closed = True
             self.open_trajs.remove(best)
             self.closed_trajs.append(best)
- 
+
+    """
+    3. Atualiza o dwell_s da última visita aberta
+    na mesma zona. O linger é gerado pelo sensor entre entry e exit.
+    """
     def process_linger(self, row: pd.Series):
-        """
-        Processa um evento linger: atualiza o dwell_s da última visita aberta
-        na mesma zona. O linger é gerado pelo sensor entre entry e exit.
-        """
         ts        = row["timestamp"]
         zone_id   = row["zone_id"]
         duration  = row["duration_s"]
@@ -329,8 +323,8 @@ class Stitcher:
                         last["event_ids"].append(row["event_id"])
             break  # associar ao primeiro candidato encontrado
  
+    """ 4. Fecha todas as trajetórias ainda abertas no final do dataset."""
     def flush(self):
-        """Fechar todas as trajetórias ainda abertas no final do dataset."""
         for traj in self.open_trajs:
             traj.closed = True
             self.closed_trajs.append(traj)
@@ -363,14 +357,11 @@ def build_journeys_df(trajs: list[OpenTrajectory]) -> pd.DataFrame:
             })
     return pd.DataFrame(rows)
  
-# Métricas de qualidade da reconstrução
+# Cálculo das métricas de qualidade
 def compute_quality_metrics(df: pd.DataFrame, total_events: int, unmatched: int) -> dict:
-    """
-    Calcula e imprime as métricas de qualidade pedidas no enunciado.
-    """
     n_trajs = df["person_id"].nunique()
  
-    # Cobertura: eventos atribuídos / total
+    # Cobertura: eventos atribuídos / total de eventos no csv
     assigned_events = len(df) * 3  # aprox.: entry + linger + exit por visita
     coverage = min(1.0, assigned_events / total_events)
  
@@ -388,15 +379,13 @@ def compute_quality_metrics(df: pd.DataFrame, total_events: int, unmatched: int)
     # Completude: trajetórias com início em Z_E
     entrance_zones = {"Z_E1", "Z_E2"}
     exit_zones     = {"Z_E1", "Z_E2", "Z_CK"}
- 
     first_zones = df.groupby("person_id")["zone_id"].first()
     last_zones  = df.groupby("person_id")["zone_id"].last()
- 
     starts_ok = first_zones.isin(entrance_zones).sum()
     ends_ok   = last_zones.isin(exit_zones).sum()
     completeness = (starts_ok + ends_ok) / (2 * n_trajs) if n_trajs > 0 else 0
  
-    # Gap distribution
+    # Gap distribution: mediana e percentil 95 dos gaps entre zonas consecutivas
     gaps = []
     for pid, group in df.groupby("person_id"):
         group = group.sort_values("entry_time")
