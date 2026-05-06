@@ -1,7 +1,7 @@
 {
   "meta": {
     "data_file": "data/events.csv",
-    "evaluated_at": "2026-05-06 19:40:25",
+    "evaluated_at": "2026-05-06 22:04:00",
     "pipeline": {
       "stitcher": "src\\stitcher.py",
       "analytics": "src\\analytics.py",
@@ -23,11 +23,11 @@
   },
   "anomaly_detection": {
     "anomalies_in_metrics": 22,
-    "anomaly_insights_generated": 5,
-    "numeric_precision": 1.0,
-    "numeric_precision_pct": "100.0%",
-    "numeric_checks_total": 12,
-    "numeric_checks_ok": 12,
+    "anomaly_insights_generated": 1,
+    "numeric_precision": 0.952,
+    "numeric_precision_pct": "95.2%",
+    "numeric_checks_total": 21,
+    "numeric_checks_ok": 20,
     "top_anomalies": [
       {
         "zone_id": "Z_N6",
@@ -62,10 +62,10 @@
     ]
   },
   "hallucination": {
-    "numbers_checked": 31,
-    "numbers_verified": 30,
-    "hallucination_rate": 0.032,
-    "hallucination_pct": "3.2%",
+    "numbers_checked": 23,
+    "numbers_verified": 22,
+    "hallucination_rate": 0.043,
+    "hallucination_pct": "4.3%",
     "note": "Taxa de alucinação = % de números no relatório não verificáveis nos dados reais"
   },
   "summary": {
@@ -73,8 +73,8 @@
     "coverage": "100.0%",
     "completeness": "87.2%",
     "anomalies_detected": 22,
-    "numeric_precision": "100.0%",
-    "hallucination_rate": "3.2%",
-    "total_time_s": 104.6
+    "numeric_precision": "95.2%",
+    "hallucination_rate": "4.3%",
+    "total_time_s": 102.2
   }
 }
