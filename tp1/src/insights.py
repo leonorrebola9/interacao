@@ -94,7 +94,7 @@ def prepare_metrics_summary(metrics: dict) -> str:
         for d in t["visitors_by_day"]
     )
     hours_str = ", ".join(
-        f"{h['hour']}h={h['visitors']}"
+        f"{h['hour']}h={h['avg_visitors']}"    # ← correto
         for h in t["visitors_by_hour"]
     )
  
