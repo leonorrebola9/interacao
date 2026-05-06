@@ -29,11 +29,6 @@ W_ADJ      = 0.1   # Bónus por zona adjacente (trajeto plausível no mapa)
  
 # Carregamento do mapa de zonas
 def load_zone_graph(path: Path) -> dict:
-    """
-    Carrega zones.json e devolve um dicionário com:
-      zone_graph[z1][z2] = walk_seconds  (tempo mínimo de deslocação)
-    Para zonas não adjacentes, calcula distância mínima via BFS.
-    """
     if not path.exists():
         # Se o ficheiro não existir, assume grafo vazio (sem penalidade de adj.)
         print(f"[WARN] {path} não encontrado — adjacência desativada.", file=sys.stderr)
@@ -49,13 +44,8 @@ def load_zone_graph(path: Path) -> dict:
  
     return graph
  
- 
+# Tempo mínimo de deslocação entre duas zonas
 def min_walk_time(graph: dict, z1: str, z2: str) -> int:
-    """
-    Tempo mínimo entre z1 e z2.
-    Devolve o valor direto se adjacentes, ou estimativa via BFS.
-    Se desconhecido, devolve MIN_GAP_S.
-    """
     # Se as zonas forem as mesmas
     if z1 == z2:
         return 0
@@ -289,9 +279,12 @@ class Stitcher:
  
         # Fechar trajetória se a saída for por porta ou caixa
         if zone_id in ("Z_E1", "Z_E2", "Z_CK"):
-            best.closed = True
-            self.open_trajs.remove(best)
-            self.closed_trajs.append(best)
+            already_shopped = any(v["zone_id"] not in {"Z_E1", "Z_E2"} for v in best.visits)
+            is_quick_exit = (ts - best.start_ts).total_seconds() < 60
+            if already_shopped or is_quick_exit:
+                best.closed = True
+                self.open_trajs.remove(best)
+                self.closed_trajs.append(best)
 
     # Processa um evento do tipo linger (pessoa parada numa zona)
     def process_linger(self, row: pd.Series):
@@ -354,8 +347,8 @@ def compute_quality_metrics(df: pd.DataFrame, total_events: int, unmatched: int)
     n_trajs = df["person_id"].nunique()
  
     # Cobertura: eventos atribuídos / total de eventos no csv
-    assigned_events = len(df) * 3  # aprox.: entry + linger + exit por visita
-    coverage = min(1.0, assigned_events / total_events)
+    # Usa o contador real de eventos não associados para evitar sobrestimação
+    coverage = 1.0 - (unmatched / total_events) if total_events > 0 else 0.0
  
     # Consistência: sem sobreposição temporal
     overlaps = 0
