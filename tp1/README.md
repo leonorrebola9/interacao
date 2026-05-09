@@ -1,4 +1,4 @@
-# Trabalho prático 1 - From Raw Detections to Real Intelligence
+# Trabalho Prático 1 - From Raw Detections to Real Intelligence
 
 ### Trabalho realizado por: ###
 * Leonor Rebola (leonor.rebola@ubi.pt)

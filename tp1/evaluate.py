@@ -1,5 +1,6 @@
 import argparse
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -34,7 +35,7 @@ def run_module(script: Path, args: list[str], step: str) -> bool:
  
 # Métricas de qualidade do stitching
 def evaluate_stitching(events_path: str, journeys_path: str) -> dict:
-    """Calcula as 3 métricas de qualidade do stitching."""
+    """Calcula as métricas de qualidade do stitching."""
     events   = pd.read_csv(events_path, parse_dates=["timestamp"])
     journeys = pd.read_csv(journeys_path, parse_dates=["entry_time", "exit_time"])
  
@@ -52,10 +53,12 @@ def evaluate_stitching(events_path: str, journeys_path: str) -> dict:
                 overlaps += 1
     consistency = 1.0 - (overlaps / max(1, n_trajs))
  
-    # Cobertura: eventos atribuídos / total
-    assigned_events = len(journeys) * 3  # aprox.: entry + linger + exit
-    coverage = min(1.0, assigned_events / total_events)
- 
+    # Cobertura: entries associadas / entries totais no dataset
+    # Cada linha do journeys corresponde a uma entry associada a uma trajetória
+    entries_in_events   = len(events[events["event_type"] == "entry"])
+    entries_in_journeys = len(journeys)
+    coverage = min(1.0, entries_in_journeys / entries_in_events) if entries_in_events > 0 else 0.0
+
     # Completude: início em Z_E, fim em Z_E ou Z_CK
     entrance_zones = {"Z_E1", "Z_E2"}
     exit_zones     = {"Z_E1", "Z_E2", "Z_CK"}
@@ -81,6 +84,8 @@ def evaluate_stitching(events_path: str, journeys_path: str) -> dict:
     return {
         "trajectories_total": int(n_trajs),
         "events_total":       int(total_events),
+        "entries_total":      int(entries_in_events),
+        "entries_assigned":   int(entries_in_journeys),
         "consistency":        round(consistency, 4),
         "consistency_pct":    f"{consistency * 100:.1f}%",
         "coverage":           round(coverage, 4),
@@ -124,29 +129,26 @@ def evaluate_anomaly_detection(insights_path: str, metrics_path: str) -> dict:
     # Os números nos insights devem ser verificáveis no metrics.json
     numeric_checks = 0
     numeric_ok     = 0
+    metrics_str    = json.dumps(metrics)
     for ins in insights:
         obs = ins.get("observacao", "")
-        # Verificar se os valores de visitantes citados existem nos dados
-        import re
         numbers_in_obs = re.findall(r'\b(\d+)\b', obs)
         for n in numbers_in_obs:
             n_int = int(n)
             if n_int > 10:  # ignorar números muito pequenos
                 numeric_checks += 1
-                # Verificar se o número aparece em alguma métrica
-                metrics_str = json.dumps(metrics)
                 if str(n_int) in metrics_str:
                     numeric_ok += 1
  
     precision = numeric_ok / numeric_checks if numeric_checks > 0 else None
  
     return {
-        "anomalies_in_metrics":      int(total_anomalies_detected),
+        "anomalies_in_metrics":       int(total_anomalies_detected),
         "anomaly_insights_generated": len(anomaly_insights),
-        "numeric_precision":         round(precision, 3) if precision else None,
-        "numeric_precision_pct":     f"{precision * 100:.1f}%" if precision else "N/A",
-        "numeric_checks_total":      numeric_checks,
-        "numeric_checks_ok":         numeric_ok,
+        "numeric_precision":          round(precision, 3) if precision else None,
+        "numeric_precision_pct":      f"{precision * 100:.1f}%" if precision else "N/A",
+        "numeric_checks_total":       numeric_checks,
+        "numeric_checks_ok":          numeric_ok,
         "top_anomalies": [
             {
                 "zone_id":   a.get("zone_id"),
@@ -167,7 +169,6 @@ def evaluate_hallucination(report_path: str, metrics_path: str) -> dict:
     if not Path(report_path).exists():
         return {"error": "weekly_report.md não encontrado"}
  
-    import re
     with open(report_path, encoding="utf-8") as f:
         report_text = f.read()
  
@@ -240,7 +241,7 @@ def main():
         ok = run_module(INSIGHTS, [
             "--input",    metrics_path,
             "--output",   insights_path,
-            "--strategy", "both",  # MUDANÇA AQUI: usar "both" para avaliar ambas e popular primary_insights
+            "--strategy", "both",
         ], "insights.py")
         if not ok:
             print("[AVISO] insights.py falhou — métricas de anomalia não disponíveis.")
@@ -254,7 +255,7 @@ def main():
                 "--output",  report_path,
             ], "report.py")
  
-        # ── Avaliação
+        # Avaliação
         print("\nCalcular métricas de avaliação")
  
         evaluation = {
@@ -267,10 +268,10 @@ def main():
                     "insights":  str(INSIGHTS),
                 }
             },
-            "stitching":          {},
-            "anomaly_detection":  {},
-            "hallucination":      {},
-            "summary":            {},
+            "stitching":         {},
+            "anomaly_detection": {},
+            "hallucination":     {},
+            "summary":           {},
         }
  
         # Métricas de stitching
@@ -301,13 +302,13 @@ def main():
         a = evaluation["anomaly_detection"]
         h = evaluation["hallucination"]
         evaluation["summary"] = {
-            "consistency":            s.get("consistency_pct", "N/A"),
-            "coverage":               s.get("coverage_pct", "N/A"),
-            "completeness":           s.get("completeness_pct", "N/A"),
-            "anomalies_detected":     a.get("anomalies_in_metrics", "N/A"),
-            "numeric_precision":      a.get("numeric_precision_pct", "N/A"),
-            "hallucination_rate":     h.get("hallucination_pct", "N/A"),
-            "total_time_s":           round(time.time() - t_total, 1),
+            "consistency":        s.get("consistency_pct", "N/A"),
+            "coverage":           s.get("coverage_pct", "N/A"),
+            "completeness":       s.get("completeness_pct", "N/A"),
+            "anomalies_detected": a.get("anomalies_in_metrics", "N/A"),
+            "numeric_precision":  a.get("numeric_precision_pct", "N/A"),
+            "hallucination_rate": h.get("hallucination_pct", "N/A"),
+            "total_time_s":       round(time.time() - t_total, 1),
         }
  
         # Escrever resultado
