@@ -1,3 +1,5 @@
+# Como correr: python src/report.py --input output/insights.json --metrics output/metrics.json --output output/weekly_report.md
+
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
