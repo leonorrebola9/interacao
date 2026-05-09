@@ -40,7 +40,7 @@ tp1/
 │   └── report_prompt.txt
 ├── evaluate.py
 ├── check.py
-├── injected_anomalies.py
+├── inject_anomalies.py
 ├── README.md
 └── requirements.txt
 ```
