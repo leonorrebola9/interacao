@@ -111,7 +111,7 @@ Analisa a distribuição de trajetórias por número de zonas visitadas, útil p
 
 ---
 
-## Testes com Anomalias Injetadas
+## Testes com anomalias injetadas
 Para validar o sistema de deteção de anomalias, foi criado um script que injeta anomalias conhecidas no dataset original:
 Para correr o código:
 ```bash
