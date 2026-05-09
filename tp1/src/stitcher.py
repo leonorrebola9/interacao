@@ -1,3 +1,5 @@
+# Como correr: python src/stitcher.py --input data/events.csv --output output/journeys.csv --zones data/zones.json
+
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
