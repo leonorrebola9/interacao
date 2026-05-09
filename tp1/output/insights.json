@@ -8,69 +8,75 @@
     "insights": [
       {
         "id": "INS_001",
-        "categoria": "trafego",
-        "titulo": "Sábado é o dia mais movimentado da semana",
-        "observacao": "O sábado registou 2546 visitantes, enquanto a terça-feira foi o dia menos movimentado com apenas 1624 visitantes.",
-        "implicacao": "Isso significa que a loja está a perder oportunidades de venda durante os dias mais calmos da semana.",
-        "recomendacao": "Desenvolver estratégias para aumentar a atracção de clientes nos dias menos movimentados, como promoções especiais ou eventos em tempo real.",
+        "categoria": "trafego|zona|funil",
+        "titulo": "Z_CK tem dwell time 4x acima da média da loja",
+        "observacao": "Z_CK registou dwell médio de 89.12s vs média de 22.3s nas restantes secções; taxa de paragem de 0.99 com 4799 visitantes na semana",
+        "implicacao": "Clientes passam muito tempo a decidir — zona com alto potencial de venda assistida",
+        "recomendacao": "Colocar promotor em Z_CK às sextas e sábados entre 16h-19h quando o tráfego é 45% acima da média semanal",
         "urgencia": "esta_semana",
         "confianca": 0.9
       },
       {
         "id": "INS_002",
-        "categoria": "zona",
-        "titulo": "Z_C2 tem dwell time 3x acima da média da loja",
-        "observacao": "A zona Z_C2 registou um dwell médio de 11.74s, enquanto a média da loja é de apenas 2.3 minutos.",
-        "implicacao": "Isso indica que os clientes estão a passar muito tempo na zona das caixas registadoras, o que pode ser um sinal de que há oportunidades de venda assistida.",
-        "recomendacao": "Colocar promotores em Z_C2 para ajudar os clientes a encontrar produtos e aumentar as vendas.",
+        "categoria": "zona|trafego",
+        "titulo": "Z_E1 tem taxa de paragem 2% acima da média da loja",
+        "observacao": "Z_E1 registou taxa de paragem de 0.951 vs média de 0.94 nas restantes secções; 6495 visitantes na semana",
+        "implicacao": "Clientes estão a parar mais frequentemente em Z_E1 do que em outras zonas",
+        "recomendacao": "Revisar o layout e a oferta de Z_E1 para maximizar as oportunidades de venda",
         "urgencia": "esta_semana",
         "confianca": 0.8
       },
       {
         "id": "INS_003",
-        "categoria": "funil",
-        "titulo": "Apenas 11,5% dos visitantes chegam a corredores",
-        "observacao": "Dos 14386 visitantes da semana, apenas 1237 (8.6%) chegaram a corredores.",
-        "implicacao": "Isso indica que há uma grande oportunidade de melhorar a experiência do cliente e aumentar as vendas.",
-        "recomendacao": "Desenvolver estratégias para melhorar a navegação da loja e aumentar o tempo dos clientes em corredores.",
+        "categoria": "funil|demografico",
+        "titulo": "Adultos têm dwell time 2x maior do que jovens adultos",
+        "observacao": "Dwell médio de 46.33s vs 23.14s; 4036 adultos e 2896 jovens adultos visitaram a loja na semana",
+        "implicacao": "Os adultos estão a passar mais tempo em cada zona, o que pode indicar uma necessidade maior de assistência ao cliente",
+        "recomendacao": "Oferecer serviços personalizados para os adultos, como consultas com especialistas ou workshops",
+        "urgencia": "proximo_mes",
+        "confianca": 0.7
+      },
+      {
+        "id": "INS_004",
+        "categoria": "anomalia|trafego",
+        "titulo": "Pico anómalo em Z_N6 na quarta às 14h",
+        "observacao": "Z_N6 teve 50 visitantes na quarta às 14h vs média de 24.3 nos mesmos dias/horas anteriores (z=+3.79, acima da média)",
+        "implicacao": "Possível evento promocional não registado ou redirecionamento de fluxo por obra noutro corredor",
+        "recomendacao": "Cruzar com registos de promoções e obras da quarta-feira; se recorrente nas quartas, reforçar stock em Z_N6 antes das 14h",
         "urgencia": "esta_semana",
         "confianca": 0.9
       },
       {
-        "id": "INS_004",
-        "categoria": "anomalia",
-        "titulo": "Pico anómalo em Z_N4 às 12h",
-        "observacao": "Z_N4 registou 34 visitantes às 12h, enquanto a média é de apenas 27.5.",
-        "implicacao": "Isso pode ser um sinal de que há uma oportunidade de venda ou promoção não registada.",
-        "recomendacao": "Investigar o que está a atrair os clientes para Z_N4 às 12h e desenvolver estratégias para aproveitar essa oportunidade.",
-        "urgencia": "imediata",
-        "confianca": 0.7
-      },
-      {
         "id": "INS_005",
-        "categoria": "demografico",
-        "titulo": "Adultos são a faixa etária mais representativa da loja",
-        "observacao": "Dos 14386 visitantes, 4038 (28%) eram adultos.",
-        "implicacao": "Isso indica que a loja está a atender bem às necessidades dos clientes adultos.",
-        "recomendacao": "Desenvolver estratégias para melhorar a experiência do cliente e aumentar as vendas entre os adultos.",
+        "categoria": "demografico|funil",
+        "titulo": "Menos de 12% dos visitantes chegam a secções",
+        "observacao": "Total visitantes: 14390; chegaram a corredores: 1216 (11.4%); chegaram a secções: 596 (5.6%)",
+        "implicaco": "A loja está a perder oportunidades de venda ao longo do funil de cliente",
+        "recomendacao": "Revisar o layout e a oferta para melhorar a experiência do cliente e aumentar as taxas de conversão",
         "urgencia": "esta_semana",
         "confianca": 0.8
       },
       {
         "id": "INS_006",
         "categoria": "trafego|zona",
-        "titulo": "Z_E1 tem taxa de paragem de 95%",
-        "observacao": "A zona Z_E1 registou uma taxa de paragem de 0.95, o que é muito alta.",
-        "implicacao": "Isso indica que os clientes estão a passar muito tempo na entrada principal da loja.",
-        "recomendacao": "Desenvolver estratégias para melhorar a experiência do cliente e aumentar as vendas em Z_E1.",
+        "titulo": "Sábado é o dia mais movimentado, com 2550 visitantes",
+        "observacao": "Total visitantes semana: 14390; sábado teve 2550 visitantes vs média de 1925 nos outros dias da semana",
+        "implicacao": "O sábado é um dia crítico para a loja e deve ser priorizado em termos de recursos e promoções",
+        "recomendacao": "Aumentar a oferta e os recursos no sábado, como mais pessoal e promoções especiais",
         "urgencia": "esta_semana",
         "confianca": 0.9
       }
     ],
     "resumo_executivo": [
-      "O sábado é o dia mais movimentado da semana, com 2546 visitantes.",
-      "Apenas 11,5% dos visitantes chegam a corredores.",
-      "Os adultos são a faixa etária mais representativa da loja."
+      {
+        "titulo": "Z_CK tem dwell time 4x acima da média da loja"
+      },
+      {
+        "titulo": "Adultos têm dwell time 2x maior do que jovens adultos"
+      },
+      {
+        "titulo": "Sábado é o dia mais movimentado, com 2550 visitantes"
+      }
     ]
   },
   "strategy_A_zero_shot": {
@@ -78,9 +84,9 @@
       {
         "id": "INS_001",
         "categoria": "trafego|zona|funil|anomalia|demografico",
-        "titulo": "Dia mais movimentado foi o sábado com 2546 visitantes",
-        "observacao": "O dia mais movimentado da semana foi o sábado, com um total de 2546 visitantes. Isso representa cerca de 17,7% do total de visitantes da semana.",
-        "implicacao": "Isso pode indicar que os clientes estão procurando atividades ao ar livre ou compras de fim de semana.",
+        "titulo": "Dia mais movimentado foi o sábado com 2550 visitantes",
+        "observacao": "O dia mais movimentado da semana foi o sábado, com um total de 2550 visitantes. Isso representa cerca de 17,7% do total de visitantes da semana.",
+        "implicacao": "Isso pode indicar que os clientes estão procurando por atividades ao ar livre ou compras de fim de semana.",
         "recomendacao": "Aumentar a oferta de produtos e serviços para atender às necessidades dos clientes no sábado.",
         "urgencia": "esta_semana",
         "confianca": 0.9
@@ -88,9 +94,9 @@
       {
         "id": "INS_002",
         "categoria": "trafego|zona|funil|anomalia|demografico",
-        "titulo": "A zona Z_E1 é a mais visitada com 6508 visitantes",
-        "observacao": "A zona Z_E1 foi a mais visitada da semana, com um total de 6508 visitantes. Isso representa cerca de 60% do total de visitantes da entrada principal.",
-        "implicacao": "Isso pode indicar que os clientes estão procurando produtos específicos ou serviços naquela área.",
+        "titulo": "A zona Z_E1 é a mais visitada com 6495 visitantes",
+        "observacao": "A zona Z_E1 foi a mais visitada da semana, com um total de 6495 visitantes. Isso representa cerca de 60% do total de visitantes da entrada principal.",
+        "implicacao": "Isso pode indicar que os clientes estão procurando por produtos específicos ou serviços naquela área.",
         "recomendacao": "Aumentar a oferta de produtos e serviços na zona Z_E1 para atender às necessidades dos clientes.",
         "urgencia": "esta_semana",
         "confianca": 0.8
@@ -98,133 +104,139 @@
       {
         "id": "INS_003",
         "categoria": "funil|anomalia|demografico",
-        "titulo": "Apenas 11,5% dos visitantes chegaram a corredores",
-        "observacao": "Apenas 1237 visitantes (11,5%) chegaram a corredores durante a semana. Isso pode indicar que os clientes estão perdendo interesse após entrar na loja.",
-        "implicacao": "Isso pode indicar que a experiência do cliente precisa ser melhorada para manter os clientes interessados.",
-        "recomendacao": "Melhorar a experiência do cliente ao longo da jornada de compra, incluindo a oferta de produtos e serviços mais atraentes.",
+        "titulo": "Apenas 11,4% dos visitantes chegaram a corredores",
+        "observacao": "Apenas 1216 visitantes (11,4%) chegaram a corredores durante a semana. Isso pode indicar que os clientes estão perdendo interesse após entrar na loja.",
+        "implicacao": "Isso pode indicar que a experiência do cliente precisa ser melhorada para manter os clientes engajados.",
+        "recomendacao": "Melhorar a experiência do cliente ao longo da jornada de compra, incluindo a oferta de produtos e serviços personalizados.",
         "urgencia": "esta_semana",
-        "confianca": 0.7
+        "confianca": 0.9
       },
       {
         "id": "INS_004",
         "categoria": "anomalia|demografico",
-        "titulo": "A zona Z_N4 teve um aumento de visitantes em 34% no dia 12h",
-        "observacao": "A zona Z_N4 teve um aumento de 34 visitantes (média=27.5, z=3.47) no dia 12h. Isso pode indicar que os clientes estão procurando produtos específicos ou serviços naquela área.",
-        "implicacao": "Isso pode indicar que a zona Z_N4 precisa de mais atenção e oferta de produtos e serviços para atender às necessidades dos clientes.",
-        "recomendacao": "Aumentar a oferta de produtos e serviços na zona Z_N4 para atender às necessidades dos clientes.",
+        "titulo": "A zona Z_N6 teve um aumento de visitantes em 50% no dia 7",
+        "observacao": "A zona Z_N6 teve um aumento de visitantes em 50% no dia 7, com um total de 50 visitantes. Isso pode indicar que há uma demanda por produtos ou serviços específicos naquela área.",
+        "implicacao": "Isso pode indicar que a oferta de produtos e serviços precisa ser ajustada para atender às necessidades dos clientes.",
+        "recomendacao": "Ajustar a oferta de produtos e serviços na zona Z_N6 para atender às necessidades dos clientes.",
         "urgencia": "esta_semana",
-        "confianca": 0.6
+        "confianca": 0.8
       },
       {
         "id": "INS_005",
         "categoria": "demografico",
-        "titulo": "Os adultos são a faixa etária mais representativa com 40,3% do total de visitantes",
-        "observacao": "Os adultos (faixa etária: adult) são a faixa etária mais representativa da semana, com um total de 4038 visitantes (40,3%). Isso pode indicar que os produtos e serviços oferecidos estão atendendo às necessidades dos adultos.",
-        "implicacao": "Isso pode indicar que a loja está atendendo bem às necessidades dos adultos.",
-        "recomendacao": "Manter a oferta de produtos e serviços para adultos, pois eles são a faixa etária mais representativa da semana.",
+        "titulo": "Os adultos são a faixa etária mais representativa com 40,4% do total de visitantes",
+        "observacao": "Os adultos são a faixa etária mais representativa da semana, com um total de 4036 visitantes (40,4%). Isso pode indicar que os produtos e serviços oferecidos estão alinhados às necessidades dos adultos.",
+        "implicacao": "Isso pode indicar que a oferta de produtos e serviços precisa ser ajustada para atender às necessidades das outras faixas etárias.",
+        "recomendacao": "Ajustar a oferta de produtos e serviços para atender às necessidades das outras faixas etárias, como jovens adultos e crianças.",
         "urgencia": "esta_semana",
-        "confianca": 0.5
+        "confianca": 0.8
       },
       {
         "id": "INS_006",
         "categoria": "demografico",
-        "titulo": "A duração média de visita é de 2,3 minutos para os adultos e 39,8 segundos para as crianças",
-        "observacao": "A duração média de visita é de 46.67 segundos (adultos) e 39.8 segundos (crianças). Isso pode indicar que a loja está oferecendo uma experiência rápida e eficiente para os clientes.",
-        "implicacao": "Isso pode indicar que a loja está atendendo bem às necessidades dos clientes em termos de tempo de visita.",
-        "recomendacao": "Manter a oferta de produtos e serviços para manter a experiência rápida e eficiente para os clientes.",
+        "titulo": "A duração média da visita é de 2,3 minutos",
+        "observacao": "A duração média da visita é de 2,3 minutos. Isso pode indicar que os clientes estão perdendo interesse após entrar na loja.",
+        "implicacao": "Isso pode indicar que a experiência do cliente precisa ser melhorada para manter os clientes engajados.",
+        "recomendacao": "Melhorar a experiência do cliente ao longo da jornada de compra, incluindo a oferta de produtos e serviços personalizados.",
         "urgencia": "esta_semana",
-        "confianca": 0.4
+        "confianca": 0.9
       }
     ],
     "resumo_executivo": [
-      "O sábado foi o dia mais movimentado da semana com 2546 visitantes.",
-      "A zona Z_E1 é a mais visitada da semana, com um total de 6508 visitantes.",
-      "Apenas 11,5% dos visitantes chegaram a corredores durante a semana."
+      "O sábado foi o dia mais movimentado da semana com 2550 visitantes.",
+      "A zona Z_E1 é a mais visitada da semana, com um total de 6495 visitantes.",
+      "Apenas 11,4% dos visitantes chegaram a corredores durante a semana."
     ]
   },
   "strategy_B_few_shot": {
     "insights": [
       {
         "id": "INS_001",
-        "categoria": "trafego",
-        "titulo": "Sábado é o dia mais movimentado da semana",
-        "observacao": "O sábado registou 2546 visitantes, enquanto a terça-feira foi o dia menos movimentado com apenas 1624 visitantes.",
-        "implicacao": "Isso significa que a loja está a perder oportunidades de venda durante os dias mais calmos da semana.",
-        "recomendacao": "Desenvolver estratégias para aumentar a atracção de clientes nos dias menos movimentados, como promoções especiais ou eventos em tempo real.",
+        "categoria": "trafego|zona|funil",
+        "titulo": "Z_CK tem dwell time 4x acima da média da loja",
+        "observacao": "Z_CK registou dwell médio de 89.12s vs média de 22.3s nas restantes secções; taxa de paragem de 0.99 com 4799 visitantes na semana",
+        "implicacao": "Clientes passam muito tempo a decidir — zona com alto potencial de venda assistida",
+        "recomendacao": "Colocar promotor em Z_CK às sextas e sábados entre 16h-19h quando o tráfego é 45% acima da média semanal",
         "urgencia": "esta_semana",
         "confianca": 0.9
       },
       {
         "id": "INS_002",
-        "categoria": "zona",
-        "titulo": "Z_C2 tem dwell time 3x acima da média da loja",
-        "observacao": "A zona Z_C2 registou um dwell médio de 11.74s, enquanto a média da loja é de apenas 2.3 minutos.",
-        "implicacao": "Isso indica que os clientes estão a passar muito tempo na zona das caixas registadoras, o que pode ser um sinal de que há oportunidades de venda assistida.",
-        "recomendacao": "Colocar promotores em Z_C2 para ajudar os clientes a encontrar produtos e aumentar as vendas.",
+        "categoria": "zona|trafego",
+        "titulo": "Z_E1 tem taxa de paragem 2% acima da média da loja",
+        "observacao": "Z_E1 registou taxa de paragem de 0.951 vs média de 0.94 nas restantes secções; 6495 visitantes na semana",
+        "implicacao": "Clientes estão a parar mais frequentemente em Z_E1 do que em outras zonas",
+        "recomendacao": "Revisar o layout e a oferta de Z_E1 para maximizar as oportunidades de venda",
         "urgencia": "esta_semana",
         "confianca": 0.8
       },
       {
         "id": "INS_003",
-        "categoria": "funil",
-        "titulo": "Apenas 11,5% dos visitantes chegam a corredores",
-        "observacao": "Dos 14386 visitantes da semana, apenas 1237 (8.6%) chegaram a corredores.",
-        "implicacao": "Isso indica que há uma grande oportunidade de melhorar a experiência do cliente e aumentar as vendas.",
-        "recomendacao": "Desenvolver estratégias para melhorar a navegação da loja e aumentar o tempo dos clientes em corredores.",
+        "categoria": "funil|demografico",
+        "titulo": "Adultos têm dwell time 2x maior do que jovens adultos",
+        "observacao": "Dwell médio de 46.33s vs 23.14s; 4036 adultos e 2896 jovens adultos visitaram a loja na semana",
+        "implicacao": "Os adultos estão a passar mais tempo em cada zona, o que pode indicar uma necessidade maior de assistência ao cliente",
+        "recomendacao": "Oferecer serviços personalizados para os adultos, como consultas com especialistas ou workshops",
+        "urgencia": "proximo_mes",
+        "confianca": 0.7
+      },
+      {
+        "id": "INS_004",
+        "categoria": "anomalia|trafego",
+        "titulo": "Pico anómalo em Z_N6 na quarta às 14h",
+        "observacao": "Z_N6 teve 50 visitantes na quarta às 14h vs média de 24.3 nos mesmos dias/horas anteriores (z=+3.79, acima da média)",
+        "implicacao": "Possível evento promocional não registado ou redirecionamento de fluxo por obra noutro corredor",
+        "recomendacao": "Cruzar com registos de promoções e obras da quarta-feira; se recorrente nas quartas, reforçar stock em Z_N6 antes das 14h",
         "urgencia": "esta_semana",
         "confianca": 0.9
       },
       {
-        "id": "INS_004",
-        "categoria": "anomalia",
-        "titulo": "Pico anómalo em Z_N4 às 12h",
-        "observacao": "Z_N4 registou 34 visitantes às 12h, enquanto a média é de apenas 27.5.",
-        "implicacao": "Isso pode ser um sinal de que há uma oportunidade de venda ou promoção não registada.",
-        "recomendacao": "Investigar o que está a atrair os clientes para Z_N4 às 12h e desenvolver estratégias para aproveitar essa oportunidade.",
-        "urgencia": "imediata",
-        "confianca": 0.7
-      },
-      {
         "id": "INS_005",
-        "categoria": "demografico",
-        "titulo": "Adultos são a faixa etária mais representativa da loja",
-        "observacao": "Dos 14386 visitantes, 4038 (28%) eram adultos.",
-        "implicacao": "Isso indica que a loja está a atender bem às necessidades dos clientes adultos.",
-        "recomendacao": "Desenvolver estratégias para melhorar a experiência do cliente e aumentar as vendas entre os adultos.",
+        "categoria": "demografico|funil",
+        "titulo": "Menos de 12% dos visitantes chegam a secções",
+        "observacao": "Total visitantes: 14390; chegaram a corredores: 1216 (11.4%); chegaram a secções: 596 (5.6%)",
+        "implicaco": "A loja está a perder oportunidades de venda ao longo do funil de cliente",
+        "recomendacao": "Revisar o layout e a oferta para melhorar a experiência do cliente e aumentar as taxas de conversão",
         "urgencia": "esta_semana",
         "confianca": 0.8
       },
       {
         "id": "INS_006",
         "categoria": "trafego|zona",
-        "titulo": "Z_E1 tem taxa de paragem de 95%",
-        "observacao": "A zona Z_E1 registou uma taxa de paragem de 0.95, o que é muito alta.",
-        "implicacao": "Isso indica que os clientes estão a passar muito tempo na entrada principal da loja.",
-        "recomendacao": "Desenvolver estratégias para melhorar a experiência do cliente e aumentar as vendas em Z_E1.",
+        "titulo": "Sábado é o dia mais movimentado, com 2550 visitantes",
+        "observacao": "Total visitantes semana: 14390; sábado teve 2550 visitantes vs média de 1925 nos outros dias da semana",
+        "implicacao": "O sábado é um dia crítico para a loja e deve ser priorizado em termos de recursos e promoções",
+        "recomendacao": "Aumentar a oferta e os recursos no sábado, como mais pessoal e promoções especiais",
         "urgencia": "esta_semana",
         "confianca": 0.9
       }
     ],
     "resumo_executivo": [
-      "O sábado é o dia mais movimentado da semana, com 2546 visitantes.",
-      "Apenas 11,5% dos visitantes chegam a corredores.",
-      "Os adultos são a faixa etária mais representativa da loja."
+      {
+        "titulo": "Z_CK tem dwell time 4x acima da média da loja"
+      },
+      {
+        "titulo": "Adultos têm dwell time 2x maior do que jovens adultos"
+      },
+      {
+        "titulo": "Sábado é o dia mais movimentado, com 2550 visitantes"
+      }
     ]
   },
   "comparison": {
     "strategy_A_zero_shot": {
       "n_insights": 6,
-      "avg_specificity": 0.57,
-      "avg_actionability": 0.65,
+      "avg_specificity": 0.53,
+      "avg_actionability": 0.77,
       "avg_completeness": 1.0,
-      "avg_total": 0.74
+      "avg_total": 0.77
     },
     "strategy_B_few_shot": {
       "n_insights": 6,
-      "avg_specificity": 0.67,
-      "avg_actionability": 0.88,
-      "avg_completeness": 1.0,
-      "avg_total": 0.85
+      "avg_specificity": 0.9,
+      "avg_actionability": 0.77,
+      "avg_completeness": 0.97,
+      "avg_total": 0.88
     }
   }
 }

@@ -1,52 +1,45 @@
 ---
-gerado_em: 2026-05-06 21:58
+gerado_em: 2026-05-09 12:09
 modelo: llama3.1:8b
 fonte: output/metrics.json
 ---
  
-# Briefing Semanal — 2025-03-10 a 2025-03-16
-
 ## 1. Resumo Executivo
-O sábado é o dia mais movimentado da semana, com 2546 visitantes. Apenas 11,5% dos visitantes chegam a corredores. Os adultos são a faixa etária mais representativa da loja.
+O sábado foi o dia mais movimentado da semana, com 2550 visitantes. A zona Z_CK tem uma dwell time 4x acima da média da loja.
 
 ## 2. Performance de Tráfego
-Total de visitantes na semana: 14386.
-Dia mais movimentado: sábado com 2546 visitantes.
-Dia mais calmo: terça-feira com 1624 visitantes.
+Total de visitantes na semana: 14390.
+Dia mais movimentado: sábado com 2550 visitantes.
+Dia mais calmo: terça-feira com 1620 visitantes.
 Hora de pico: 17h.
 Duração média de visita: 2.3 minutos.
 Visitantes por dia:
-- Segunda-feira: 1907 visitantes
-- Terça-feira: 1624 visitantes
-- Quarta-feira: 2012 visitantes
-- Quinta-feira: 2079 visitantes
-- Sexta-feira: 1931 visitantes
-- Sábado: 2546 visitantes
-- Domingo: 2287 visitantes
+- Segunda-feira: 1905 visitantes
+- Terça-feira: 1620 visitantes
+- Quarta-feira: 2006 visitantes
+- Quinta-feira: 2092 visitantes
+- Sexta-feira: 1934 visitantes
+- Sábado: 2550 visitantes
+- Domingo: 2283 visitantes
 
 ## 3. Análise de Zonas
-As três zonas mais visitadas foram:
-- Z_E1: 6508 visitantes, com um dwell médio de 9.63 segundos.
-- Z_E2: 6275 visitantes, com um dwell médio de 9.71 segundos.
-- Z_C2: 5586 visitantes, com um dwell médio de 11.74 segundos.
-
-A zona Z_C2 tem um dwell time três vezes superior à média da loja. Isso pode indicar que os clientes estão a passar muito tempo na zona das caixas registadoras, o que pode ser um sinal de que há oportunidades de venda assistida. Recomendação: Colocar promotores em Z_C2 para ajudar os clientes a encontrar produtos e aumentar as vendas.
+A zona Z_CK tem uma dwell time muito alta, o que pode indicar que os clientes estão a passar muito tempo a decidir. É recomendável colocar um promotor em Z_CK às sextas e sábados entre 16h-19h.
+A zona Z_E1 tem uma taxa de paragem 2% acima da média da loja, o que pode indicar que os clientes estão a parar mais frequentemente nessa zona. É recomendável revisar o layout e a oferta de Z_E1 para maximizar as oportunidades de venda.
 
 ## 4. Funil de Clientes
-Total visitantes: 14386.
-Chegaram a corredores: 1237 (11,5%).
-Chegaram a secções de produto: 615 (5,7%).
-Chegaram à caixa: 3304 (30,8%).
-Completaram compra: 1969 (18,4%).
+Total visitantes: 14390.
+Chegaram a corredores: 1216 (11,4%).
+Chegaram a secções de produto: 596 (5,6%).
+Chegaram à caixa: 3296 (30,8%).
+Completaram compra: 2000 (18,7%).
 
 ## 5. Anomalias da Semana
-- Z_N4 às 12h registou 34 visitantes, enquanto a média esperada era de 27,5.
-- Z_N6 às 14h registou 51 visitantes, enquanto a média esperada era de 25,3.
-- Z_S6 às 19h registou 27 visitantes, enquanto a média esperada era de 14,5.
+Houve um pico anómalo em Z_N6 na quarta-feira às 14h, com 50 visitantes vs média de 24,3.
+É possível que haja um evento promocional não registado ou redirecionamento de fluxo por obra noutro corredor.
 
 ## 6. Recomendações para a Próxima Semana
-1. Desenvolver estratégias para aumentar a atracção de clientes nos dias menos movimentados.
-2. Colocar promotores em Z_C2 para ajudar os clientes a encontrar produtos e aumentar as vendas.
-3. Melhorar a navegação da loja e aumentar o tempo dos clientes em corredores.
-4. Investigar o que está a atrair os clientes para Z_N4 às 12h e desenvolver estratégias para aproveitar essa oportunidade.
-5. Desenvolver estratégias para melhorar a experiência do cliente e aumentar as vendas entre os adultos.
+1. Colocar promotor em Z_CK às sextas e sábados entre 16h-19h.
+2. Revisar o layout e a oferta de Z_E1 para maximizar as oportunidades de venda.
+3. Aumentar a oferta e os recursos no sábado, como mais pessoal e promoções especiais.
+4. Cruzar com registos de promoções e obras da quarta-feira; se recorrente nas quartas, reforçar stock em Z_N6 antes das 14h.
+5. Revisar o layout e a oferta para melhorar a experiência do cliente e aumentar as taxas de conversão.

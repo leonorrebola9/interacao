@@ -14,7 +14,7 @@ SRC_DIR     = Path("src")
 STITCHER    = SRC_DIR / "stitcher.py"
 ANALYTICS   = SRC_DIR / "analytics.py"
 INSIGHTS    = SRC_DIR / "insights.py"
-ZONES_FILE  = Path("data") / "zones.json"
+ZONES_FILE = Path(__file__).parent / "data" / "zones.json"
  
 # Execução dos módulos do pipeline
 def run_module(script: Path, args: list[str], step: str) -> bool:
