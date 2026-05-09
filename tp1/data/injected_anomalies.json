@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ANO_001",
+    "tipo": "queda_zero",
+    "zona": "Z_S3",
+    "hora": 14,
+    "dia": "dia 7",
+    "descricao": "Removidos 56 eventos — simula encerramento temporário"
+  },
+  {
+    "id": "ANO_002",
+    "tipo": "pico_trafego",
+    "zona": "Z_N5",
+    "hora": 11,
+    "dia": "dia 7",
+    "descricao": "Duplicados 129 eventos — simula pico promocional"
+  },
+  {
+    "id": "ANO_003",
+    "tipo": "queda_parcial",
+    "zona": "Z_C2",
+    "hora": 17,
+    "dia": "dia 7",
+    "descricao": "Removidos 648 eventos (80%) — simula avaria de caixa"
+  }
+]

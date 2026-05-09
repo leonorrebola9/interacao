@@ -3,8 +3,8 @@
 ### Trabalho realizado por: ###
 * Leonor Rebola (leonor.rebola@ubi.pt)
 * Número: 53663
+* Curso: Inteligência Artificial e Ciência de Dados
 * UC: Interação com Modelos em Larga Escala
-
 ---
 
 ## Descrição do trabalho
@@ -19,8 +19,10 @@ O trabalho segue a seguinte estrutura:
 ```
 tp1/
 ├── data/
+│   ├── events_with_anomalies.csv
 │   ├── events.csv
 │   └── zones.json
+│   └── injected_anomalies.json
 ├── src/
 │   ├── stitcher.py
 │   ├── analytics.py
@@ -30,12 +32,15 @@ tp1/
 │   ├── journeys.csv
 │   ├── metrics.json
 │   ├── insights.json
+│   ├── evaluation_injected.json
 │   └── weekly_report.md
 ├── prompts/
 │   ├── strategy_A_zero_shot.txt
 │   ├── strategy_B_few_shot.txt
 │   └── report_prompt.txt
 ├── evaluate.py
+├── check.py
+├── injected_anomalies.py
 ├── README.md
 └── requirements.txt
 ```
@@ -97,6 +102,33 @@ Para avaliar com o dataset de validação:
 ```bash
 python evaluate.py --data events_validation.csv --output evaluation_report.json --zones data/zones.json
 ```
+
+3. Script de diagnóstico (opcional)
+```bash
+python check.py
+```
+Analisa a distribuição de trajetórias por número de zonas visitadas, útil para validar a qualidade do stitching.
+
+---
+
+## Testes com Anomalias Injetadas
+Para validar o sistema de deteção de anomalias, foi criado um script que injeta anomalias conhecidas no dataset original:
+Para correr o código:
+```bash
+python inject_anomalies.py
+```
+
+Isto gera `data/events_with_anomalies.csv` com três anomalias controladas:
+- **ANO_001**: queda para zero em Z_S3 às 14h do dia 7 (56 eventos removidos)
+- **ANO_002**: pico de tráfego em Z_N5 às 11h do dia 7 (129 eventos duplicados)
+- **ANO_003**: queda de 80% em Z_C2 às 17h do dia 7 (648 eventos removidos)
+
+Para avaliar o pipeline sobre o dataset com anomalias:
+```bash
+python evaluate.py --data data/events_with_anomalies.csv \ --output output/evaluation_injected.json \ --zones data/zones.json
+```
+
+O registo das anomalias injetadas é guardado em `data/injected_anomalies.json`.
 
 ---
 
