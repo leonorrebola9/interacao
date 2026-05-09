@@ -1,3 +1,5 @@
+# Como correr: python src/insights.py --input output/metrics.json --output output/insights.json
+
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
