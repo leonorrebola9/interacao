@@ -1,3 +1,5 @@
+# Como correr: python src/analytics.py --input output/journeys.csv --output output/metrics.json
+
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
