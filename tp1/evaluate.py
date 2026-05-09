@@ -1,3 +1,5 @@
+# Como correr: python evaluate.py --data data/events.csv --output evaluation_report.json --zones data/zones.json
+
 import argparse
 import json
 import re
