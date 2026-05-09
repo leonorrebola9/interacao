@@ -1,7 +1,7 @@
 {
   "meta": {
-    "data_file": "events_validation.csv",
-    "evaluated_at": "2026-05-09 12:39:23",
+    "data_file": "data/events.csv",
+    "evaluated_at": "2026-05-09 15:14:24",
     "pipeline": {
       "stitcher": "src\\stitcher.py",
       "analytics": "src\\analytics.py",
@@ -9,21 +9,74 @@
     }
   },
   "stitching": {
-    "error": "journeys.csv não foi produzido"
+    "trajectories_total": 14390,
+    "events_total": 250015,
+    "entries_total": 85347,
+    "entries_assigned": 140727,
+    "consistency": 0.9997,
+    "consistency_pct": "100.0%",
+    "coverage": 1.0,
+    "coverage_pct": "100.0%",
+    "completeness": 0.8722,
+    "completeness_pct": "87.2%",
+    "overlaps_found": 5,
+    "gap_median_s": 9.0,
+    "gap_p95_s": 31.0
   },
   "anomaly_detection": {
-    "error": "insights.json ou metrics.json não disponíveis"
+    "anomalies_in_metrics": 22,
+    "anomaly_insights_generated": 1,
+    "numeric_precision": 0.952,
+    "numeric_precision_pct": "95.2%",
+    "numeric_checks_total": 21,
+    "numeric_checks_ok": 20,
+    "top_anomalies": [
+      {
+        "zone_id": "Z_N6",
+        "hour": 14,
+        "z_score": 3.79,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_C2",
+        "hour": 12,
+        "z_score": 3.47,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_S6",
+        "hour": 19,
+        "z_score": 2.89,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_N8",
+        "hour": 14,
+        "z_score": 2.87,
+        "direction": "acima"
+      },
+      {
+        "zone_id": "Z_N4",
+        "hour": 12,
+        "z_score": 2.66,
+        "direction": "acima"
+      }
+    ]
   },
   "hallucination": {
-    "error": "weekly_report.md não disponível"
+    "numbers_checked": 24,
+    "numbers_verified": 23,
+    "hallucination_rate": 0.042,
+    "hallucination_pct": "4.2%",
+    "note": "Taxa de alucinação = % de números no relatório não verificáveis nos dados reais"
   },
   "summary": {
-    "consistency": "N/A",
-    "coverage": "N/A",
-    "completeness": "N/A",
-    "anomalies_detected": "N/A",
-    "numeric_precision": "N/A",
-    "hallucination_rate": "N/A",
-    "total_time_s": 4.2
+    "consistency": "100.0%",
+    "coverage": "100.0%",
+    "completeness": "87.2%",
+    "anomalies_detected": 22,
+    "numeric_precision": "95.2%",
+    "hallucination_rate": "4.2%",
+    "total_time_s": 104.6
   }
 }
