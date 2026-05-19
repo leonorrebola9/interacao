@@ -20,7 +20,7 @@ print(f"\nZona mais frequente como 2ª zona:")
 second_zones = sequences[sequences.apply(len) >= 2].apply(lambda x: x[1])
 print(second_zones.value_counts().head(10))
 
-print(f"\nDistribuição por número de zonas visitadas:")
+print(f"\nDistribuição por número de visitas a zonas:")
 zone_counts = sequences.apply(len).value_counts().sort_index()
 for n, count in zone_counts.items():
-    print(f"  {n} zona(s): {count} trajetórias ({count/total*100:.1f}%)")
+    print(f"  {n} visita(s): {count} trajetórias ({count/total*100:.1f}%)")
