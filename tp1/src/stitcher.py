@@ -318,8 +318,7 @@ class Stitcher:
                             best_inferred = traj
             
             if best_inferred is not None:
-                # Encontrámos um bom candidato noutra zona.
-                # Vamos forçar a entrada ("inferir" que ele entrou instantes antes de sair)
+                # Forçar a entrada ("inferir" que ele entrou instantes antes de sair)
                 self.open_trajs_by_zone[best_inferred.last_zone].remove(best_inferred)
                 best_inferred.last_zone = zone_id
                 best_inferred.last_entry_ts = ts - pd.Timedelta(seconds=1) # Finge que entrou 1s antes
@@ -333,7 +332,7 @@ class Stitcher:
                 self.open_trajs_by_zone[zone_id].append(best_inferred)
                 best = best_inferred
             else:
-                # Se não encontrarmos mesmo ninguém compatível, aí sim, contamos como órfão
+                # Se não encontrarmos mesmo ninguém compatível, conta como órfão
                 self._unmatched_exit += 1
                 return
  
@@ -376,7 +375,7 @@ class Stitcher:
                 best_score = score
                 best       = traj
 
-        # 2. SALVAGUARDA (Inferred Entry): O sensor falhou a entrada, mas a pessoa está aqui parada!
+        # 2. SALVAGUARDA (Inferred Entry): O sensor falhou a entrada, mas a pessoa está parada
         if best is None:
             best_inferred = None
             best_inferred_score = float("-inf")
@@ -411,7 +410,7 @@ class Stitcher:
                 self.open_trajs_by_zone[zone_id].append(best_inferred)
                 best = best_inferred
             else:
-                # Ninguém compatível, é um fantasma
+                # Ninguém compatível
                 self._unmatched_linger += 1
                 return
 

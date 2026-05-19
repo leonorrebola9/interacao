@@ -186,7 +186,7 @@ def compute_zone_metrics(df: pd.DataFrame) -> dict:
  
     zones_list = zone_df.to_dict(orient="records")
  
-    # Top-10 sequências de zonas mais frequentes — vetorizado com shift
+    # Top-10 sequências de zonas mais frequentes
     df_sorted = df.sort_values(["person_id", "entry_time"]).copy()
     df_sorted["next_zone"] = df_sorted.groupby("person_id")["zone_id"].shift(-1)
     seq_df = df_sorted.dropna(subset=["next_zone"])
