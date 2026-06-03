@@ -22,4 +22,4 @@ try:
     print(response.text)
     print("---")
 except Exception as e:
-    print(f"Ups, deu erro no teste: {e}")
+    print(f"Deu erro no teste: {e}")
