@@ -16,7 +16,7 @@ load_dotenv()
 client = genai.Client()
 
 # Pastas e Cache
-CATEGORIES = ["normal", "ambiguous"]
+CATEGORIES = ["normal", "ambiguous", "empty_shelf", "planogram_violation", "dirty_messy"]
 BASE_DIR = Path("data/images")
 for cat in CATEGORIES:
     (BASE_DIR / cat).mkdir(parents=True, exist_ok=True)
@@ -35,10 +35,13 @@ def classify_image(img_bytes: bytes, img_hash: str) -> str:
         return cache[img_hash]
 
     prompt = """Analisa esta imagem de uma prateleira de supermercado e classifica-a numa destas categorias:
-    - normal: prateleira bem organizada, produtos visíveis e bem posicionados
-    - ambiguous: situação pouco clara ou que mistura vários problemas
-    - rejeitar: se estiver vazia, suja, ou tiver produtos tombados.
-    Responde APENAS com uma destas três palavras."""
+            - normal: prateleira bem organizada, TODOS os produtos bem posicionados, sem nenhum problema visível
+            - empty_shelf: prateleira vazia ou com grandes espaços sem produto
+            - planogram_violation: produto tombado, fora do sítio, ou etiqueta ausente
+            - dirty_messy: prateleira desorganizada, embalagens danificadas ou produtos desalinhados
+            - ambiguous: situação pouco clara ou que mistura vários problemas
+            - rejeitar: imagem que não é de prateleira de supermercado
+            Responde APENAS com uma destas seis palavras."""
 
     try:
         image = PIL.Image.open(io.BytesIO(img_bytes))
@@ -62,7 +65,7 @@ def classify_image(img_bytes: bytes, img_hash: str) -> str:
 
 def run_phase_1():
     print("A carregar o dataset")
-    dataset = load_dataset("johnanvik/grocery-store-dataset", split="train", streaming=True)
+    dataset = load_dataset("UniDataPro/grocery-shelves", split="train", streaming=True)
     
     # Metas apenas para estas duas categorias
     targets = {"normal": 150, "ambiguous": 70}
@@ -76,11 +79,16 @@ def run_phase_1():
             
         img = item["image"]
         img_byte_arr = io.BytesIO()
+        
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+            
+        img_byte_arr = io.BytesIO()
         img.save(img_byte_arr, format='JPEG')
         img_bytes = img_byte_arr.getvalue()
         img_hash = hashlib.md5(img_bytes).hexdigest()
         
-        print(f"A classificar imagem {processed}...", end=" ")
+        print(f"A classificar imagem {processed}", end=" ")
         category = classify_image(img_bytes, img_hash)
         print(f"→ {category}")
         
