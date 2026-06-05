@@ -1,0 +1,17 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "medium",
+      "location": "center-right shelves (visible gaps in Fairy section)"
+    },
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "top shelf (slight uneven alignment of green bottles)"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.8,
+  "image": "IMG_9003.jpg"
+}

@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "medium",
+      "location": "central shelves with noticeable empty spaces"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.8,
+  "image": "IMG_8993.jpg"
+}

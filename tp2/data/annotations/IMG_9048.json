@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "wrong_product",
+      "severity": "high",
+      "location": "middle shelf (Air Wick air freshener sprays placed among cereal/food products)"
+    }
+  ],
+  "overall_status": "critical",
+  "fill_rate": 0.95,
+  "image": "IMG_9048.jpg"
+}

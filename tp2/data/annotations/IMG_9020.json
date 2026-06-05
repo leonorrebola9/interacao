@@ -1,0 +1,17 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "low",
+      "location": "lower shelves (small gaps)"
+    },
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "some yogurt packs slightly pushed back"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.9,
+  "image": "IMG_9020.jpg"
+}

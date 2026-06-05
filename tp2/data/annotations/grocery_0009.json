@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "low",
+      "location": "center (a visible gap between the third and fourth boxes suggests an empty slot)"
+    }
+  ],
+  "overall_status": "ok",
+  "fill_rate": 0.83,
+  "image": "grocery_0009.jpg"
+}

@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "low",
+      "location": "small gaps across shelves, especially bottom row"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.9,
+  "image": "grocery_0012.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "medium",
+      "location": "central shelves with visible empty gaps"
+    },
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "center-left shelves (some products slightly tilted or not front-facing)"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.8,
+  "image": "IMG_8996.jpg"
+}

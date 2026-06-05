@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "wrong_product",
+      "severity": "medium",
+      "location": "middle shelf (Nescafé cappuccino placed among chocolate cereal products)"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.95,
+  "image": "image.png"
+}

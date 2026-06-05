@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "empty_shelf",
+      "severity": "low",
+      "location": "small gaps in multiple shelves, especially upper right"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.9,
+  "image": "IMG_8990.jpg"
+}

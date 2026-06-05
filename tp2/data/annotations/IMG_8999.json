@@ -1,0 +1,12 @@
+{
+  "issues": [
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "multiple shelves (products slightly pushed back, not fully front-facing)"
+    }
+  ],
+  "overall_status": "warning",
+  "fill_rate": 0.98,
+  "image": "IMG_8999.jpg"
+}

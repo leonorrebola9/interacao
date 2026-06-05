@@ -1,0 +1,17 @@
+{
+  "issues": [
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "Top left Indomie cup is slightly angled."
+    },
+    {
+      "type": "misaligned",
+      "severity": "low",
+      "location": "Top middle Indomie cup is slightly angled."
+    }
+  ],
+  "overall_status": "fair",
+  "fill_rate": 0.98,
+  "image": "grocery_0004.jpg"
+}
