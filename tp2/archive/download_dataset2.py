@@ -8,7 +8,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 TOTAL = 500
 
-print("A carregar dataset em modo streaming (sem descarregar tudo)...")
+print("A carregar dataset em modo streaming (sem descarregar tudo)")
 dataset = load_dataset("PrashantDixit0/SKU-110K", split="train", streaming=True)
 
 saved = 0
