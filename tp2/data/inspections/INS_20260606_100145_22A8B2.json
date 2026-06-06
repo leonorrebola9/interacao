@@ -1,0 +1,35 @@
+{
+  "inspection_id": "INS_20260606_100145_22A8B2",
+  "timestamp": "2026-06-06T10:01:45.171245+00:00",
+  "image_path": "data/test/IMG_9047.jpg",
+  "zone_id": "Z_S2",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "Terceira prateleira, ao centro, entre os sacos de cereais 'Continente Pétalas de Chocolate'.",
+      "severity": "medium",
+      "description": "Uma pequena caixa de 'Nescafe Cappuccino' está indevidamente colocada na prateleira dos cereais.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Quarta prateleira, lado direito, sacos azuis de cereais 'UMAX'.",
+      "severity": "low",
+      "description": "Os sacos de cereais azuis estão um pouco amassados e não estão arrumados de forma organizada, dando uma aparência desarrumada.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.93,
+  "products_detected": [
+    "Cereais de chocolate (arroz tufado, pétalas)",
+    "Café (cappuccino)"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas com uma variedade de cereais de chocolate. No entanto, uma caixa de 'Nescafe Cappuccino' está incorretamente colocada na terceira prateleira entre os sacos de cereais, indicando um problema de 'wrong_product'. Além disso, alguns sacos de cereais na quarta prateleira parecem 'misaligned' ou mal arrumados. A taxa de preenchimento geral é alta, mas estas pequenas discrepâncias levam a um status de 'warning'.",
+  "strategy": "A",
+  "summary": "prateleira da zona Z_S2 com fill rate de 93%, com cereais de chocolate e café. Produto errado (café) fora de posição na terceira prateleira ao centro (severidade média), e sacos de cereais desalinhados/desarrumados detetados na quarta prateleira lado direito (severidade baixa). Sábado 10h01, estado warning."
+}
