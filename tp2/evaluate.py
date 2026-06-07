@@ -39,31 +39,32 @@ def load_annotation(image_path):
 # ─────────────────────────────────────────────
 
 def evaluate_inspection(prediction, ground_truth):
-    """
-    Avalia uma inspecao face ao ground truth.
-    Retorna dict com metricas.
-    """
     pred_issues = prediction.get("issues", [])
     gt_issues = ground_truth.get("issues", [])
 
     pred_types = [i.get("type") for i in pred_issues]
     gt_types = [i.get("type") for i in gt_issues]
 
-    # Issue Detection Rate (Recall) — % de issues do GT corretamente identificados
-    detected = sum(1 for gt in gt_types if gt in pred_types)
-    issue_detection_rate = detected / len(gt_types) if gt_types else 1.0
+    # Issue Detection Rate — so calculavel se houver issues no GT
+    if gt_types:
+        detected = sum(1 for gt in gt_types if gt in pred_types)
+        issue_detection_rate = detected / len(gt_types)
+    else:
+        issue_detection_rate = None  # nao aplicavel se GT vazio
 
-    # False Positive Rate — % de issues reportados que nao existem no GT
-    false_positives = sum(1 for p in pred_types if p not in gt_types)
-    false_positive_rate = false_positives / len(pred_types) if pred_types else 0.0
+    # False Positive Rate — issues reportados que nao existem no GT
+    if pred_types:
+        false_positives = sum(1 for p in pred_types if p not in gt_types)
+        false_positive_rate = false_positives / len(pred_types)
+    else:
+        false_positive_rate = 0.0  # nao reportou nada, sem falsos positivos
 
-    # Severity Accuracy — % de issues com severidade correta
+    # Severity Accuracy
     severity_correct = 0
     severity_total = 0
     for gt_issue in gt_issues:
         gt_type = gt_issue.get("type")
         gt_sev = gt_issue.get("severity", "low")
-        # procura issue correspondente na predicao
         matching = [p for p in pred_issues if p.get("type") == gt_type]
         if matching:
             pred_sev = matching[0].get("severity", "low")
@@ -73,20 +74,16 @@ def evaluate_inspection(prediction, ground_truth):
 
     severity_accuracy = severity_correct / severity_total if severity_total > 0 else None
 
-    # JSON Parse Rate — se chegamos aqui, o JSON foi parseado com sucesso
-    json_parse_rate = 1.0
-
     return {
-        "issue_detection_rate": round(issue_detection_rate, 3),
+        "issue_detection_rate": round(issue_detection_rate, 3) if issue_detection_rate is not None else None,
         "false_positive_rate": round(false_positive_rate, 3),
         "severity_accuracy": round(severity_accuracy, 3) if severity_accuracy is not None else None,
-        "json_parse_rate": json_parse_rate,
+        "json_parse_rate": 1.0,
         "gt_issues": gt_types,
         "pred_issues": pred_types,
         "gt_status": ground_truth.get("overall_status"),
         "pred_status": prediction.get("overall_status")
     }
-
 
 # ─────────────────────────────────────────────
 # AVALIACAO POR ESTRATEGIA
@@ -99,7 +96,7 @@ def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
     results = []
     json_failures = 0
 
-    print(f"\nA avaliar estrategia {strategy} em {len(images)} imagens...")
+    print(f"\nA avaliar estrategia {strategy} em {len(images)} imagens")
 
     for i, image_path in enumerate(images):
         annotation = load_annotation(image_path)
@@ -127,8 +124,8 @@ def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
     if not results:
         return {}
 
-    avg_idr = sum(r["issue_detection_rate"] for r in results) / len(results)
-    avg_fpr = sum(r["false_positive_rate"] for r in results) / len(results)
+    idr_results = [r["issue_detection_rate"] for r in results if r["issue_detection_rate"] is not None]
+    avg_idr = sum(idr_results) / len(idr_results) if idr_results else 0.0
 
     sev_results = [r["severity_accuracy"] for r in results if r["severity_accuracy"] is not None]
     avg_sev = sum(sev_results) / len(sev_results) if sev_results else None
@@ -160,7 +157,7 @@ def evaluate_rag(queries_with_ground_truth, k=3):
 
     recall_hits = 0
 
-    print(f"\nA avaliar RAG com {len(queries_with_ground_truth)} queries...")
+    print(f"\nA avaliar RAG com {len(queries_with_ground_truth)} queries")
 
     for item in queries_with_ground_truth:
         query = item["query"]
