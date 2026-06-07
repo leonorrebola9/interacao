@@ -268,7 +268,7 @@ def main():
         cmd, args = parse_command(line)
 
         if cmd in ("exit", "quit", "sair"):
-            print("A sair...")
+            print("A sair")
             break
 
         elif cmd == "help":
