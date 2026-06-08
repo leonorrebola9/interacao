@@ -12,7 +12,11 @@ from shelf_inspector import inspect_image
 
 VALID_ISSUE_TYPES = ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"]
 SEVERITY_ORDER = {"low": 0, "medium": 1, "high": 2}
-ANNOTATIONS_DIR = "./data/annotations"
+DATASET_JSON = "./data/dataset.json"
+
+# carrega dataset no inicio
+with open(DATASET_JSON, encoding="utf-8") as f:
+    DATASET = json.load(f)
 
 # ─────────────────────────────────────────────
 # CARREGAMENTO DE ANOTACOES
@@ -20,18 +24,27 @@ ANNOTATIONS_DIR = "./data/annotations"
 
 def load_annotation(image_path):
     """Carrega a anotacao ground truth para uma imagem."""
-    image_name = Path(image_path).stem
-    annotation_path = os.path.join(ANNOTATIONS_DIR, f"{image_name}.json")
-    if not os.path.exists(annotation_path):
+    image_name = Path(image_path).name
+    entry = DATASET.get(image_name)
+    if not entry or not entry.get("annotated"):
         return None
-    with open(annotation_path, encoding="utf-8") as f:
-        data = json.load(f)
-    # normaliza overall_status
-    status = data.get("overall_status", "ok").lower()
+    status = entry.get("overall_status", "ok")
+    if status:
+        status = status.lower()
     if status not in ["ok", "warning", "critical"]:
         status = "ok"
-    data["overall_status"] = status
-    return data
+    return {
+        "overall_status": status,
+        "fill_rate": entry.get("fill_rate", 1.0),
+        "issues": entry.get("issues", []),
+        "zone": entry.get("zone", "Z_S1")
+    }
+
+def get_zone(image_path):
+    """Retorna a zona de uma imagem."""
+    image_name = Path(image_path).name
+    entry = DATASET.get(image_name)
+    return entry.get("zone", "Z_S1") if entry else "Z_S1"
 
 
 # ─────────────────────────────────────────────
@@ -45,21 +58,18 @@ def evaluate_inspection(prediction, ground_truth):
     pred_types = [i.get("type") for i in pred_issues]
     gt_types = [i.get("type") for i in gt_issues]
 
-    # Issue Detection Rate — so calculavel se houver issues no GT
     if gt_types:
         detected = sum(1 for gt in gt_types if gt in pred_types)
         issue_detection_rate = detected / len(gt_types)
     else:
-        issue_detection_rate = None  # nao aplicavel se GT vazio
+        issue_detection_rate = None
 
-    # False Positive Rate — issues reportados que nao existem no GT
     if pred_types:
         false_positives = sum(1 for p in pred_types if p not in gt_types)
         false_positive_rate = false_positives / len(pred_types)
     else:
-        false_positive_rate = 0.0  # nao reportou nada, sem falsos positivos
+        false_positive_rate = 0.0
 
-    # Severity Accuracy
     severity_correct = 0
     severity_total = 0
     for gt_issue in gt_issues:
@@ -85,14 +95,12 @@ def evaluate_inspection(prediction, ground_truth):
         "pred_status": prediction.get("overall_status")
     }
 
+
 # ─────────────────────────────────────────────
 # AVALIACAO POR ESTRATEGIA
 # ─────────────────────────────────────────────
 
-def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
-    """
-    Avalia uma estrategia de prompting sobre um conjunto de imagens anotadas.
-    """
+def evaluate_strategy(images, strategy, delay=6):
     results = []
     json_failures = 0
 
@@ -107,10 +115,13 @@ def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
         print(f"  [{i+1}/{len(images)}] {Path(image_path).name}...", end=" ")
 
         try:
-            prediction = inspect_image(image_path, zone_id=zone_id, strategy=strategy)
+            # usa zona correcta do dataset
+            zone = get_zone(image_path)
+            prediction = inspect_image(image_path, zone_id=zone, strategy=strategy)
             metrics = evaluate_inspection(prediction, annotation)
             metrics["image"] = Path(image_path).name
             metrics["strategy"] = strategy
+            metrics["zone"] = zone
             results.append(metrics)
             print(f"IDR: {metrics['issue_detection_rate']} | FPR: {metrics['false_positive_rate']}")
 
@@ -120,12 +131,14 @@ def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
 
         time.sleep(delay)
 
-    # agrega metricas
     if not results:
         return {}
 
     idr_results = [r["issue_detection_rate"] for r in results if r["issue_detection_rate"] is not None]
     avg_idr = sum(idr_results) / len(idr_results) if idr_results else 0.0
+
+    fpr_results = [r["false_positive_rate"] for r in results]
+    avg_fpr = sum(fpr_results) / len(fpr_results) if fpr_results else 0.0
 
     sev_results = [r["severity_accuracy"] for r in results if r["severity_accuracy"] is not None]
     avg_sev = sum(sev_results) / len(sev_results) if sev_results else None
@@ -149,30 +162,22 @@ def evaluate_strategy(images, strategy, zone_id="Z_EVAL", delay=6):
 # ─────────────────────────────────────────────
 
 def evaluate_rag(queries_with_ground_truth, k=3):
-    """
-    Avalia o RAG com Recall@k.
-    queries_with_ground_truth: lista de {query, relevant_inspection_ids}
-    """
     from rag_memory import retrieve
 
     recall_hits = 0
-
     print(f"\nA avaliar RAG com {len(queries_with_ground_truth)} queries")
 
     for item in queries_with_ground_truth:
         query = item["query"]
         relevant_ids = item["relevant_ids"]
-
         retrieved = retrieve(query, k=k)
         retrieved_ids = [r["inspection_id"] for r in retrieved]
-
         hit = any(rid in retrieved_ids for rid in relevant_ids)
         if hit:
             recall_hits += 1
         print(f"  Query: \"{query[:50]}\" — {'HIT' if hit else 'MISS'}")
 
     recall_at_k = recall_hits / len(queries_with_ground_truth) if queries_with_ground_truth else 0.0
-
     return {
         "recall_at_k": round(recall_at_k, 3),
         "k": k,
@@ -185,10 +190,6 @@ def evaluate_rag(queries_with_ground_truth, k=3):
 # ─────────────────────────────────────────────
 
 def llm_judge(prediction_text, criterion, max_retries=3):
-    """
-    Usa o Gemini como juiz para avaliacao qualitativa.
-    Retorna score (0-5) e justificacao.
-    """
     from google import genai
     from google.genai import types
     from google.genai.errors import ClientError
@@ -250,11 +251,9 @@ def main():
     parser.add_argument("--images-dir", required=True, help="Pasta com imagens de teste")
     parser.add_argument("--output", default="evaluation_report.json", help="Ficheiro de output")
     parser.add_argument("--strategies", default="A,B,C", help="Estrategias a avaliar (A,B,C)")
-    parser.add_argument("--zone", default="Z_EVAL", help="Zona para as inspecoes")
     parser.add_argument("--delay", type=int, default=6, help="Delay entre chamadas API (segundos)")
     args = parser.parse_args()
 
-    # recolhe imagens com anotacao
     images_dir = args.images_dir
     all_images = list(Path(images_dir).glob("*.jpg")) + list(Path(images_dir).glob("*.png"))
     annotated_images = [str(img) for img in all_images if load_annotation(str(img)) is not None]
@@ -263,7 +262,7 @@ def main():
     print(f"Imagens com anotacao: {len(annotated_images)}")
 
     if not annotated_images:
-        print("Nenhuma imagem anotada encontrada. Verifica a pasta de anotacoes.")
+        print("Nenhuma imagem anotada encontrada.")
         return
 
     strategies = [s.strip() for s in args.strategies.split(",")]
@@ -274,15 +273,13 @@ def main():
         "strategies": {}
     }
 
-    # avalia cada estrategia
     for strategy in strategies:
         print(f"\n{'='*50}")
         print(f"ESTRATEGIA {strategy}")
         print(f"{'='*50}")
-        result = evaluate_strategy(annotated_images, strategy, zone_id=args.zone, delay=args.delay)
+        result = evaluate_strategy(annotated_images, strategy, delay=args.delay)
         evaluation_results["strategies"][strategy] = result
 
-    # resumo comparativo
     print(f"\n{'='*50}")
     print("RESUMO COMPARATIVO")
     print(f"{'='*50}")
@@ -299,7 +296,6 @@ def main():
             values.append(f"{v:.3f}" if v is not None else "N/A")
         print(f"{label:<25} {values[0]:>8} {values[1] if len(values) > 1 else 'N/A':>8} {values[2] if len(values) > 2 else 'N/A':>8}")
 
-    # guarda resultados
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(evaluation_results, f, indent=2, ensure_ascii=False)
 

@@ -1,0 +1,498 @@
+{
+  "timestamp": "2026-06-08T19:28:08.131740+00:00",
+  "images_dir": "data/images",
+  "total_images": 30,
+  "strategies": {
+    "A": {
+      "strategy": "A",
+      "images_evaluated": 28,
+      "issue_detection_rate": 0.348,
+      "false_positive_rate": 0.469,
+      "severity_accuracy": 0.556,
+      "json_parse_rate": 0.933,
+      "per_image": [
+        {
+          "issue_detection_rate": null,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [],
+          "pred_issues": [],
+          "gt_status": "ok",
+          "pred_status": "ok",
+          "image": "grocery_0002.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.5,
+          "severity_accuracy": 1.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "misaligned",
+            "misaligned"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "other"
+          ],
+          "gt_status": "ok",
+          "pred_status": "warning",
+          "image": "grocery_0004.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "grocery_0005.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "misaligned",
+            "misaligned"
+          ],
+          "gt_status": "ok",
+          "pred_status": "warning",
+          "image": "grocery_0009.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": null,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [],
+          "pred_issues": [
+            "wrong_product",
+            "wrong_product"
+          ],
+          "gt_status": "ok",
+          "pred_status": "critical",
+          "image": "grocery_0010.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "warning",
+          "pred_status": "ok",
+          "image": "grocery_0012.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": null,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [],
+          "pred_issues": [
+            "wrong_product",
+            "wrong_product"
+          ],
+          "gt_status": "ok",
+          "pred_status": "warning",
+          "image": "grocery_0013.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": null,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [],
+          "pred_issues": [
+            "misaligned"
+          ],
+          "gt_status": "ok",
+          "pred_status": "warning",
+          "image": "grocery_0014.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "warning",
+          "pred_status": "ok",
+          "image": "IMG_8990.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "misaligned",
+            "misaligned",
+            "other"
+          ],
+          "gt_status": "warning",
+          "pred_status": "ok",
+          "image": "IMG_8991.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "critical",
+          "pred_status": "ok",
+          "image": "IMG_8992.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf",
+            "misaligned"
+          ],
+          "pred_issues": [],
+          "gt_status": "warning",
+          "pred_status": "ok",
+          "image": "IMG_8996.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "critical",
+          "pred_status": "ok",
+          "image": "IMG_8998.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "misaligned"
+          ],
+          "pred_issues": [
+            "label_missing"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_8999.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.5,
+          "severity_accuracy": 1.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "misaligned"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "other"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_9001.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": null,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [],
+          "pred_issues": [
+            "misaligned"
+          ],
+          "gt_status": "ok",
+          "pred_status": "ok",
+          "image": "IMG_9002.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.5,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": 1.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf",
+            "misaligned"
+          ],
+          "pred_issues": [
+            "empty_shelf",
+            "empty_shelf"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_9003.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 0.5,
+          "false_positive_rate": 0.333,
+          "severity_accuracy": 0.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf",
+            "wrong_product"
+          ],
+          "pred_issues": [
+            "empty_shelf",
+            "empty_shelf",
+            "other"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_9005.jpg",
+          "strategy": "A",
+          "zone": "Z_S4"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": 0.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "empty_shelf",
+            "empty_shelf"
+          ],
+          "gt_status": "critical",
+          "pred_status": "warning",
+          "image": "IMG_9007.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.8,
+          "severity_accuracy": 1.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "other",
+            "other",
+            "other",
+            "empty_shelf"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_9008.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "misaligned",
+            "misaligned"
+          ],
+          "gt_status": "ok",
+          "pred_status": "ok",
+          "image": "IMG_9013.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "critical",
+          "pred_status": "ok",
+          "image": "IMG_9014.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [],
+          "gt_status": "warning",
+          "pred_status": "ok",
+          "image": "IMG_9015.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.5,
+          "severity_accuracy": 0.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "empty_shelf",
+            "empty_shelf",
+            "empty_shelf",
+            "empty_shelf",
+            "misaligned",
+            "misaligned",
+            "misaligned",
+            "other"
+          ],
+          "gt_status": "critical",
+          "pred_status": "warning",
+          "image": "IMG_9016.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": 0.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "empty_shelf"
+          ],
+          "gt_status": "critical",
+          "pred_status": "warning",
+          "image": "IMG_9017.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 1.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "empty_shelf"
+          ],
+          "pred_issues": [
+            "misaligned",
+            "other",
+            "other"
+          ],
+          "gt_status": "ok",
+          "pred_status": "warning",
+          "image": "IMG_9021.jpg",
+          "strategy": "A",
+          "zone": "Z_S1"
+        },
+        {
+          "issue_detection_rate": 1.0,
+          "false_positive_rate": 0.5,
+          "severity_accuracy": 1.0,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "wrong_product"
+          ],
+          "pred_issues": [
+            "wrong_product",
+            "misaligned"
+          ],
+          "gt_status": "warning",
+          "pred_status": "warning",
+          "image": "IMG_9047.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        },
+        {
+          "issue_detection_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "severity_accuracy": null,
+          "json_parse_rate": 1.0,
+          "gt_issues": [
+            "wrong_product"
+          ],
+          "pred_issues": [],
+          "gt_status": "critical",
+          "pred_status": "ok",
+          "image": "IMG_9048.jpg",
+          "strategy": "A",
+          "zone": "Z_S5"
+        }
+      ]
+    }
+  }
+}

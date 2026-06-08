@@ -1,0 +1,4945 @@
+{
+  "grocery_0000.jpg": {
+    "path": "data\\images\\grocery_0000.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0001.jpg": {
+    "path": "data\\images\\grocery_0001.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0002.jpg": {
+    "path": "data\\images\\grocery_0002.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 1.0,
+    "issues": []
+  },
+  "grocery_0003.jpg": {
+    "path": "data\\images\\grocery_0003.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0004.jpg": {
+    "path": "data\\images\\grocery_0004.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "fair",
+    "fill_rate": 0.98,
+    "issues": [
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "Top left Indomie cup is slightly angled."
+      },
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "Top middle Indomie cup is slightly angled."
+      }
+    ]
+  },
+  "grocery_0005.jpg": {
+    "path": "data\\images\\grocery_0005.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "center (visible gap between products)"
+      }
+    ]
+  },
+  "grocery_0006.jpg": {
+    "path": "data\\images\\grocery_0006.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0007.jpg": {
+    "path": "data\\images\\grocery_0007.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0008.jpg": {
+    "path": "data\\images\\grocery_0008.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0009.jpg": {
+    "path": "data\\images\\grocery_0009.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 0.83,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "center (a visible gap between the third and fourth boxes suggests an empty slot)"
+      }
+    ]
+  },
+  "grocery_0010.jpg": {
+    "path": "data\\images\\grocery_0010.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "Excellent",
+    "fill_rate": 1.0,
+    "issues": []
+  },
+  "grocery_0011.jpg": {
+    "path": "data\\images\\grocery_0011.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "grocery_0012.jpg": {
+    "path": "data\\images\\grocery_0012.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "small gaps across shelves, especially bottom row"
+      }
+    ]
+  },
+  "grocery_0013.jpg": {
+    "path": "data\\images\\grocery_0013.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 1.0,
+    "issues": []
+  },
+  "grocery_0014.jpg": {
+    "path": "data\\images\\grocery_0014.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 1.0,
+    "issues": []
+  },
+  "IMG_8990.jpg": {
+    "path": "data\\images\\IMG_8990.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "small gaps in multiple shelves, especially upper right"
+      }
+    ]
+  },
+  "IMG_8991.jpg": {
+    "path": "data\\images\\IMG_8991.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "small gaps across shelves, especially left and middle sections"
+      }
+    ]
+  },
+  "IMG_8992.jpg": {
+    "path": "data\\images\\IMG_8992.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.7,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "second shelf (large empty central area)"
+      }
+    ]
+  },
+  "IMG_8993.jpg": {
+    "path": "data\\images\\IMG_8993.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.8,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "central shelves with noticeable empty spaces"
+      }
+    ]
+  },
+  "IMG_8994.jpg": {
+    "path": "data\\images\\IMG_8994.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_8995.jpg": {
+    "path": "data\\images\\IMG_8995.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_8996.jpg": {
+    "path": "data\\images\\IMG_8996.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.8,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "central shelves with visible empty gaps"
+      },
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "center-left shelves (some products slightly tilted or not front-facing)"
+      }
+    ]
+  },
+  "IMG_8997.jpg": {
+    "path": "data\\images\\IMG_8997.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_8998.jpg": {
+    "path": "data\\images\\IMG_8998.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.75,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "central shelf section (large empty area)"
+      }
+    ]
+  },
+  "IMG_8999.jpg": {
+    "path": "data\\images\\IMG_8999.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.98,
+    "issues": [
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "multiple shelves (products slightly pushed back, not fully front-facing)"
+      }
+    ]
+  },
+  "IMG_9001.jpg": {
+    "path": "data\\images\\IMG_9001.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.98,
+    "issues": [
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "third shelf, one spray bottle slightly tilted"
+      }
+    ]
+  },
+  "IMG_9002.jpg": {
+    "path": "data\\images\\IMG_9002.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 0.95,
+    "issues": []
+  },
+  "IMG_9003.jpg": {
+    "path": "data\\images\\IMG_9003.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.8,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "center-right shelves (visible gaps in Fairy section)"
+      },
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "top shelf (slight uneven alignment of green bottles)"
+      }
+    ]
+  },
+  "IMG_9004.jpg": {
+    "path": "data\\images\\IMG_9004.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9005.jpg": {
+    "path": "data\\images\\IMG_9005.jpg",
+    "zone": "Z_S4",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.8,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "middle and bottom shelves (visible gaps between detergent bottles, especially center-right)"
+      },
+      {
+        "type": "wrong_product",
+        "severity": "low",
+        "location": "middle shelves (fabric softener mixed with detergents)"
+      }
+    ]
+  },
+  "IMG_9006.jpg": {
+    "path": "data\\images\\IMG_9006.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9007.jpg": {
+    "path": "data\\images\\IMG_9007.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.7,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "multiple shelves (display boxes partially or mostly empty, especially top and bottom sections)"
+      }
+    ]
+  },
+  "IMG_9008.jpg": {
+    "path": "data\\images\\IMG_9008.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.85,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "middle shelves, especially right side (visible gaps between milk cartons)"
+      }
+    ]
+  },
+  "IMG_9009.jpg": {
+    "path": "data\\images\\IMG_9009.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9010.jpg": {
+    "path": "data\\images\\IMG_9010.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9012.jpg": {
+    "path": "data\\images\\IMG_9012.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9013.jpg": {
+    "path": "data\\images\\IMG_9013.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "both left and right shelves (small gaps between products, especially in middle rows)"
+      }
+    ]
+  },
+  "IMG_9014.jpg": {
+    "path": "data\\images\\IMG_9014.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.7,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "right-side shelves (multiple gaps across several rows, especially in Starbucks/dairy section)"
+      }
+    ]
+  },
+  "IMG_9015.jpg": {
+    "path": "data\\images\\IMG_9015.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.75,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "central and right-side shelves (visible gaps across multiple rows)"
+      }
+    ]
+  },
+  "IMG_9016.jpg": {
+    "path": "data\\images\\IMG_9016.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.65,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "central and left shelves (large empty gaps across multiple rows)"
+      }
+    ]
+  },
+  "IMG_9017.jpg": {
+    "path": "data\\images\\IMG_9017.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.75,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "high",
+        "location": "bottom shelf (large empty areas across the entire row)"
+      }
+    ]
+  },
+  "IMG_9018.jpg": {
+    "path": "data\\images\\IMG_9018.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9019.jpg": {
+    "path": "data\\images\\IMG_9019.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9020.jpg": {
+    "path": "data\\images\\IMG_9020.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.9,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "lower shelves (small gaps)"
+      },
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "some yogurt packs slightly pushed back"
+      }
+    ]
+  },
+  "IMG_9021.jpg": {
+    "path": "data\\images\\IMG_9021.jpg",
+    "zone": "Z_S1",
+    "annotated": true,
+    "overall_status": "ok",
+    "fill_rate": 0.95,
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "low",
+        "location": "some shelves (small gaps mainly on the right side)"
+      }
+    ]
+  },
+  "IMG_9022.jpg": {
+    "path": "data\\images\\IMG_9022.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9023.jpg": {
+    "path": "data\\images\\IMG_9023.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9024.jpg": {
+    "path": "data\\images\\IMG_9024.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9025.jpg": {
+    "path": "data\\images\\IMG_9025.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9026.jpg": {
+    "path": "data\\images\\IMG_9026.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9027.jpg": {
+    "path": "data\\images\\IMG_9027.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9028.jpg": {
+    "path": "data\\images\\IMG_9028.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9029.jpg": {
+    "path": "data\\images\\IMG_9029.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9030.jpg": {
+    "path": "data\\images\\IMG_9030.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9031.jpg": {
+    "path": "data\\images\\IMG_9031.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9032.jpg": {
+    "path": "data\\images\\IMG_9032.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9033.jpg": {
+    "path": "data\\images\\IMG_9033.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9034.jpg": {
+    "path": "data\\images\\IMG_9034.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9035.jpg": {
+    "path": "data\\images\\IMG_9035.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9036.jpg": {
+    "path": "data\\images\\IMG_9036.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9037.jpg": {
+    "path": "data\\images\\IMG_9037.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9038.jpg": {
+    "path": "data\\images\\IMG_9038.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9039.jpg": {
+    "path": "data\\images\\IMG_9039.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9040.jpg": {
+    "path": "data\\images\\IMG_9040.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9041.jpg": {
+    "path": "data\\images\\IMG_9041.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9042.jpg": {
+    "path": "data\\images\\IMG_9042.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9043.jpg": {
+    "path": "data\\images\\IMG_9043.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9044.jpg": {
+    "path": "data\\images\\IMG_9044.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9045.jpg": {
+    "path": "data\\images\\IMG_9045.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9046.jpg": {
+    "path": "data\\images\\IMG_9046.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9047.jpg": {
+    "path": "data\\images\\IMG_9047.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "warning",
+    "fill_rate": 0.95,
+    "issues": [
+      {
+        "type": "wrong_product",
+        "severity": "medium",
+        "location": "middle shelf (Nescafé cappuccino placed among chocolate cereal products)"
+      }
+    ]
+  },
+  "IMG_9048.jpg": {
+    "path": "data\\images\\IMG_9048.jpg",
+    "zone": "Z_S5",
+    "annotated": true,
+    "overall_status": "critical",
+    "fill_rate": 0.95,
+    "issues": [
+      {
+        "type": "wrong_product",
+        "severity": "high",
+        "location": "middle shelf (Air Wick air freshener sprays placed among cereal/food products)"
+      }
+    ]
+  },
+  "IMG_9049.jpg": {
+    "path": "data\\images\\IMG_9049.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9050.jpg": {
+    "path": "data\\images\\IMG_9050.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9051.jpg": {
+    "path": "data\\images\\IMG_9051.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9052.jpg": {
+    "path": "data\\images\\IMG_9052.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9053.jpg": {
+    "path": "data\\images\\IMG_9053.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9054.jpg": {
+    "path": "data\\images\\IMG_9054.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9055.jpg": {
+    "path": "data\\images\\IMG_9055.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9056.jpg": {
+    "path": "data\\images\\IMG_9056.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9057.jpg": {
+    "path": "data\\images\\IMG_9057.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9058.jpg": {
+    "path": "data\\images\\IMG_9058.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9059.jpg": {
+    "path": "data\\images\\IMG_9059.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9060.jpg": {
+    "path": "data\\images\\IMG_9060.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9061.jpg": {
+    "path": "data\\images\\IMG_9061.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9062.jpg": {
+    "path": "data\\images\\IMG_9062.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9064.jpg": {
+    "path": "data\\images\\IMG_9064.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9065.jpg": {
+    "path": "data\\images\\IMG_9065.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9066.jpg": {
+    "path": "data\\images\\IMG_9066.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9067.jpg": {
+    "path": "data\\images\\IMG_9067.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9068.jpg": {
+    "path": "data\\images\\IMG_9068.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9069.jpg": {
+    "path": "data\\images\\IMG_9069.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9070.jpg": {
+    "path": "data\\images\\IMG_9070.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9071.jpg": {
+    "path": "data\\images\\IMG_9071.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9072.jpg": {
+    "path": "data\\images\\IMG_9072.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9073.jpg": {
+    "path": "data\\images\\IMG_9073.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9074.jpg": {
+    "path": "data\\images\\IMG_9074.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9075.jpg": {
+    "path": "data\\images\\IMG_9075.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "IMG_9076.jpg": {
+    "path": "data\\images\\IMG_9076.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0000.jpg": {
+    "path": "data\\images\\sku_0000.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0001.jpg": {
+    "path": "data\\images\\sku_0001.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0002.jpg": {
+    "path": "data\\images\\sku_0002.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0003.jpg": {
+    "path": "data\\images\\sku_0003.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0004.jpg": {
+    "path": "data\\images\\sku_0004.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0005.jpg": {
+    "path": "data\\images\\sku_0005.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0006.jpg": {
+    "path": "data\\images\\sku_0006.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0007.jpg": {
+    "path": "data\\images\\sku_0007.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0008.jpg": {
+    "path": "data\\images\\sku_0008.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0009.jpg": {
+    "path": "data\\images\\sku_0009.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0010.jpg": {
+    "path": "data\\images\\sku_0010.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0011.jpg": {
+    "path": "data\\images\\sku_0011.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0012.jpg": {
+    "path": "data\\images\\sku_0012.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0013.jpg": {
+    "path": "data\\images\\sku_0013.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0014.jpg": {
+    "path": "data\\images\\sku_0014.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0015.jpg": {
+    "path": "data\\images\\sku_0015.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0016.jpg": {
+    "path": "data\\images\\sku_0016.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0017.jpg": {
+    "path": "data\\images\\sku_0017.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0018.jpg": {
+    "path": "data\\images\\sku_0018.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0019.jpg": {
+    "path": "data\\images\\sku_0019.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0020.jpg": {
+    "path": "data\\images\\sku_0020.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0021.jpg": {
+    "path": "data\\images\\sku_0021.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0022.jpg": {
+    "path": "data\\images\\sku_0022.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0023.jpg": {
+    "path": "data\\images\\sku_0023.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0024.jpg": {
+    "path": "data\\images\\sku_0024.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0025.jpg": {
+    "path": "data\\images\\sku_0025.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0026.jpg": {
+    "path": "data\\images\\sku_0026.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0027.jpg": {
+    "path": "data\\images\\sku_0027.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0028.jpg": {
+    "path": "data\\images\\sku_0028.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0029.jpg": {
+    "path": "data\\images\\sku_0029.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0030.jpg": {
+    "path": "data\\images\\sku_0030.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0031.jpg": {
+    "path": "data\\images\\sku_0031.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0032.jpg": {
+    "path": "data\\images\\sku_0032.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0033.jpg": {
+    "path": "data\\images\\sku_0033.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0034.jpg": {
+    "path": "data\\images\\sku_0034.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0035.jpg": {
+    "path": "data\\images\\sku_0035.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0036.jpg": {
+    "path": "data\\images\\sku_0036.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0037.jpg": {
+    "path": "data\\images\\sku_0037.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0038.jpg": {
+    "path": "data\\images\\sku_0038.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0039.jpg": {
+    "path": "data\\images\\sku_0039.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0040.jpg": {
+    "path": "data\\images\\sku_0040.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0041.jpg": {
+    "path": "data\\images\\sku_0041.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0042.jpg": {
+    "path": "data\\images\\sku_0042.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0043.jpg": {
+    "path": "data\\images\\sku_0043.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0044.jpg": {
+    "path": "data\\images\\sku_0044.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0045.jpg": {
+    "path": "data\\images\\sku_0045.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0046.jpg": {
+    "path": "data\\images\\sku_0046.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0047.jpg": {
+    "path": "data\\images\\sku_0047.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0048.jpg": {
+    "path": "data\\images\\sku_0048.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0049.jpg": {
+    "path": "data\\images\\sku_0049.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0050.jpg": {
+    "path": "data\\images\\sku_0050.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0051.jpg": {
+    "path": "data\\images\\sku_0051.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0052.jpg": {
+    "path": "data\\images\\sku_0052.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0053.jpg": {
+    "path": "data\\images\\sku_0053.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0054.jpg": {
+    "path": "data\\images\\sku_0054.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0055.jpg": {
+    "path": "data\\images\\sku_0055.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0056.jpg": {
+    "path": "data\\images\\sku_0056.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0057.jpg": {
+    "path": "data\\images\\sku_0057.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0058.jpg": {
+    "path": "data\\images\\sku_0058.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0059.jpg": {
+    "path": "data\\images\\sku_0059.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0060.jpg": {
+    "path": "data\\images\\sku_0060.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0061.jpg": {
+    "path": "data\\images\\sku_0061.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0062.jpg": {
+    "path": "data\\images\\sku_0062.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0063.jpg": {
+    "path": "data\\images\\sku_0063.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0064.jpg": {
+    "path": "data\\images\\sku_0064.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0065.jpg": {
+    "path": "data\\images\\sku_0065.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0066.jpg": {
+    "path": "data\\images\\sku_0066.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0067.jpg": {
+    "path": "data\\images\\sku_0067.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0068.jpg": {
+    "path": "data\\images\\sku_0068.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0069.jpg": {
+    "path": "data\\images\\sku_0069.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0070.jpg": {
+    "path": "data\\images\\sku_0070.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0071.jpg": {
+    "path": "data\\images\\sku_0071.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0072.jpg": {
+    "path": "data\\images\\sku_0072.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0073.jpg": {
+    "path": "data\\images\\sku_0073.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0074.jpg": {
+    "path": "data\\images\\sku_0074.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0075.jpg": {
+    "path": "data\\images\\sku_0075.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0076.jpg": {
+    "path": "data\\images\\sku_0076.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0077.jpg": {
+    "path": "data\\images\\sku_0077.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0078.jpg": {
+    "path": "data\\images\\sku_0078.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0079.jpg": {
+    "path": "data\\images\\sku_0079.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0080.jpg": {
+    "path": "data\\images\\sku_0080.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0081.jpg": {
+    "path": "data\\images\\sku_0081.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0082.jpg": {
+    "path": "data\\images\\sku_0082.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0083.jpg": {
+    "path": "data\\images\\sku_0083.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0084.jpg": {
+    "path": "data\\images\\sku_0084.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0085.jpg": {
+    "path": "data\\images\\sku_0085.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0086.jpg": {
+    "path": "data\\images\\sku_0086.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0087.jpg": {
+    "path": "data\\images\\sku_0087.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0088.jpg": {
+    "path": "data\\images\\sku_0088.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0089.jpg": {
+    "path": "data\\images\\sku_0089.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0090.jpg": {
+    "path": "data\\images\\sku_0090.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0091.jpg": {
+    "path": "data\\images\\sku_0091.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0092.jpg": {
+    "path": "data\\images\\sku_0092.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0093.jpg": {
+    "path": "data\\images\\sku_0093.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0094.jpg": {
+    "path": "data\\images\\sku_0094.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0095.jpg": {
+    "path": "data\\images\\sku_0095.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0096.jpg": {
+    "path": "data\\images\\sku_0096.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0097.jpg": {
+    "path": "data\\images\\sku_0097.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0098.jpg": {
+    "path": "data\\images\\sku_0098.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0099.jpg": {
+    "path": "data\\images\\sku_0099.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0100.jpg": {
+    "path": "data\\images\\sku_0100.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0101.jpg": {
+    "path": "data\\images\\sku_0101.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0102.jpg": {
+    "path": "data\\images\\sku_0102.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0103.jpg": {
+    "path": "data\\images\\sku_0103.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0104.jpg": {
+    "path": "data\\images\\sku_0104.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0105.jpg": {
+    "path": "data\\images\\sku_0105.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0106.jpg": {
+    "path": "data\\images\\sku_0106.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0107.jpg": {
+    "path": "data\\images\\sku_0107.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0108.jpg": {
+    "path": "data\\images\\sku_0108.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0109.jpg": {
+    "path": "data\\images\\sku_0109.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0110.jpg": {
+    "path": "data\\images\\sku_0110.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0111.jpg": {
+    "path": "data\\images\\sku_0111.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0112.jpg": {
+    "path": "data\\images\\sku_0112.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0113.jpg": {
+    "path": "data\\images\\sku_0113.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0114.jpg": {
+    "path": "data\\images\\sku_0114.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0115.jpg": {
+    "path": "data\\images\\sku_0115.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0116.jpg": {
+    "path": "data\\images\\sku_0116.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0117.jpg": {
+    "path": "data\\images\\sku_0117.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0118.jpg": {
+    "path": "data\\images\\sku_0118.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0119.jpg": {
+    "path": "data\\images\\sku_0119.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0120.jpg": {
+    "path": "data\\images\\sku_0120.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0121.jpg": {
+    "path": "data\\images\\sku_0121.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0122.jpg": {
+    "path": "data\\images\\sku_0122.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0123.jpg": {
+    "path": "data\\images\\sku_0123.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0124.jpg": {
+    "path": "data\\images\\sku_0124.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0125.jpg": {
+    "path": "data\\images\\sku_0125.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0126.jpg": {
+    "path": "data\\images\\sku_0126.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0127.jpg": {
+    "path": "data\\images\\sku_0127.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0128.jpg": {
+    "path": "data\\images\\sku_0128.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0129.jpg": {
+    "path": "data\\images\\sku_0129.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0130.jpg": {
+    "path": "data\\images\\sku_0130.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0131.jpg": {
+    "path": "data\\images\\sku_0131.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0132.jpg": {
+    "path": "data\\images\\sku_0132.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0133.jpg": {
+    "path": "data\\images\\sku_0133.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0134.jpg": {
+    "path": "data\\images\\sku_0134.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0135.jpg": {
+    "path": "data\\images\\sku_0135.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0136.jpg": {
+    "path": "data\\images\\sku_0136.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0137.jpg": {
+    "path": "data\\images\\sku_0137.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0138.jpg": {
+    "path": "data\\images\\sku_0138.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0139.jpg": {
+    "path": "data\\images\\sku_0139.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0140.jpg": {
+    "path": "data\\images\\sku_0140.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0141.jpg": {
+    "path": "data\\images\\sku_0141.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0142.jpg": {
+    "path": "data\\images\\sku_0142.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0143.jpg": {
+    "path": "data\\images\\sku_0143.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0144.jpg": {
+    "path": "data\\images\\sku_0144.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0145.jpg": {
+    "path": "data\\images\\sku_0145.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0146.jpg": {
+    "path": "data\\images\\sku_0146.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0147.jpg": {
+    "path": "data\\images\\sku_0147.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0148.jpg": {
+    "path": "data\\images\\sku_0148.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0149.jpg": {
+    "path": "data\\images\\sku_0149.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0150.jpg": {
+    "path": "data\\images\\sku_0150.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0151.jpg": {
+    "path": "data\\images\\sku_0151.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0152.jpg": {
+    "path": "data\\images\\sku_0152.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0153.jpg": {
+    "path": "data\\images\\sku_0153.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0154.jpg": {
+    "path": "data\\images\\sku_0154.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0155.jpg": {
+    "path": "data\\images\\sku_0155.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0156.jpg": {
+    "path": "data\\images\\sku_0156.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0157.jpg": {
+    "path": "data\\images\\sku_0157.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0158.jpg": {
+    "path": "data\\images\\sku_0158.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0159.jpg": {
+    "path": "data\\images\\sku_0159.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0160.jpg": {
+    "path": "data\\images\\sku_0160.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0161.jpg": {
+    "path": "data\\images\\sku_0161.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0162.jpg": {
+    "path": "data\\images\\sku_0162.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0163.jpg": {
+    "path": "data\\images\\sku_0163.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0164.jpg": {
+    "path": "data\\images\\sku_0164.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0165.jpg": {
+    "path": "data\\images\\sku_0165.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0166.jpg": {
+    "path": "data\\images\\sku_0166.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0167.jpg": {
+    "path": "data\\images\\sku_0167.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0168.jpg": {
+    "path": "data\\images\\sku_0168.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0169.jpg": {
+    "path": "data\\images\\sku_0169.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0170.jpg": {
+    "path": "data\\images\\sku_0170.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0171.jpg": {
+    "path": "data\\images\\sku_0171.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0172.jpg": {
+    "path": "data\\images\\sku_0172.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0173.jpg": {
+    "path": "data\\images\\sku_0173.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0174.jpg": {
+    "path": "data\\images\\sku_0174.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0175.jpg": {
+    "path": "data\\images\\sku_0175.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0176.jpg": {
+    "path": "data\\images\\sku_0176.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0177.jpg": {
+    "path": "data\\images\\sku_0177.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0178.jpg": {
+    "path": "data\\images\\sku_0178.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0179.jpg": {
+    "path": "data\\images\\sku_0179.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0180.jpg": {
+    "path": "data\\images\\sku_0180.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0181.jpg": {
+    "path": "data\\images\\sku_0181.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0182.jpg": {
+    "path": "data\\images\\sku_0182.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0183.jpg": {
+    "path": "data\\images\\sku_0183.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0184.jpg": {
+    "path": "data\\images\\sku_0184.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0185.jpg": {
+    "path": "data\\images\\sku_0185.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0186.jpg": {
+    "path": "data\\images\\sku_0186.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0187.jpg": {
+    "path": "data\\images\\sku_0187.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0188.jpg": {
+    "path": "data\\images\\sku_0188.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0189.jpg": {
+    "path": "data\\images\\sku_0189.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0190.jpg": {
+    "path": "data\\images\\sku_0190.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0191.jpg": {
+    "path": "data\\images\\sku_0191.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0192.jpg": {
+    "path": "data\\images\\sku_0192.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0193.jpg": {
+    "path": "data\\images\\sku_0193.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0194.jpg": {
+    "path": "data\\images\\sku_0194.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0195.jpg": {
+    "path": "data\\images\\sku_0195.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0196.jpg": {
+    "path": "data\\images\\sku_0196.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0197.jpg": {
+    "path": "data\\images\\sku_0197.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0198.jpg": {
+    "path": "data\\images\\sku_0198.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0199.jpg": {
+    "path": "data\\images\\sku_0199.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0200.jpg": {
+    "path": "data\\images\\sku_0200.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0201.jpg": {
+    "path": "data\\images\\sku_0201.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0202.jpg": {
+    "path": "data\\images\\sku_0202.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0203.jpg": {
+    "path": "data\\images\\sku_0203.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0204.jpg": {
+    "path": "data\\images\\sku_0204.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0205.jpg": {
+    "path": "data\\images\\sku_0205.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0206.jpg": {
+    "path": "data\\images\\sku_0206.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0207.jpg": {
+    "path": "data\\images\\sku_0207.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0208.jpg": {
+    "path": "data\\images\\sku_0208.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0209.jpg": {
+    "path": "data\\images\\sku_0209.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0210.jpg": {
+    "path": "data\\images\\sku_0210.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0211.jpg": {
+    "path": "data\\images\\sku_0211.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0212.jpg": {
+    "path": "data\\images\\sku_0212.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0213.jpg": {
+    "path": "data\\images\\sku_0213.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0214.jpg": {
+    "path": "data\\images\\sku_0214.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0215.jpg": {
+    "path": "data\\images\\sku_0215.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0216.jpg": {
+    "path": "data\\images\\sku_0216.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0217.jpg": {
+    "path": "data\\images\\sku_0217.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0218.jpg": {
+    "path": "data\\images\\sku_0218.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0219.jpg": {
+    "path": "data\\images\\sku_0219.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0220.jpg": {
+    "path": "data\\images\\sku_0220.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0221.jpg": {
+    "path": "data\\images\\sku_0221.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0222.jpg": {
+    "path": "data\\images\\sku_0222.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0223.jpg": {
+    "path": "data\\images\\sku_0223.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0224.jpg": {
+    "path": "data\\images\\sku_0224.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0225.jpg": {
+    "path": "data\\images\\sku_0225.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0226.jpg": {
+    "path": "data\\images\\sku_0226.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0227.jpg": {
+    "path": "data\\images\\sku_0227.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0228.jpg": {
+    "path": "data\\images\\sku_0228.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0229.jpg": {
+    "path": "data\\images\\sku_0229.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0230.jpg": {
+    "path": "data\\images\\sku_0230.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0231.jpg": {
+    "path": "data\\images\\sku_0231.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0232.jpg": {
+    "path": "data\\images\\sku_0232.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0233.jpg": {
+    "path": "data\\images\\sku_0233.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0234.jpg": {
+    "path": "data\\images\\sku_0234.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0235.jpg": {
+    "path": "data\\images\\sku_0235.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0236.jpg": {
+    "path": "data\\images\\sku_0236.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0237.jpg": {
+    "path": "data\\images\\sku_0237.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0238.jpg": {
+    "path": "data\\images\\sku_0238.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0239.jpg": {
+    "path": "data\\images\\sku_0239.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0240.jpg": {
+    "path": "data\\images\\sku_0240.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0241.jpg": {
+    "path": "data\\images\\sku_0241.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0242.jpg": {
+    "path": "data\\images\\sku_0242.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0243.jpg": {
+    "path": "data\\images\\sku_0243.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0244.jpg": {
+    "path": "data\\images\\sku_0244.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0245.jpg": {
+    "path": "data\\images\\sku_0245.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0246.jpg": {
+    "path": "data\\images\\sku_0246.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0247.jpg": {
+    "path": "data\\images\\sku_0247.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0248.jpg": {
+    "path": "data\\images\\sku_0248.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0249.jpg": {
+    "path": "data\\images\\sku_0249.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0250.jpg": {
+    "path": "data\\images\\sku_0250.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0251.jpg": {
+    "path": "data\\images\\sku_0251.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0252.jpg": {
+    "path": "data\\images\\sku_0252.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0253.jpg": {
+    "path": "data\\images\\sku_0253.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0254.jpg": {
+    "path": "data\\images\\sku_0254.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0255.jpg": {
+    "path": "data\\images\\sku_0255.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0256.jpg": {
+    "path": "data\\images\\sku_0256.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0257.jpg": {
+    "path": "data\\images\\sku_0257.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0258.jpg": {
+    "path": "data\\images\\sku_0258.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0259.jpg": {
+    "path": "data\\images\\sku_0259.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0260.jpg": {
+    "path": "data\\images\\sku_0260.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0261.jpg": {
+    "path": "data\\images\\sku_0261.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0262.jpg": {
+    "path": "data\\images\\sku_0262.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0263.jpg": {
+    "path": "data\\images\\sku_0263.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0264.jpg": {
+    "path": "data\\images\\sku_0264.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0265.jpg": {
+    "path": "data\\images\\sku_0265.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0266.jpg": {
+    "path": "data\\images\\sku_0266.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0267.jpg": {
+    "path": "data\\images\\sku_0267.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0268.jpg": {
+    "path": "data\\images\\sku_0268.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0269.jpg": {
+    "path": "data\\images\\sku_0269.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0270.jpg": {
+    "path": "data\\images\\sku_0270.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0271.jpg": {
+    "path": "data\\images\\sku_0271.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0272.jpg": {
+    "path": "data\\images\\sku_0272.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0273.jpg": {
+    "path": "data\\images\\sku_0273.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0274.jpg": {
+    "path": "data\\images\\sku_0274.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0275.jpg": {
+    "path": "data\\images\\sku_0275.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0276.jpg": {
+    "path": "data\\images\\sku_0276.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0277.jpg": {
+    "path": "data\\images\\sku_0277.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0278.jpg": {
+    "path": "data\\images\\sku_0278.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0279.jpg": {
+    "path": "data\\images\\sku_0279.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0280.jpg": {
+    "path": "data\\images\\sku_0280.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0281.jpg": {
+    "path": "data\\images\\sku_0281.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0282.jpg": {
+    "path": "data\\images\\sku_0282.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0283.jpg": {
+    "path": "data\\images\\sku_0283.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0284.jpg": {
+    "path": "data\\images\\sku_0284.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0285.jpg": {
+    "path": "data\\images\\sku_0285.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0286.jpg": {
+    "path": "data\\images\\sku_0286.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0287.jpg": {
+    "path": "data\\images\\sku_0287.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0288.jpg": {
+    "path": "data\\images\\sku_0288.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0289.jpg": {
+    "path": "data\\images\\sku_0289.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0290.jpg": {
+    "path": "data\\images\\sku_0290.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0291.jpg": {
+    "path": "data\\images\\sku_0291.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0292.jpg": {
+    "path": "data\\images\\sku_0292.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0293.jpg": {
+    "path": "data\\images\\sku_0293.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0294.jpg": {
+    "path": "data\\images\\sku_0294.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0295.jpg": {
+    "path": "data\\images\\sku_0295.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0296.jpg": {
+    "path": "data\\images\\sku_0296.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0297.jpg": {
+    "path": "data\\images\\sku_0297.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0298.jpg": {
+    "path": "data\\images\\sku_0298.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0299.jpg": {
+    "path": "data\\images\\sku_0299.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0300.jpg": {
+    "path": "data\\images\\sku_0300.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0301.jpg": {
+    "path": "data\\images\\sku_0301.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0302.jpg": {
+    "path": "data\\images\\sku_0302.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0303.jpg": {
+    "path": "data\\images\\sku_0303.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0304.jpg": {
+    "path": "data\\images\\sku_0304.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0305.jpg": {
+    "path": "data\\images\\sku_0305.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0306.jpg": {
+    "path": "data\\images\\sku_0306.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0307.jpg": {
+    "path": "data\\images\\sku_0307.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0308.jpg": {
+    "path": "data\\images\\sku_0308.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0309.jpg": {
+    "path": "data\\images\\sku_0309.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0310.jpg": {
+    "path": "data\\images\\sku_0310.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0311.jpg": {
+    "path": "data\\images\\sku_0311.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0312.jpg": {
+    "path": "data\\images\\sku_0312.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0313.jpg": {
+    "path": "data\\images\\sku_0313.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0314.jpg": {
+    "path": "data\\images\\sku_0314.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0315.jpg": {
+    "path": "data\\images\\sku_0315.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0316.jpg": {
+    "path": "data\\images\\sku_0316.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0317.jpg": {
+    "path": "data\\images\\sku_0317.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0318.jpg": {
+    "path": "data\\images\\sku_0318.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0319.jpg": {
+    "path": "data\\images\\sku_0319.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0320.jpg": {
+    "path": "data\\images\\sku_0320.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0321.jpg": {
+    "path": "data\\images\\sku_0321.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0322.jpg": {
+    "path": "data\\images\\sku_0322.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0323.jpg": {
+    "path": "data\\images\\sku_0323.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0325.jpg": {
+    "path": "data\\images\\sku_0325.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0326.jpg": {
+    "path": "data\\images\\sku_0326.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0327.jpg": {
+    "path": "data\\images\\sku_0327.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0328.jpg": {
+    "path": "data\\images\\sku_0328.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0329.jpg": {
+    "path": "data\\images\\sku_0329.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0330.jpg": {
+    "path": "data\\images\\sku_0330.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0331.jpg": {
+    "path": "data\\images\\sku_0331.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0332.jpg": {
+    "path": "data\\images\\sku_0332.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0333.jpg": {
+    "path": "data\\images\\sku_0333.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0334.jpg": {
+    "path": "data\\images\\sku_0334.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0335.jpg": {
+    "path": "data\\images\\sku_0335.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0336.jpg": {
+    "path": "data\\images\\sku_0336.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0337.jpg": {
+    "path": "data\\images\\sku_0337.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0338.jpg": {
+    "path": "data\\images\\sku_0338.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0339.jpg": {
+    "path": "data\\images\\sku_0339.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0340.jpg": {
+    "path": "data\\images\\sku_0340.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0341.jpg": {
+    "path": "data\\images\\sku_0341.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0342.jpg": {
+    "path": "data\\images\\sku_0342.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0343.jpg": {
+    "path": "data\\images\\sku_0343.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0344.jpg": {
+    "path": "data\\images\\sku_0344.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0345.jpg": {
+    "path": "data\\images\\sku_0345.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0346.jpg": {
+    "path": "data\\images\\sku_0346.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0347.jpg": {
+    "path": "data\\images\\sku_0347.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0348.jpg": {
+    "path": "data\\images\\sku_0348.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0349.jpg": {
+    "path": "data\\images\\sku_0349.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0350.jpg": {
+    "path": "data\\images\\sku_0350.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0351.jpg": {
+    "path": "data\\images\\sku_0351.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0352.jpg": {
+    "path": "data\\images\\sku_0352.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0353.jpg": {
+    "path": "data\\images\\sku_0353.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0354.jpg": {
+    "path": "data\\images\\sku_0354.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0355.jpg": {
+    "path": "data\\images\\sku_0355.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0356.jpg": {
+    "path": "data\\images\\sku_0356.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0357.jpg": {
+    "path": "data\\images\\sku_0357.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0359.jpg": {
+    "path": "data\\images\\sku_0359.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0360.jpg": {
+    "path": "data\\images\\sku_0360.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0361.jpg": {
+    "path": "data\\images\\sku_0361.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0362.jpg": {
+    "path": "data\\images\\sku_0362.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0363.jpg": {
+    "path": "data\\images\\sku_0363.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0364.jpg": {
+    "path": "data\\images\\sku_0364.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0365.jpg": {
+    "path": "data\\images\\sku_0365.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0366.jpg": {
+    "path": "data\\images\\sku_0366.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0367.jpg": {
+    "path": "data\\images\\sku_0367.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0368.jpg": {
+    "path": "data\\images\\sku_0368.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0369.jpg": {
+    "path": "data\\images\\sku_0369.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0370.jpg": {
+    "path": "data\\images\\sku_0370.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0371.jpg": {
+    "path": "data\\images\\sku_0371.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0372.jpg": {
+    "path": "data\\images\\sku_0372.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0373.jpg": {
+    "path": "data\\images\\sku_0373.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0374.jpg": {
+    "path": "data\\images\\sku_0374.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0375.jpg": {
+    "path": "data\\images\\sku_0375.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0376.jpg": {
+    "path": "data\\images\\sku_0376.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0377.jpg": {
+    "path": "data\\images\\sku_0377.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0378.jpg": {
+    "path": "data\\images\\sku_0378.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0379.jpg": {
+    "path": "data\\images\\sku_0379.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0380.jpg": {
+    "path": "data\\images\\sku_0380.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0381.jpg": {
+    "path": "data\\images\\sku_0381.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0382.jpg": {
+    "path": "data\\images\\sku_0382.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0383.jpg": {
+    "path": "data\\images\\sku_0383.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0384.jpg": {
+    "path": "data\\images\\sku_0384.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0385.jpg": {
+    "path": "data\\images\\sku_0385.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0386.jpg": {
+    "path": "data\\images\\sku_0386.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0388.jpg": {
+    "path": "data\\images\\sku_0388.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0389.jpg": {
+    "path": "data\\images\\sku_0389.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0390.jpg": {
+    "path": "data\\images\\sku_0390.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0391.jpg": {
+    "path": "data\\images\\sku_0391.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0392.jpg": {
+    "path": "data\\images\\sku_0392.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0393.jpg": {
+    "path": "data\\images\\sku_0393.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0394.jpg": {
+    "path": "data\\images\\sku_0394.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0395.jpg": {
+    "path": "data\\images\\sku_0395.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0396.jpg": {
+    "path": "data\\images\\sku_0396.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0397.jpg": {
+    "path": "data\\images\\sku_0397.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0398.jpg": {
+    "path": "data\\images\\sku_0398.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0399.jpg": {
+    "path": "data\\images\\sku_0399.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0400.jpg": {
+    "path": "data\\images\\sku_0400.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0401.jpg": {
+    "path": "data\\images\\sku_0401.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0402.jpg": {
+    "path": "data\\images\\sku_0402.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0403.jpg": {
+    "path": "data\\images\\sku_0403.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0404.jpg": {
+    "path": "data\\images\\sku_0404.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0405.jpg": {
+    "path": "data\\images\\sku_0405.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0406.jpg": {
+    "path": "data\\images\\sku_0406.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0407.jpg": {
+    "path": "data\\images\\sku_0407.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0408.jpg": {
+    "path": "data\\images\\sku_0408.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0409.jpg": {
+    "path": "data\\images\\sku_0409.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0410.jpg": {
+    "path": "data\\images\\sku_0410.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0411.jpg": {
+    "path": "data\\images\\sku_0411.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0412.jpg": {
+    "path": "data\\images\\sku_0412.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0413.jpg": {
+    "path": "data\\images\\sku_0413.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0414.jpg": {
+    "path": "data\\images\\sku_0414.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0415.jpg": {
+    "path": "data\\images\\sku_0415.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0416.jpg": {
+    "path": "data\\images\\sku_0416.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0417.jpg": {
+    "path": "data\\images\\sku_0417.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0418.jpg": {
+    "path": "data\\images\\sku_0418.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0419.jpg": {
+    "path": "data\\images\\sku_0419.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0420.jpg": {
+    "path": "data\\images\\sku_0420.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0421.jpg": {
+    "path": "data\\images\\sku_0421.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0422.jpg": {
+    "path": "data\\images\\sku_0422.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0423.jpg": {
+    "path": "data\\images\\sku_0423.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0424.jpg": {
+    "path": "data\\images\\sku_0424.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0425.jpg": {
+    "path": "data\\images\\sku_0425.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0426.jpg": {
+    "path": "data\\images\\sku_0426.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0427.jpg": {
+    "path": "data\\images\\sku_0427.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0428.jpg": {
+    "path": "data\\images\\sku_0428.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0429.jpg": {
+    "path": "data\\images\\sku_0429.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0430.jpg": {
+    "path": "data\\images\\sku_0430.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0431.jpg": {
+    "path": "data\\images\\sku_0431.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0432.jpg": {
+    "path": "data\\images\\sku_0432.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0433.jpg": {
+    "path": "data\\images\\sku_0433.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0434.jpg": {
+    "path": "data\\images\\sku_0434.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0435.jpg": {
+    "path": "data\\images\\sku_0435.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0436.jpg": {
+    "path": "data\\images\\sku_0436.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0437.jpg": {
+    "path": "data\\images\\sku_0437.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0438.jpg": {
+    "path": "data\\images\\sku_0438.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0439.jpg": {
+    "path": "data\\images\\sku_0439.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0440.jpg": {
+    "path": "data\\images\\sku_0440.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0441.jpg": {
+    "path": "data\\images\\sku_0441.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0442.jpg": {
+    "path": "data\\images\\sku_0442.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0443.jpg": {
+    "path": "data\\images\\sku_0443.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0444.jpg": {
+    "path": "data\\images\\sku_0444.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0445.jpg": {
+    "path": "data\\images\\sku_0445.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0446.jpg": {
+    "path": "data\\images\\sku_0446.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0447.jpg": {
+    "path": "data\\images\\sku_0447.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0448.jpg": {
+    "path": "data\\images\\sku_0448.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0449.jpg": {
+    "path": "data\\images\\sku_0449.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0450.jpg": {
+    "path": "data\\images\\sku_0450.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0451.jpg": {
+    "path": "data\\images\\sku_0451.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0452.jpg": {
+    "path": "data\\images\\sku_0452.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0453.jpg": {
+    "path": "data\\images\\sku_0453.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0454.jpg": {
+    "path": "data\\images\\sku_0454.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0455.jpg": {
+    "path": "data\\images\\sku_0455.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0456.jpg": {
+    "path": "data\\images\\sku_0456.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0457.jpg": {
+    "path": "data\\images\\sku_0457.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0458.jpg": {
+    "path": "data\\images\\sku_0458.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0459.jpg": {
+    "path": "data\\images\\sku_0459.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0460.jpg": {
+    "path": "data\\images\\sku_0460.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0461.jpg": {
+    "path": "data\\images\\sku_0461.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0462.jpg": {
+    "path": "data\\images\\sku_0462.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0463.jpg": {
+    "path": "data\\images\\sku_0463.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0464.jpg": {
+    "path": "data\\images\\sku_0464.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0465.jpg": {
+    "path": "data\\images\\sku_0465.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0466.jpg": {
+    "path": "data\\images\\sku_0466.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0467.jpg": {
+    "path": "data\\images\\sku_0467.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0468.jpg": {
+    "path": "data\\images\\sku_0468.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0469.jpg": {
+    "path": "data\\images\\sku_0469.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0470.jpg": {
+    "path": "data\\images\\sku_0470.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0471.jpg": {
+    "path": "data\\images\\sku_0471.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0472.jpg": {
+    "path": "data\\images\\sku_0472.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0473.jpg": {
+    "path": "data\\images\\sku_0473.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0474.jpg": {
+    "path": "data\\images\\sku_0474.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0475.jpg": {
+    "path": "data\\images\\sku_0475.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0476.jpg": {
+    "path": "data\\images\\sku_0476.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0477.jpg": {
+    "path": "data\\images\\sku_0477.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0478.jpg": {
+    "path": "data\\images\\sku_0478.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0479.jpg": {
+    "path": "data\\images\\sku_0479.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0480.jpg": {
+    "path": "data\\images\\sku_0480.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0481.jpg": {
+    "path": "data\\images\\sku_0481.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0482.jpg": {
+    "path": "data\\images\\sku_0482.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0483.jpg": {
+    "path": "data\\images\\sku_0483.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0484.jpg": {
+    "path": "data\\images\\sku_0484.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0485.jpg": {
+    "path": "data\\images\\sku_0485.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0486.jpg": {
+    "path": "data\\images\\sku_0486.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0487.jpg": {
+    "path": "data\\images\\sku_0487.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0488.jpg": {
+    "path": "data\\images\\sku_0488.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0489.jpg": {
+    "path": "data\\images\\sku_0489.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0490.jpg": {
+    "path": "data\\images\\sku_0490.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0491.jpg": {
+    "path": "data\\images\\sku_0491.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0492.jpg": {
+    "path": "data\\images\\sku_0492.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0493.jpg": {
+    "path": "data\\images\\sku_0493.jpg",
+    "zone": "Z_S7",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0494.jpg": {
+    "path": "data\\images\\sku_0494.jpg",
+    "zone": "Z_S1",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0495.jpg": {
+    "path": "data\\images\\sku_0495.jpg",
+    "zone": "Z_S2",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0496.jpg": {
+    "path": "data\\images\\sku_0496.jpg",
+    "zone": "Z_S3",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0497.jpg": {
+    "path": "data\\images\\sku_0497.jpg",
+    "zone": "Z_S4",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0498.jpg": {
+    "path": "data\\images\\sku_0498.jpg",
+    "zone": "Z_S5",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  },
+  "sku_0499.jpg": {
+    "path": "data\\images\\sku_0499.jpg",
+    "zone": "Z_S6",
+    "annotated": false,
+    "overall_status": null,
+    "fill_rate": null,
+    "issues": []
+  }
+}
