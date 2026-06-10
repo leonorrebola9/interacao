@@ -1,0 +1,64 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Second shelf, right of 'Teetha' teething granules and between some medicine products",
+      "severity": "medium",
+      "description": "Significant empty space on the second shelf where products should be, particularly a large gap to the right of 'Teetha' and smaller gaps between medicine boxes.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Third shelf, left side and between Vaseline and Sudocrem",
+      "severity": "medium",
+      "description": "A large empty space is visible on the far left of the third shelf, and a smaller gap exists between the Vaseline and Sudocrem products.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Fourth shelf, left side and between cotton products",
+      "severity": "medium",
+      "description": "Multiple empty spaces are present on the fourth shelf, including a large section on the left before the maternity towels and gaps between the various cotton products.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.25
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Fifth (bottom) shelf, left half and between products",
+      "severity": "high",
+      "description": "The entire left half of the bottom shelf is completely empty, and there are significant gaps between the remaining products on this shelf.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.4
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Across all shelves, various products",
+      "severity": "low",
+      "description": "Several products across different shelves, such as Dentinox, Nurofen, Vaseline, and Nuby toys, are not perfectly aligned with the shelf edge, creating a slightly untidy appearance.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.67,
+  "products_detected": [
+    "Baby Toiletries",
+    "Baby Medicine",
+    "Maternity Products",
+    "Baby Accessories",
+    "Cotton Products"
+  ],
+  "model_reasoning": "The image displays a supermarket aisle primarily stocked with baby and maternity products. While the top shelf is well-stocked, there are noticeable empty spaces and gaps on the second, third, fourth, and especially the bottom shelf, indicating a need for restocking. Some products also show minor misalignment. The overall status is 'warning' due to the cumulative effect of these empty spots across multiple shelves.",
+  "inspection_id": "INS_20260610_190410_2AFEB6",
+  "timestamp": "2026-06-10T19:04:10.172352+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0023.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

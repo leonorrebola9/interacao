@@ -1,0 +1,64 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, left side, next to 'ROCK' deodorants",
+      "severity": "low",
+      "description": "Small gaps visible on the top shelf where products should be, specifically next to the 'ROCK' brand items.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, left side, around 'Spry' toothpaste",
+      "severity": "medium",
+      "description": "Several empty slots are visible on the second shelf from the top, particularly in the section displaying 'Spry' toothpaste.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, left side, around 'Tom's' and 'Nature's Gate' toothpaste",
+      "severity": "medium",
+      "description": "Noticeable empty spaces on the third shelf from the top, in the section dedicated to 'Tom's' and 'Nature's Gate' toothpastes.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Fourth shelf from top, left side, around 'Tom's' toothpaste",
+      "severity": "medium",
+      "description": "Empty slots are present on the fourth shelf from the top, specifically where 'Tom's' toothpaste is displayed.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Throughout all toothpaste shelves",
+      "severity": "low",
+      "description": "Many toothpaste boxes across various shelves are slightly misaligned, not perfectly front-faced, or not neatly stacked, indicating a need for tidying.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Deodorant/Antiperspirant",
+    "Toothpaste",
+    "Toothbrush Heads",
+    "Manual Toothbrushes",
+    "Mouthwash"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked, leading to a high shelf fill rate. However, several small to medium empty spots are visible on the left side of the upper shelves, particularly in the natural toothpaste section. Additionally, a significant number of toothpaste boxes are not perfectly aligned or front-faced, suggesting a need for minor merchandising adjustments. No damaged products or wrong placements were identified. The overall status is 'warning' due to these multiple minor issues.",
+  "inspection_id": "INS_20260610_184950_69A983",
+  "timestamp": "2026-06-10T18:49:50.933341+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0018.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

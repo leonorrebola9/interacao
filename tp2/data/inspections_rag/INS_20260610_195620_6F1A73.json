@@ -1,0 +1,42 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Top shelf, right side, pink/purple packaged Systema toothbrush",
+      "severity": "low",
+      "description": "The Systema toothbrush in pink/purple packaging is hanging crookedly.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Second shelf from top, middle section, yellow/gold packaged toothbrushes",
+      "severity": "low",
+      "description": "Several toothbrushes in yellow/gold packaging are slightly angled and not perfectly straight.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Third shelf from top, middle section, 'Member Price' flag and surrounding products",
+      "severity": "low",
+      "description": "The 'Member Price' flag is crooked, and some adjacent products are not perfectly aligned.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "toothbrushes"
+  ],
+  "model_reasoning": "The supermarket shelves are well-stocked with various brands of toothbrushes. All products appear to have price labels. The primary issues observed are minor misalignments of individual products or small groups of products, which do not significantly impact the overall presentation or availability. There are no empty shelf sections, damaged products, or incorrect product placements.",
+  "inspection_id": "INS_20260610_195620_6F1A73",
+  "timestamp": "2026-06-10T19:56:20.730630+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0034.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

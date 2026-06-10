@@ -1,0 +1,26 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "Top shelf, above the green Mountain Dew bottles on the right side, where a 'cocktail mixers' sign is displayed.",
+      "severity": "medium",
+      "description": "A sign indicating 'cocktail mixers' is placed above a section of Mountain Dew bottles, suggesting the wrong product category is displayed.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Pepsi",
+    "Mist Twst",
+    "Mountain Dew"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with various soft drinks. The primary issue identified is a misleading sign for 'cocktail mixers' placed above Mountain Dew bottles. No significant empty spaces or damaged products were observed, leading to an overall 'warning' status due to the single, clear issue.",
+  "inspection_id": "INS_20260610_195410_53CA15",
+  "timestamp": "2026-06-10T19:54:10.293781+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0030.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

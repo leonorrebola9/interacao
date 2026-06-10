@@ -1,0 +1,27 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Ovulation Tests",
+    "Condoms",
+    "Lubricants",
+    "Foot Files",
+    "Pumice Stones",
+    "Callus Removers",
+    "Foot Creams",
+    "Foot Balms",
+    "Foot Bath Crystals",
+    "Foot Masks",
+    "Foot Sponges",
+    "Wart Removers",
+    "Foot Deodorants",
+    "Insoles"
+  ],
+  "model_reasoning": "The shelves are consistently well-stocked with a high fill rate. Products are generally well-aligned, and there are no visible empty slots, damaged items, or misplaced products. All items have clear price labels.",
+  "inspection_id": "INS_20260610_190510_39C561",
+  "timestamp": "2026-06-10T19:05:10.819455+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0024.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

@@ -1,0 +1,56 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, between Sainsbury's Healthcare Max strength Congestion relief and Sudafed Blocked Nose",
+      "severity": "low",
+      "description": "A small gap indicates a missing product box within the product line.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, to the right of Sudafed Sinus Max Strength, before Strepsils",
+      "severity": "low",
+      "description": "A small gap indicates a missing product box within the product line.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Fourth shelf from top, to the right of Clarityn Hayfever, before Clarityn One-a-day",
+      "severity": "low",
+      "description": "A small gap indicates a missing product box within the product line.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Fifth shelf from top, to the right of Boston contact lens solution, before Blink Total Care",
+      "severity": "low",
+      "description": "A small gap indicates a missing product box within the product line.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Cold & Flu Medication",
+    "Allergy Medication",
+    "Nasal Sprays",
+    "Eye Care Products",
+    "Contact Lens Solutions",
+    "Cough & Throat Relief"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a variety of cold, flu, allergy, and eye care products. The overall fill rate is high. However, several small gaps were identified on multiple shelves, indicating potential missing product boxes within continuous product lines rather than just empty space at the end of a section. These minor gaps contribute to a 'warning' status. No damaged products, wrong products, or missing labels were observed.",
+  "inspection_id": "INS_20260610_195846_FC3E7E",
+  "timestamp": "2026-06-10T19:58:46.443623+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0041.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

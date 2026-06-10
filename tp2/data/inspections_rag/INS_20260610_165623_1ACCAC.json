@@ -1,0 +1,22 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Gin",
+    "Cocktails pré-misturados",
+    "Bebidas refrescantes (Ice Tea)",
+    "Vermute",
+    "Vinho do Porto",
+    "Licor de Creme",
+    "Whisky",
+    "Vinho Espumante"
+  ],
+  "model_reasoning": "As prateleiras estão bem abastecidas e organizadas. Os produtos estão alinhados e as etiquetas de preço estão presentes e visíveis. Não foram identificadas anomalias significativas como prateleiras vazias, produtos danificados ou fora do lugar.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem apresenta uma secção de um corredor de supermercado, focando-se em prateleiras repletas de bebidas alcoólicas. Existem três secções verticais de prateleiras, separadas por estruturas de madeira. Cada secção vertical contém várias prateleiras horizontais. Os produtos visíveis incluem uma variedade de gins, cocktails pré-misturados, vermutes, vinhos do Porto, licores de creme e whisky. O teto com painéis e o chão de azulejos são visíveis na parte superior e inferior da imagem, respetivamente. O ambiente geral é de um espaço de retalho bem abastecido e organizado.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nSecção Esquerda:\n- Prateleira Superior: Está cheia, com os produtos (cocktails pré-misturados de Pina Colada e Maracujá) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 2,80€) estão presentes e visíveis.\n- Prateleira do Meio: Está cheia, com os produtos (KNEBEP ICE) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 1,45€) estão presentes e visíveis.\n- Prateleira Inferior: Está cheia, com os produtos (Maronti Vermouth) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 4,30€) estão presentes e visíveis.\n\nSecção Central:\n- Prateleira Superior: Está cheia, com os produtos (Glavery Gin vermelho) geralmente bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 8,00€) estão presentes e visíveis.\n- Prateleira do Meio: Está cheia, com os produtos (Glavery Gin Exotic e Strawberry) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 6,40€, 8,00€) estão presentes e visíveis.\n- Prateleira Inferior: Está cheia, com os produtos (Almeida Porto White e Ruby) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 4,50€, 8,00€) estão presentes e visíveis.\n\nSecção Direita:\n- Prateleira Superior: Está cheia, com os produtos (vinhos/espumantes) geralmente bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 6,00€) estão presentes e visíveis.\n- Prateleira do Meio: Está cheia, com os produtos (Glavery Gin Strawberry) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 7,25€, 8,00€) estão presentes e visíveis.\n- Prateleira Inferior: Está cheia, com os produtos (Crema Cream Liquor Royal Swan) bem alinhados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (ex: 4,50€) estão presentes e visíveis.\n\nÁrea do Chão/Prateleiras Baixas:\n- As caixas de Crema Cream Liquor Royal Swan, Glivery Dry Gin e James Webb Blended Scotch Whisky estão cheias e bem organizadas. Não há anomalias visíveis.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\nApós uma análise detalhada, não foram identificadas anomalias significativas na imagem.\n- Não há prateleiras vazias (empty_shelf) onde produtos deveriam estar. Os pequenos espaços no final de algumas filas não são considerados prateleiras vazias.\n- Não há produtos errados (wrong_product) visíveis.\n- Não há produtos danificados (damaged) visíveis.\n- Os produtos estão razoavelmente alinhados (misaligned), sem desorganização que justifique uma anomalia de severidade baixa ou superior.\n- Todas as etiquetas de preço (label_missing) visíveis estão presentes e legíveis.\n- Não há outras anomalias (other) a reportar.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL",
+  "inspection_id": "INS_20260610_165623_1ACCAC",
+  "timestamp": "2026-06-10T16:56:23.104536+00:00",
+  "image_path": "data\\images\\IMG_9069.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "B"
+}

@@ -1,0 +1,24 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Wired Energy Drink",
+    "Runa Energy Drink",
+    "Vuk Energy Drink",
+    "Monster Energy Drink",
+    "Rockstar Energy Drink",
+    "NOS Energy Drink",
+    "Full Throttle Energy Drink",
+    "Red Bull Energy Drink",
+    "Redline Energy Drink",
+    "Table Tennis Balls",
+    "Texas Tech Coolers"
+  ],
+  "model_reasoning": "A imagem mostra uma prateleira de supermercado muito bem organizada e abastecida. Todas as prateleiras estão cheias com uma grande variedade de bebidas energéticas de diferentes marcas e sabores. Não há espaços vazios visíveis onde os produtos deveriam estar, nem produtos danificados ou desalinhados. As etiquetas de preço estão presentes e legíveis para a maioria dos produtos. A taxa de preenchimento da prateleira é muito alta, indicando uma excelente gestão de estoque e apresentação. Não foram identificados problemas que se enquadrem nas categorias de 'empty_shelf', 'wrong_product', 'damaged', 'misaligned', 'label_missing' ou 'other'.",
+  "inspection_id": "INS_20260610_183608_700EB6",
+  "timestamp": "2026-06-10T18:36:08.358367+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0006.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

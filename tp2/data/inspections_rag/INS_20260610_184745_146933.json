@@ -1,0 +1,30 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Fourth shelf from top, left and middle sections (Dr. Thunder and Sam's Cola cans)",
+      "severity": "low",
+      "description": "Cans are stacked slightly unevenly, not perfectly aligned, creating a minor visual disorganization.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Soft Drinks (bottles)",
+    "Soft Drinks (cans/multi-packs)",
+    "Diet Soft Drinks",
+    "Ginger Ale",
+    "Root Beer",
+    "Lemon-Lime Soda",
+    "Fruit-flavored Soda"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket soda aisle. Products are generally organized and shelves are nearly full across all visible levels. Only minor misalignments of canned products were identified, which are common in a retail environment and do not significantly impact the overall presentation or availability. No empty shelf positions, damaged products, or wrong products were observed. The high fill rate and minimal issues contribute to an 'ok' overall status.",
+  "inspection_id": "INS_20260610_184745_146933",
+  "timestamp": "2026-06-10T18:47:45.041326+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0012.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

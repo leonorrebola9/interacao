@@ -1,0 +1,44 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "damaged",
+      "location": "prateleira superior direita, leite inteiro",
+      "severity": "low",
+      "description": "Uma embalagem de leite inteiro (Mimosa ou similar) ligeiramente amassada/danificada.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleiras do expositor de aveia",
+      "severity": "low",
+      "description": "Alguns sacos de aveia estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.",
+      "confidence": 0.75,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "topo do expositor, bebidas Alpro",
+      "severity": "low",
+      "description": "As embalagens de bebidas vegetais Alpro no topo do expositor estão ligeiramente desalinhadas.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "flocos de aveia",
+    "bebidas vegetais",
+    "leite"
+  ],
+  "model_reasoning": "A prateleira está bem preenchida com flocos de aveia e leite. Foram identificadas algumas embalagens desalinhadas e uma embalagem de leite ligeiramente danificada.",
+  "inspection_id": "INS_20260610_173744_8E722E",
+  "timestamp": "2026-06-10T17:37:44.279674+00:00",
+  "image_path": "data\\images\\IMG_9012.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "C"
+}

@@ -1,0 +1,36 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "terceira prateleira, centro-direita",
+      "severity": "medium",
+      "description": "Uma caixa de Nescafé Cappuccino está indevidamente colocada entre as embalagens de cereais 'Pétalas de Chocolate'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira inferior, centro-esquerda",
+      "severity": "low",
+      "description": "Várias embalagens de cereais azuis (MAX) estão desalinhadas e não estão devidamente frontadas na prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "cereais",
+    "flocos de chocolate",
+    "arroz tufado",
+    "cappuccino"
+  ],
+  "model_reasoning": "Um produto de café (Nescafé Cappuccino) está indevidamente colocado entre os cereais na terceira prateleira. As embalagens azuis na prateleira inferior estão ligeiramente desalinhadas e não frontadas. As restantes prateleiras estão bem preenchidas e organizadas.",
+  "inspection_id": "INS_20260610_174714_F38058",
+  "timestamp": "2026-06-10T17:47:14.754071+00:00",
+  "image_path": "data\\images\\IMG_9047.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "C"
+}

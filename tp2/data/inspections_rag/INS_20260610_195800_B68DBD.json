@@ -1,0 +1,40 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Shelf 4, left side, air freshener sprays",
+      "severity": "low",
+      "description": "Some air freshener spray bottles are slightly tilted and not perfectly upright.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Shelf 4, right side, large packs of tea lights",
+      "severity": "low",
+      "description": "Some packs of tea lights are slightly misaligned or not perfectly stacked.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Air fresheners",
+    "Reed diffusers",
+    "Scented candles",
+    "Wax melts",
+    "Tea lights",
+    "Car air fresheners",
+    "Anti-tobacco products",
+    "Grave lights"
+  ],
+  "model_reasoning": "The shelves are very well-stocked and organized overall. Products are neatly arranged with clear pricing. However, minor misalignments were observed in a small section of air freshener sprays and some tea light packs on the bottom shelf, leading to a 'warning' status. The shelf fill rate is exceptionally high.",
+  "inspection_id": "INS_20260610_195800_B68DBD",
+  "timestamp": "2026-06-10T19:58:00.297641+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0039.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

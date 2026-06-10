@@ -1,0 +1,31 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "Fifth shelf, right side, Dial bar soap section",
+      "severity": "low",
+      "description": "Minor understocking in the Dial bar soap section, with a few boxes missing from the front row, creating a small gap.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Bath Salts",
+    "Body Soaks",
+    "Milk Bath",
+    "Body Wash",
+    "Bar Soap",
+    "Loofahs",
+    "Bath Sponges",
+    "Bath Gloves"
+  ],
+  "model_reasoning": "The supermarket shelves are largely well-stocked and organized. All products are clearly visible, and price labels are present. There are no significant empty shelf spaces, misplacements, or damaged items. A very minor understocking was observed in one section of bar soap, but it does not detract from the overall excellent presentation and product availability.",
+  "inspection_id": "INS_20260610_194242_F1A61D",
+  "timestamp": "2026-06-10T19:42:42.438680+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0028.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

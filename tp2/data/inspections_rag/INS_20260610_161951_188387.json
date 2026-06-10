@@ -1,0 +1,36 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "terceira prateleira do expositor central de Gin Mix",
+      "severity": "high",
+      "description": "Prateleira completamente vazia no expositor de Gin Mix.",
+      "confidence": 0.98,
+      "affected_area_pct": 0.17
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "quarta prateleira do expositor central de Gin Mix",
+      "severity": "medium",
+      "description": "Secção esquerda da prateleira vazia no expositor de Gin Mix.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.08
+    }
+  ],
+  "shelf_fill_rate": 0.85,
+  "products_detected": [
+    "Gin Mix (especiarias/botânicos)",
+    "Vinho (Moscatel de Setúbal, Dão, Douro, Alentejo)",
+    "Vinho do Porto (Lagrima, Porto Cruz, Offley, Cadão)",
+    "Copos (Gin Mix, Gold Grail)"
+  ],
+  "model_reasoning": "O expositor central de Gin Mix apresenta uma prateleira completamente vazia e outra parcialmente vazia. As restantes prateleiras de vinho e bebidas refrigeradas parecem bem abastecidas, elevando a taxa de preenchimento geral.",
+  "inspection_id": "INS_20260610_161951_188387",
+  "timestamp": "2026-06-10T16:19:51.512257+00:00",
+  "image_path": "data/images/IMG_9058.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "C"
+}

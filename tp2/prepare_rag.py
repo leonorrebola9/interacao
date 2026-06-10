@@ -16,15 +16,14 @@ for path in Path(INSPECTIONS_DIR).glob("*.json"):
     strategy = data.get("strategy", "")
     image = Path(data.get("image_path", "")).name
     
-    # copia SKU (estratégia A) e fotos tuas (estratégia B)
     is_sku = "sku_" in image.lower()
-    is_myphotos_b = not is_sku and strategy == "B"
+    is_myphotos = not is_sku and strategy in ["B", "C"]
     
-    if is_sku or is_myphotos_b:
+    if is_sku or is_myphotos:
         shutil.copy(path, Path(RAG_DIR) / path.name)
         copied += 1
     else:
         skipped += 1
 
-print(f"Copiados: {copied}")
+print(f"Copiados para RAG: {copied}")
 print(f"Ignorados: {skipped}")

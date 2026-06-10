@@ -1,0 +1,84 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Secção superior, caixa 'Chai Velas Perfumadas', centro-esquerda.",
+      "severity": "low",
+      "description": "A caixa contendo 'Chai Velas Perfumadas' está aberta e os produtos no seu interior não estão arrumados.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "damaged",
+      "location": "Prateleira mais alta, canto superior direito, toalhitas de limpeza 'Toallitas Suelos Chao'.",
+      "severity": "low",
+      "description": "Uma embalagem de 'Toallitas Suelos Chao' parece ligeiramente amassada ou danificada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Segunda prateleira mais alta, lado direito, caixas de ambientadores azuis.",
+      "severity": "low",
+      "description": "Algumas caixas de ambientadores azuis estão ligeiramente recuadas ou não estão perfeitamente viradas para a frente.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Terceira prateleira mais alta, lado esquerdo, sprays repelentes de insetos vermelhos.",
+      "severity": "low",
+      "description": "Alguns sprays repelentes de insetos vermelhos estão ligeiramente desalinhados ou não estão perfeitamente na vertical.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Prateleira inferior, lado esquerdo, vários sprays e ambientadores pequenos.",
+      "severity": "low",
+      "description": "Várias garrafas de spray e ambientadores pequenos estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "empty_shelf",
+      "location": "Secção superior, lado direito.",
+      "severity": "low",
+      "description": "Há um espaço vazio notável na secção superior onde produtos poderiam ser colocados, indicando uma prateleira parcialmente vazia.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "empty_shelf",
+      "location": "Prateleira mais alta, lado esquerdo, ao lado da caixa de 'Chai Velas Perfumadas'.",
+      "severity": "low",
+      "description": "Um pequeno espaço vazio é visível na prateleira mais alta onde um expositor de produtos poderia estar.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Velas perfumadas",
+    "Ambientadores (sprays, difusores, elétricos)",
+    "Repelentes de insetos (sprays, armadilhas)",
+    "Toalhitas de limpeza",
+    "Lixívia",
+    "Produtos de limpeza para o lar"
+  ],
+  "model_reasoning": "A prateleira apresenta um bom nível de preenchimento geral, com a maioria dos produtos bem organizados. No entanto, foram identificadas várias anomalias de baixa severidade, incluindo produtos ligeiramente desalinhados, uma embalagem danificada e pequenas áreas vazias, especialmente na secção superior. Estas questões, embora não críticas, justificam um estado de 'warning' para indicar a necessidade de pequenas intervenções de reabastecimento e organização.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem apresenta uma secção de um corredor de supermercado, focando-se em prateleiras escuras e metálicas repletas de produtos. O teto, composto por painéis acústicos brancos, é visível na parte superior. Existem quatro prateleiras principais visíveis, além de uma secção superior acima da prateleira mais alta. Os produtos são predominantemente artigos para o lar e cuidado pessoal, incluindo velas perfumadas, ambientadores, repelentes de insetos, toalhitas de limpeza e lixívia. A iluminação é boa e o ambiente geral da loja parece limpo e organizado.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Secção Superior (acima da prateleira mais alta)**:\n    *   **Preenchimento**: Parcialmente preenchida. Há caixas de produtos, mas também um espaço vazio considerável, especialmente à direita.\n    *   **Alinhamento**: Os produtos estão razoavelmente alinhados, mas algumas caixas estão ligeiramente desalinhadas ou não perfeitamente empilhadas. A caixa de \"Chai Velas Perfumadas\" está aberta e desorganizada.\n    *   **Danos/Fora do lugar**: Não há produtos visivelmente danificados ou fora do lugar, exceto pela desorganização da caixa de velas.\n    *   **Etiquetas de preço**: Uma etiqueta de preço (1.85€) é visível para as velas.\n\n*   **Prateleira Mais Alta (primeira prateleira principal de cima)**:\n    *   **Preenchimento**: Maioritariamente preenchida, com algumas pequenas lacunas.\n    *   **Alinhamento**: Os produtos estão geralmente bem alinhados dentro das suas embalagens de exposição.\n    *   **Danos/Fora do lugar**: Uma embalagem de toalhitas de limpeza \"Toallitas Suelos Chao\" no canto superior direito parece ligeiramente amassada/danificada.\n    *   **Etiquetas de preço**: A maioria dos produtos tem etiquetas de preço visíveis (5.50€, 1.85€, 1.50€).\n\n*   **Segunda Prateleira Mais Alta (segunda prateleira principal de cima)**:\n    *   **Preenchimento**: Maioritariamente preenchida.\n    *   **Alinhamento**: Os produtos estão geralmente bem alinhados dentro das suas embalagens de exposição.\n    *   **Danos/Fora do lugar**: Não há produtos visivelmente danificados. Alguns ambientadores azuis à direita estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.\n    *   **Etiquetas de preço**: A maioria dos produtos tem etiquetas de preço visíveis (1.50€, 2.75€, 1.90€, 3.10€).\n\n*   **Terceira Prateleira Mais Alta (terceira prateleira principal de cima)**:\n    *   **Preenchimento**: Maioritariamente preenchida.\n    *   **Alinhamento**: Os produtos estão geralmente bem alinhados dentro das suas embalagens de exposição.\n    *   **Danos/Fora do lugar**: Não há produtos visivelmente danificados. Alguns sprays repelentes de insetos vermelhos estão ligeiramente desalinhados.\n    *   **Etiquetas de preço**: A maioria dos produtos tem etiquetas de preço visíveis (2.15€, 2.15€, 2.15€, 2.15€, 2.10€, 2.80€, 2.35€, 2.95€, 3.20€).\n\n*   **Prateleira Inferior (prateleira mais baixa visível)**:\n    *   **Preenchimento**: Maioritariamente preenchida. As garrafas grandes de lixívia amarela estão bem abastecidas.\n    *   **Alinhamento**: Os produtos estão geralmente bem alinhados. As garrafas de lixívia estão arrumadas.\n    *   **Danos/Fora do lugar**: Não há produtos visivelmente danificados. Alguns itens mais pequenos à esquerda (sprays, ambientadores) estão ligeiramente desalinhados.\n    *   **Etiquetas de preço**: A maioria dos produtos tem etiquetas de preço visíveis (2.00€, 1.85€, 0.80€, 1.50€, 1.50€, 2.00€, 3.30€, 3.30€, 2.90€, 1.50€, 1.50€, 1.80€, 1.60€).\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001**:\n    *   **Tipo**: misaligned\n    *   **Localização**: Secção superior, caixa de \"Chai Velas Perfumadas\", centro-esquerda.\n    *   **Severidade**: low\n    *   **Descrição**: A caixa das velas está aberta e os produtos no seu interior não estão arrumados.\n\n2.  **ISS_002**:\n    *   **Tipo**: damaged\n    *   **Localização**: Prateleira mais alta, canto superior direito, toalhitas de limpeza \"Toallitas Suelos Chao\".\n    *   **Severidade**: low\n    *   **Descrição**: Uma embalagem de toalhitas de limpeza parece ligeiramente amassada ou danificada.\n\n3.  **ISS_003**:\n    *   **Tipo**: misaligned\n    *   **Localização**: Segunda prateleira mais alta, lado direito, caixas de ambientadores azuis.\n    *   **Severidade**: low\n    *   **Descrição**: Algumas caixas de ambientadores azuis estão ligeiramente recuadas ou não estão perfeitamente viradas para a frente.\n\n4.  **ISS_004**:\n    *   **Tipo**: misaligned\n    *   **Localização**: Terceira prateleira mais alta, lado esquerdo, sprays repelentes de insetos vermelhos.\n    *   **Severidade**: low\n    *   **Descrição**: Alguns sprays repelentes de insetos vermelhos estão ligeiramente desalinhados ou não estão perfeitamente na vertical.\n\n5.  **ISS_005**:\n    *   **Tipo**: misaligned\n    *   **Localização**: Prateleira inferior, lado esquerdo, vários sprays e ambientadores pequenos.\n    *   **Severidade**: low\n    *   **Descrição**: Várias garrafas de spray e ambientadores pequenos estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.\n\n6.  **ISS_006**:\n    *   **Tipo**: empty_shelf\n    *   **Localização**: Secção superior, lado direito.\n    *   **Severidade**: low\n    *   **Descrição**: Há um espaço vazio notável na secção superior onde poderiam ser colocados produtos, indicando uma prateleira parcialmente vazia.\n\n7.  **ISS_007**:\n    *   **Tipo**: empty_shelf\n    *   **Localização**: Prateleira mais alta, lado esquerdo, ao lado da caixa de \"Chai Velas Perfumadas\".\n    *   **Severidade**: low\n    *   **Descrição**: Um pequeno espaço vazio é visível na prateleira mais alta onde poderia haver um expositor de produtos.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Secção superior, caixa 'Chai Velas Perfumadas', centro-esquerda.\",\n      \"severity\": \"low\",\n      \"description\": \"A caixa contendo 'Chai Velas Perfumadas' está aberta e os produtos no seu interior não estão arrumados.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"damaged\",\n      \"location\": \"Prateleira mais alta, canto superior direito, toalhitas de limpeza 'Toallitas Suelos Chao'.\",\n      \"severity\": \"low\",\n      \"description\": \"Uma embalagem de 'Toallitas Suelos Chao' parece ligeiramente amassada ou danificada.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"misaligned\",\n      \"location\": \"Segunda prateleira mais alta, lado direito, caixas de ambientadores azuis.\",\n      \"severity\": \"low\",\n      \"description\": \"Algumas caixas de ambientadores azuis estão ligeiramente recuadas ou não estão perfeitamente viradas para a frente.\",\n      \"confidence\": 0.85,\n      \"affected_area_pct\": 0.02\n    },\n    {\n      \"issue_id\": \"ISS_004\",\n      \"type\": \"misaligned\",\n      \"location\": \"Terceira prateleira mais alta, lado esquerdo, sprays repelentes de insetos vermelhos.\",\n      \"severity\": \"low\",\n      \"description\": \"Alguns sprays repelentes de insetos vermelhos estão ligeiramente desalinhados ou não estão perfeitamente na vertical.\",\n      \"confidence\": 0.85,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_005\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira inferior, lado esquerdo, vários sprays e ambientadores pequenos.\",\n      \"severity\": \"low\",\n      \"description\": \"Várias garrafas de spray e ambientadores pequenos estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.\",\n      \"confidence\": 0.85,\n      \"affected_area_pct\": 0.02\n    },\n    {\n      \"issue_id\": \"ISS_006\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Secção superior, lado direito.\",\n      \"severity\": \"low\",\n      \"description\": \"Há um espaço vazio notável na secção superior onde produtos poderiam ser colocados, indicando uma prateleira parcialmente vazia.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.15\n    },",
+  "inspection_id": "INS_20260610_165821_DAFF4E",
+  "timestamp": "2026-06-10T16:58:21.569712+00:00",
+  "image_path": "data\\images\\IMG_9073.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "B"
+}

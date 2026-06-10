@@ -1,0 +1,40 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "prateleira inferior, secção esquerda",
+      "severity": "low",
+      "description": "Caixa de transporte ('FRAGIL') utilizada como expositor para marshmallows, o que não é um display de retalho padrão.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "segunda prateleira, secção esquerda",
+      "severity": "low",
+      "description": "Alguns sacos de 'Minis Crunchy' estão ligeiramente desalinhados ou não perfeitamente virados para a frente.",
+      "confidence": 0.75,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Minis Kips",
+    "Minis Crunchy",
+    "Haribo Favoritos",
+    "Haribo Funky",
+    "Haribo Ositos de Oro",
+    "Chupa Chups Minis",
+    "M&M's",
+    "Marshmallows"
+  ],
+  "model_reasoning": "Prateleiras geralmente bem preenchidas com uma variedade de doces e snacks. Foi identificada uma caixa de transporte ('FRAGIL') a ser usada como expositor na prateleira inferior e um ligeiro desalinhamento de produtos na segunda prateleira.",
+  "inspection_id": "INS_20260610_174001_389C74",
+  "timestamp": "2026-06-10T17:40:01.064222+00:00",
+  "image_path": "data\\images\\IMG_9035.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "C"
+}

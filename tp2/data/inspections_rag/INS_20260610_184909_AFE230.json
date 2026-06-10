@@ -1,0 +1,99 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Top shelf, right side, Yunnan Baiyao toothpaste section",
+      "severity": "low",
+      "description": "Several Yunnan Baiyao toothpaste boxes are slightly misaligned and not neatly stacked.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Second shelf from top, right side, Yunnan Baiyao toothpaste section",
+      "severity": "low",
+      "description": "A few Yunnan Baiyao toothpaste boxes are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Third shelf from top, right side, Yunnan Baiyao toothpaste section",
+      "severity": "low",
+      "description": "Some Yunnan Baiyao toothpaste boxes are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Fourth shelf from top, right side, Yunnan Baiyao toothpaste section",
+      "severity": "low",
+      "description": "Some Yunnan Baiyao toothpaste boxes are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Bottom shelf, right side, Yunnan Baiyao spray bottles",
+      "severity": "low",
+      "description": "The Yunnan Baiyao spray bottles are not perfectly aligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, left side, within the Sensodyne toothpaste display",
+      "severity": "low",
+      "description": "A small gap is visible where a few Sensodyne toothpaste boxes could be placed.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, left side, within the Sensodyne toothpaste display",
+      "severity": "low",
+      "description": "A small gap is visible where a few Sensodyne toothpaste boxes could be placed.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_008",
+      "type": "empty_shelf",
+      "location": "Fourth shelf from top, left side, within the Sensodyne toothpaste display",
+      "severity": "low",
+      "description": "A small gap is visible where a few Sensodyne toothpaste boxes could be placed.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_009",
+      "type": "empty_shelf",
+      "location": "Bottom shelf, left side, within the Sensodyne toothpaste display",
+      "severity": "low",
+      "description": "A small gap is visible where a few Sensodyne toothpaste boxes could be placed.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Parodontax Toothpaste",
+    "Yunnan Baiyao Toothpaste",
+    "Sensodyne Toothpaste",
+    "Yunnan Baiyao Mouthwash/Spray"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a high fill rate. However, there are multiple instances of minor product misalignment, particularly with the Yunnan Baiyao toothpaste boxes across several shelves, and small gaps within the Sensodyne toothpaste sections. These issues are minor and do not significantly impact product availability, leading to an overall 'warning' status.",
+  "inspection_id": "INS_20260610_184909_AFE230",
+  "timestamp": "2026-06-10T18:49:09.004527+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0016.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

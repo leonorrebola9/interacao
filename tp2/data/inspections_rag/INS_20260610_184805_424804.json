@@ -1,0 +1,46 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Across multiple shelves, particularly the second, third, and fourth shelves from the top.",
+      "severity": "low",
+      "description": "Many products, including Yes To body washes, Olay Eyes boxes, Burt's Bees items, and various L'Oreal and Garnier products, are not neatly aligned or are leaning, indicating a need for tidying.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Fourth shelf from the top, under Olay and Garnier products.",
+      "severity": "medium",
+      "description": "Two distinct empty slots are visible on the fourth shelf where products should be, indicated by price tags for $24.99 and $6.99 without corresponding products above them.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Fifth shelf from the top, under Olay and Garnier products.",
+      "severity": "medium",
+      "description": "Multiple empty slots are present on the fifth shelf, indicated by price tags for $12.99, $9.99 (two instances), $6.99, and $6.49 without corresponding products above them.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Skincare",
+    "Body Care",
+    "Cosmetics",
+    "Lipstick",
+    "Makeup Wipes"
+  ],
+  "model_reasoning": "The image displays a supermarket aisle primarily stocked with personal care and beauty products. I first estimated the shelf fill rate by observing the overall density of products, noting that most shelves are well-stocked but with some noticeable gaps. I then systematically scanned each shelf from top to bottom to identify specific issues. Misalignment was a recurring low-severity issue across several shelves, affecting various brands like Yes To, Olay, Burt's Bees, L'Oreal, and Garnier. More significantly, I identified multiple clear empty slots on the fourth and fifth shelves from the top, where price tags were present but no products, indicating stockouts. Based on the combination of widespread minor misalignment and several distinct empty product slots, the overall status was classified as 'warning'.",
+  "inspection_id": "INS_20260610_184805_424804",
+  "timestamp": "2026-06-10T18:48:05.884386+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0013.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

@@ -1,0 +1,47 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Todas as prateleiras, especialmente as de garrafas (duas superiores) e as de packs de 12 (três inferiores).",
+      "severity": "medium",
+      "description": "Muitas garrafas e packs de 12 não estão perfeitamente alinhados ou empurrados para a frente da prateleira, criando uma aparência desorganizada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.35
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "wrong_product",
+      "location": "Pendurado em frente à segunda prateleira, lado direito, parcialmente obscurecendo garrafas de bebidas.",
+      "severity": "low",
+      "description": "Um expositor de sementes de girassol está pendurado em frente à prateleira de bebidas, bloqueando parcialmente alguns produtos que não pertencem à categoria de bebidas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.96,
+  "products_detected": [
+    "Mountain Dew",
+    "Diet Mist",
+    "Twist",
+    "Schweppes",
+    "Brisk",
+    "Crush",
+    "Mug",
+    "Manzanita Sol",
+    "Hawaiian Punch",
+    "Pepsi",
+    "Super Chill",
+    "Mountain Dew Throwback",
+    "Mountain Dew Code Red",
+    "Mountain Dew Voltage",
+    "Sunflower Seeds"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas com uma alta taxa de preenchimento. O principal problema observado é o desalinhamento dos produtos em várias prateleiras, o que afeta a apresentação visual. Além disso, um item não-bebida (sementes de girassol) está exposto em frente a uma das prateleiras de bebidas, o que está fora do lugar para a categoria. Não foram observados espaços vazios significativos nas prateleiras ou produtos danificados.",
+  "inspection_id": "INS_20260610_195458_F6B712",
+  "timestamp": "2026-06-10T19:54:58.494332+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0032.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

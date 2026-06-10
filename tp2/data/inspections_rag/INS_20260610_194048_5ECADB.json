@@ -1,0 +1,35 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Multiple shelves with soft drink bottles and 12-packs",
+      "severity": "low",
+      "description": "Many soft drink bottles and 12-packs are slightly misaligned, affecting the neatness and presentation of the display.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.3
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Hanging snack bags on the second and bottom shelves (Herr's Popcorn, Cheez Doodles)",
+      "severity": "low",
+      "description": "The hanging snack bags are somewhat disheveled and not neatly arranged, impacting visual appeal.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Soft drinks (bottles)",
+    "Soft drinks (cans)",
+    "Snacks"
+  ],
+  "model_reasoning": "The shelves are very well-stocked with a high fill rate across all visible sections. Products are generally in their correct places, and price labels are present and readable. The primary issues identified are minor misalignments of soft drink bottles and 12-packs, and some disorganization among the hanging snack bags. These are aesthetic issues of low severity and do not indicate critical problems like empty shelves, damaged products, or missing labels. The overall condition is good.",
+  "inspection_id": "INS_20260610_194048_5ECADB",
+  "timestamp": "2026-06-10T19:40:48.578392+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0026.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

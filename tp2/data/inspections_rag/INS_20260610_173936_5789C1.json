@@ -1,0 +1,29 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleiras superiores de várias secções",
+      "severity": "low",
+      "description": "Pequenas falhas de stock visíveis nas prateleiras superiores, com alguns espaços vazios onde deveriam estar produtos.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Iglo Medalhões Pescada",
+    "Iglo Lombos Pescada",
+    "Continente Pescada-do-Cabo Medalhões",
+    "Continente Pescada-do-Cabo Lombos",
+    "Iglo Salmão do Atlântico",
+    "Continente Seleção Bife de Atum"
+  ],
+  "model_reasoning": "As prateleiras de congelados estão maioritariamente bem preenchidas com produtos de peixe e marisco. Foram identificadas pequenas falhas de stock nas prateleiras superiores de algumas secções, mas sem impactar significativamente a disponibilidade geral dos produtos.",
+  "inspection_id": "INS_20260610_173936_5789C1",
+  "timestamp": "2026-06-10T17:39:36.266541+00:00",
+  "image_path": "data\\images\\IMG_9026.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "C"
+}

@@ -1,0 +1,53 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, left side",
+      "severity": "medium",
+      "description": "A significant portion of the top left shelf is empty, indicating missing Colgate products.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Top shelf, middle to right side",
+      "severity": "low",
+      "description": "Several empty slots are visible on the top shelf where Listerine products should be.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, left side",
+      "severity": "low",
+      "description": "Some empty spaces are visible on the second shelf from the top, particularly on the left end.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, left side",
+      "severity": "low",
+      "description": "A small empty space is visible between product rows on the third shelf from the top.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.78,
+  "products_detected": [
+    "Toothpaste",
+    "Mouthwash",
+    "Dental Floss/Interdental Brushes"
+  ],
+  "model_reasoning": "The shelves are generally well-organized with products correctly categorized. However, there are noticeable empty spaces, particularly on the upper shelves, indicating a need for restocking. The lower shelves are mostly full. No damaged products or wrong products are clearly visible. Labels appear to be present for most products. The overall status is 'warning' due to multiple empty shelf sections.",
+  "inspection_id": "INS_20260610_191133_B8A05D",
+  "timestamp": "2026-06-10T19:11:33.453962+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0027.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

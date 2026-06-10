@@ -1,0 +1,56 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira 4, lado direito, após os cremes Coffee-mate e International Delight.",
+      "severity": "high",
+      "description": "Uma seção significativa da prateleira está completamente vazia, indicando falta de estoque ou espaço não utilizado.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.35
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira 3, lado direito, após os cafés Gevalia e outros pacotes.",
+      "severity": "medium",
+      "description": "Uma parte da prateleira está vazia, com espaço para mais produtos.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.25
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Prateleira 2, lado direito, após os pacotes de café Starbucks 'Brazil'.",
+      "severity": "low",
+      "description": "Um pequeno espaço vazio na prateleira onde deveria haver produtos.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Todas as prateleiras com produtos (Prateleiras 1, 2, 3, 4, 5).",
+      "severity": "low",
+      "description": "Muitos produtos, incluindo pacotes de café, garrafas de bebidas e cremes, estão desalinhados ou não estão virados para a frente, afetando a apresentação visual.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.4
+    }
+  ],
+  "shelf_fill_rate": 0.83,
+  "products_detected": [
+    "Café Instantâneo",
+    "Café Moído/Grão",
+    "Chocolate Quente/Cacau",
+    "Bebidas de Café Engarrafadas",
+    "Xaropes para Café",
+    "Cremes para Café"
+  ],
+  "model_reasoning": "A análise da imagem revelou múltiplas seções vazias em diferentes prateleiras, variando de pequenas a grandes, o que impacta a taxa de preenchimento da prateleira. Além disso, há um desalinhamento generalizado dos produtos em todas as prateleiras, embora a maioria dos produtos esteja presente. A combinação de várias prateleiras vazias e a desorganização geral justifica o status de 'warning'. A taxa de preenchimento foi calculada com base na estimativa visual do espaço ocupado versus o espaço total disponível em cada prateleira.",
+  "inspection_id": "INS_20260610_183401_7E0B26",
+  "timestamp": "2026-06-10T18:34:01.681509+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0000.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}
