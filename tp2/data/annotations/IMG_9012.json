@@ -1,0 +1,28 @@
+{
+  "inspection_id": "GT_IMG_9012",
+  "image": "IMG_9012.jpg",
+  "zone": "Z_S1",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.70,
+  "products_detected": ["aveia", "flocos de aveia", "Alpro", "leite meio gordo", "Mimosa", "Terra Nostra"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira superior do display, zona central",
+      "severity": "medium",
+      "description": "Prateleira superior do display de aveia quase vazia, com apenas 2-3 embalagens restantes de um lado. O espaço superior da gondola está desocupado.",
+      "confidence": 0.88,
+      "affected_area_pct": 0.30
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira superior do display",
+      "severity": "low",
+      "description": "Embalagens de leite marca Continente empilhadas irregularmente no topo do display, sem alinhamento com o restante da exposição.",
+      "confidence": 0.80,
+      "affected_area_pct": 0.10
+    }
+  ]
+}

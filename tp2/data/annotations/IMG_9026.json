@@ -1,0 +1,21 @@
+{
+  "inspection_id": "GT_IMG_9026",
+  "image": "IMG_9026.jpg",
+  "zone": "Z_S7",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.78,
+  "products_detected": ["pescado congelado", "lombos de pescada", "salmão", "Iglo", "Continente", "Pescada-do-Cabo"],
+  "ambiguous": true,
+  "ambiguity_reason": "Prateleira maioritariamente preenchida mas com gaps pontuais entre produtos. Sem conhecimento do planograma real é difícil determinar se o fill rate é aceitável ou se indica necessidade de reposição.",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleiras central e superior, zonas pontuais",
+      "severity": "low",
+      "description": "Gaps pontuais entre produtos em várias prateleiras, sem prateleira completamente vazia.",
+      "confidence": 0.60,
+      "affected_area_pct": 0.22
+    }
+  ]
+}

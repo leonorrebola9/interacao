@@ -1,13 +1,9 @@
 {
-  "issues": [
-    {
-      "type": "empty_shelf",
-      "severity": "low",
-      "location": "small gaps in multiple shelves, especially upper right"
-    }
-  ],
-  "overall_status": "warning",
-  "fill_rate": 0.9,
+  "inspection_id": "GT_IMG_8990",
   "image": "IMG_8990.jpg",
-  "zone": "Z_S4"
+  "zone": "Z_S4",
+  "overall_status": "ok",
+  "shelf_fill_rate": 0.95,
+  "products_detected": ["higiene feminina", "pensos", "tampões", "Ausonia", "Tampax", "o.b.", "Carefree"],
+  "issues": []
 }

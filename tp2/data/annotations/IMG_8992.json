@@ -1,13 +1,19 @@
 {
+  "inspection_id": "GT_IMG_8992",
+  "image": "IMG_8992.jpg",
+  "zone": "Z_S4",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.75,
+  "products_detected": ["fraldas incontinência", "cuecas incontinência", "Continente", "TENA", "Lindor", "Intimus"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "empty_shelf",
-      "severity": "high",
-      "location": "second shelf (large empty central area)"
+      "location": "prateleira superior, zona central",
+      "severity": "medium",
+      "description": "Prateleira superior apresenta gap significativo na zona central, com ausência de produto em aproximadamente 3 posições consecutivas.",
+      "confidence": 0.90,
+      "affected_area_pct": 0.25
     }
-  ],
-  "overall_status": "critical",
-  "fill_rate": 0.7,
-  "image": "IMG_8992.jpg",
-  "zone": "Z_S4"
+  ]
 }

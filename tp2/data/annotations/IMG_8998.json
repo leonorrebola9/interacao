@@ -1,13 +1,19 @@
 {
+  "inspection_id": "GT_IMG_8998",
+  "image": "IMG_8998.jpg",
+  "zone": "Z_S3",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.75,
+  "products_detected": ["frango", "carne de frango embalada", "peças de frango"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "empty_shelf",
-      "severity": "high",
-      "location": "central shelf section (large empty area)"
+      "location": "prateleira superior, lado esquerdo",
+      "severity": "medium",
+      "description": "Prateleira superior esquerda com gap visível de aproximadamente 2 posições sem produto, contrastando com o lado direito bem preenchido.",
+      "confidence": 0.92,
+      "affected_area_pct": 0.25
     }
-  ],
-  "overall_status": "critical",
-  "fill_rate": 0.75,
-  "image": "IMG_8998.jpg",
-  "zone": "Z_S1"
+  ]
 }

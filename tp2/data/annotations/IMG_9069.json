@@ -1,0 +1,9 @@
+{
+  "inspection_id": "GT_IMG_9069",
+  "image": "IMG_9069.jpg",
+  "zone": "Z_S6",
+  "overall_status": "ok",
+  "shelf_fill_rate": 0.95,
+  "products_detected": ["gin", "Dry Gin", "CremaCream", "Royal Swan", "licores", "whisky", "James Whisky"],
+  "issues": []
+}

@@ -1,0 +1,9 @@
+{
+  "inspection_id": "GT_IMG_9073",
+  "image": "IMG_9073.jpg",
+  "zone": "Z_S4",
+  "overall_status": "ok",
+  "shelf_fill_rate": 0.90,
+  "products_detected": ["inseticidas", "ambientadores", "repelentes", "toalhetes", "lixívia", "Tradicion"],
+  "issues": []
+}

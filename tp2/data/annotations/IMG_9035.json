@@ -1,0 +1,19 @@
+{
+  "inspection_id": "GT_IMG_9035",
+  "image": "IMG_9035.jpg",
+  "zone": "Z_S5",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.88,
+  "products_detected": ["guloseimas", "Haribo", "Chupa Chups", "M&Ms", "Kips", "CrunchO"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira inferior, canto esquerdo",
+      "severity": "low",
+      "description": "Um produto tombado no centro da prateleira central.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    }
+  ]
+}

@@ -1,13 +1,19 @@
 {
+  "inspection_id": "GT_IMG_9047",
+  "image": "IMG_9047.jpg",
+  "zone": "Z_S5",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.90,
+  "products_detected": ["cereais chocolate", "Continente Pétalas de Chocolate", "Nescafé", "Chocapic"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "wrong_product",
+      "location": "prateleira central, zona central",
       "severity": "medium",
-      "location": "middle shelf (Nescafé cappuccino placed among chocolate cereal products)"
+      "description": "Embalagem de Nescafé Cappuccino colocada no meio da secção de cereais de chocolate, sem relação com os produtos adjacentes. Violação clara de planograma.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
     }
-  ],
-  "overall_status": "warning",
-  "fill_rate": 0.95,
-  "image": "image.png",
-  "zone": "Z_S5"
+  ]
 }

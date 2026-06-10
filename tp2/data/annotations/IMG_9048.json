@@ -1,13 +1,19 @@
 {
+  "inspection_id": "GT_IMG_9048",
+  "image": "IMG_9048.jpg",
+  "zone": "Z_S5",
+  "overall_status": "critical",
+  "shelf_fill_rate": 0.95,
+  "products_detected": ["cereais", "Golden Grahams", "Milk Crockers", "Choco Crackers", "Lion", "Kellogg's Krave", "ambientador Air Wick"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "wrong_product",
+      "location": "prateleira intermédia, zona central",
       "severity": "high",
-      "location": "middle shelf (Air Wick air freshener sprays placed among cereal/food products)"
+      "description": "Sprays de ambientador Air Wick colocados entre produtos alimentares (cereais). Produto de higiene/limpeza misturado com alimentos constitui violação grave de planograma e potencial risco de contaminação.",
+      "confidence": 0.97,
+      "affected_area_pct": 0.10
     }
-  ],
-  "overall_status": "critical",
-  "fill_rate": 0.95,
-  "image": "IMG_9048.jpg",
-  "zone": "Z_S5"
+  ]
 }

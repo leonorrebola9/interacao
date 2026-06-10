@@ -1,0 +1,19 @@
+{
+  "inspection_id": "GT_IMG_9072",
+  "image": "IMG_9072.jpg",
+  "zone": "Z_S2",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.70,
+  "products_detected": ["croissants", "bolos", "pão de leite", "pastelaria embalada", "sobremesas"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, zona central",
+      "severity": "high",
+      "description": "Prateleira inferior central completamente vazia ao longo de toda a extensão central, sem qualquer produto exposto.",
+      "confidence": 0.96,
+      "affected_area_pct": 0.35
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "inspection_id": "GT_IMG_9043",
+  "image": "IMG_9043.jpg",
+  "zone": "Z_S5",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.78,
+  "products_detected": ["bolachas", "Mikado", "Filipinos", "Lion", "Kellogg's Krave", "Finifino", "Continente Argolinhas"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira central, zona das Argolinhas",
+      "severity": "medium",
+      "description": "Secção das Argolinhas na prateleira central apresenta gaps visíveis com posições sem produto.",
+      "confidence": 0.87,
+      "affected_area_pct": 0.22
+    }
+  ]
+}

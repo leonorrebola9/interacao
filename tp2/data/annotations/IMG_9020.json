@@ -1,18 +1,19 @@
 {
+  "inspection_id": "GT_IMG_9020",
+  "image": "IMG_9020.jpg",
+  "zone": "Z_S1",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.82,
+  "products_detected": ["iogurtes magros", "iogurtes low fat", "Bem-Estar", "Yoggi", "Danone", "Mimosa", "LongaVida"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "empty_shelf",
-      "severity": "low",
-      "location": "lower shelves (small gaps)"
-    },
-    {
-      "type": "misaligned",
-      "severity": "low",
-      "location": "some yogurt packs slightly pushed back"
+      "location": "prateleira superior, zona central-esquerda",
+      "severity": "medium",
+      "description": "Prateleira superior com gap visível na zona central-esquerda, com ausência de produto em aproximadamente 2-3 posições.",
+      "confidence": 0.88,
+      "affected_area_pct": 0.18
     }
-  ],
-  "overall_status": "warning",
-  "fill_rate": 0.9,
-  "image": "IMG_9020.jpg",
-  "zone": "Z_S1"
+  ]
 }

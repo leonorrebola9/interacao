@@ -1,13 +1,28 @@
 {
+  "inspection_id": "GT_IMG_9017",
+  "image": "IMG_9017.jpg",
+  "zone": "Z_S1",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.65,
+  "products_detected": ["iogurtes", "pedaços de fruta", "Continente", "Mimosa", "Agros"],
   "issues": [
     {
+      "issue_id": "ISS_001",
       "type": "empty_shelf",
+      "location": "prateleira inferior, zona central e direita",
       "severity": "high",
-      "location": "bottom shelf (large empty areas across the entire row)"
+      "description": "Prateleira inferior apresenta área completamente vazia na zona central-direita, com apenas 2-3 embalagens isoladas no canto esquerdo inferior.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.40
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "prateleira do fundo, zona direita",
+      "severity": "medium",
+      "description": "Prateleira traseira inferior com stock muito reduzido no lado direito, visível através do vidro.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.20
     }
-  ],
-  "overall_status": "critical",
-  "fill_rate": 0.75,
-  "image": "IMG_9017.jpg",
-  "zone": "Z_S1"
+  ]
 }

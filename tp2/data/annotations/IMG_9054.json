@@ -1,0 +1,28 @@
+{
+  "inspection_id": "GT_IMG_9054",
+  "image": "IMG_9054.jpg",
+  "zone": "Z_S5",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.75,
+  "products_detected": ["massas", "esparguete", "macarrão", "cotovelos", "pérolas", "Continente"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, lado esquerdo",
+      "severity": "medium",
+      "description": "Prateleira inferior esquerda com gaps visíveis entre produtos, com várias posições sem stock.",
+      "confidence": 0.88,
+      "affected_area_pct": 0.20
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "wrong_product",
+      "location": "prateleira inferior",
+      "severity": "low",
+      "description": "Embalagem de esparguete colocada fora da sua posição correta na prateleira inferior, em zona de outro tipo de massa.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    }
+  ]
+}

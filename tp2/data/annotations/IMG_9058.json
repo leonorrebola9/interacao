@@ -1,0 +1,19 @@
+{
+  "inspection_id": "GT_IMG_9058",
+  "image": "IMG_9058.jpg",
+  "zone": "Z_S6",
+  "overall_status": "warning",
+  "shelf_fill_rate": 0.60,
+  "products_detected": ["Gin Mix", "destilados", "vinhos", "acessórios gin"],
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira central, zona central",
+      "severity": "high",
+      "description": "Prateleira central completamente vazia em toda a sua extensão, sem qualquer produto.",
+      "confidence": 0.98,
+      "affected_area_pct": 0.35
+    }
+  ]
+}
