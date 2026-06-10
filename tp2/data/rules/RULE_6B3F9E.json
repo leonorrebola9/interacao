@@ -1,0 +1,27 @@
+{
+  "rule_id": "RULE_6B3F9E",
+  "created_at": "2026-06-10T17:31:00.394601+00:00",
+  "natural_language": "Na zona Z_S6, se o fill rate for inferior a 50% e houver pelo menos um empty_shelf de severidade high, gera alerta crítico imediato",
+  "description": "Gerar um alerta crítico imediato se, na zona Z_S6, o fill rate for inferior a 50% e for detetada uma prateleira vazia com severidade alta.",
+  "conditions": {
+    "zone_filter": [
+      "Z_S6"
+    ],
+    "time_filter": null,
+    "issue_types": [
+      "empty_shelf"
+    ],
+    "severity_threshold": "high",
+    "fill_rate_threshold": 0.5,
+    "location_filter": "any"
+  },
+  "action": {
+    "alert_level": "critical",
+    "notification_message": "Alerta CRÍTICO: Zona {zone_id} com fill rate de {fill_rate} e detetado {issue_type} de severidade alta."
+  },
+  "validation": {
+    "is_valid": true,
+    "ambiguities": [],
+    "assumptions": []
+  }
+}

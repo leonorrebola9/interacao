@@ -1,0 +1,35 @@
+{
+  "rule_id": "RULE_7B58A5",
+  "created_at": "2026-06-10T17:23:28.618072+00:00",
+  "natural_language": "Alerta quando houver pouco produto nas prateleiras",
+  "description": "Esta regra visa alertar quando a quantidade de produto nas prateleiras for considerada baixa. No entanto, a definição de 'pouco produto', as zonas específicas, a localização exata nas prateleiras e o nível de urgência do alerta não foram especificados.",
+  "conditions": {
+    "zone_filter": [],
+    "time_filter": null,
+    "issue_types": [
+      "empty_shelf"
+    ],
+    "severity_threshold": "low",
+    "fill_rate_threshold": null,
+    "location_filter": "any"
+  },
+  "action": {
+    "alert_level": "warning",
+    "notification_message": "Foi detetada uma situação de baixo stock nas prateleiras na zona {zone_id}. Fill rate: {fill_rate}."
+  },
+  "validation": {
+    "is_valid": false,
+    "ambiguities": [
+      "O termo 'pouco produto' não especifica um threshold numérico concreto para o fill rate.",
+      "Não foi especificado a que zonas se aplica a regra.",
+      "Não foi especificado o nível de urgência do alerta.",
+      "Não foi especificado se a regra se aplica a uma prateleira específica (superior/meio/inferior) ou a todas."
+    ],
+    "assumptions": [
+      "Assumiu-se que 'pouco produto' se refere ao tipo de problema 'empty_shelf'.",
+      "Assumiu-se que a regra se aplica a todas as zonas, uma vez que nenhuma foi especificada.",
+      "Assumiu-se que a regra se aplica a todas as localizações de prateleira (superior, meio, inferior), uma vez que nenhuma foi especificada.",
+      "Assumiu-se um nível de alerta 'warning' dado o termo 'Alerta'."
+    ]
+  }
+}

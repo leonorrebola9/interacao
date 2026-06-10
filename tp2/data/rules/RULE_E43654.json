@@ -1,0 +1,29 @@
+{
+  "rule_id": "RULE_E43654",
+  "created_at": "2026-06-10T17:28:42.603691+00:00",
+  "natural_language": "Na zona Z_S2, se houver empty_shelf na prateleira inferior, nível crítico",
+  "description": "Esta regra alerta para a ocorrência de prateleiras vazias na zona Z_S2, especificamente na prateleira inferior, com um nível de alerta crítico.",
+  "conditions": {
+    "zone_filter": [
+      "Z_S2"
+    ],
+    "time_filter": null,
+    "issue_types": [
+      "empty_shelf"
+    ],
+    "severity_threshold": "low",
+    "fill_rate_threshold": null,
+    "location_filter": "bottom"
+  },
+  "action": {
+    "alert_level": "critical",
+    "notification_message": "Alerta crítico: Prateleira vazia ({issue_type}) detetada na zona {zone_id}, prateleira {location_filter}. Ação imediata necessária."
+  },
+  "validation": {
+    "is_valid": false,
+    "ambiguities": [
+      "A condição 'empty_shelf' não especifica um threshold numérico concreto para o fill rate."
+    ],
+    "assumptions": []
+  }
+}

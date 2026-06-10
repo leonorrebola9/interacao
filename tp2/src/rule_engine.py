@@ -97,7 +97,6 @@ def convert_rule(natural_language_text, max_retries=3):
             )
             raw_text = response.text.strip()
 
-            # limpa markdown se necessário
             import re
             matches = re.findall(r'\{[\s\S]*\}', raw_text)
             if not matches:
@@ -105,23 +104,24 @@ def convert_rule(natural_language_text, max_retries=3):
 
             data = json.loads(matches[-1])
 
-            # preenche campos gerados externamente
             data["rule_id"] = f"RULE_{uuid.uuid4().hex[:6].upper()}"
             data["created_at"] = datetime.now(timezone.utc).isoformat()
             data["natural_language"] = natural_language_text
 
             return data
 
-        except ClientError as e:
-            if e.code in [429, 503]:
-                wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
-                time.sleep(wait)
-            else:
-                raise
         except (json.JSONDecodeError, ValueError) as e:
             print(f"  [aviso] Erro a parsear JSON (tentativa {attempt+1}): {e}")
             if attempt == max_retries - 1:
+                raise
+
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
+                wait = 35 + attempt * 15
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})...")
+                time.sleep(wait)
+            else:
                 raise
 
     raise RuntimeError("Limite de tentativas excedido")
@@ -170,7 +170,7 @@ def list_rules():
         print("Nenhuma regra guardada.")
         return []
     for r in rules:
-        status = "✓" if r.get("validation", {}).get("is_valid") else "⚠ ambígua"
+        status = "✓" if r.get("validation", {}).get("is_valid") else "ambígua"
         print(f"  [{r['rule_id']}] {status} — {r.get('natural_language', '')[:60]}")
     return rules
 
@@ -283,10 +283,6 @@ def execute_rules(inspection, rules=None):
 
 # Adição de regra
 def add_rule_interactive(natural_language_text):
-    """
-    Converte e guarda uma regra, pedindo clarificação se for ambígua.
-    Retorna a regra guardada ou None se cancelado.
-    """
     print(f"\nA converter regra: \"{natural_language_text}\"")
     rule = convert_rule(natural_language_text)
 
@@ -299,15 +295,9 @@ def add_rule_interactive(natural_language_text):
             print(f"  • {a}")
 
     if ambiguities:
-        print("\nA regra tem ambiguidades que precisam de ser resolvidas:")
+        print("\nAmbiguidades detetadas:")
         for i, amb in enumerate(ambiguities, 1):
             print(f"  {i}. {amb}")
-
-        print("\nDeseja guardar a regra mesmo assim? (s/n): ", end="")
-        resposta = input().strip().lower()
-        if resposta != "s":
-            print("Regra não guardada.")
-            return None
 
     path = save_rule(rule)
     print(f"\nRegra guardada: {rule['rule_id']}")

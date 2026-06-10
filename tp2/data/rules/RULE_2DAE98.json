@@ -1,0 +1,36 @@
+{
+  "rule_id": "RULE_2DAE98",
+  "created_at": "2026-06-10T17:17:39.375030+00:00",
+  "natural_language": "Avisa-me quando a prateleira estiver vazia",
+  "description": "Esta regra visa notificar o utilizador quando uma prateleira for considerada vazia, sem especificar um limiar de preenchimento, zonas ou nível de urgência.",
+  "conditions": {
+    "zone_filter": [],
+    "time_filter": null,
+    "issue_types": [
+      "empty_shelf"
+    ],
+    "severity_threshold": "low",
+    "fill_rate_threshold": null,
+    "location_filter": "any"
+  },
+  "action": {
+    "alert_level": "info",
+    "notification_message": "A prateleira na zona {zone_id} está vazia. Fill rate: {fill_rate}."
+  },
+  "validation": {
+    "is_valid": false,
+    "ambiguities": [
+      "O termo 'vazia' não especifica um threshold numérico concreto para o fill rate.",
+      "Não é especificado a que zonas da loja a regra se aplica.",
+      "Não é especificado o nível de urgência da notificação (alert_level).",
+      "Não é especificado se a regra se aplica a uma localização específica da prateleira (superior, meio, inferior) ou a todas."
+    ],
+    "assumptions": [
+      "Assumi que 'vazia' se refere ao tipo de problema 'empty_shelf'.",
+      "Assumi que a regra se aplica a todas as zonas da loja, uma vez que nenhuma zona específica foi mencionada.",
+      "Assumi que o nível de severidade padrão é 'low'.",
+      "Assumi que o nível de alerta padrão é 'info', uma vez que não foi especificada a urgência.",
+      "Assumi que a regra se aplica a qualquer localização da prateleira (superior, meio, inferior), uma vez que nenhuma localização específica foi mencionada."
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rule_id": "RULE_878F3E",
+  "created_at": "2026-06-10T17:18:56.937249+00:00",
+  "natural_language": "Se houver um produto fora do lugar em qualquer zona, nível de alerta warning",
+  "description": "Gerar um alerta de nível 'warning' sempre que for detetado um produto fora do lugar em qualquer zona da loja.",
+  "conditions": {
+    "zone_filter": [],
+    "time_filter": null,
+    "issue_types": [
+      "wrong_product"
+    ],
+    "severity_threshold": "low",
+    "fill_rate_threshold": null,
+    "location_filter": "any"
+  },
+  "action": {
+    "alert_level": "warning",
+    "notification_message": "Foi detetado um {issue_type} na zona {zone_id}. Por favor, verifique a situação."
+  },
+  "validation": {
+    "is_valid": true,
+    "ambiguities": [],
+    "assumptions": []
+  }
+}
