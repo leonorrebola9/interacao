@@ -1,0 +1,37 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira do meio, secção esquerda, abaixo das embalagens de 'CONTINENTE Cueca Incontinência M' e 'L'.",
+      "severity": "medium",
+      "description": "Espaço vazio significativo onde deveriam estar produtos, indicando falta de stock ou necessidade de reposição.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.12
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "label_missing",
+      "location": "Prateleira do meio, secção direita, para a embalagem de 'TENA PROskin Slip M' mais à direita.",
+      "severity": "low",
+      "description": "A etiqueta de preço para o produto TENA PROskin Slip M não está visível ou está ausente.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Fraldas de incontinência",
+    "Cuecas de incontinência",
+    "Toalhitas",
+    "Cremes de higiene"
+  ],
+  "model_reasoning": "A análise detalhada da imagem revelou que a prateleira do meio apresenta um espaço vazio considerável, o que indica uma falha na reposição de stock. Adicionalmente, uma etiqueta de preço está em falta para um produto específico na mesma prateleira. As prateleiras superior e inferior estão bem abastecidas e organizadas. Devido à presença de uma prateleira parcialmente vazia (severidade média) e uma etiqueta em falta (severidade baixa), o status geral da secção é classificado como 'warning'.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem apresenta uma secção de um corredor de supermercado, focada numa prateleira de produtos de incontinência, claramente identificada pelo letreiro \"INCONTINÊNCIA\" no topo. Existem três prateleiras visíveis que exibem uma variedade de produtos, incluindo fraldas para adultos, cuecas de incontinência, toalhitas e cremes de higiene. Acima das prateleiras, há um grande cartaz publicitário que mostra um olho e a aplicação de um creme. O ambiente geral é de um supermercado bem iluminado e organizado.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior:\n- Está cheia, com produtos como fraldas de incontinência da marca Continente (tamanhos S, M, L) e produtos Lindor (toalhitas e cremes/espumas).\n- Os produtos estão bem alinhados e posicionados de forma organizada.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, incluindo uma etiqueta promocional amarela (\"Apenas\") pendurada.\n\nPrateleira do Meio:\n- Está parcialmente vazia. A secção esquerda da prateleira apresenta um espaço vazio considerável onde deveriam estar produtos, abaixo das embalagens de cuecas de incontinência Continente M e L. A secção direita está bem abastecida com fraldas de noite Continente e TENA PROskin Slip.\n- Os produtos presentes estão geralmente bem alinhados e posicionados.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, mas uma embalagem de TENA PROskin Slip M no extremo direito não tem uma etiqueta de preço diretamente visível.\n\nPrateleira Inferior:\n- Está cheia com cuecas de noite Continente (tamanhos M, L), Intimus Premium Care XL e Lindor Elásticos (tamanhos M, L).\n- Os produtos estão bem alinhados e posicionados.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas de preço estão presentes e visíveis para todos os produtos nesta prateleira.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **empty_shelf**:\n    *   Localização: Prateleira do meio, secção esquerda, abaixo das embalagens de \"CONTINENTE Cueca Incontinência M\" e \"L\".\n    *   Severidade: medium\n    *   Descrição: Há um espaço vazio significativo onde deveriam estar produtos, indicando falta de stock ou necessidade de reposição.\n    *   Área afetada: Aproximadamente 12% da área total visível das prateleiras.\n\n2.  **label_missing**:\n    *   Localização: Prateleira do meio, secção direita, para a embalagem de \"TENA PROskin Slip M\" mais à direita.\n    *   Severidade: low\n    *   Descrição: A etiqueta de preço para esta embalagem específica de produto não está visível ou está ausente diretamente abaixo dela.\n    *   Área afetada: Muito pequena, correspondente a uma única posição de produto (cerca de 1% da área total visível das prateleiras).\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Prateleira do meio, secção esquerda, abaixo das embalagens de 'CONTINENTE Cueca Incontinência M' e 'L'.\",\n      \"severity\": \"medium\",\n      \"description\": \"Espaço vazio significativo onde deveriam estar produtos, indicando falta de stock ou necessidade de reposição.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.12\n    },",
+  "inspection_id": "INS_20260610_165028_427A57",
+  "timestamp": "2026-06-10T16:50:28.328745+00:00",
+  "image_path": "data\\images\\IMG_8992.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "B"
+}

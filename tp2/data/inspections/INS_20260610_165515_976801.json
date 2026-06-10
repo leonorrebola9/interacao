@@ -1,0 +1,53 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "Prateleira do meio, à frente dos produtos 'Continente Choco Cookies' e 'Continente Choco Crockers'.",
+      "severity": "low",
+      "description": "Um expositor pendurado com pequenos artigos está a obstruir parcialmente a visibilidade e o acesso a alguns produtos de cereais.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira superior, à direita das caixas de 'Golden Grahams'.",
+      "severity": "low",
+      "description": "A etiqueta de preço '2.39€' para os cereais 'Golden Grahams' está ligeiramente torta.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "label_missing",
+      "location": "Prateleira inferior, à esquerda, para os cereais 'Nacional Cookie'z'.",
+      "severity": "low",
+      "description": "A etiqueta de preço para os cereais 'Nacional Cookie'z' está parcialmente escondida ou obscurecida.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "wrong_product",
+      "location": "Prateleira do meio, à direita, em frente aos 'Continente Choco Crockers'.",
+      "severity": "low",
+      "description": "Um 'pack familiar' de um produto não identificado está colocado na prateleira dos cereais, fora do seu lugar.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Cereais de pequeno-almoço",
+    "Biscoitos"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas e organizadas. Foram identificadas algumas anomalias menores, como um expositor pendurado a obstruir produtos, uma etiqueta de preço desalinhada, uma etiqueta parcialmente obscurecida e um produto fora do lugar. A taxa de preenchimento da prateleira é alta.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de uma prateleira de supermercado, focada em produtos de pequeno-almoço, especificamente cereais e biscoitos. Existem três prateleiras principais visíveis, repletas de produtos de várias marcas. A iluminação ambiente é típica de um supermercado, com luzes fluorescentes visíveis no teto. Uma estrutura de madeira serve como separador para outra secção de produtos à direita, que está parcialmente visível.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior:\n- Está cheia, com caixas de \"Golden Grahams\" à esquerda e sacos de \"Continente Milk Crockers\" à direita.\n- Os produtos estão geralmente bem alinhados.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis para ambos os produtos (\"2.39€\" para Golden Grahams e \"2.49€\" para Milk Crockers), embora uma esteja ligeiramente torta.\n\nPrateleira do Meio:\n- Está cheia, com caixas de \"Continente Golden Squares\" e \"Continente Choco Cookies\" à esquerda, e \"Continente Choco Crockers\" à direita.\n- Os produtos estão geralmente bem alinhados.\n- Não há produtos tombados ou danificados. No entanto, há um expositor pendurado com pequenos artigos que obstrui parcialmente alguns produtos e um produto fora do lugar.\n- As etiquetas de preço estão presentes e visíveis (\"2.99€\" para Choco Cookies e \"2.49€\" para Choco Crockers).\n\nPrateleira Inferior:\n- Está cheia, com caixas de \"Nacional Cookie'z\" e \"Lion\" à esquerda, e \"Kellogg's Krave\" à direita.\n- Os produtos estão geralmente bem alinhados.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos (\"4.39€\" para Lion, \"3.99€\" e \"3.89€\" para Krave), mas uma está parcialmente obscurecida para os \"Nacional Cookie'z\".\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\nISS_001:\n  type: other\n  location: Prateleira do meio, à frente dos produtos \"Continente Choco Cookies\" e \"Continente Choco Crockers\".\n  severity: low\n  description: Um expositor pendurado com pequenos artigos (possivelmente utensílios ou acessórios) está a obstruir parcialmente a visibilidade e o acesso a alguns produtos de cereais.\n  confidence: 0.9\n  affected_area_pct: 0.05\n\nISS_002:\n  type: misaligned\n  location: Prateleira superior, à direita das caixas de \"Golden Grahams\".\n  severity: low\n  description: A etiqueta de preço \"2.39€\" para os cereais \"Golden Grahams\" está ligeiramente torta e não perfeitamente alinhada com a prateleira.\n  confidence: 0.9\n  affected_area_pct: 0.01\n\nISS_003:\n  type: label_missing\n  location: Prateleira inferior, à esquerda, para os cereais \"Nacional Cookie'z\".\n  severity: low\n  description: A etiqueta de preço para os cereais \"Nacional Cookie'z\" está parcialmente escondida ou obscurecida, tornando-a difícil de ler.\n  confidence: 0.8\n  affected_area_pct: 0.01\n\nISS_004:\n  type: wrong_product\n  location: Prateleira do meio, à direita, em frente aos \"Continente Choco Crockers\".\n  severity: low\n  description: Um \"pack familiar\" de um produto não identificado (com embalagem roxa, que parece ser de higiene ou limpeza) está colocado na prateleira dos cereais, fora do seu lugar.\n  confidence: 0.8\n  affected_area_pct: 0.02\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"other\",\n      \"location\": \"Prateleira do meio, à frente dos produtos 'Continente Choco Cookies' e 'Continente Choco Crockers'.\",\n      \"severity\": \"low\",\n      \"description\": \"Um expositor pendurado com pequenos artigos está a obstruir parcialmente a visibilidade e o acesso a alguns produtos de cereais.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.05\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira superior, à direita das caixas de 'Golden Grahams'.\",\n      \"severity\": \"low\",\n      \"description\": \"A etiqueta de preço '2.39€' para os cereais 'Golden Grahams' está ligeiramente torta.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"label_missing\",\n      \"location\": \"Prateleira inferior, à esquerda, para os cereais 'Nacional Cookie'z'.\",\n      \"severity\": \"low\",\n      \"description\": \"A etiqueta de preço para os cereais 'Nacional Cookie'z' está parcialmente escondida ou obscurecida.\",\n      \"confidence\": 0.8,\n      \"affected_area_pct\": 0.01\n    },",
+  "inspection_id": "INS_20260610_165515_976801",
+  "timestamp": "2026-06-10T16:55:15.123946+00:00",
+  "image_path": "data\\images\\IMG_9048.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "B"
+}

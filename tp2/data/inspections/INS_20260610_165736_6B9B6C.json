@@ -1,0 +1,38 @@
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira 4 (quarta a partir do topo), secções do meio e da direita",
+      "severity": "high",
+      "description": "Uma parte significativa da prateleira está completamente vazia, indicando uma rutura de stock. A presença de uma etiqueta de preço na área vazia confirma que produtos deveriam estar ali.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.65
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira 5 (inferior), toda a extensão",
+      "severity": "high",
+      "description": "A prateleira inferior está completamente vazia, indicando uma rutura de stock total para os produtos que deveriam ser exibidos ali. Uma etiqueta de preço é visível, confirmando a intenção de exposição de produtos.",
+      "confidence": 1.0,
+      "affected_area_pct": 1.0
+    }
+  ],
+  "shelf_fill_rate": 0.67,
+  "products_detected": [
+    "Croissants pré-embalados",
+    "Pequenos bolos/muffins pré-embalados",
+    "Bolos/pastelaria retangulares pré-embalados",
+    "Pastelaria salgada (Pollo y Setas, Atún Atum)",
+    "Infusões/Chás (Digest, Dormir, Menta Poleo, Fria, Rooibos, Canela, Miel)"
+  ],
+  "model_reasoning": "A análise revelou que três das cinco prateleiras de produtos estão bem abastecidas e organizadas. No entanto, a quarta prateleira apresenta uma secção considerável vazia, e a prateleira inferior está completamente vazia. Estas duas anomalias de 'empty_shelf' são de alta severidade e afetam uma grande parte da área de exposição, resultando numa taxa de preenchimento da prateleira de 67% e um estado geral crítico.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de prateleiras de um supermercado, focando-se em produtos de padaria/pastelaria pré-embalados e uma variedade de infusões/chás. Existem cinco prateleiras visíveis que contêm produtos, além de um painel decorativo superior. O ambiente geral é de um corredor de supermercado bem iluminado, com chão de azulejos claros.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira 1 (Superior)**:\n    *   **Fullness**: Está maioritariamente cheia. A secção da esquerda e do meio contém produtos de pastelaria, enquanto a secção da direita está preenchida com caixas de infusões.\n    *   **Alignment**: Os produtos estão bem alinhados e organizados. Os pacotes de croissants e as caixas de infusões estão empilhados de forma ordenada.\n    *   **Damage/Out of Place**: Não há produtos visivelmente tombados, danificados ou fora do lugar.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis para a maioria dos produtos (ex: 2.60€, 2.20€, 1.40€, 3.20€, 2.55€, 2.60€, 1.20€).\n\n*   **Prateleira 2 (Segunda a partir do topo)**:\n    *   **Fullness**: Está maioritariamente cheia.\n    *   **Alignment**: Os produtos estão bem alinhados e organizados.\n    *   **Damage/Out of Place**: Não há produtos visivelmente tombados, danificados ou fora do lugar.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis (ex: 3.30€, 3.50€, 0.70€, 0.60€, 1.05€, 0.75€, 0.75€).\n\n*   **Prateleira 3 (Terceira a partir do topo)**:\n    *   **Fullness**: Está maioritariamente cheia.\n    *   **Alignment**: Os produtos estão bem alinhados e organizados.\n    *   **Damage/Out of Place**: Não há produtos visivelmente tombados, danificados ou fora do lugar.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis (ex: 3.75€, 3.60€, 1.20€, 1.50€, 1.50€, 0.80€).\n\n*   **Prateleira 4 (Quarta a partir do topo)**:\n    *   **Fullness**: Está parcialmente vazia. A secção da esquerda contém produtos de pastelaria salgada (Atún Atum), mas as secções do meio e da direita estão completamente vazias.\n    *   **Alignment**: Os produtos existentes na secção esquerda estão alinhados.\n    *   **Damage/Out of Place**: Não há produtos visivelmente tombados, danificados ou fora do lugar entre os produtos existentes.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis para os produtos na secção esquerda (ex: 7.40€). Há também uma etiqueta de 7.40€ na secção vazia, indicando que produtos deveriam estar ali.\n\n*   **Prateleira 5 (Inferior)**:\n    *   **Fullness**: Está completamente vazia.\n    *   **Alignment**: N/A (prateleira vazia).\n    *   **Damage/Out of Place**: N/A (prateleira vazia).\n    *   **Price Labels**: Uma etiqueta de preço (7.40€) é visível na parte esquerda da prateleira, indicando que produtos deveriam ser exibidos aqui.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001**:\n    *   **Tipo**: empty_shelf\n    *   **Localização**: Prateleira 4 (quarta a partir do topo), secções do meio e da direita.\n    *   **Severidade**: high\n    *   **Descrição**: Uma parte significativa da prateleira está completamente vazia, indicando uma rutura de stock. A presença de uma etiqueta de preço na área vazia confirma que produtos deveriam estar ali.\n    *   **Área Afetada**: Aproximadamente 65% desta prateleira.\n\n2.  **ISS_002**:\n    *   **Tipo**: empty_shelf\n    *   **Localização**: Prateleira 5 (inferior), toda a extensão.\n    *   **Severidade**: high\n    *   **Descrição**: A prateleira inferior está completamente vazia, indicando uma rutura de stock total para os produtos que deveriam ser exibidos ali. Uma etiqueta de preço é visível, confirmando a intenção de exposição de produtos.\n    *   **Área Afetada**: Aproximadamente 100% desta prateleira.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"critical\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Prateleira 4 (quarta a partir do topo), secções do meio e da direita\",\n      \"severity\": \"high\",\n      \"description\": \"Uma parte significativa da prateleira está completamente vazia, indicando uma rutura de stock. A presença de uma etiqueta de preço na área vazia confirma que produtos deveriam estar ali.\",\n      \"confidence\": 1.0,\n      \"affected_area_pct\": 0.65\n    },",
+  "inspection_id": "INS_20260610_165736_6B9B6C",
+  "timestamp": "2026-06-10T16:57:36.829951+00:00",
+  "image_path": "data\\images\\IMG_9072.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "B"
+}

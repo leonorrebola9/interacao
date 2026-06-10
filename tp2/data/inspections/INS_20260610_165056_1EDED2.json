@@ -1,0 +1,44 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira superior, centro-direita",
+      "severity": "low",
+      "description": "Pilha de produtos ligeiramente mais baixa/desalinhada, indicando depleção parcial ou organização irregular.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira do meio, centro-direita",
+      "severity": "low",
+      "description": "Pilha de produtos ligeiramente mais baixa/desalinhada, indicando depleção parcial ou organização irregular.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira inferior, centro-direita",
+      "severity": "low",
+      "description": "Pilha de produtos ligeiramente mais baixa/desalinhada, indicando depleção parcial ou organização irregular.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Frango (cortes diversos)",
+    "Frango completo"
+  ],
+  "model_reasoning": "A imagem mostra um expositor refrigerado de frango em um supermercado. As três prateleiras visíveis estão em grande parte cheias e os produtos estão geralmente bem organizados. No entanto, foram identificadas pequenas anomalias de desalinhamento em pilhas de produtos no centro-direita de cada prateleira, onde as pilhas estão ligeiramente mais baixas, sugerindo depleção parcial ou organização irregular. Não foram encontrados produtos danificados, etiquetas ausentes ou espaços vazios significativos.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de um supermercado com um expositor refrigerado de produtos de frango embalados. O expositor tem portas de vidro e várias prateleiras. Acima do expositor, há um painel com um padrão decorativo em tons de rosa e vermelho, e um letreiro com a palavra \"FRANGO\" e um ícone de galinha. No canto superior direito, parte de outro letreiro com as palavras \"UMA\" e \"Para co\" é visível. O ambiente geral parece ser de um supermercado bem organizado.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior:\n- Está cheia, com produtos empilhados em bandejas transparentes.\n- Os produtos estão geralmente bem posicionados, embora algumas pilhas apresentem ligeiro desalinhamento ou estejam um pouco mais baixas no centro-direita.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas amarelas de preço/informação estão presentes e visíveis na maioria dos produtos. Códigos de barras são visíveis na borda da prateleira.\n\nPrateleira do Meio:\n- Está cheia, com produtos empilhados em bandejas transparentes.\n- Os produtos estão geralmente bem posicionados, com algumas pilhas ligeiramente mais baixas ou desalinhadas no centro-direita.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas amarelas de preço/informação estão presentes e visíveis na maioria dos produtos. Códigos de barras são visíveis na borda da prateleira.\n\nPrateleira Inferior:\n- Está cheia, com produtos empilhados em bandejas transparentes.\n- Os produtos estão geralmente bem posicionados, com algumas pilhas ligeiramente mais baixas ou desalinhadas no centro-direita.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas amarelas de preço/informação estão presentes e visíveis na maioria dos produtos. Códigos de barras são visíveis na borda da prateleira.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001**:\n    *   **Localização**: Prateleira superior, centro-direita.\n    *   **Severidade**: low\n    *   **Descrição**: Uma pilha de produtos está ligeiramente mais baixa ou desalinhada em comparação com as pilhas adjacentes, indicando que alguns itens foram removidos ou a organização não está perfeita. Não é um espaço completamente vazio, mas sim uma pilha incompleta.\n2.  **ISS_002**:\n    *   **Localização**: Prateleira do meio, centro-direita.\n    *   **Severidade**: low\n    *   **Descrição**: Uma pilha de produtos está ligeiramente mais baixa ou desalinhada em comparação com as pilhas adjacentes, similar à prateleira superior.\n3.  **ISS_003**:\n    *   **Localização**: Prateleira inferior, centro-direita.\n    *   **Severidade**: low\n    *   **Descrição**: Uma pilha de produtos está ligeiramente mais baixa ou desalinhada em comparação com as pilhas adjacentes, similar às prateleiras superiores.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira superior, centro-direita\",\n      \"severity\": \"low\",\n      \"description\": \"Pilha de produtos ligeiramente mais baixa/desalinhada, indicando depleção parcial ou organização irregular.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.03\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira do meio, centro-direita\",\n      \"severity\": \"low\",\n      \"description\": \"Pilha de produtos ligeiramente mais baixa/desalinhada, indicando depleção parcial ou organização irregular.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.03\n    },",
+  "inspection_id": "INS_20260610_165056_1EDED2",
+  "timestamp": "2026-06-10T16:50:56.046136+00:00",
+  "image_path": "data\\images\\IMG_8998.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "B"
+}

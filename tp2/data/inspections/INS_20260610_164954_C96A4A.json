@@ -1,0 +1,91 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira 2, secção de produtos AUSONIA (caixas rosa) no canto superior esquerdo.",
+      "severity": "low",
+      "description": "Algumas caixas de pensos AUSONIA estão ligeiramente desalinhadas, umas mais para trás que outras.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira 3, secção de produtos CONTENENTES Comfort Mini (caixas rosa) no lado esquerdo.",
+      "severity": "low",
+      "description": "As caixas de pensos CONTENENTES estão ligeiramente desalinhadas, com algumas mais para a frente ou para trás.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira 4, secção de produtos ob (caixas brancas/azuis) no lado esquerdo.",
+      "severity": "low",
+      "description": "As caixas de tampões ob estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Prateleira 5, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.",
+      "severity": "low",
+      "description": "As embalagens de pensos evax estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Prateleira 6, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.",
+      "severity": "low",
+      "description": "As embalagens de pensos evax estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Prateleira 5, secção de produtos AUSONIA (embalagens rosa/amarelo) no meio.",
+      "severity": "low",
+      "description": "As embalagens de pensos AUSONIA estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "misaligned",
+      "location": "Prateleira 5, secção de produtos Tampax (caixas azuis) no lado direito.",
+      "severity": "low",
+      "description": "As caixas de tampões Tampax estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_008",
+      "type": "misaligned",
+      "location": "Prateleira 6, secção de produtos Tampax (caixas azuis) no lado direito.",
+      "severity": "low",
+      "description": "As caixas de tampões Tampax estão ligeiramente desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Pensos higiénicos",
+    "Tampões",
+    "Champô",
+    "Fraldas"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas e organizadas. Foram identificados vários casos de desalinhamento ligeiro de produtos em diferentes secções das prateleiras, mas não foram encontrados espaços vazios significativos, produtos danificados ou etiquetas de preço em falta. A apresentação geral é boa, com anomalias de baixa severidade.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem apresenta uma secção de um supermercado, focada numa prateleira alta e bem iluminada dedicada a produtos de higiene feminina. Esta prateleira principal exibe uma vasta gama de pensos higiénicos e tampões de diversas marcas. À direita da prateleira principal, é visível uma secção de uma prateleira secundária que contém garrafas de champô. No topo da prateleira principal, há um sinal que diz \"HIGIENE FEMININA\" e um cartaz amarelo com \"25%\". Um banner vertical com as marcas \"ob\" e \"Carefree\" também está presente. O chão é de azulejos claros.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira 1 (Superior, parcialmente visível):**\n    *   **Cheia/Vazia:** Parece estar bem preenchida com caixas de produtos, possivelmente fraldas ou pensos para incontinência, embora não totalmente visível.\n    *   **Alinhamento:** Os produtos visíveis parecem estar razoavelmente alinhados.\n    *   **Anomalias:** Não são visíveis produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Não são visíveis etiquetas de preço nesta secção.\n\n*   **Prateleira 2 (Superior-meio):**\n    *   **Cheia/Vazia:** Cheia.\n    *   **Alinhamento:** Os produtos \"AUSONIA\" à esquerda e \"CONTENENTES\" à direita estão maioritariamente bem alinhados, com ligeiras variações em algumas caixas.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Etiquetas de preço presentes e visíveis para todos os produtos.\n\n*   **Prateleira 3 (Meio-superior):**\n    *   **Cheia/Vazia:** Cheia.\n    *   **Alinhamento:** Os produtos \"CONTENENTES\" e \"AUSONIA\" estão bem alinhados, com pequenas irregularidades em algumas caixas.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Etiquetas de preço presentes e visíveis para todos os produtos.\n\n*   **Prateleira 4 (Meio):**\n    *   **Cheia/Vazia:** Cheia.\n    *   **Alinhamento:** Os produtos \"ob\" e \"AUSONIA\" estão bem alinhados, com algumas caixas ligeiramente desalinhadas.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Etiquetas de preço presentes e visíveis para todos os produtos.\n\n*   **Prateleira 5 (Meio-inferior):**\n    *   **Cheia/Vazia:** Cheia.\n    *   **Alinhamento:** Os produtos \"evax\", \"AUSONIA\" e \"Tampax\" estão bem alinhados, mas com algumas embalagens ligeiramente desalinhadas ou empurradas para trás.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Etiquetas de preço presentes e visíveis para todos os produtos.\n\n*   **Prateleira 6 (Inferior):**\n    *   **Cheia/Vazia:** Cheia.\n    *   **Alinhamento:** Os produtos \"evax\", \"AUSONIA\" e \"Tampax\" estão bem alinhados, com algumas embalagens ligeiramente desalinhadas.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas:** Etiquetas de preço presentes e visíveis para todos os produtos.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 2, secção de produtos AUSONIA (caixas rosa) no canto superior esquerdo.\n    *   **Severidade:** low\n    *   **Descrição:** Algumas caixas de pensos AUSONIA estão ligeiramente desalinhadas, umas mais para trás que outras.\n\n2.  **ISS_002**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 3, secção de produtos CONTENENTES Comfort Mini (caixas rosa) no lado esquerdo.\n    *   **Severidade:** low\n    *   **Descrição:** As caixas de pensos CONTENENTES estão ligeiramente desalinhadas, com algumas mais para a frente ou para trás.\n\n3.  **ISS_003**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 4, secção de produtos ob (caixas brancas/azuis) no lado esquerdo.\n    *   **Severidade:** low\n    *   **Descrição:** As caixas de tampões ob estão ligeiramente desalinhadas.\n\n4.  **ISS_004**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 5, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.\n    *   **Severidade:** low\n    *   **Descrição:** As embalagens de pensos evax estão ligeiramente desalinhadas.\n\n5.  **ISS_005**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 6, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.\n    *   **Severidade:** low\n    *   **Descrição:** As embalagens de pensos evax estão ligeiramente desalinhadas.\n\n6.  **ISS_006**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 5, secção de produtos AUSONIA (embalagens rosa/amarelo) no meio.\n    *   **Severidade:** low\n    *   **Descrição:** As embalagens de pensos AUSONIA estão ligeiramente desalinhadas.\n\n7.  **ISS_007**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 5, secção de produtos Tampax (caixas azuis) no lado direito.\n    *   **Severidade:** low\n    *   **Descrição:** As caixas de tampões Tampax estão ligeiramente desalinhadas.\n\n8.  **ISS_008**\n    *   **Tipo:** misaligned\n    *   **Localização:** Prateleira 6, secção de produtos Tampax (caixas azuis) no lado direito.\n    *   **Severidade:** low\n    *   **Descrição:** As caixas de tampões Tampax estão ligeiramente desalinhadas.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"ok\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 2, secção de produtos AUSONIA (caixas rosa) no canto superior esquerdo.\",\n      \"severity\": \"low\",\n      \"description\": \"Algumas caixas de pensos AUSONIA estão ligeiramente desalinhadas, umas mais para trás que outras.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 3, secção de produtos CONTENENTES Comfort Mini (caixas rosa) no lado esquerdo.\",\n      \"severity\": \"low\",\n      \"description\": \"As caixas de pensos CONTENENTES estão ligeiramente desalinhadas, com algumas mais para a frente ou para trás.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 4, secção de produtos ob (caixas brancas/azuis) no lado esquerdo.\",\n      \"severity\": \"low\",\n      \"description\": \"As caixas de tampões ob estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_004\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 5, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.\",\n      \"severity\": \"low\",\n      \"description\": \"As embalagens de pensos evax estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_005\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 6, secção de produtos evax Cottonlike (embalagens azuis) no lado esquerdo.\",\n      \"severity\": \"low\",\n      \"description\": \"As embalagens de pensos evax estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_006\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 5, secção de produtos AUSONIA (embalagens rosa/amarelo) no meio.\",\n      \"severity\": \"low\",\n      \"description\": \"As embalagens de pensos AUSONIA estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },\n    {\n      \"issue_id\": \"ISS_007\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira 5, secção de produtos Tampax (caixas azuis) no lado direito.\",\n      \"severity\": \"low\",\n      \"description\": \"As caixas de tampões Tampax estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.005\n    },",
+  "inspection_id": "INS_20260610_164954_C96A4A",
+  "timestamp": "2026-06-10T16:49:54.753368+00:00",
+  "image_path": "data\\images\\IMG_8990.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "B"
+}

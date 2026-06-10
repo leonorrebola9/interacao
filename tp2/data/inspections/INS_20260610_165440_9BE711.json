@@ -1,0 +1,35 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "Prateleira do meio, ligeiramente à direita do centro, entre as caixas de 'Continente Pétalas de Chocolate'.",
+      "severity": "medium",
+      "description": "Uma pequena caixa de Nescafe Cappuccino está colocada numa secção destinada a caixas de cereais.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira inferior, lado direito, onde estão os sacos de 'Nesquik Max'.",
+      "severity": "low",
+      "description": "Alguns sacos de cereais 'Nesquik Max' estão ligeiramente amassados ou não estão perfeitamente alinhados/verticais.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.93,
+  "products_detected": [
+    "Cereais de pequeno-almoço",
+    "Café/Cappuccino"
+  ],
+  "model_reasoning": "A prateleira está geralmente bem preenchida e organizada, com a maioria dos produtos alinhados. No entanto, foi identificada uma anomalia de produto errado (café entre cereais) na prateleira do meio e um ligeiro desalinhamento de alguns sacos de cereais na prateleira inferior. Não foram encontradas prateleiras vazias, produtos danificados ou etiquetas de preço em falta.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de uma prateleira de supermercado, focada em cereais de pequeno-almoço. A estrutura da prateleira é de madeira, com três níveis visíveis de exposição de produtos. O ambiente é bem iluminado, com o teto e os sistemas de ventilação visíveis na parte superior. A maioria dos produtos é da marca \"Continente\", com algumas outras marcas como \"Chocapic\" e \"Nesquik Max\" também presentes.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira Superior:**\n    *   **Estado:** A prateleira está praticamente cheia, com uma pequena área vazia no extremo direito que parece ser o fim da secção de exposição.\n    *   **Alinhamento:** Os produtos, caixas de \"Continente Arroz Tufado com Chocolate\", estão bem alinhados e posicionados de forma organizada.\n    *   **Anomalias:** Não há produtos tombados, danificados ou fora do lugar.\n    *   **Etiquetas de Preço:** As etiquetas de preço estão presentes e visíveis para a maioria dos produtos.\n\n*   **Prateleira do Meio:**\n    *   **Estado:** A prateleira está quase cheia, com uma pequena área vazia no extremo direito, similar à prateleira superior.\n    *   **Alinhamento:** Os produtos, caixas de \"Continente Pétalas de Chocolate\", estão geralmente bem alinhados e posicionados.\n    *   **Anomalias:** Há um produto de categoria diferente (Nescafe Cappuccino) colocado entre as caixas de cereais. Não há produtos tombados ou danificados.\n    *   **Etiquetas de Preço:** As etiquetas de preço estão presentes e visíveis, incluindo para o produto fora do lugar.\n\n*   **Prateleira Inferior:**\n    *   **Estado:** A prateleira está bem preenchida. No lado esquerdo, há caixas de \"Chocapic\" numa unidade de exposição separada ao lado da prateleira principal. A parte central e direita da prateleira está preenchida com sacos de cereais \"Continente Pétalas de Chocolate\" e \"Nesquik Max\".\n    *   **Alinhamento:** Os sacos de \"Continente\" estão razoavelmente alinhados. Os sacos de \"Nesquik Max\" no lado direito estão um pouco menos organizados, com alguns ligeiramente amassados ou não perfeitamente verticais.\n    *   **Anomalias:** Alguns sacos de \"Nesquik Max\" estão ligeiramente desalinhados ou amassados. Não há produtos tombados ou danificados.\n    *   **Etiquetas de Preço:** As etiquetas de preço estão presentes e visíveis para os produtos nesta prateleira.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001:**\n    *   **Tipo:** `wrong_product`\n    *   **Localização:** Prateleira do meio, ligeiramente à direita do centro, entre as caixas de \"Continente Pétalas de Chocolate\".\n    *   **Severidade:** `medium`\n    *   **Descrição:** Uma pequena caixa de \"Nescafe Cappuccino\" está colocada numa secção destinada a caixas de cereais.\n    *   **Área Afetada:** Aproximadamente 1% da área total da prateleira visível.\n\n2.  **ISS_002:**\n    *   **Tipo:** `misaligned`\n    *   **Localização:** Prateleira inferior, lado direito, onde estão os sacos de \"Nesquik Max\".\n    *   **Severidade:** `low`\n    *   **Descrição:** Alguns sacos de cereais \"Nesquik Max\" estão ligeiramente amassados ou não estão perfeitamente alinhados/verticais, afetando a apresentação.\n    *   **Área Afetada:** Aproximadamente 5% da área total da prateleira visível.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"wrong_product\",\n      \"location\": \"Prateleira do meio, ligeiramente à direita do centro, entre as caixas de 'Continente Pétalas de Chocolate'.\",\n      \"severity\": \"medium\",\n      \"description\": \"Uma pequena caixa de Nescafe Cappuccino está colocada numa secção destinada a caixas de cereais.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.01\n    },",
+  "inspection_id": "INS_20260610_165440_9BE711",
+  "timestamp": "2026-06-10T16:54:40.951808+00:00",
+  "image_path": "data\\images\\IMG_9047.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "B"
+}

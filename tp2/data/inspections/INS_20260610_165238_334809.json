@@ -1,0 +1,44 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira Superior, canto esquerdo, pilha de produtos Yoggi",
+      "severity": "low",
+      "description": "Pilha de produtos Yoggi está inclinada/tombada.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira Superior, lado direito, secção Danone 'magro'",
+      "severity": "low",
+      "description": "Pequeno espaço vazio onde deveria haver produto Danone 'magro'.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira Inferior, lado direito, produtos Mimosa 'SUPER POUPANÇA'",
+      "severity": "low",
+      "description": "Algumas embalagens de Mimosa 'SUPER POUPANÇA' estão ligeiramente desalinhadas.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "iogurtes",
+    "bebidas lácteas"
+  ],
+  "model_reasoning": "O expositor de supermercado está geralmente bem abastecido e organizado. A maioria dos produtos está alinhada e as etiquetas de preço estão presentes. Foram identificadas algumas anomalias menores, como pilhas de produtos desalinhadas e um pequeno espaço vazio na prateleira superior, mas estas não afetam significativamente a apresentação geral ou a disponibilidade dos produtos. A taxa de preenchimento da prateleira é alta.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de um expositor refrigerado de supermercado, provavelmente dedicado a laticínios, especificamente iogurtes e bebidas lácteas. Acima do expositor, é visível parte de um letreiro com a palavra \"Magros\" e \"LOW FAT\". O expositor é composto por quatro prateleiras horizontais principais, todas com portas de vidro. Os produtos são de várias marcas, incluindo Yoggi, Danone, Equilíbrio, Activia, Longa Vida e Mimosa.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior:\n- Está maioritariamente cheia, mas com uma pequena falha de stock na secção direita.\n- Os produtos estão geralmente alinhados, mas há algumas pilhas ligeiramente inclinadas.\n- Há uma pilha de produtos Yoggi no canto superior esquerdo que está visivelmente tombada/inclinada.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos grupos de produtos (ex: 1.35€, 1.49€, 1.99€).\n\nPrateleira Meio Superior:\n- Está muito cheia, com os produtos bem empilhados.\n- Os produtos estão bem alinhados e posicionados.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos grupos de produtos (ex: 1.49€, 1.69€).\n\nPrateleira Meio Inferior:\n- Está muito cheia, com os produtos bem empilhados.\n- Os produtos estão bem alinhados e posicionados.\n- Não há produtos tombados, danificados ou fora do lugar visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos grupos de produtos (ex: 1.35€, 1.69€, 2.16€).\n\nPrateleira Inferior:\n- Está cheia, com os produtos bem empilhados.\n- Os produtos estão geralmente bem alinhados, embora algumas embalagens da marca Mimosa no lado direito estejam ligeiramente desalinhadas.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos grupos de produtos (ex: 1.49€, 2.16€).\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001** - **misaligned**: Prateleira Superior, canto esquerdo. Uma pilha de produtos Yoggi está visivelmente inclinada/tombada. Severidade: low.\n2.  **ISS_002** - **empty_shelf**: Prateleira Superior, lado direito. Há um pequeno espaço vazio na secção dos produtos Danone \"magro\", indicando a falta de pelo menos uma embalagem. Severidade: low.\n3.  **ISS_003** - **misaligned**: Prateleira Inferior, lado direito. Algumas embalagens dos produtos Mimosa \"SUPER POUPANÇA\" estão ligeiramente desalinhadas ou não perfeitamente empilhadas. Severidade: low.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"ok\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira Superior, canto esquerdo, pilha de produtos Yoggi\",\n      \"severity\": \"low\",\n      \"description\": \"Pilha de produtos Yoggi está inclinada/tombada.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Prateleira Superior, lado direito, secção Danone 'magro'\",\n      \"severity\": \"low\",\n      \"description\": \"Pequeno espaço vazio onde deveria haver produto Danone 'magro'.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.01\n    },",
+  "inspection_id": "INS_20260610_165238_334809",
+  "timestamp": "2026-06-10T16:52:38.133378+00:00",
+  "image_path": "data\\images\\IMG_9020.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "B"
+}

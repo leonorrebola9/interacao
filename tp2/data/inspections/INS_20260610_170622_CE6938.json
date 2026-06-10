@@ -1,0 +1,16 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "pensos higiénicos",
+    "tampões",
+    "produtos de higiene feminina"
+  ],
+  "model_reasoning": "Prateleira bem preenchida e organizada com produtos de higiene feminina. Os produtos estão alinhados e não há anomalias visíveis como prateleiras vazias, produtos danificados ou etiquetas em falta. Há sinalização de promoções e categoria de produto.",
+  "inspection_id": "INS_20260610_170622_CE6938",
+  "timestamp": "2026-06-10T17:06:22.158030+00:00",
+  "image_path": "data\\images\\IMG_8990.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "C"
+}

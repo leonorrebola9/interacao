@@ -1,0 +1,46 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Base do refrigerador, secção central e direita",
+      "severity": "medium",
+      "description": "Uma porção significativa da base do refrigerador, no centro e à direita, está sem produtos, criando um espaço vazio notável.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira do Meio Inferior, secção direita (produtos Agros)",
+      "severity": "low",
+      "description": "Alguns dos produtos da marca Agros na prateleira do meio inferior, à direita, estão ligeiramente desalinhados ou empilhados de forma menos uniforme.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "label_missing",
+      "location": "Prateleira Superior",
+      "severity": "low",
+      "description": "Não há etiquetas de preço visíveis diretamente associadas aos produtos da prateleira superior.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.2
+    }
+  ],
+  "shelf_fill_rate": 0.85,
+  "products_detected": [
+    "Yogurts",
+    "Dairy Desserts",
+    "Fruit Preparations",
+    "Multi-packs"
+  ],
+  "model_reasoning": "O expositor está geralmente bem abastecido, com as prateleiras superiores cheias e organizadas. No entanto, a base do refrigerador apresenta uma área vazia considerável, indicando necessidade de reposição. Foram também observados pequenos desalinhamentos em produtos e a ausência de etiquetas de preço visíveis na prateleira superior.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra um expositor refrigerado de supermercado, com portas de vidro, contendo várias prateleiras de produtos lácteos ou sobremesas de fruta. Acima do expositor, é visível parte de um letreiro que menciona \"FRUIT PIECES\". O expositor está maioritariamente bem abastecido, com produtos empilhados em várias camadas.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira Superior**:\n    *   **Está cheia, parcialmente vazia ou completamente vazia?** Está cheia, com produtos empilhados até ao topo.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, os produtos estão bem alinhados e organizados em pilhas.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não são visíveis produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Não são visíveis etiquetas de preço individuais ou de secção para esta prateleira.\n\n*   **Prateleira do Meio Superior**:\n    *   **Está cheia, parcialmente vazia ou completamente vazia?** Está cheia, com produtos empilhados.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, os produtos estão bem alinhados e organizados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não são visíveis produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, uma etiqueta de preço \"1,19€\" é visível no centro da prateleira.\n\n*   **Prateleira do Meio Inferior**:\n    *   **Está cheia, parcialmente vazia ou completamente vazia?** Está cheia, com produtos em caixas e embalagens individuais.\n    *   **Os produtos estão alinhados e bem posicionados?** Na sua maioria sim, embora alguns produtos da marca Agros no lado direito pareçam ligeiramente menos organizados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não são visíveis produtos tombados ou danificados.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, etiquetas de preço \"2,49€\" (esquerda) e \"1,49€\" (direita) são visíveis.\n\n*   **Prateleira Inferior**:\n    *   **Está cheia, parcialmente vazia ou completamente vazia?** Está cheia, com produtos em caixas e embalagens individuais.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, os produtos estão bem alinhados e organizados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não são visíveis produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, etiquetas de preço \"0,99€\" (esquerda), \"0,99€\" (centro) e \"0,79€\" (direita) são visíveis.\n\n*   **Base do Refrigerador (Chão)**:\n    *   **Está cheia, parcialmente vazia ou completamente vazia?** Está parcialmente vazia, com uma área significativa sem produtos no centro e à direita.\n    *   **Os produtos estão alinhados e bem posicionados?** Os produtos presentes no lado esquerdo estão alinhados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não são visíveis produtos tombados ou danificados.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, etiquetas de preço \"0,49€\" e \"0,79€\" são visíveis na área vazia à direita.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **empty_shelf**:\n    *   **Localização**: Base do refrigerador, secção central e direita.\n    *   **Severidade**: Medium. Há uma área considerável e claramente vazia onde deveriam estar produtos, indicando falta de stock ou necessidade de reposição.\n    *   **Descrição**: Uma porção significativa da base do refrigerador, no centro e à direita, está sem produtos, criando um espaço vazio notável.\n\n2.  **misaligned**:\n    *   **Localização**: Prateleira do Meio Inferior, secção direita (produtos Agros).\n    *   **Severidade**: Low.\n    *   **Descrição**: Alguns dos produtos da marca Agros na prateleira do meio inferior, à direita, estão ligeiramente desalinhados ou empilhados de forma menos uniforme.\n\n3.  **label_missing**:\n    *   **Localização**: Prateleira Superior.\n    *   **Severidade**: Low.\n    *   **Descrição**: Não há etiquetas de preço visíveis diretamente associadas aos produtos da prateleira superior, o que pode dificultar a identificação do preço para o cliente.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Base do refrigerador, secção central e direita\",\n      \"severity\": \"medium\",\n      \"description\": \"Uma porção significativa da base do refrigerador, no centro e à direita, está sem produtos, criando um espaço vazio notável.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.1\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira do Meio Inferior, secção direita (produtos Agros)\",\n      \"severity\": \"low\",\n      \"description\": \"Alguns dos produtos da marca Agros na prateleira do meio inferior, à direita, estão ligeiramente desalinhados ou empilhados de forma menos uniforme.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.02\n    },",
+  "inspection_id": "INS_20260610_165208_23E58F",
+  "timestamp": "2026-06-10T16:52:08.273122+00:00",
+  "image_path": "data\\images\\IMG_9017.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "B"
+}
