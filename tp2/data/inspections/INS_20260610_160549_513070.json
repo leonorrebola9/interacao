@@ -1,0 +1,37 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Fourth shelf of the main display stand, left side",
+      "severity": "medium",
+      "description": "Significant empty space on the fourth shelf, indicating missing products where 'Gin Mix' boxes should be.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.5
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Fifth shelf of the main display stand",
+      "severity": "high",
+      "description": "The fifth shelf is almost entirely empty, with only a few 'Gin Mix' boxes remaining on the far right.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.9
+    }
+  ],
+  "shelf_fill_rate": 0.77,
+  "products_detected": [
+    "Gin Mix botanicals",
+    "Wine",
+    "Port Wine",
+    "Gin glasses",
+    "Gin accessories"
+  ],
+  "model_reasoning": "The primary display stand, which is the central focus of the image, shows two shelves with significant empty spaces. The fourth shelf is approximately half empty on its left side, and the fifth shelf is almost entirely bare, with only a small fraction of products remaining. The other shelves on this main stand and the background wine shelves appear generally well-stocked. The overall status is set to 'warning' due to these prominent empty sections on the central display, which indicate a need for restocking. The shelf fill rate is calculated based on the visible shelves of the main display stand.",
+  "inspection_id": "INS_20260610_160549_513070",
+  "timestamp": "2026-06-10T16:05:49.098764+00:00",
+  "image_path": "data/images/IMG_9058.jpg",
+  "zone_id": "Z_UNKNOWN",
+  "strategy": "A"
+}

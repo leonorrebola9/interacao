@@ -1,0 +1,16 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Cereals",
+    "Crackers",
+    "Cookies"
+  ],
+  "model_reasoning": "The shelves are consistently well-stocked with a high fill rate. All products appear to be correctly placed, undamaged, and have visible pricing. No significant issues such as empty shelves, wrong products, or severe misalignment were detected.",
+  "inspection_id": "INS_20260610_162952_729842",
+  "timestamp": "2026-06-10T16:29:52.419466+00:00",
+  "image_path": "data\\images\\IMG_9048.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

@@ -1,0 +1,42 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior direita",
+      "severity": "medium",
+      "description": "A prateleira inferior direita apresenta várias posições vazias onde deveriam estar produtos, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.25
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior esquerda",
+      "severity": "low",
+      "description": "A prateleira inferior esquerda tem algumas pequenas lacunas entre os produtos, sugerindo que o stock está a diminuir.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Prateleira superior direita",
+      "severity": "low",
+      "description": "A prateleira superior direita parece menos preenchida do que as outras, com espaços visíveis entre os produtos.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.85,
+  "products_detected": [
+    "Frango"
+  ],
+  "model_reasoning": "A imagem mostra um expositor refrigerado de supermercado com produtos de frango embalados. A maioria das prateleiras está bem abastecida, mas foram identificadas várias áreas com falta de produtos, especialmente na prateleira inferior direita, que tem lacunas significativas. As prateleiras inferior esquerda e superior direita também mostram algumas áreas menos preenchidas. Com base nestas observações, o estado geral é classificado como 'warning' devido às prateleiras vazias. A taxa de preenchimento da prateleira foi estimada em 85% considerando as áreas com falta de stock. Os produtos detetados são claramente 'Frango' em várias formas.",
+  "inspection_id": "INS_20260610_162526_EC8B92",
+  "timestamp": "2026-06-10T16:25:26.662047+00:00",
+  "image_path": "data\\images\\IMG_8998.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

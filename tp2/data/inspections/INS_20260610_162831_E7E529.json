@@ -1,0 +1,37 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "damaged",
+      "location": "Shelf 3, second Haribo Funky box from the left",
+      "severity": "medium",
+      "description": "One Haribo Funky bag appears to be open or damaged, with a white cap visible inside the box, suggesting product compromise.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Shelf 5, pink marshmallow bag",
+      "severity": "low",
+      "description": "The pink marshmallow bag is bulging and overflowing its display box, creating a messy presentation.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Snacks",
+    "Gummy Candies",
+    "Lollipops",
+    "Chocolates",
+    "Marshmallows"
+  ],
+  "model_reasoning": "The image shows a well-stocked supermarket aisle with various candy and snack products. Most shelves are full and organized. However, a damaged Haribo Funky bag was identified on the third shelf, and a marshmallow bag on the bottom shelf was overflowing its box, leading to a 'warning' status. The overall shelf fill rate is very high, indicating good stock management despite these minor issues.",
+  "inspection_id": "INS_20260610_162831_E7E529",
+  "timestamp": "2026-06-10T16:28:31.178835+00:00",
+  "image_path": "data\\images\\IMG_9035.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

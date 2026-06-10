@@ -1,0 +1,57 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior da porta mais à esquerda, lado direito",
+      "severity": "low",
+      "description": "Há um espaço vazio significativo onde deveriam estar produtos 'Iglo Medalhões Pescada'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior da porta do meio, lado direito",
+      "severity": "low",
+      "description": "Há um espaço vazio significativo onde deveriam estar produtos 'Continente Pescada-do-Cabo Medalhões'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior da porta mais à direita, lado direito",
+      "severity": "low",
+      "description": "Há um espaço vazio significativo onde deveriam estar produtos 'Iglo Salmão Selvagem do Pacífico'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Prateleira do meio da porta mais à direita, produtos 'Continente Seleção Bife de Atum'",
+      "severity": "medium",
+      "description": "Os produtos 'Bife de Atum' estão desalinhados e empilhados de forma desorganizada, afetando a apresentação.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Medalhões Pescada",
+    "Lombos Pescada",
+    "Pescada-do-Cabo Medalhões",
+    "Pescada-do-Cabo Lombos",
+    "Salmão do Atlântico",
+    "Salmão Selvagem do Pacífico",
+    "Bife de Atum"
+  ],
+  "model_reasoning": "O expositor de congelados está geralmente bem abastecido com uma variedade de produtos de peixe. No entanto, foram identificadas algumas pequenas falhas de stock em várias prateleiras inferiores, indicando a necessidade de reabastecimento. Além disso, os produtos 'Bife de Atum' numa das prateleiras estão visivelmente desalinhados e desorganizados, o que afeta a apresentação geral. Estes problemas, embora não sejam críticos, justificam um estado de 'warning' devido a pequenas imperfeições no display e lacunas de stock.",
+  "inspection_id": "INS_20260610_162807_F8B9E0",
+  "timestamp": "2026-06-10T16:28:07.172483+00:00",
+  "image_path": "data\\images\\IMG_9026.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

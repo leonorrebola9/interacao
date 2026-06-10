@@ -1,9 +1,13 @@
-'''
-colocar no relatório: foi usado o modelo 2.5, pois o modelo 1.5 
-já não estava disponível na listagem de modelos da minha API gratuita.
-O modelo 2.5 Flash tem melhor capacidade de raciocínio visual, o que
-beneficia especialmente a Estratégia B (chain-of-thought).
-'''
+"""
+shelf_inspector.py
+Componente 1 — Análise visual de prateleiras com Gemini 2.5 Flash
+Três estratégias de prompting: A (zero-shot), B (chain-of-thought), C (few-shot)
+
+Nota para o relatório: foi usado o modelo gemini-2.5-flash em vez do gemini-1.5-flash
+indicado no enunciado, pois o 1.5 já não estava disponível na API gratuita no momento
+do desenvolvimento. O modelo 2.5 Flash tem melhor capacidade de raciocínio visual,
+o que beneficia especialmente a Estratégia B (chain-of-thought).
+"""
 
 import os
 import json
@@ -19,14 +23,14 @@ from google.genai import types
 from google.genai.errors import ClientError
 from dotenv import load_dotenv
 
-
-# API
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 MODEL = "gemini-2.5-flash"
 CACHE_DIR = "./cache/inspections"
 INSPECTIONS_DIR = "./data/inspections"
+ANNOTATIONS_DIR = "./data/annotations/all_images"
+
 os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs(INSPECTIONS_DIR, exist_ok=True)
 
@@ -35,7 +39,8 @@ VALID_SEVERITIES = ["low", "medium", "high"]
 VALID_ISSUE_TYPES = ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"]
 
 
-# Prompts
+# ─── PROMPTS ─────────────────────────────────────────────────────────────────
+
 PROMPT_A_ZERO_SHOT = """Analisa esta imagem de uma prateleira de supermercado e produz uma análise estruturada em JSON.
 
 O JSON deve seguir exatamente este schema:
@@ -65,8 +70,7 @@ Regras importantes:
 - Espaço no fim de uma prateleira não é empty_shelf — só classifica como tal se houver posições claramente sem produto onde deveria haver
 - Se não houver problemas, "issues" deve ser lista vazia e "overall_status" deve ser "ok"
 
-Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.
-"""
+Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json."""
 
 PROMPT_B_COT = """Analisa esta imagem de uma prateleira de supermercado seguindo estes passos de raciocínio obrigatórios:
 
@@ -109,8 +113,7 @@ Com base nos passos anteriores, produz o JSON final seguindo estas regras:
   "model_reasoning": "resumo do raciocínio dos passos anteriores"
 }
 
-Escreve os 4 passos e termina com o JSON. Sem markdown, sem ```json à volta do JSON final.
-"""
+Escreve os 4 passos e termina com o JSON. Sem markdown, sem ```json à volta do JSON final."""
 
 PROMPT_C_FEW_SHOT = """Analisa esta imagem de uma prateleira de supermercado.
 
@@ -161,27 +164,36 @@ JSON:
 }
 
 Agora analisa a imagem submetida e produz o JSON completo seguindo o mesmo padrão.
-Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.
-"""
+Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json."""
 
 
-# Normalização da resposta
+# ─── ZONA A PARTIR DAS ANOTAÇÕES ─────────────────────────────────────────────
+
+def get_zone_from_annotations(image_path, annotations_dir=ANNOTATIONS_DIR):
+    """Vai buscar a zona da imagem ao ficheiro de anotação correspondente."""
+    image_name = Path(image_path).stem
+    annotation_path = Path(annotations_dir) / f"{image_name}.json"
+    if annotation_path.exists():
+        with open(annotation_path, encoding="utf-8") as f:
+            ann = json.load(f)
+        return ann.get("zone", "Z_UNKNOWN")
+    return "Z_UNKNOWN"
+
+
+# ─── NORMALIZAÇÃO ────────────────────────────────────────────────────────────
+
 def clean_response(data):
-    # overall_status
     status = data.get("overall_status", "warning").lower()
     data["overall_status"] = status if status in VALID_STATUSES else "warning"
 
-    # garante que model_reasoning existe sempre — mesmo que vazio
     if "model_reasoning" not in data or not data["model_reasoning"]:
         data["model_reasoning"] = ""
 
-    # issues
     cleaned_issues = []
     for i, issue in enumerate(data.get("issues", [])):
         issue_type = issue.get("type", "other").lower()
         severity = issue.get("severity", "low").lower()
 
-        # normaliza tipo — mapeia variantes comuns para o schema correto
         type_map = {
             "misplaced_product": "wrong_product",
             "misplaced": "wrong_product",
@@ -196,7 +208,6 @@ def clean_response(data):
         if severity not in VALID_SEVERITIES:
             severity = "low"
 
-        # normaliza valores numéricos
         confidence = float(issue.get("confidence", 0.8))
         if confidence > 1.0:
             confidence = confidence / 100.0
@@ -217,7 +228,6 @@ def clean_response(data):
 
     data["issues"] = cleaned_issues
 
-    # shelf_fill_rate
     fill = float(data.get("shelf_fill_rate", 0.8))
     if fill > 1.0:
         fill = fill / 100.0
@@ -226,7 +236,8 @@ def clean_response(data):
     return data
 
 
-# Cache
+# ─── CACHE ───────────────────────────────────────────────────────────────────
+
 def get_cache_path(image_path, strategy):
     md5 = hashlib.md5(open(image_path, "rb").read()).hexdigest()
     return os.path.join(CACHE_DIR, f"{md5}_{strategy}.json")
@@ -244,9 +255,10 @@ def save_to_cache(image_path, strategy, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-# Persistência em data/inspections/
-# necessário para o RAG indexar depois — separado do cache que é por hash
+# ─── PERSISTÊNCIA ────────────────────────────────────────────────────────────
+
 def save_inspection(data):
+    """Guarda inspeção em data/inspections/ para o RAG indexar depois."""
     inspection_id = data.get("inspection_id", f"INS_{uuid.uuid4().hex[:12].upper()}")
     out_path = os.path.join(INSPECTIONS_DIR, f"{inspection_id}.json")
     with open(out_path, "w", encoding="utf-8") as f:
@@ -254,13 +266,11 @@ def save_inspection(data):
     return out_path
 
 
-# Parsing
+# ─── PARSING ─────────────────────────────────────────────────────────────────
+
 def parse_inspection_json(raw_text, image_path, zone_id, strategy):
-    # na estratégia B, o modelo responde com texto + JSON misturado
-    # guardamos o texto completo em cot_reasoning antes de extrair o JSON
     cot_reasoning = ""
     if strategy == "B":
-        # tudo o que vem antes do último { é o raciocínio explícito
         last_brace = raw_text.rfind("{")
         if last_brace > 0:
             cot_reasoning = raw_text[:last_brace].strip()
@@ -272,7 +282,6 @@ def parse_inspection_json(raw_text, image_path, zone_id, strategy):
     data = json.loads(matches[-1])
     data = clean_response(data)
 
-    # na estratégia B, preserva o raciocínio completo separadamente
     if strategy == "B" and cot_reasoning:
         data["cot_reasoning"] = cot_reasoning
 
@@ -285,9 +294,12 @@ def parse_inspection_json(raw_text, image_path, zone_id, strategy):
     return data
 
 
-# Inspeção principal
-def inspect_image(image_path, zone_id="Z_UNKNOWN", strategy="A", max_retries=3):
+# ─── INSPEÇÃO PRINCIPAL ───────────────────────────────────────────────────────
+def inspect_image(image_path, zone_id=None, strategy="A", max_retries=3):
     image_path = str(image_path)
+
+    if zone_id is None:
+        zone_id = get_zone_from_annotations(image_path)
 
     cached = load_from_cache(image_path, strategy)
     if cached:
@@ -319,37 +331,56 @@ def inspect_image(image_path, zone_id="Z_UNKNOWN", strategy="A", max_retries=3):
 
             return result
 
-        except ClientError as e:
-            if e.code in [429, 503]:
-                wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
-                time.sleep(wait)
-            else:
-                raise
         except (json.JSONDecodeError, ValueError) as e:
             print(f"  [aviso] Erro a parsear JSON (tentativa {attempt+1}): {e}")
             if attempt == max_retries - 1:
                 raise
 
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
+                wait = 35 + attempt * 15
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})")
+                time.sleep(wait)
+            else:
+                raise
+
     raise RuntimeError("Limite de tentativas excedido")
 
 
-# Avaliação do ground truth
-def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=6):
+# ─── CORRER AS 3 ESTRATÉGIAS NA MESMA IMAGEM ─────────────────────────────────
+
+def run_all_strategies(image_path, zone_id=None, delay=4):
+    """Corre as 3 estratégias na mesma imagem e devolve comparação."""
+    results = {}
+    for strategy in ["A", "B", "C"]:
+        print(f"\nEstratégia {strategy}")
+        try:
+            results[strategy] = inspect_image(image_path, zone_id=zone_id, strategy=strategy)
+            time.sleep(delay)
+        except Exception as e:
+            print(f"  ERRO: {e}")
+            results[strategy] = None
+    return results
+
+
+# ─── AVALIAÇÃO DO GROUND TRUTH ────────────────────────────────────────────────
+
+def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=4):
     with open(gt_path, encoding="utf-8") as f:
         gt = json.load(f)
 
-    print(f"A correr estratégia {strategy} em {len(gt)} imagens...\n")
+    print(f"A correr estratégia {strategy} em {len(gt)} imagens\n")
 
     for i, (filename, ann) in enumerate(gt.items()):
         img_path = Path(images_dir) / filename
         zone = ann.get("zone", "Z_S1")
 
         if not img_path.exists():
-            print(f"[{i+1}/{len(gt)}] {filename} — FICHEIRO NÃO ENCONTRADO, a saltar")
+            print(f"[{i+1}/{len(gt)}] {filename} — Ficheiro não encontrado, a saltar")
             continue
 
-        print(f"[{i+1}/{len(gt)}] {filename} (zona {zone})...", end=" ")
+        print(f"[{i+1}/{len(gt)}] {filename} (zona {zone})", end=" ")
         try:
             result = inspect_image(str(img_path), zone_id=zone, strategy=strategy)
             print(f"{result.get('overall_status', '?')} | fill_rate: {result.get('shelf_fill_rate', '?')}")
@@ -361,7 +392,8 @@ def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=6):
     print("\nConcluído!")
 
 
-# Inspeção de uma pasta inteira com zona única
+# ─── INSPEÇÃO DE PASTA INTEIRA ────────────────────────────────────────────────
+
 def inspect_directory(images_dir, zone_id="Z_UNKNOWN", strategy="A", delay=6):
     images = list(Path(images_dir).glob("*.jpg"))
     print(f"A inspecionar {len(images)} imagens com estratégia {strategy}")
@@ -378,25 +410,33 @@ def inspect_directory(images_dir, zone_id="Z_UNKNOWN", strategy="A", delay=6):
     return results
 
 
+
 if __name__ == "__main__":
 
-    # modo de avaliação: python shelf_inspector.py eval [estrategia]
+    # python src/shelf_inspector.py eval [estrategia]
     if len(sys.argv) >= 2 and sys.argv[1] == "eval":
         strat = sys.argv[2] if len(sys.argv) > 2 else "A"
         run_ground_truth_eval(
             gt_path="./data/annotations/ground_truth.json",
-            images_dir="./data/images/myphotos",
+            images_dir="./data/images",
             strategy=strat
         )
 
-    # modo de inspeção individual: python shelf_inspector.py <imagem.jpg> [zone_id] [estrategia]
+    # python src/shelf_inspector.py compare <imagem.jpg> [zone_id]
+    elif len(sys.argv) >= 3 and sys.argv[1] == "compare":
+        img = sys.argv[2]
+        zone = sys.argv[3] if len(sys.argv) > 3 else None
+        results = run_all_strategies(img, zone_id=zone)
+        print(json.dumps(results, indent=2, ensure_ascii=False))
+
+    # python src/shelf_inspector.py <imagem.jpg> [zone_id] [estrategia]
     elif len(sys.argv) >= 2:
         img = sys.argv[1]
-        zone = sys.argv[2] if len(sys.argv) > 2 else "Z_S1"
+        zone = sys.argv[2] if len(sys.argv) > 2 else None
         strat = sys.argv[3] if len(sys.argv) > 3 else "A"
 
         print(f"\nA inspecionar: {img}")
-        print(f"Zona: {zone} | Estratégia: {strat}\n")
+        print(f"Estratégia: {strat}\n")
 
         result = inspect_image(img, zone_id=zone, strategy=strat)
         print(json.dumps(result, indent=2, ensure_ascii=False))

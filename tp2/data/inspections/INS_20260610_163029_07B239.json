@@ -1,0 +1,87 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira superior, lado direito",
+      "severity": "medium",
+      "description": "Baixo stock de 'Ninhos com Ovo' na prateleira superior, com várias posições vazias.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.3
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Segunda prateleira de cima, lado direito",
+      "severity": "low",
+      "description": "Baixo stock de 'Macarrão Riscado' na secção mais à direita da segunda prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Quarta prateleira de cima (Espirais), lado direito",
+      "severity": "low",
+      "description": "Baixo stock de 'Espirais' na secção mais à direita da quarta prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Quinta prateleira de cima (Cotovelos), lado direito",
+      "severity": "low",
+      "description": "Baixo stock de 'Cotovelos' na secção mais à direita da quinta prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "empty_shelf",
+      "location": "Sexta prateleira de cima (Pérolas, Bagos, Letras)",
+      "severity": "high",
+      "description": "Grandes espaços vazios na sexta prateleira, especialmente nas secções de 'Bagos' e 'Letras'.",
+      "confidence": 0.98,
+      "affected_area_pct": 0.4
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior (Esparguete, Aletria, Meada)",
+      "severity": "high",
+      "description": "Grandes secções vazias na prateleira inferior, com stock muito reduzido e desorganizado.",
+      "confidence": 0.98,
+      "affected_area_pct": 0.5
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "damaged",
+      "location": "Prateleira inferior, secções de Esparguete, Aletria e Meada",
+      "severity": "medium",
+      "description": "Algumas embalagens de produto (caixas de Esparguete Tricolor, Aletria, Meada) na prateleira inferior estão danificadas ou em desordem.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_008",
+      "type": "misaligned",
+      "location": "Chão em frente à prateleira inferior",
+      "severity": "low",
+      "description": "Duas etiquetas de preço estão no chão, soltas da prateleira.",
+      "confidence": 0.99,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.78,
+  "products_detected": [
+    "Massas"
+  ],
+  "model_reasoning": "A imagem mostra uma prateleira de supermercado predominantemente com vários tipos de massas. Várias prateleiras apresentam baixos níveis de stock, particularmente no lado direito, e as duas prateleiras inferiores têm espaços vazios significativos. Além disso, algumas embalagens de produtos na prateleira inferior parecem danificadas ou em desordem, e etiquetas de preço foram encontradas no chão. Estas observações indicam a necessidade de reabastecimento e organização.",
+  "inspection_id": "INS_20260610_163029_07B239",
+  "timestamp": "2026-06-10T16:30:29.286345+00:00",
+  "image_path": "data\\images\\IMG_9054.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

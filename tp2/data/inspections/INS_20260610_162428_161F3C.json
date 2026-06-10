@@ -1,0 +1,27 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Várias prateleiras, especialmente as inferiores, nas secções de pensos higiénicos Evax e Ausonia.",
+      "severity": "low",
+      "description": "Alguns produtos não estão perfeitamente alinhados na frente da prateleira, criando uma ligeira desorganização visual.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Produtos de higiene feminina",
+    "Pensos higiénicos",
+    "Tampões",
+    "Pensos diários"
+  ],
+  "model_reasoning": "A imagem mostra uma prateleira de supermercado dedicada a produtos de higiene feminina. A prateleira está muito bem abastecida, com uma grande variedade de marcas e tipos de produtos (pensos higiénicos, tampões, pensos diários). Não foram detetadas prateleiras vazias significativas, produtos danificados ou produtos fora do lugar. Existe uma ligeira desorganização em termos de alinhamento de alguns produtos nas prateleiras inferiores, mas é um problema menor e não afeta a disponibilidade ou a clareza da oferta. Todos os produtos visíveis parecem ter etiquetas de preço. O estado geral é bom, com apenas uma pequena questão de alinhamento.",
+  "inspection_id": "INS_20260610_162428_161F3C",
+  "timestamp": "2026-06-10T16:24:28.820772+00:00",
+  "image_path": "data\\images\\IMG_8990.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

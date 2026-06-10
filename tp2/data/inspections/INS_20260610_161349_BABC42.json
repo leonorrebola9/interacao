@@ -1,0 +1,36 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Quarta prateleira do expositor central, lado esquerdo",
+      "severity": "high",
+      "description": "Uma parte significativa da quarta prateleira do expositor central está vazia, indicando falta de stock ou reposição inadequada.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.65
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Várias prateleiras do expositor central e prateleiras de vinho à esquerda",
+      "severity": "low",
+      "description": "Vários produtos, incluindo as latas de 'Gin Mix' e algumas garrafas de vinho, estão ligeiramente desalinhados ou não estão perfeitamente virados para a frente.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Gin Botanicals/Mixers",
+    "Vinho",
+    "Vinho do Porto",
+    "Copos/Sets de Oferta"
+  ],
+  "model_reasoning": "O expositor central de produtos 'Gin Mix' apresenta uma secção vazia notável na sua quarta prateleira, o que indica uma falha de stock. Além disso, alguns produtos em várias prateleiras estão ligeiramente desalinhados. Embora a taxa de preenchimento geral das prateleiras seja boa, a área vazia proeminente no expositor central justifica um estado de 'warning'.",
+  "inspection_id": "INS_20260610_161349_BABC42",
+  "timestamp": "2026-06-10T16:13:49.717950+00:00",
+  "image_path": "data/images/IMG_9058.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}
