@@ -1,0 +1,430 @@
+{
+  "IMG_8990.jpg": {
+    "inspection_id": "GT_IMG_8990",
+    "image": "IMG_8990.jpg",
+    "zone": "Z_S4",
+    "overall_status": "ok",
+    "shelf_fill_rate": 0.95,
+    "products_detected": [
+      "higiene feminina",
+      "pensos",
+      "tampões",
+      "Ausonia",
+      "Tampax",
+      "o.b.",
+      "Carefree"
+    ],
+    "issues": []
+  },
+  "IMG_8992.jpg": {
+    "inspection_id": "GT_IMG_8992",
+    "image": "IMG_8992.jpg",
+    "zone": "Z_S4",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.75,
+    "products_detected": [
+      "fraldas incontinência",
+      "cuecas incontinência",
+      "Continente",
+      "TENA",
+      "Lindor",
+      "Intimus"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira superior, zona central",
+        "severity": "medium",
+        "description": "Prateleira superior apresenta gap significativo na zona central, com ausência de produto em aproximadamente 3 posições consecutivas.",
+        "confidence": 0.9,
+        "affected_area_pct": 0.25
+      }
+    ]
+  },
+  "IMG_8998.jpg": {
+    "inspection_id": "GT_IMG_8998",
+    "image": "IMG_8998.jpg",
+    "zone": "Z_S3",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.75,
+    "products_detected": [
+      "frango",
+      "carne de frango embalada",
+      "peças de frango"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira superior, lado esquerdo",
+        "severity": "medium",
+        "description": "Prateleira superior esquerda com gap visível de aproximadamente 2 posições sem produto, contrastando com o lado direito bem preenchido.",
+        "confidence": 0.92,
+        "affected_area_pct": 0.25
+      }
+    ]
+  },
+  "IMG_9012.jpg": {
+    "inspection_id": "GT_IMG_9012",
+    "image": "IMG_9012.jpg",
+    "zone": "Z_S1",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.7,
+    "products_detected": [
+      "aveia",
+      "flocos de aveia",
+      "Alpro",
+      "leite meio gordo",
+      "Mimosa",
+      "Terra Nostra"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira superior do display, zona central",
+        "severity": "medium",
+        "description": "Prateleira superior do display de aveia quase vazia, com apenas 2-3 embalagens restantes de um lado. O espaço superior da gondola está desocupado.",
+        "confidence": 0.88,
+        "affected_area_pct": 0.3
+      },
+      {
+        "issue_id": "ISS_002",
+        "type": "misaligned",
+        "location": "prateleira superior do display",
+        "severity": "low",
+        "description": "Embalagens de leite marca Continente empilhadas irregularmente no topo do display, sem alinhamento com o restante da exposição.",
+        "confidence": 0.8,
+        "affected_area_pct": 0.1
+      }
+    ]
+  },
+  "IMG_9017.jpg": {
+    "inspection_id": "GT_IMG_9017",
+    "image": "IMG_9017.jpg",
+    "zone": "Z_S1",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.65,
+    "products_detected": [
+      "iogurtes",
+      "pedaços de fruta",
+      "Continente",
+      "Mimosa",
+      "Agros"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira inferior, zona central e direita",
+        "severity": "high",
+        "description": "Prateleira inferior apresenta área completamente vazia na zona central-direita, com apenas 2-3 embalagens isoladas no canto esquerdo inferior.",
+        "confidence": 0.95,
+        "affected_area_pct": 0.4
+      },
+      {
+        "issue_id": "ISS_002",
+        "type": "empty_shelf",
+        "location": "prateleira do fundo, zona direita",
+        "severity": "medium",
+        "description": "Prateleira traseira inferior com stock muito reduzido no lado direito, visível através do vidro.",
+        "confidence": 0.85,
+        "affected_area_pct": 0.2
+      }
+    ]
+  },
+  "IMG_9020.jpg": {
+    "inspection_id": "GT_IMG_9020",
+    "image": "IMG_9020.jpg",
+    "zone": "Z_S1",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.82,
+    "products_detected": [
+      "iogurtes magros",
+      "iogurtes low fat",
+      "Bem-Estar",
+      "Yoggi",
+      "Danone",
+      "Mimosa",
+      "LongaVida"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira superior, zona central-esquerda",
+        "severity": "medium",
+        "description": "Prateleira superior com gap visível na zona central-esquerda, com ausência de produto em aproximadamente 2-3 posições.",
+        "confidence": 0.88,
+        "affected_area_pct": 0.18
+      }
+    ]
+  },
+  "IMG_9026.jpg": {
+    "inspection_id": "GT_IMG_9026",
+    "image": "IMG_9026.jpg",
+    "zone": "Z_S7",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.78,
+    "products_detected": [
+      "pescado congelado",
+      "lombos de pescada",
+      "salmão",
+      "Iglo",
+      "Continente",
+      "Pescada-do-Cabo"
+    ],
+    "ambiguous": true,
+    "ambiguity_reason": "Prateleira maioritariamente preenchida mas com gaps pontuais entre produtos. Sem conhecimento do planograma real é difícil determinar se o fill rate é aceitável ou se indica necessidade de reposição.",
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleiras central e superior, zonas pontuais",
+        "severity": "low",
+        "description": "Gaps pontuais entre produtos em várias prateleiras, sem prateleira completamente vazia.",
+        "confidence": 0.6,
+        "affected_area_pct": 0.22
+      }
+    ]
+  },
+  "IMG_9035.jpg": {
+    "inspection_id": "GT_IMG_9035",
+    "image": "IMG_9035.jpg",
+    "zone": "Z_S5",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.88,
+    "products_detected": [
+      "guloseimas",
+      "Haribo",
+      "Chupa Chups",
+      "M&Ms",
+      "Kips",
+      "CrunchO"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "misaligned",
+        "location": "prateleira inferior, canto esquerdo",
+        "severity": "low",
+        "description": "Um produto tombado no centro da prateleira central.",
+        "confidence": 0.85,
+        "affected_area_pct": 0.05
+      }
+    ]
+  },
+  "IMG_9043.jpg": {
+    "inspection_id": "GT_IMG_9043",
+    "image": "IMG_9043.jpg",
+    "zone": "Z_S5",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.78,
+    "products_detected": [
+      "bolachas",
+      "Mikado",
+      "Filipinos",
+      "Lion",
+      "Kellogg's Krave",
+      "Finifino",
+      "Continente Argolinhas"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira central, zona das Argolinhas",
+        "severity": "medium",
+        "description": "Secção das Argolinhas na prateleira central apresenta gaps visíveis com posições sem produto.",
+        "confidence": 0.87,
+        "affected_area_pct": 0.22
+      }
+    ]
+  },
+  "IMG_9047.jpg": {
+    "inspection_id": "GT_IMG_9047",
+    "image": "IMG_9047.jpg",
+    "zone": "Z_S5",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.9,
+    "products_detected": [
+      "cereais chocolate",
+      "Continente Pétalas de Chocolate",
+      "Nescafé",
+      "Chocapic"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "wrong_product",
+        "location": "prateleira central, zona central",
+        "severity": "medium",
+        "description": "Embalagem de Nescafé Cappuccino colocada no meio da secção de cereais de chocolate, sem relação com os produtos adjacentes. Violação clara de planograma.",
+        "confidence": 0.95,
+        "affected_area_pct": 0.05
+      }
+    ]
+  },
+  "IMG_9048.jpg": {
+    "inspection_id": "GT_IMG_9048",
+    "image": "IMG_9048.jpg",
+    "zone": "Z_S5",
+    "overall_status": "critical",
+    "shelf_fill_rate": 0.95,
+    "products_detected": [
+      "cereais",
+      "Golden Grahams",
+      "Milk Crockers",
+      "Choco Crackers",
+      "Lion",
+      "Kellogg's Krave",
+      "ambientador Air Wick"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "wrong_product",
+        "location": "prateleira intermédia, zona central",
+        "severity": "high",
+        "description": "Sprays de ambientador Air Wick colocados entre produtos alimentares (cereais). Produto de higiene/limpeza misturado com alimentos constitui violação grave de planograma e potencial risco de contaminação.",
+        "confidence": 0.97,
+        "affected_area_pct": 0.1
+      }
+    ]
+  },
+  "IMG_9054.jpg": {
+    "inspection_id": "GT_IMG_9054",
+    "image": "IMG_9054.jpg",
+    "zone": "Z_S5",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.75,
+    "products_detected": [
+      "massas",
+      "esparguete",
+      "macarrão",
+      "cotovelos",
+      "pérolas",
+      "Continente"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira inferior, lado esquerdo",
+        "severity": "medium",
+        "description": "Prateleira inferior esquerda com gaps visíveis entre produtos, com várias posições sem stock.",
+        "confidence": 0.88,
+        "affected_area_pct": 0.2
+      },
+      {
+        "issue_id": "ISS_002",
+        "type": "wrong_product",
+        "location": "prateleira inferior",
+        "severity": "low",
+        "description": "Embalagem de esparguete colocada fora da sua posição correta na prateleira inferior, em zona de outro tipo de massa.",
+        "confidence": 0.85,
+        "affected_area_pct": 0.05
+      }
+    ]
+  },
+  "IMG_9058.jpg": {
+    "inspection_id": "GT_IMG_9058",
+    "image": "IMG_9058.jpg",
+    "zone": "Z_S6",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.6,
+    "products_detected": [
+      "Gin Mix",
+      "destilados",
+      "vinhos",
+      "acessórios gin"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira central, zona central",
+        "severity": "high",
+        "description": "Prateleira central completamente vazia em toda a sua extensão, sem qualquer produto.",
+        "confidence": 0.98,
+        "affected_area_pct": 0.35
+      }
+    ]
+  },
+  "IMG_9069.jpg": {
+    "inspection_id": "GT_IMG_9069",
+    "image": "IMG_9069.jpg",
+    "zone": "Z_S6",
+    "overall_status": "ok",
+    "shelf_fill_rate": 0.95,
+    "products_detected": [
+      "gin",
+      "Dry Gin",
+      "CremaCream",
+      "Royal Swan",
+      "licores",
+      "whisky",
+      "James Whisky"
+    ],
+    "issues": []
+  },
+  "IMG_9072.jpg": {
+    "inspection_id": "GT_IMG_9072",
+    "image": "IMG_9072.jpg",
+    "zone": "Z_S2",
+    "overall_status": "warning",
+    "shelf_fill_rate": 0.7,
+    "products_detected": [
+      "croissants",
+      "bolos",
+      "pão de leite",
+      "pastelaria embalada",
+      "sobremesas"
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS_001",
+        "type": "empty_shelf",
+        "location": "prateleira inferior, zona central",
+        "severity": "high",
+        "description": "Prateleira inferior central completamente vazia ao longo de toda a extensão central, sem qualquer produto exposto.",
+        "confidence": 0.96,
+        "affected_area_pct": 0.35
+      }
+    ]
+  },
+  "IMG_9073.jpg": {
+    "inspection_id": "GT_IMG_9073",
+    "image": "IMG_9073.jpg",
+    "zone": "Z_S4",
+    "overall_status": "ok",
+    "shelf_fill_rate": 0.9,
+    "products_detected": [
+      "inseticidas",
+      "ambientadores",
+      "repelentes",
+      "toalhetes",
+      "lixívia",
+      "Tradicion"
+    ],
+    "issues": []
+  },
+  "IMG_9074.jpg": {
+    "inspection_id": "GT_IMG_9074",
+    "image": "IMG_9074.jpg",
+    "zone": "Z_S4",
+    "overall_status": "ok",
+    "shelf_fill_rate": 0.92,
+    "products_detected": [
+      "detergentes",
+      "lixívia",
+      "desengordurante",
+      "multiusos",
+      "vinagre limpeza",
+      "Ropa Blanca",
+      "Gel Lejia"
+    ],
+    "issues": []
+  }
+}
