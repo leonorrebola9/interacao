@@ -1,0 +1,34 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Multiple shelves, various sections",
+      "severity": "low",
+      "description": "Small gaps visible between products on most shelves, indicating minor empty spaces.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Multiple shelves, various sections",
+      "severity": "low",
+      "description": "Products are not consistently pushed to the front edge of the shelves, leading to a slightly untidy appearance.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.2
+    }
+  ],
+  "shelf_fill_rate": 0.85,
+  "products_detected": [
+    "Yogurt (Yoggi, Danone, Longa Vida, Equilíbrio, Mimosa)",
+    "Dairy drinks"
+  ],
+  "model_reasoning": "The refrigerated display is generally well-stocked, but there are numerous small gaps between products and some items are not perfectly fronted across various shelves, suggesting minor needs for restocking and alignment.",
+  "inspection_id": "INS_20260610_173913_999DF7",
+  "timestamp": "2026-06-10T17:39:13.859394+00:00",
+  "image_path": "data\\images\\IMG_9020.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "C"
+}

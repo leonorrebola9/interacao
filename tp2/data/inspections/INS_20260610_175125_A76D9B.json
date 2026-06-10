@@ -1,0 +1,48 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "terceira prateleira, lado direito",
+      "severity": "high",
+      "description": "Expositor de lixívia de 5L 'Tradicio' está significativamente vazio, com apenas algumas unidades visíveis ao fundo.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "segunda prateleira, lado direito",
+      "severity": "medium",
+      "description": "Uma das caixas de 'Toallitas Suelos Chao' está quase vazia.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "damaged",
+      "location": "primeira prateleira, centro",
+      "severity": "low",
+      "description": "Embalagem de 'CHAI Velas Perfumadas' está aberta e desarrumada.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "velas perfumadas",
+    "ambientadores",
+    "difusores",
+    "repelentes de insetos",
+    "armadilhas para insetos",
+    "toalhitas de limpeza",
+    "lixívia"
+  ],
+  "model_reasoning": "Foram identificadas duas secções com produtos em falta (lixívia e toalhitas de limpeza) e uma embalagem de velas danificada/desarrumada. A maioria das prateleiras está bem preenchida e organizada.",
+  "inspection_id": "INS_20260610_175125_A76D9B",
+  "timestamp": "2026-06-10T17:51:25.421715+00:00",
+  "image_path": "data\\images\\IMG_9073.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "C"
+}

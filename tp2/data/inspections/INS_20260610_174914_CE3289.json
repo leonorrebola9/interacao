@@ -1,0 +1,37 @@
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, secção central",
+      "severity": "high",
+      "description": "Secção central da penúltima prateleira completamente vazia.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "prateleira mais baixa, secção central",
+      "severity": "high",
+      "description": "Secção central da prateleira mais baixa completamente vazia.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.87,
+  "products_detected": [
+    "mini croissants",
+    "pastéis embalados",
+    "bolos embalados",
+    "tartes salgadas (frango e cogumelos, atum)",
+    "infusões (digest, dormir, menta poleo, rooibos, canela, fria)"
+  ],
+  "model_reasoning": "Duas secções consecutivas na parte inferior e central da prateleira estão completamente vazias. As restantes prateleiras estão bem preenchidas e organizadas.",
+  "inspection_id": "INS_20260610_174914_CE3289",
+  "timestamp": "2026-06-10T17:49:14.139895+00:00",
+  "image_path": "data\\images\\IMG_9072.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "C"
+}

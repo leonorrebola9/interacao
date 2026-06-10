@@ -1,0 +1,81 @@
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "segunda prateleira, secção direita",
+      "severity": "medium",
+      "description": "Espaços vazios significativos entre os produtos 'Macarrão Riscado'.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "quarta prateleira, secção direita",
+      "severity": "medium",
+      "description": "Espaços vazios na secção de 'Cotovelos'.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "quinta prateleira, secção direita",
+      "severity": "high",
+      "description": "Grandes secções vazias na secção de 'Cotovelos'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "prateleira inferior",
+      "severity": "low",
+      "description": "Prateleira inferior com muitas posições vazias e produtos em falta, especialmente nas secções de 'Pérolas', 'Bagos', 'Letras' e 'Esparguete'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.11
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "damaged",
+      "location": "prateleira inferior, secção de esparguete",
+      "severity": "medium",
+      "description": "Embalagens de esparguete (Tricolor e Tinta de Choco) rasgadas ou danificadas, com produto a sair.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "other",
+      "location": "chão em frente à prateleira inferior",
+      "severity": "low",
+      "description": "Etiquetas de preço soltas no chão.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.68,
+  "products_detected": [
+    "Lasanha com Ovo",
+    "Ninhos com Ovo",
+    "Macarrão Riscado",
+    "Fusilli Tricolor",
+    "Espirais",
+    "Cotovelos",
+    "Pérolas",
+    "Bagos",
+    "Letras",
+    "Esparguete Tricolor",
+    "Esparguete Tinta de Choco",
+    "Aletria",
+    "Meada"
+  ],
+  "model_reasoning": "Múltiplas prateleiras apresentam espaços vazios significativos, especialmente as prateleiras inferiores. Há embalagens de produto danificadas na prateleira de baixo e etiquetas de preço soltas no chão, indicando desorganização.",
+  "inspection_id": "INS_20260610_174827_DAC072",
+  "timestamp": "2026-06-10T17:48:27.521192+00:00",
+  "image_path": "data\\images\\IMG_9054.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "C"
+}

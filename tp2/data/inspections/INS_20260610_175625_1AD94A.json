@@ -1,0 +1,43 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira inferior, caixa verde de 'Gel Lejía', uma garrafa tombada.",
+      "severity": "low",
+      "description": "Uma garrafa de 'Gel Lejía' está tombada dentro da caixa, desalinhada com as restantes.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "damaged",
+      "location": "Prateleira inferior, caixas de 'Ropa Blanca' no lado esquerdo.",
+      "severity": "low",
+      "description": "As caixas de cartão que contêm o detergente 'Ropa Blanca' apresentam pequenos sinais de desgaste e amolgadelas na embalagem exterior.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Detergentes para roupa",
+    "Desengordurantes",
+    "Limpadores de cozinha",
+    "Limpadores de forno",
+    "Limpadores de madeira",
+    "Limpadores multiusos",
+    "Lixívias",
+    "Vinagre de limpeza",
+    "Produtos para mopa",
+    "Limpadores de chão"
+  ],
+  "model_reasoning": "As prateleiras do supermercado estão geralmente bem abastecidas e organizadas. Foram identificadas pequenas anomalias, como uma garrafa desalinhada e danos menores nas embalagens de cartão de alguns produtos. Não foram observados espaços vazios significativos ou produtos fora do lugar. As etiquetas de preço estão presentes e visíveis.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de prateleiras de supermercado, focada em produtos de limpeza e higiene doméstica. Existem três prateleiras principais visíveis, repletas de uma variedade de garrafas, sprays e caixas de produtos. O teto, com painéis quadrados e iluminação embutida, é visível na parte superior da imagem, e o chão de azulejos claros é visível na parte inferior. O ambiente geral sugere um corredor de supermercado bem abastecido.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira Superior**:\n    *   **Fullness**: A prateleira está maioritariamente cheia, com blocos de produtos bem definidos. Existem pequenos espaços entre diferentes tipos de produtos, mas não há posições claramente vazias dentro de um bloco de produtos.\n    *   **Alignment**: Os produtos estão geralmente bem alinhados e organizados em filas.\n    *   **Damage/Out of Place**: Não foram observados produtos tombados, danificados ou fora do lugar.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis abaixo de cada secção de produtos (ex: 2.00€, 2.90€, 2.85€).\n\n*   **Prateleira do Meio**:\n    *   **Fullness**: A prateleira está muito bem abastecida, com todos os blocos de produtos preenchidos. Tal como na prateleira superior, existem pequenos espaços entre diferentes categorias de produtos, mas não há posições vazias onde deveria haver um produto.\n    *   **Alignment**: Os produtos estão bem alinhados e organizados.\n    *   **Damage/Out of Place**: Não foram observados produtos tombados, danificados ou fora do lugar.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis abaixo de cada secção de produtos (ex: 2.50€, 1.65€, 1.70€, 0.95€, 0.85€).\n\n*   **Prateleira Inferior**:\n    *   **Fullness**: Esta prateleira é composta principalmente por caixas de cartão empilhadas que contêm os produtos. As caixas estão cheias e a prateleira está bem abastecida.\n    *   **Alignment**: As caixas estão geralmente bem empilhadas e alinhadas. No entanto, uma garrafa dentro de uma das caixas está tombada.\n    *   **Damage/Out of Place**: Uma garrafa de \"Gel Lejía\" na caixa verde está tombada. Algumas das caixas de \"Ropa Blanca\" no lado esquerdo mostram pequenos sinais de desgaste ou amolgadelas no cartão, mas os produtos dentro parecem intactos.\n    *   **Price Labels**: As etiquetas de preço estão presentes e visíveis acima das caixas (ex: 1.75€, 1.50€, 1.35€, 1.70€).\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **misaligned**:\n    *   **Location**: Prateleira inferior, na caixa verde de \"Gel Lejía\" (terceira caixa da esquerda para a direita na fila de baixo).\n    *   **Severity**: low\n    *   **Description**: Uma garrafa de \"Gel Lejía\" está tombada dentro da caixa, desalinhada com as restantes.\n    *   **Affected Area**: 0.001 (uma única garrafa num grande número de produtos).\n\n2.  **damaged**:\n    *   **Location**: Prateleira inferior, nas caixas de \"Ropa Blanca\" (lado esquerdo da prateleira).\n    *   **Severity**: low\n    *   **Description**: As caixas de cartão que contêm o detergente \"Ropa Blanca\" apresentam pequenos sinais de desgaste e amolgadelas na embalagem exterior, embora os produtos no interior pareçam intactos.\n    *   **Affected Area**: 0.005 (algumas caixas de cartão com danos menores).\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira inferior, caixa verde de 'Gel Lejía', uma garrafa tombada.\",\n      \"severity\": \"low\",\n      \"description\": \"Uma garrafa de 'Gel Lejía' está tombada dentro da caixa, desalinhada com as restantes.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.001\n    },",
+  "inspection_id": "INS_20260610_175625_1AD94A",
+  "timestamp": "2026-06-10T17:56:25.739888+00:00",
+  "image_path": "data/images/IMG_9074.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "B"
+}

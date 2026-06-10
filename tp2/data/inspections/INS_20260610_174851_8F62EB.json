@@ -1,0 +1,20 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Gin",
+    "Licores",
+    "Vinho do Porto",
+    "Whisky",
+    "Cocktails pré-misturados",
+    "Vermute",
+    "Espumantes"
+  ],
+  "model_reasoning": "Todas as prateleiras estão completamente preenchidas e bem organizadas. Não há espaços vazios, produtos danificados, desalinhados ou etiquetas em falta. A secção está em excelente estado.",
+  "inspection_id": "INS_20260610_174851_8F62EB",
+  "timestamp": "2026-06-10T17:48:51.680289+00:00",
+  "image_path": "data\\images\\IMG_9069.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "C"
+}
