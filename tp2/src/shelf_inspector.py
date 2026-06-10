@@ -11,6 +11,7 @@ import hashlib
 import time
 import uuid
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from google import genai
@@ -333,12 +334,40 @@ def inspect_image(image_path, zone_id="Z_UNKNOWN", strategy="A", max_retries=3):
     raise RuntimeError("Limite de tentativas excedido")
 
 
+# Avaliação do ground truth
+def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=6):
+    with open(gt_path, encoding="utf-8") as f:
+        gt = json.load(f)
+
+    print(f"A correr estratégia {strategy} em {len(gt)} imagens...\n")
+
+    for i, (filename, ann) in enumerate(gt.items()):
+        img_path = Path(images_dir) / filename
+        zone = ann.get("zone", "Z_S1")
+
+        if not img_path.exists():
+            print(f"[{i+1}/{len(gt)}] {filename} — FICHEIRO NÃO ENCONTRADO, a saltar")
+            continue
+
+        print(f"[{i+1}/{len(gt)}] {filename} (zona {zone})...", end=" ")
+        try:
+            result = inspect_image(str(img_path), zone_id=zone, strategy=strategy)
+            print(f"{result.get('overall_status', '?')} | fill_rate: {result.get('shelf_fill_rate', '?')}")
+        except Exception as e:
+            print(f"ERRO: {e}")
+
+        time.sleep(delay)
+
+    print("\nConcluído!")
+
+
+# Inspeção de uma pasta inteira com zona única
 def inspect_directory(images_dir, zone_id="Z_UNKNOWN", strategy="A", delay=6):
     images = list(Path(images_dir).glob("*.jpg"))
-    print(f"A inspecionar {len(images)} imagens com estratégia {strategy}...")
+    print(f"A inspecionar {len(images)} imagens com estratégia {strategy}")
     results = []
     for i, img_path in enumerate(images):
-        print(f"[{i+1}/{len(images)}] {img_path.name}...", end=" ")
+        print(f"[{i+1}/{len(images)}] {img_path.name}", end=" ")
         try:
             result = inspect_image(str(img_path), zone_id=zone_id, strategy=strategy)
             print(f"{result.get('overall_status', '?')} | fill_rate: {result.get('shelf_fill_rate', '?')}")
@@ -350,60 +379,18 @@ def inspect_directory(images_dir, zone_id="Z_UNKNOWN", strategy="A", delay=6):
 
 
 if __name__ == "__main__":
-    import sys
 
-    if len(sys.argv) < 2:
-        print("Uso:")
-        print("  python shelf_inspector.py <imagem.jpg> [zone_id] [estrategia A|B|C]")
-        print("  python shelf_inspector.py --ground-truth <ground_truth.json> [estrategia A|B|C]")
-        sys.exit(1)
+    # modo de avaliação: python shelf_inspector.py eval [estrategia]
+    if len(sys.argv) >= 2 and sys.argv[1] == "eval":
+        strat = sys.argv[2] if len(sys.argv) > 2 else "A"
+        run_ground_truth_eval(
+            gt_path="./data/annotations/ground_truth.json",
+            images_dir="./data/images/myphotos",
+            strategy=strat
+        )
 
-    if sys.argv[1] == "--ground-truth":
-        import time
-
-        gt_path = sys.argv[2] if len(sys.argv) > 2 else "./data/annotations/ground_truth.json"
-        strat = sys.argv[3] if len(sys.argv) > 3 else "A"
-        images_dir = "./data/images/myphotos"
-        delay = 6
-
-        with open(gt_path, encoding="utf-8") as f:
-            ground_truth = json.load(f)
-
-        images = list(ground_truth.keys())
-        print(f"A correr estratégia {strat} em {len(images)} imagens\n")
-
-        results = {}
-        errors = []
-
-        for i, image_name in enumerate(images):
-            img_path = Path(images_dir) / image_name
-            zone = ground_truth[image_name].get("zone", "Z_S1")
-            print(f"[{i+1}/{len(images)}] {image_name} (zona {zone})", end=" ", flush=True)
-
-            if not img_path.exists():
-                print("Ficheiro não encontrado")
-                errors.append(image_name)
-                continue
-
-            try:
-                result = inspect_image(str(img_path), zone_id=zone, strategy=strat)
-                results[image_name] = result
-                print(f"{result.get('overall_status','?')} | fill: {result.get('shelf_fill_rate','?')} | issues: {len(result.get('issues',[]))}")
-                time.sleep(delay)
-            except Exception as e:
-                print(f"ERRO: {e}")
-                errors.append(image_name)
-
-        output_path = f"./data/inspections/strategy_{strat.lower()}_results.json"
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-
-        print(f"\nFeito! {len(results)}/{len(images)} imagens inspecionadas.")
-        print(f"Resultados em {output_path}")
-        if errors:
-            print(f"Erros: {errors}")
-
-    else:
+    # modo de inspeção individual: python shelf_inspector.py <imagem.jpg> [zone_id] [estrategia]
+    elif len(sys.argv) >= 2:
         img = sys.argv[1]
         zone = sys.argv[2] if len(sys.argv) > 2 else "Z_S1"
         strat = sys.argv[3] if len(sys.argv) > 3 else "A"
