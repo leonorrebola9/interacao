@@ -1,8 +1,16 @@
+'''
+colocar no relatório: foi usado o modelo 2.5, pois o modelo 1.5 
+já não estava disponível na listagem de modelos da minha API gratuita.
+O modelo 2.5 Flash tem melhor capacidade de raciocínio visual, o que
+beneficia especialmente a Estratégia B (chain-of-thought).
+'''
+
 import os
 import json
 import hashlib
 import time
 import uuid
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from google import genai
@@ -17,7 +25,9 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 MODEL = "gemini-2.5-flash"
 CACHE_DIR = "./cache/inspections"
+INSPECTIONS_DIR = "./data/inspections"
 os.makedirs(CACHE_DIR, exist_ok=True)
+os.makedirs(INSPECTIONS_DIR, exist_ok=True)
 
 VALID_STATUSES = ["ok", "warning", "critical"]
 VALID_SEVERITIES = ["low", "medium", "high"]
@@ -160,6 +170,10 @@ def clean_response(data):
     status = data.get("overall_status", "warning").lower()
     data["overall_status"] = status if status in VALID_STATUSES else "warning"
 
+    # garante que model_reasoning existe sempre — mesmo que vazio
+    if "model_reasoning" not in data or not data["model_reasoning"]:
+        data["model_reasoning"] = ""
+
     # issues
     cleaned_issues = []
     for i, issue in enumerate(data.get("issues", [])):
@@ -229,15 +243,37 @@ def save_to_cache(image_path, strategy, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+# Persistência em data/inspections/
+# necessário para o RAG indexar depois — separado do cache que é por hash
+def save_inspection(data):
+    inspection_id = data.get("inspection_id", f"INS_{uuid.uuid4().hex[:12].upper()}")
+    out_path = os.path.join(INSPECTIONS_DIR, f"{inspection_id}.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    return out_path
+
+
 # Parsing
 def parse_inspection_json(raw_text, image_path, zone_id, strategy):
-    import re
+    # na estratégia B, o modelo responde com texto + JSON misturado
+    # guardamos o texto completo em cot_reasoning antes de extrair o JSON
+    cot_reasoning = ""
+    if strategy == "B":
+        # tudo o que vem antes do último { é o raciocínio explícito
+        last_brace = raw_text.rfind("{")
+        if last_brace > 0:
+            cot_reasoning = raw_text[:last_brace].strip()
+
     matches = re.findall(r'\{[\s\S]*\}', raw_text)
     if not matches:
         raise ValueError("Nenhum JSON encontrado na resposta")
 
     data = json.loads(matches[-1])
     data = clean_response(data)
+
+    # na estratégia B, preserva o raciocínio completo separadamente
+    if strategy == "B" and cot_reasoning:
+        data["cot_reasoning"] = cot_reasoning
 
     data["inspection_id"] = f"INS_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:6].upper()}"
     data["timestamp"] = datetime.now(timezone.utc).isoformat()
@@ -276,7 +312,10 @@ def inspect_image(image_path, zone_id="Z_UNKNOWN", strategy="A", max_retries=3):
             )
             raw_text = response.text.strip()
             result = parse_inspection_json(raw_text, image_path, zone_id, strategy)
+
             save_to_cache(image_path, strategy, result)
+            save_inspection(result)
+
             return result
 
         except ClientError as e:
@@ -314,16 +353,63 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 2:
-        print("Uso: python shelf_inspector.py <imagem.jpg> [zone_id] [estrategia A|B|C]")
-        print("Exemplo: python src/shelf_inspector.py data/test/img_001.jpg Z_S1 B")
+        print("Uso:")
+        print("  python shelf_inspector.py <imagem.jpg> [zone_id] [estrategia A|B|C]")
+        print("  python shelf_inspector.py --ground-truth <ground_truth.json> [estrategia A|B|C]")
         sys.exit(1)
 
-    img = sys.argv[1]
-    zone = sys.argv[2] if len(sys.argv) > 2 else "Z_S1"
-    strat = sys.argv[3] if len(sys.argv) > 3 else "A"
+    if sys.argv[1] == "--ground-truth":
+        import time
 
-    print(f"\nA inspecionar: {img}")
-    print(f"Zona: {zone} | Estratégia: {strat}\n")
+        gt_path = sys.argv[2] if len(sys.argv) > 2 else "./data/annotations/ground_truth.json"
+        strat = sys.argv[3] if len(sys.argv) > 3 else "A"
+        images_dir = "./data/images/myphotos"
+        delay = 6
 
-    result = inspect_image(img, zone_id=zone, strategy=strat)
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+        with open(gt_path, encoding="utf-8") as f:
+            ground_truth = json.load(f)
+
+        images = list(ground_truth.keys())
+        print(f"A correr estratégia {strat} em {len(images)} imagens\n")
+
+        results = {}
+        errors = []
+
+        for i, image_name in enumerate(images):
+            img_path = Path(images_dir) / image_name
+            zone = ground_truth[image_name].get("zone", "Z_S1")
+            print(f"[{i+1}/{len(images)}] {image_name} (zona {zone})", end=" ", flush=True)
+
+            if not img_path.exists():
+                print("Ficheiro não encontrado")
+                errors.append(image_name)
+                continue
+
+            try:
+                result = inspect_image(str(img_path), zone_id=zone, strategy=strat)
+                results[image_name] = result
+                print(f"{result.get('overall_status','?')} | fill: {result.get('shelf_fill_rate','?')} | issues: {len(result.get('issues',[]))}")
+                time.sleep(delay)
+            except Exception as e:
+                print(f"ERRO: {e}")
+                errors.append(image_name)
+
+        output_path = f"./data/inspections/strategy_{strat.lower()}_results.json"
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+
+        print(f"\nFeito! {len(results)}/{len(images)} imagens inspecionadas.")
+        print(f"Resultados em {output_path}")
+        if errors:
+            print(f"Erros: {errors}")
+
+    else:
+        img = sys.argv[1]
+        zone = sys.argv[2] if len(sys.argv) > 2 else "Z_S1"
+        strat = sys.argv[3] if len(sys.argv) > 3 else "A"
+
+        print(f"\nA inspecionar: {img}")
+        print(f"Zona: {zone} | Estratégia: {strat}\n")
+
+        result = inspect_image(img, zone_id=zone, strategy=strat)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
