@@ -3,7 +3,7 @@ from pathlib import Path
 import time
 
 ZONES = ["Z_S1", "Z_S2", "Z_S3", "Z_S4", "Z_S5", "Z_S6", "Z_S7"]
-images = list(Path("./data/raw/sku110k").glob("*.jpg"))[:50]
+images = list(Path("./data/raw/sku110k").glob("*.jpg"))[43:250]
 
 for i, img in enumerate(images):
     zone = ZONES[i % len(ZONES)]

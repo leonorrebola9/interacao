@@ -1,0 +1,104 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, far right, behind the silver thermos",
+      "severity": "medium",
+      "description": "A noticeable empty space on the top shelf where products should be, indicating a stockout.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, far right, behind the silver thermos",
+      "severity": "medium",
+      "description": "A noticeable empty space on the second shelf from the top where products should be, indicating a stockout.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, far right, behind the green and grey containers",
+      "severity": "medium",
+      "description": "A noticeable empty space on the third shelf from the top where products should be, indicating a stockout.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Second shelf from top, right side, 'Value Corner Creamer' bottles",
+      "severity": "low",
+      "description": "Several 'Value Corner Creamer' bottles are not perfectly aligned with the shelf edge, affecting presentation.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Third shelf from top, right side, 'Value Corner Creamer' bottles",
+      "severity": "low",
+      "description": "Several 'Value Corner Creamer' bottles are not perfectly aligned with the shelf edge, affecting presentation.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Fourth shelf from top, right side, 'Coffee Creamer' bottles",
+      "severity": "low",
+      "description": "Several 'Coffee Creamer' bottles are not perfectly aligned with the shelf edge, affecting presentation.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "misaligned",
+      "location": "Fifth shelf from top, left side, 'Swiss Miss' boxes",
+      "severity": "low",
+      "description": "Some 'Swiss Miss' hot cocoa boxes are slightly misaligned, not flush with the shelf edge.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_008",
+      "type": "misaligned",
+      "location": "Bottom shelf, left side, 'Nesquik' containers",
+      "severity": "low",
+      "description": "Some 'Nesquik' containers on the bottom shelf are slightly misaligned.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_009",
+      "type": "other",
+      "location": "Various locations across the shelves, particularly on the right side",
+      "severity": "low",
+      "description": "Several price labels are bent, slightly askew, or partially obscured, impacting readability and presentation.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Chocolate Syrups",
+    "Malted Milk",
+    "Coffee Creamers (Liquid)",
+    "Coffee Creamers (Powdered)",
+    "Hot Chocolate Mixes",
+    "Instant Coffee",
+    "Cold Brew Coffee",
+    "Coffee Filters",
+    "Sweeteners"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked, indicating a high fill rate. However, there are a few distinct empty spots on the right side of the upper shelves, suggesting some products are out of stock or need restocking. Additionally, several products, particularly bottles and boxes, show minor misalignment, which could be improved for better presentation. Price labels are mostly present but some are slightly bent or not perfectly straight. No damaged or wrong products were clearly identified.",
+  "inspection_id": "INS_20260610_195647_433C72",
+  "timestamp": "2026-06-10T19:56:47.133512+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0035.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

@@ -1,0 +1,55 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Top shelf, left section, L'Oréal Age Perfect boxes",
+      "severity": "low",
+      "description": "Several L'Oréal Age Perfect product boxes are slightly askew and not perfectly aligned on the shelf.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Second shelf from top, left section, L'Oréal Revitalift boxes",
+      "severity": "low",
+      "description": "Some L'Oréal Revitalift product boxes are slightly askew and not perfectly aligned on the shelf.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Third shelf from top, left section, L'Oréal Revitalift and Collagen boxes",
+      "severity": "low",
+      "description": "Several L'Oréal Revitalift and Collagen product boxes are slightly askew and not perfectly aligned on the shelf.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Second shelf from top, middle section, various hand creams/lotions",
+      "severity": "low",
+      "description": "Some tubes and small bottles of hand creams/lotions (Vaseline, Nivea, Garnier) are slightly leaning or not perfectly upright.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Facial Skincare",
+    "Lip Care",
+    "Body Lotion",
+    "Hand Cream",
+    "Liquid Hand Soap"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a high fill rate. Minor misalignments of boxed and tubed products are observed across several shelves, but no significant empty spaces, damaged products, or missing labels were identified. The overall presentation is good despite these minor cosmetic issues.",
+  "inspection_id": "INS_20260610_183550_E82B6A",
+  "timestamp": "2026-06-10T18:35:50.922903+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0005.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

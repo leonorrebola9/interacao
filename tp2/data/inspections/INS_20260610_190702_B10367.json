@@ -1,0 +1,73 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, various spots, especially right side near Gillette products",
+      "severity": "low",
+      "description": "Small gaps are visible on the top shelf where products should be, particularly on the right side near the Gillette products.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Second shelf, left side near 'SmartSource' sign and middle between Right Guard and Mitchum",
+      "severity": "low",
+      "description": "Small empty spaces are present on the second shelf, notably on the left side and in the middle section.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Third shelf, left side with Speed Stick, and between Lady Speed Stick and Dove",
+      "severity": "low",
+      "description": "Minor empty spots are visible on the third shelf, particularly on the left side and towards the right between different product lines.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Fourth shelf, between Pure Silk and Nair, and between Secret and Degree, and between Tom's and Dove",
+      "severity": "low",
+      "description": "Several small empty spaces are present on the fourth shelf, indicating minor stock deficiencies between various product brands.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "empty_shelf",
+      "location": "Fifth shelf, minor gaps between Old Spice and Degree, Arrid and Ultra Max, and Dry Idea and Dove",
+      "severity": "low",
+      "description": "Very minor empty spots are observed on the fifth shelf, indicating almost full stock levels.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Across all shelves",
+      "severity": "low",
+      "description": "Numerous products are slightly misaligned or not perfectly front-faced, affecting the overall neatness of the display.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Deodorants",
+    "Shaving Products",
+    "Hair Removal",
+    "Men's Grooming",
+    "Body Care"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked, but there are multiple small empty spots across all levels, indicating minor stock deficiencies. Additionally, many products are slightly misaligned, impacting the visual organization. No major issues like damaged products or completely empty sections were observed, leading to an 'warning' status.",
+  "inspection_id": "INS_20260610_190702_B10367",
+  "timestamp": "2026-06-10T19:07:02.803802+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0025.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

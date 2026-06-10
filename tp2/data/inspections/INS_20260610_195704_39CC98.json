@@ -1,0 +1,19 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "air fresheners",
+    "cleaning wipes",
+    "laundry care",
+    "floor cleaners",
+    "textile fresheners",
+    "stain removers"
+  ],
+  "model_reasoning": "The supermarket shelves are very well-organized and fully stocked. All products are neatly aligned, and there are no visible empty spaces where products should be. No damaged items, wrong products, or missing labels were detected. The overall presentation is excellent.",
+  "inspection_id": "INS_20260610_195704_39CC98",
+  "timestamp": "2026-06-10T19:57:04.513474+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0036.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

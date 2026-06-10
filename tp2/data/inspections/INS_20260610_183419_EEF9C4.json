@@ -1,0 +1,53 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, right side (prepaid/gift cards)",
+      "severity": "medium",
+      "description": "Several slots for prepaid or gift cards are empty on the right side of the top shelf.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.25
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Top shelf (prepaid/gift cards)",
+      "severity": "low",
+      "description": "Some prepaid or gift cards are tilted or not perfectly aligned in their slots.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Shelf 1, top and middle rows (Flonase, Zyrtec)",
+      "severity": "low",
+      "description": "A few product boxes (Flonase, Zyrtec) are slightly askew or not perfectly straight on the shelf.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Shelf 3, bottom row, far right",
+      "severity": "low",
+      "description": "A small section on the far right of the bottom shelf appears empty where products should be.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Prepaid Cards / Gift Cards",
+    "Allergy & Cold Relief Medication",
+    "Nasal Decongestants"
+  ],
+  "model_reasoning": "The top shelf with prepaid cards has noticeable empty slots and some misaligned cards. The main product shelves are generally well-stocked, but a few items are slightly misaligned, and there's a small empty section on the bottom shelf. Overall, the fill rate is good, but the identified issues warrant a 'warning' status.",
+  "inspection_id": "INS_20260610_183419_EEF9C4",
+  "timestamp": "2026-06-10T18:34:19.405123+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0001.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

@@ -1,0 +1,33 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "First shelf, middle section",
+      "severity": "medium",
+      "description": "There is a noticeable empty space on the first shelf, indicated by a 'Pepsi 2 Liter $1.29' price label, suggesting that 2-liter Pepsi bottles are out of stock.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.3
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Dr. Pepper",
+    "Mist Twst",
+    "Mountain Dew",
+    "Pepsi",
+    "Grapico",
+    "Hawaiian Punch",
+    "Diet Sunkist",
+    "Mountain Dew Voltage",
+    "Mountain Dew Pitch Black",
+    "Mountain Dew Game Fuel"
+  ],
+  "model_reasoning": "The image displays a beverage aisle with multiple shelves of soft drinks. The majority of the shelves are well-stocked and organized. However, a clear empty section was identified on the first shelf, specifically where 2-liter Pepsi bottles are priced, indicating an out-of-stock situation for that product. This single issue leads to a 'warning' status, while the overall shelf fill rate remains relatively high.",
+  "inspection_id": "INS_20260610_195742_0F1F25",
+  "timestamp": "2026-06-10T19:57:42.332406+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0038.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

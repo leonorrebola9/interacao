@@ -1,0 +1,33 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, far right section",
+      "severity": "low",
+      "description": "Several bottles are missing from the far right section of the top shelf, creating visible gaps where products should be.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Top two shelves, left side, boxes of Pond's Flawless White",
+      "severity": "low",
+      "description": "Some boxes of Pond's Flawless White on the top two shelves are slightly misaligned or pushed back, affecting the neatness of the display.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Pond's skincare products"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a variety of Pond's skincare products, including creams, serums, and cleansers. The overall fill rate is high. However, there are a few empty slots on the top right shelf where products are clearly missing. Additionally, some product boxes on the top two shelves are slightly misaligned, though this is a minor issue. The majority of the display is neat and organized.",
+  "inspection_id": "INS_20260610_184827_6FAEAE",
+  "timestamp": "2026-06-10T18:48:27.278523+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0014.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

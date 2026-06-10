@@ -1,0 +1,50 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Multiple prateleiras, incluindo a prateleira superior (WC Frisch), prateleira do meio (Abluss Fee, Blink WC-Blaupulver) e prateleira inferior (Mr. Muscle Drano, Blink Rohreiniger, Blink Allzweckreiniger).",
+      "severity": "medium",
+      "description": "Existem vários espaços vazios em diferentes prateleiras, indicando produtos em falta ou esgotados.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Em todas as prateleiras.",
+      "severity": "low",
+      "description": "Muitos produtos estão ligeiramente desalinhados, inclinados ou não perfeitamente alinhados com a borda da prateleira, afetando a organização visual.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "other",
+      "location": "Prateleira do meio, perto do centro.",
+      "severity": "low",
+      "description": "Um pacote de luvas Vileda está colocado à frente de outros produtos, obscurecendo-os parcialmente.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Sprays de Limpeza (Casa de Banho, Multiusos)",
+    "Limpadores de Sanita (Líquidos, Blocos, Pós)",
+    "Limpadores Multiusos (Líquidos)",
+    "Limpadores e Cuidado de Chão",
+    "Desentupidores de Esgotos",
+    "Desinfetantes",
+    "Toalhetes de Limpeza",
+    "Luvas de Limpeza",
+    "Ambientadores"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas com uma vasta variedade de produtos de limpeza. No entanto, existem várias instâncias de espaços vazios para produtos em diferentes secções, o que pode indicar falta de stock ou má reposição. Muitos produtos também apresentam um ligeiro desalinhamento, o que afeta a apresentação geral. Um item (luvas Vileda) está mal posicionado, obscurecendo outros produtos.",
+  "inspection_id": "INS_20260610_183528_D05F9B",
+  "timestamp": "2026-06-10T18:35:28.284954+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0004.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

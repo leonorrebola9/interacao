@@ -1,0 +1,36 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, far right side, next to the ZzzQuil bottle.",
+      "severity": "low",
+      "description": "A product box is missing from its designated spot on the top shelf, creating a small empty gap.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "ZzzQuil Nighttime Sleep-Aid",
+    "Advil PM",
+    "Ibuprofen PM",
+    "Icy Hot Smart Relief TENS Therapy",
+    "Icy Hot Lidocaine Patch",
+    "Advil Liqui-Gels",
+    "Ibuprofen",
+    "Aspercreme Lidocaine Patch",
+    "Salonpas Pain Relief Patch",
+    "Motrin Liquid Gels",
+    "Bengay Pain Relieving Patch",
+    "ThermaCare Heat Wraps",
+    "Signature Care Medicated Patch"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket aisle. I scanned each shelf for common issues such as empty spots, misaligned products, wrong product placement, damaged items, and missing labels. One small empty spot was identified on the top shelf, far right, where a product box appears to be missing. While some products exhibit minor misalignment, this is typical for a retail environment and not severe enough to be flagged as a critical issue. All products appear to be in their correct categories, and no visible damage or missing price labels were observed. The overall shelf fill rate is high. Based on the single minor empty shelf issue, the overall status is classified as 'warning'.",
+  "inspection_id": "INS_20260610_183503_017E69",
+  "timestamp": "2026-06-10T18:35:03.839975+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0003.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

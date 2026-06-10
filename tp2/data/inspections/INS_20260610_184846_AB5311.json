@@ -1,0 +1,25 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Multiple shelves, particularly the upper and middle sections displaying hanging toothbrushes.",
+      "severity": "low",
+      "description": "Numerous toothbrush packages are slightly crooked or not perfectly aligned on their display hooks, contributing to a somewhat untidy appearance across the aisle.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.4
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "toothbrushes",
+    "oral_care_products"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket aisle primarily featuring toothbrushes and other oral care products like mouthwash and toothpaste. The shelf fill rate is very high, indicating good product availability. The main identified issue is the minor misalignment of many hanging toothbrush packages, which affects the overall tidiness but does not impede product access or availability. No significant empty shelves, damaged products, or incorrect product placements were observed. Promotional signage is present and clearly visible.",
+  "inspection_id": "INS_20260610_184846_AB5311",
+  "timestamp": "2026-06-10T18:48:46.575594+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0015.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

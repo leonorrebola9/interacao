@@ -1,0 +1,55 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Segunda prateleira de cima, secção central-direita, abaixo do sinal 'Scholl Light Legs'",
+      "severity": "medium",
+      "description": "Há um espaço vazio significativo na prateleira onde os produtos deveriam estar expostos, especificamente abaixo do sinal 'Scholl Light Legs'.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Terceira prateleira de cima, secções central e direita, perto de 'Scholl Hühneraugen Pflaster' e 'Scholl Light Legs'",
+      "severity": "medium",
+      "description": "Vários espaços vazios são visíveis na terceira prateleira, indicando falta de produtos, particularmente nas secções de pensos para calos e produtos de cuidado para os pés.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.07
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Quarta prateleira de cima, secções central e direita, perto de 'Hansaplast' e 'Scholl Zehenkeile'",
+      "severity": "medium",
+      "description": "Existem múltiplos espaços vazios na quarta prateleira, sugerindo que os produtos estão esgotados ou mal colocados, especialmente nas secções de Hansaplast e separadores de dedos.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.06
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Segunda prateleira de cima, secção central, onde estão os dispositivos 'Scholl Velvet Smooth'",
+      "severity": "low",
+      "description": "Algumas caixas de produtos 'Scholl Velvet Smooth' estão empilhadas de forma desorganizada ou não estão bem alinhadas, criando uma aparência ligeiramente desarrumada.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.89,
+  "products_detected": [
+    "Einlagen (Palmilhas)",
+    "Fuss- und Nagelpflegegeräte (Dispositivos/Ferramentas para Cuidado dos Pés e Unhas)",
+    "Fusscremes und Balsame (Cremes e Bálsamos para os Pés)",
+    "Pflaster und Schutzprodukte für Füsse (Pensos e Produtos de Proteção para os Pés)",
+    "Fussdeos (Desodorizantes para os Pés)"
+  ],
+  "model_reasoning": "As prateleiras geralmente parecem bem organizadas, mas há vários espaços vazios notáveis em várias prateleiras, particularmente nas secções do meio, indicando potenciais faltas de stock ou itens fora do lugar. Alguns produtos também não estão perfeitamente alinhados. As duas prateleiras inferiores e a prateleira superior estão maioritariamente cheias e arrumadas.",
+  "inspection_id": "INS_20260610_195820_A783BA",
+  "timestamp": "2026-06-10T19:58:20.835833+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0040.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

@@ -1,0 +1,72 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira superior, lado direito, próximo aos produtos Califig",
+      "severity": "medium",
+      "description": "Existem espaços vazios na prateleira onde deveriam estar produtos, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Segunda prateleira de cima para baixo, lado direito, entre 'Fruits & Fibres' e 'Dioclear'",
+      "severity": "medium",
+      "description": "Existem espaços vazios na prateleira onde deveriam estar produtos, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Terceira prateleira de cima para baixo, lado direito, próximo a 'Imodium Instants'",
+      "severity": "medium",
+      "description": "Existem espaços vazios na prateleira onde deveriam estar produtos, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior, secção central, próximo aos produtos Vaseline",
+      "severity": "medium",
+      "description": "Existem espaços vazios na prateleira onde deveriam estar produtos, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    }
+  ],
+  "shelf_fill_rate": 0.87,
+  "products_detected": [
+    "Germoloids",
+    "Thermofluid relief",
+    "Anusol",
+    "Preparation H",
+    "Califig",
+    "Imodium",
+    "Dioralyte",
+    "Senokot",
+    "Dulcolax",
+    "Tesco Rehydration",
+    "Dioclear",
+    "Fruits & Fibres",
+    "Nexium",
+    "Buscopan",
+    "Senocalm",
+    "Silicogel",
+    "DulcoEase",
+    "Gaviscon",
+    "Rennie",
+    "WindSetlers",
+    "Vaseline",
+    "Indigestion tablets"
+  ],
+  "model_reasoning": "A análise da imagem revela várias secções com espaços vazios nas prateleiras, indicando falta de stock em algumas áreas. Embora a maioria dos produtos esteja bem organizada e com etiquetas de preço visíveis, a presença de múltiplas lacunas justifica um 'overall_status' de 'warning'. A taxa de preenchimento da prateleira é de aproximadamente 87%, refletindo estas lacunas. Não foram detetados produtos danificados, desalinhamentos graves ou produtos errados.",
+  "inspection_id": "INS_20260610_195434_F1B0CB",
+  "timestamp": "2026-06-10T19:54:34.634317+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0031.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

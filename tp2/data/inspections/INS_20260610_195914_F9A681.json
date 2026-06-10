@@ -1,0 +1,56 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Multiple shelves on the right side of the display",
+      "severity": "medium",
+      "description": "Several empty product slots are visible on almost all shelves in the rightmost section of the display, indicating a consistent understocking issue.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Various shelves, particularly shelf 9 (JAM jars) and shelf 10 (Super Gro, Castor jars)",
+      "severity": "low",
+      "description": "Some products, such as the JAM jars and Super Gro/Castor jars, are not perfectly aligned to the front of the shelf, creating a slightly untidy appearance.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "other",
+      "location": "Shelf 4-5 area, right side",
+      "severity": "low",
+      "description": "Hanging merchandise (possibly hair accessories or small items) is somewhat disheveled and partially obstructs the view of products behind it.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "other",
+      "location": "Shelf 9, right side",
+      "severity": "low",
+      "description": "A large yellow package (possibly wipes) is placed somewhat haphazardly on the shelf, not neatly integrated with other products.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.79,
+  "products_detected": [
+    "Deodorants",
+    "Hair Care Products",
+    "Hair Dyes & Relaxers",
+    "Body Lotions",
+    "Specialty Skin Care",
+    "Personal Wipes"
+  ],
+  "model_reasoning": "The store display is generally organized by product type and brand. However, a notable issue is the consistent understocking on the right side of the display across multiple shelves, leading to numerous empty slots. Minor issues include some product misalignment and a few items placed haphazardly, which detract slightly from the overall presentation. The left side of the display is well-stocked and organized.",
+  "inspection_id": "INS_20260610_195914_F9A681",
+  "timestamp": "2026-06-10T19:59:14.293637+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0042.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}
