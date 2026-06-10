@@ -97,8 +97,24 @@ Exemplo de mau summary:
 Responde APENAS com o texto do summary, sem introdução, sem explicação, sem markdown."""
 
 def generate_summary(inspection, max_retries=3):
+    # contexto de afluência
+    zone_id = inspection.get("zone_id", "")
+    timestamp = inspection.get("timestamp", "")
+    
+    try:
+        import sys, os
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from journey_context import get_affluence_context
+        hour = datetime.fromisoformat(timestamp).hour
+        affluence = get_affluence_context(zone_id, hour)
+        print(f"  [afluência] {zone_id} às {hour}h: '{affluence}'")
+    except Exception as e:
+        print(f"  [afluência] erro: {e}")
+        affluence = ""
+
     inspection_text = json.dumps(inspection, ensure_ascii=False, indent=2)
-    prompt = f"{PROMPT_SUMMARY}\n\nInspeção:\n{inspection_text}"
+    affluence_note = f"\nContexto de afluência histórica: {affluence}" if affluence else ""
+    prompt = f"{PROMPT_SUMMARY}\n\nInspeção:\n{inspection_text}{affluence_note}"
 
     for attempt in range(max_retries):
         try:

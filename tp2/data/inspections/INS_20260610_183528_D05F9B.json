@@ -47,5 +47,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0004.jpg",
   "zone_id": "Z_S5",
   "strategy": "A",
-  "summary": "prateleira da zona Z_S5 com fill rate de 88%, produtos de limpeza (sprays, limpadores de sanita, desentupidores, luvas, ambientadores) detetados. Espaços vazios em várias prateleiras (superior, meio, inferior) com severidade média, produtos desalinhados em todas as prateleiras com severidade baixa, e um pacote de luvas Vileda mal posicionado na prateleira do meio (centro) com severidade baixa. Quarta-feira 18h35, estado warning"
+  "summary": "Zona Z_S5 com fill rate de 88%, contendo produtos de limpeza variados (sprays, limpadores de sanita, desentupidores, luvas, ambientadores). Espaços vazios (falta de stock) em várias prateleiras (superior, meio, inferior) com severidade média. Produtos desalinhados em todas as prateleiras com severidade baixa. Pacote de luvas Vileda mal posicionado (obscurecendo outros) na prateleira do meio, perto do centro, com severidade baixa. Inspeção realizada quarta-feira 18h35, estado geral warning."
 }

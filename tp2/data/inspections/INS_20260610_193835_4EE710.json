@@ -68,5 +68,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0022.jpg",
   "zone_id": "Z_S2",
   "strategy": "A",
-  "summary": "Zona Z_S2 com fill rate de 92%, detetados pensos higiénicos, fraldas de adulto e gel de banho/loção corporal. Problemas de prateleiras vazias na secção mais à direita (de cima a baixo) e produtos desalinhados em várias prateleiras, ambos com severidade baixa. Quarta-feira 19h38, estado warning."
+  "summary": "Zona Z_S2 com fill rate de 92%, com produtos como pensos higiénicos, fraldas de adulto e produtos de higiene corporal. Foram detetadas secções vazias de severidade baixa na extremidade direita de todas as prateleiras e produtos desalinhados de severidade baixa em várias prateleiras. Quarta-feira 19h38, estado warning."
 }

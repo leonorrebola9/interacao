@@ -50,5 +50,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0001.jpg",
   "zone_id": "Z_S2",
   "strategy": "A",
-  "summary": "prateleira da zona Z_S2 com fill rate de 90%, detetados cartões pré-pagos/presente, medicamentos para alergias e constipações (como Flonase, Zyrtec), e descongestionantes nasais. Falta de stock (severidade média) no lado direito da prateleira superior (cartões pré-pagos/presente), onde também se detetaram cartões desalinhados (severidade baixa). Produtos (Flonase, Zyrtec) desalinhados (severidade baixa) nas filas superior e central da prateleira 1. Falta de stock (severidade baixa) na fila inferior, lado direito da prateleira 3. Quarta-feira 18h34, estado warning."
+  "summary": "Zona Z_S2 com fill rate de 90%, detetados cartões pré-pagos/presente e medicamentos para alergias e constipações. Na prateleira superior (cartões pré-pagos/presente), espaços vazios no lado direito (severidade média) e desalinhamentos (severidade baixa). Produtos desalinhados na prateleira 1, filas superior e central (severidade baixa). Secção vazia na prateleira 3, fila inferior, extremo direito (severidade baixa). Quarta-feira 18h34, estado warning."
 }

@@ -69,5 +69,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0031.jpg",
   "zone_id": "Z_S4",
   "strategy": "A",
-  "summary": "Zona Z_S4 com fill rate de 87%, detetados produtos de saúde digestiva e bem-estar (ex: Imodium, Gaviscon). Vários espaços vazios (falta de stock) com severidade média, localizados na prateleira superior (lado direito), nas prateleiras intermédias (lado direito) e na prateleira inferior (secção central). Quarta-feira, 10 de junho de 2026, 19h54, estado warning."
+  "summary": "Zona Z_S4 com fill rate de 87%, contendo produtos de saúde digestiva e bem-estar. Foram detetadas várias prateleiras vazias (falta de stock de severidade média) no lado direito (superior, segunda e terceira) e na secção central da prateleira inferior. Inspeção de quarta-feira 19h54, estado warning."
 }

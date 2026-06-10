@@ -30,5 +30,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0014.jpg",
   "zone_id": "Z_S1",
   "strategy": "A",
-  "summary": "zona Z_S1 com fill rate de 95%, produtos de cuidado da pele da Pond's detetados. Problemas: prateleira vazia na secção superior direita (severidade baixa) e produtos desalinhados no lado esquerdo das duas prateleiras superiores (severidade baixa). Quarta-feira 10 de junho de 2026 às 18h48, estado warning"
+  "summary": "Zona Z_S1 com fill rate de 95%, detetados produtos de cuidado de pele da Pond's. Problemas incluem prateleira vazia na secção superior, lado direito (severidade baixa) e produtos desalinhados (caixas de Pond's Flawless White) nas duas prateleiras superiores, lado esquerdo (severidade baixa). Inspeção realizada quarta-feira 18h48, estado geral warning."
 }

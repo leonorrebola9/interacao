@@ -41,5 +41,5 @@
   "image_path": "data\\images\\IMG_9020.jpg",
   "zone_id": "Z_S1",
   "strategy": "B",
-  "summary": "Zona Z_S1 com fill rate de 92%, detetados iogurtes e bebidas lácteas. Na prateleira superior, uma pilha de iogurtes Yoggi desalinhada no canto esquerdo (severidade baixa) e um espaço vazio na secção Danone 'magro' no lado direito (severidade baixa). Na prateleira inferior, embalagens de Mimosa 'SUPER POUPANÇA' desalinhadas no lado direito (severidade baixa). 10 de junho de 2026 às 16h52, estado ok."
+  "summary": "Zona Z_S1 com fill rate de 92%, com iogurtes e bebidas lácteas. Problemas: iogurtes Yoggi desalinhados na prateleira superior, canto esquerdo (severidade baixa); falha de stock de Danone 'magro' na prateleira superior, lado direito (severidade baixa); e embalagens Mimosa 'SUPER POUPANÇA' desalinhadas na prateleira inferior, lado direito (severidade baixa). Quarta-feira 16h52, estado ok."
 }

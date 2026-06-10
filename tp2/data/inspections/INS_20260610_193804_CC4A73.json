@@ -72,5 +72,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0019.jpg",
   "zone_id": "Z_S6",
   "strategy": "A",
-  "summary": "Zona Z_S6 com fill rate de 88%, detetando produtos de limpeza (ambientadores, casa de banho, panos), corantes para tecido, lâmpadas LED, produtos para calçado e isqueiros, com espaços vazios (low) na prateleira superior (direita) e do meio (esquerda), e um espaço vazio (medium) na prateleira inferior (esquerda); e produtos desalinhados (low) nas prateleiras superior (Domol Raumfrischer), do meio (Domol Mini-Spray) e inferior (Domol WC-Duftsteine), realizada quarta-feira 19h38, estado warning."
+  "summary": "Na zona Z_S6, com fill rate de 88%, foram detetados produtos de limpeza, ambientadores, corantes para tecido, lâmpadas LED, produtos para calçado e isqueiros. Problemas incluem: espaços vazios de severidade baixa na prateleira superior (direita dos ambientadores Frosch Oa) e na prateleira do meio (esquerda das lâmpadas LED Rubin), e um espaço vazio de severidade média na prateleira inferior (esquerda dos produtos de limpeza Domestos). Adicionalmente, produtos desalinhados de severidade baixa foram encontrados na prateleira superior (ambientadores Domol Raumfrischer), na prateleira do meio (ambientadores Domol Mini-Spray) e na prateleira inferior (blocos sanitários Domol WC-Duftsteine). Quarta-feira 19h38, estado warning."
 }

@@ -23,5 +23,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0030.jpg",
   "zone_id": "Z_S3",
   "strategy": "A",
-  "summary": "Zona Z_S3 com fill rate de 95%, detetados refrigerantes (Pepsi, Mist Twst, Mountain Dew), com sinalização errada (misturadores de cocktails) acima de garrafas de Mountain Dew na prateleira superior do lado direito (severidade média), quarta-feira 19h54, estado warning"
+  "summary": "Zona Z_S3 com fill rate de 95%, produtos detetados incluem refrigerantes (Pepsi, Mist Twst, Mountain Dew). Problema de produto errado (sinal de 'cocktail mixers' acima de garrafas de Mountain Dew) na prateleira superior, lado direito, com severidade média. Quarta-feira 19h54, estado warning."
 }

@@ -32,5 +32,5 @@
   "image_path": "data\\images\\IMG_9047.jpg",
   "zone_id": "Z_S5",
   "strategy": "B",
-  "summary": "Zona Z_S5 com fill rate de 93%, detetando cereais de pequeno-almoço e café/cappuccino. Um café/cappuccino (Nescafe Cappuccino) está fora de posição na prateleira do meio, ligeiramente à direita do centro (severidade média), e sacos de cereais (Nesquik Max) estão desalinhados/amassados na prateleira inferior, lado direito (severidade baixa). Quarta-feira 16h54, estado warning."
+  "summary": "Zona Z_S5 com fill rate de 93%, produtos detetados incluem cereais de pequeno-almoço e café/cappuccino, com um produto errado (café/cappuccino) na prateleira do meio, ligeiramente à direita do centro (severidade média) e desalinhamento de cereais na prateleira inferior, lado direito (severidade baixa), quarta-feira 16h54, estado warning."
 }

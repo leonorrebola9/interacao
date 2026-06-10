@@ -42,5 +42,5 @@
   "image_path": "data\\images\\IMG_9012.jpg",
   "zone_id": "Z_S1",
   "strategy": "B",
-  "summary": "prateleira da zona Z_S1 com fill rate de 95%, com produtos como flocos de aveia, bebidas vegetais e leite. Problemas encontrados: saco plástico solto e amassado (severidade baixa) na prateleira do meio, à direita; espaço vazio (severidade média) na prateleira do meio, à direita; caixa de leite Mimosa tombada (severidade baixa) na prateleira do meio, à esquerda. Quarta-feira 16h51, estado warning."
+  "summary": "Zona Z_S1 com fill rate de 95%, contendo Flocos de Aveia, Bebidas Vegetais e Leite. Na prateleira do meio, foram detetados: um saco plástico solto (low severity) à direita, sobre as caixas de leite 'meio gordo'; um espaço vazio (medium severity) à direita, entre as caixas de leite Mimosa e as caixas de leite 'meio gordo'; e uma caixa de leite Mimosa tombada (low severity) à esquerda. Quarta-feira 16h51, estado warning."
 }

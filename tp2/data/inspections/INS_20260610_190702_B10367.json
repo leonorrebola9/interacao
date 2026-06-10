@@ -70,5 +70,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0025.jpg",
   "zone_id": "Z_S5",
   "strategy": "A",
-  "summary": "Zona Z_S5 com fill rate de 88%, detetados produtos de higiene pessoal e barbear. Pequenas falhas de stock (prateleiras vazias) em vários pontos das prateleiras superior, segunda, terceira, quarta e quinta, e produtos desalinhados em todas as prateleiras, ambos com severidade baixa. Quarta-feira 19h07, estado warning."
+  "summary": "Zona Z_S5 com fill rate de 88%, produtos de higiene pessoal (desodorizantes, produtos de barbear, depilação, cuidados masculinos, cuidados corporais). Pequenas falhas de stock (vazios) detetadas em várias prateleiras (superior, segunda, terceira, quarta e quinta prateleiras), com severidade baixa. Numerosos produtos desalinhados em todas as prateleiras, com severidade baixa. Quarta-feira 19h, estado warning."
 }

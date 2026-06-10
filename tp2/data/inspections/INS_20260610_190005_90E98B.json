@@ -44,5 +44,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0021.jpg",
   "zone_id": "Z_S1",
   "strategy": "A",
-  "summary": "Zona Z_S1 com fill rate de 88%, detetados chás (engarrafados, enlatados, em galão), bebidas de aloe, bebidas matcha e tortilhas. Problemas encontrados incluem produtos desalinhados em todas as prateleiras (especialmente nas superiores e médias com chás engarrafados/enlatados, e na inferior com garrafas Pure Leaf) com baixa severidade; uma prateleira vazia na prateleira inferior, lado direito, com severidade média; e etiquetas de preço obstruídas em várias localizações nas prateleiras média e inferior com baixa severidade. Inspeção realizada quarta-feira 19h, estado warning."
+  "summary": "Zona Z_S1 com fill rate de 88%, contendo chás (engarrafados, em lata, em galão), bebidas de aloe e matcha, e tortilla chips. Produtos desalinhados (chás engarrafados e em lata) em todas as prateleiras, com maior incidência nas prateleiras superior e média, e garrafas Pure Leaf na prateleira inferior (severidade baixa); espaço vazio na prateleira inferior, lado direito (severidade média); etiquetas de preço obstruídas em várias localizações nas prateleiras média e inferior (severidade baixa). Inspeção de 10 de junho de 2026 às 19h00, estado warning."
 }

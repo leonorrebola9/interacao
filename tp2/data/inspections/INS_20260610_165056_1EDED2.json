@@ -41,5 +41,5 @@
   "image_path": "data\\images\\IMG_8998.jpg",
   "zone_id": "Z_S3",
   "strategy": "B",
-  "summary": "Zona Z_S3 com fill rate de 88%, produtos de frango (cortes diversos, completo) detetados. Desalinhamento de pilhas de produtos (severidade baixa) no centro-direita das prateleiras superior, do meio e inferior. Quarta-feira 16h50, estado warning."
+  "summary": "prateleiras da zona Z_S3 com fill rate de 88% para frango (cortes diversos, completo), pilhas de produtos desalinhadas no centro-direita das prateleiras superior, do meio e inferior (severidade baixa), quarta-feira 16h50, estado warning"
 }

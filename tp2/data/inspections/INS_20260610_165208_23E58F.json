@@ -43,5 +43,5 @@
   "image_path": "data\\images\\IMG_9017.jpg",
   "zone_id": "Z_S1",
   "strategy": "B",
-  "summary": "Zona Z_S1 com fill rate de 85%, detetados iogurtes, sobremesas lácteas, preparações de fruta e multi-packs. Problemas encontrados: prateleira vazia (severidade média) na base do refrigerador, secção central e direita; produtos desalinhados (severidade baixa) na prateleira do meio inferior, secção direita (produtos Agros); e etiqueta de preço em falta (severidade baixa) na prateleira superior. Inspeção realizada quarta-feira 16h52, estado geral warning."
+  "summary": "Expositor refrigerado da zona Z_S1 com fill rate de 85%, contendo produtos lácteos (Yogurts, Dairy Desserts, Fruit Preparations, Multi-packs). Problemas encontrados: prateleira vazia na base do refrigerador (secção central e direita, severidade média); produtos Agros desalinhados na prateleira do meio inferior (secção direita, severidade baixa); e etiquetas de preço em falta na prateleira superior (severidade baixa). Inspeção realizada quarta-feira 16h52, estado warning."
 }

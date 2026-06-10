@@ -38,5 +38,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0029.jpg",
   "zone_id": "Z_S2",
   "strategy": "A",
-  "summary": "Zona Z_S2 com fill rate de 95%, detetados produtos como bebidas diversas (água de coco, água com gás, Vitaminwater, Yerba Mate, água de bordo, água de cacto, caféberry e Aloe Vera). Problemas encontrados: desalinhamento de produtos (água de coco Zico na Prateleira 6 e Vitaminwater na Prateleira 6, lado direito), ambos de severidade baixa. Quarta-feira 19h53, estado ok."
+  "summary": "Zona Z_S2 com fill rate de 95%, detetados produtos como água de coco, Vitaminwater e outras bebidas. Desalinhamento de produtos de baixa severidade na Prateleira 6, afetando água de coco Zico (cartões azuis) e Vitaminwater (garrafas vermelhas, lado direito). Inspeção de 10 de junho de 2026 às 19h53, estado geral ok."
 }

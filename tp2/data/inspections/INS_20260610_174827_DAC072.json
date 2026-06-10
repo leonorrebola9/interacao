@@ -78,5 +78,5 @@
   "image_path": "data\\images\\IMG_9054.jpg",
   "zone_id": "Z_S5",
   "strategy": "C",
-  "summary": "Zona Z_S5 com fill rate de 68%, detetados vários tipos de massas (Lasanha, Esparguete, Cotovelos, Pérolas e outros). Problemas encontrados incluem espaços vazios significativos na segunda, quarta e quinta prateleiras (severidade média a alta), e na prateleira inferior (severidade baixa); embalagens de esparguete danificadas na prateleira inferior, secção de esparguete (severidade média); e etiquetas de preço soltas no chão em frente à prateleira inferior (severidade baixa). Inspeção realizada quarta-feira 17h48, estado critical."
+  "summary": "Inspeção na zona Z_S5 com fill rate de 68%, detetados diversos tipos de massa. Problemas incluem prateleiras vazias (severidade média a alta) na segunda, quarta e quinta prateleiras da secção direita, e na prateleira inferior (severidade baixa). Embalagens de esparguete danificadas (severidade média) na prateleira inferior, secção de esparguete, e etiquetas de preço soltas (severidade baixa) no chão em frente à prateleira inferior. Quarta-feira 17h48, estado crítico."
 }

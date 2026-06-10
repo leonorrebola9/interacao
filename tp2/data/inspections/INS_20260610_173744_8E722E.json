@@ -41,5 +41,5 @@
   "image_path": "data\\images\\IMG_9012.jpg",
   "zone_id": "Z_S1",
   "strategy": "C",
-  "summary": "Zona Z_S1 com fill rate de 92%, com produtos como flocos de aveia, bebidas vegetais e leite. Embalagem de leite inteiro danificada (severidade baixa) na prateleira superior direita, sacos de aveia desalinhados (severidade baixa) nas prateleiras do expositor de aveia e embalagens de bebidas vegetais Alpro desalinhadas (severidade baixa) no topo do expositor. Inspeção de 10 de junho de 2026 às 17h37, estado warning."
+  "summary": "Zona Z_S1 com fill rate de 92%, com flocos de aveia, bebidas vegetais e leite. Problemas incluem uma embalagem de leite inteiro danificada (baixa severidade) na prateleira superior direita, e produtos desalinhados (baixa severidade) nas prateleiras de aveia e no topo do expositor de bebidas vegetais Alpro. Quarta-feira 10 de junho 17h37, estado warning."
 }

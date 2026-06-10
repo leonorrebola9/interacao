@@ -50,5 +50,5 @@
   "image_path": "data\\images\\IMG_9048.jpg",
   "zone_id": "Z_S5",
   "strategy": "B",
-  "summary": "Zona Z_S5 com fill rate de 95%, produtos de cereais de pequeno-almoço e biscoitos. Expositor a obstruir cereais na prateleira do meio (baixa severidade), etiqueta de preço desalinhada para cereais na prateleira superior, lado direito (baixa severidade), etiqueta de preço obscurecida para biscoitos na prateleira inferior, lado esquerdo (baixa severidade), e pack familiar (possivelmente higiene/limpeza) fora de lugar na prateleira do meio, lado direito (baixa severidade). Quarta-feira 16h55, estado warning."
+  "summary": "Zona Z_S5 com fill rate de 95%, detetados produtos de pequeno-almoço (cereais, biscoitos). Problemas encontrados incluem um expositor a obstruir produtos na prateleira do meio, um pack familiar fora de lugar na prateleira do meio direita, uma etiqueta de preço desalinhada na prateleira superior, e uma etiqueta de preço obscurecida na prateleira inferior esquerda. Todos os problemas são de severidade baixa. Inspeção realizada quarta-feira 16h55, estado warning."
 }

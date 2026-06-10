@@ -70,5 +70,5 @@
   "image_path": "data\\images\\IMG_9054.jpg",
   "zone_id": "Z_S5",
   "strategy": "B",
-  "summary": "prateleira inferior da zona Z_S5 com fill rate de 90%, massas alimentícias (Lasanha com Ovo, Esparguete Tricolor) com embalagens desalinhadas no lado esquerdo (severidade média), múltiplas caixas de massa danificadas com produto a derramar no centro, centro-direita e lado direito (severidade alta), e duas etiquetas de preço caídas no chão em frente à prateleira (severidade baixa), quarta-feira 16h55, estado warning"
+  "summary": "prateleira inferior da zona Z_S5, quarta-feira 16h55, com fill rate de 90% para produtos de massa. Embalagens de massa desalinhadas no lado esquerdo (severidade média), múltiplas caixas de massa danificadas (Esparguete Tricolor e outras) com produto a derramar-se no centro e lado direito (severidade alta), e duas etiquetas de preço caídas no chão em frente à prateleira inferior (severidade baixa). Estado warning."
 }

@@ -33,5 +33,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0003.jpg",
   "zone_id": "Z_S4",
   "strategy": "A",
-  "summary": "Zona Z_S4 com fill rate de 95%, medicamentos de venda livre (analgésicos e soníferos) detetados. Prateleira vazia (severidade baixa) na prateleira superior, lado direito, junto à garrafa de ZzzQuil. Quarta-feira 18h35, estado warning."
+  "summary": "Zona Z_S4 com fill rate de 95%, produtos para alívio da dor e sono detetados, prateleira vazia (severidade baixa) na prateleira superior, lado direito, junto à garrafa de ZzzQuil, quarta-feira 18h35, estado warning."
 }

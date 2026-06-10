@@ -31,5 +31,5 @@
   "image_path": "data\\images\\IMG_9017.jpg",
   "zone_id": "Z_S1",
   "strategy": "C",
-  "summary": "Zona Z_S1 com fill rate de 65%, detetados iogurtes e produtos lácteos. Problemas de prateleira vazia (severidade média) na terceira prateleira, lado esquerdo, e prateleira vazia (severidade alta) na prateleira inferior. Quarta-feira 17h38, estado crítico."
+  "summary": "Zona Z_S1 com fill rate de 65%, produtos lácteos (iogurtes) detetados, prateleira vazia na terceira prateleira (lado esquerdo, severidade média) e prateleira vazia na prateleira inferior (severidade alta), quarta-feira 17h38, estado crítico"
 }

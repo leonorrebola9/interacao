@@ -72,5 +72,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0009.jpg",
   "zone_id": "Z_S3",
   "strategy": "A",
-  "summary": "Zona Z_S3 com fill rate de 92%, detetadas diversas bebidas (energéticas, desportivas, proteicas, águas e refrigerantes). Problemas: espaços vazios em várias prateleiras inferiores (Portas 3, 4, 8, 9, 10) com severidade média, e uma garrafa de água desalinhada na prateleira inferior, centro-direita da Porta 4 com severidade baixa. Inspeção de 10 de junho de 2026 às 18h46, estado geral warning."
+  "summary": "Prateleiras inferiores da zona Z_S3 com fill rate de 92%, contendo bebidas (energéticas, café, desportivas, batidos de proteína, águas aromatizadas, água de coco, água engarrafada, refrigerantes). Foram detetados vários espaços vazios de severidade média nas Portas 3 (para Bai, Vitaminwater), 4, 8, 9 (para águas) e 10 (para bebidas energéticas). Adicionalmente, uma garrafa de água desalinhada foi encontrada na Porta 4, centro-direita, com severidade baixa. Inspeção realizada quarta-feira 18h46, estado geral warning."
 }
