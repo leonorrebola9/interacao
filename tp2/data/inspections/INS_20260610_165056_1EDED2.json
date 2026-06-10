@@ -40,5 +40,6 @@
   "timestamp": "2026-06-10T16:50:56.046136+00:00",
   "image_path": "data\\images\\IMG_8998.jpg",
   "zone_id": "Z_S3",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Zona Z_S3 com fill rate de 88%, produtos de frango (cortes diversos, completo) detetados. Desalinhamento de pilhas de produtos (severidade baixa) no centro-direita das prateleiras superior, do meio e inferior. Quarta-feira 16h50, estado warning."
 }

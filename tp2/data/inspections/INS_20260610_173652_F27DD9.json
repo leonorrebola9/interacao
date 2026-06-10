@@ -23,5 +23,6 @@
   "timestamp": "2026-06-10T17:36:52.834627+00:00",
   "image_path": "data\\images\\IMG_8992.jpg",
   "zone_id": "Z_S4",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "Zona Z_S4 com fill rate de 75%, produtos de incontinência (fraldas, cuecas, toalhitas, cremes protetores), prateleira superior quase completamente vazia (severidade alta), quarta-feira 17h36, estado critical"
 }

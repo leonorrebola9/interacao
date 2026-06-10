@@ -49,5 +49,6 @@
   "timestamp": "2026-06-10T19:11:33.453962+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0027.jpg",
   "zone_id": "Z_S7",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S7 com fill rate de 78%, contendo produtos de higiene oral (pasta de dentes, elixir bucal, fio dental/escovas interdentais). Secções vazias detetadas na prateleira superior (lado esquerdo com severidade média, meio para o lado direito com severidade baixa), e nas prateleiras intermédias (segunda e terceira de cima, lado esquerdo, com severidade baixa). Quarta-feira 19h11, estado warning."
 }

@@ -1,3 +1,8 @@
+"""
+rag_memory.py
+Componente 3 — Memória histórica de inspeções com FAISS + embeddings Gemini
+"""
+
 import os
 import json
 import uuid
@@ -9,12 +14,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from google.genai.errors import ClientError
 import time
 
-# API
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
 MODEL = "gemini-2.5-flash"
 EMBEDDING_MODEL = "models/gemini-embedding-001"
 EMBEDDING_DIM = 3072
@@ -27,31 +31,28 @@ METADATA_PATH = os.path.join(VECTORSTORE_DIR, "metadata.pkl")
 os.makedirs(VECTORSTORE_DIR, exist_ok=True)
 os.makedirs(INSPECTIONS_DIR, exist_ok=True)
 
+
 # FAISS
-# Carrega o FAISS
 def load_index():
-    """Carrega o índice FAISS e metadata do disco, ou cria novos."""
     if os.path.exists(INDEX_PATH) and os.path.exists(METADATA_PATH):
         index = faiss.read_index(INDEX_PATH)
         with open(METADATA_PATH, "rb") as f:
             metadata = pickle.load(f)
         print(f"  [faiss] Índice carregado: {index.ntotal} entradas")
     else:
-        index = faiss.IndexFlatIP(EMBEDDING_DIM)  # Inner Product (cosine com vetores normalizados)
-        metadata = []  # lista de dicts com info de cada entrada
+        index = faiss.IndexFlatIP(EMBEDDING_DIM)
+        metadata = []
         print("  [faiss] Novo índice criado")
     return index, metadata
 
 def save_index(index, metadata):
-    """Guarda o índice FAISS e metadata no disco."""
     faiss.write_index(index, INDEX_PATH)
     with open(METADATA_PATH, "wb") as f:
         pickle.dump(metadata, f)
 
 
-# Embeddings via Gemini
+# Embeddings
 def get_embedding(text, max_retries=3):
-    """Gera embedding via Gemini API e normaliza para cosine similarity."""
     for attempt in range(max_retries):
         try:
             response = client.models.embed_content(
@@ -59,27 +60,22 @@ def get_embedding(text, max_retries=3):
                 contents=text
             )
             vec = np.array(response.embeddings[0].values, dtype=np.float32)
-            # normaliza para usar Inner Product como cosine similarity
             vec = vec / np.linalg.norm(vec)
             return vec
 
-        except ClientError as e:
-            if e.code in [429, 503]:
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
                 wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})...")
                 time.sleep(wait)
             else:
                 raise
-        except Exception as e:
-            print(f"  [aviso] Erro embedding (tentativa {attempt+1}): {e}")
-            if attempt == max_retries - 1:
-                raise
-            time.sleep(10)
 
     raise RuntimeError("Limite de tentativas excedido no embedding")
 
 
-# Sumário para a LLM
+# Sumário
 PROMPT_SUMMARY = """És um sistema de indexação de inspeções de prateleiras de supermercado.
 
 Dado o seguinte resultado de inspeção em JSON, gera um summary rico em termos semanticamente relevantes para recuperação futura.
@@ -98,11 +94,9 @@ Exemplo de bom summary:
 Exemplo de mau summary:
 "prateleira com problemas"
 
-Responde APENAS com o texto do summary, sem introdução, sem explicação, sem markdown.
-"""
+Responde APENAS com o texto do summary, sem introdução, sem explicação, sem markdown."""
 
 def generate_summary(inspection, max_retries=3):
-    """Gera um summary textual rico para indexação."""
     inspection_text = json.dumps(inspection, ensure_ascii=False, indent=2)
     prompt = f"{PROMPT_SUMMARY}\n\nInspeção:\n{inspection_text}"
 
@@ -115,10 +109,11 @@ def generate_summary(inspection, max_retries=3):
             )
             return response.text.strip()
 
-        except ClientError as e:
-            if e.code in [429, 503]:
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
                 wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})...")
                 time.sleep(wait)
             else:
                 raise
@@ -128,32 +123,21 @@ def generate_summary(inspection, max_retries=3):
 
 # Indexação
 def index_inspection(inspection):
-    """
-    Indexa uma inspeção no FAISS.
-    Estratégia híbrida: summary como chunk principal + metadata estruturada.
-    """
     inspection_id = inspection.get("inspection_id", str(uuid.uuid4()))
-
-    # carrega índice
     index, metadata = load_index()
 
-    # verifica se já está indexada
     if any(m["inspection_id"] == inspection_id for m in metadata):
         print(f"  [skip] {inspection_id} já indexada")
         return inspection_id
 
-    # gera summary
-    print(f"  A gerar summary para {inspection_id}...")
+    print(f"  A gerar summary para {inspection_id}")
     summary = generate_summary(inspection)
-    print(f"  Summary: {summary[:100]}...")
+    print(f"  Summary: {summary[:100]}")
     time.sleep(6)
 
-    # gera embedding
-    print(f"  A gerar embedding...")
+    print(f"  A gerar embedding")
     embedding = get_embedding(summary)
-    print(f"  Embedding gerado, dimensão: {len(embedding)}")
 
-    # metadata estruturada
     timestamp = inspection.get("timestamp", "")
     try:
         dt = datetime.fromisoformat(timestamp)
@@ -182,30 +166,25 @@ def index_inspection(inspection):
         "summary": summary
     }
 
-    # adiciona ao índice
     index.add(embedding.reshape(1, -1))
     metadata.append(meta)
-
-    # guarda
     save_index(index, metadata)
 
-    # guarda inspeção em disco
     path = os.path.join(INSPECTIONS_DIR, f"{inspection_id}.json")
     inspection["summary"] = summary
     with open(path, "w", encoding="utf-8") as f:
         json.dump(inspection, f, indent=2, ensure_ascii=False)
 
-    print(f"  [ok] Indexada: {inspection_id} | Total no índice: {index.ntotal}")
+    print(f"  [ok] Indexada: {inspection_id} | Total: {index.ntotal}")
     return inspection_id
 
 
 def index_directory(inspections_dir=None):
-    """Indexa todas as inspeções de uma pasta."""
     if inspections_dir is None:
         inspections_dir = INSPECTIONS_DIR
 
     files = list(Path(inspections_dir).glob("*.json"))
-    print(f"A indexar {len(files)} inspeções...")
+    print(f"A indexar {len(files)} inspeções")
 
     for i, path in enumerate(files):
         print(f"\n[{i+1}/{len(files)}] {path.name}")
@@ -216,15 +195,12 @@ def index_directory(inspections_dir=None):
 
 # Retrieval
 def retrieve(query, k=3, zone_filter=None):
-    """Recupera as k inspeções mais relevantes para uma query."""
     index, metadata = load_index()
 
     if index.ntotal == 0:
         return []
 
     query_embedding = get_embedding(query).reshape(1, -1)
-
-    # busca top-k*3 para depois filtrar por zona se necessário
     search_k = min(k * 3, index.ntotal)
     scores, indices = index.search(query_embedding, search_k)
 
@@ -234,7 +210,6 @@ def retrieve(query, k=3, zone_filter=None):
             continue
         meta = metadata[idx]
 
-        # filtro de zona
         if zone_filter and meta.get("zone_id") != zone_filter:
             continue
 
@@ -251,7 +226,7 @@ def retrieve(query, k=3, zone_filter=None):
     return retrieved
 
 
-# Query com síntese LLM
+# Query
 PROMPT_RAG_ANSWER = """És um assistente de análise de inspeções de prateleiras de supermercado.
 
 Com base nas inspeções históricas recuperadas abaixo, responde à query do gestor.
@@ -265,11 +240,9 @@ Regras:
 Inspeções recuperadas:
 {context}
 
-Query: {query}
-"""
+Query: {query}"""
 
 def query_memory(query, k=3, zone_filter=None, max_retries=3):
-    """Responde a uma query em linguagem natural usando o histórico de inspeções."""
     retrieved = retrieve(query, k=k, zone_filter=zone_filter)
 
     if not retrieved:
@@ -299,10 +272,11 @@ def query_memory(query, k=3, zone_filter=None, max_retries=3):
             )
             return response.text.strip(), retrieved
 
-        except ClientError as e:
-            if e.code in [429, 503]:
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
                 wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})")
                 time.sleep(wait)
             else:
                 raise
@@ -312,22 +286,14 @@ def query_memory(query, k=3, zone_filter=None, max_retries=3):
 
 # Estatísticas
 def get_stats():
-    """Retorna estatísticas do índice."""
     index, metadata = load_index()
     print(f"Total de inspeções indexadas: {index.ntotal}")
     return index.ntotal
 
 
+
 if __name__ == "__main__":
     import sys
-
-    if len(sys.argv) < 2:
-        print("Uso:")
-        print("  python src/rag_memory.py index <inspection.json>")
-        print("  python src/rag_memory.py index-dir [pasta]")
-        print("  python src/rag_memory.py query \"<pergunta>\" [k] [zona]")
-        print("  python src/rag_memory.py stats")
-        sys.exit(1)
 
     command = sys.argv[1]
 

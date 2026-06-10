@@ -22,5 +22,6 @@
   "timestamp": "2026-06-10T19:54:10.293781+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0030.jpg",
   "zone_id": "Z_S3",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S3 com fill rate de 95%, detetados refrigerantes (Pepsi, Mist Twst, Mountain Dew), com sinalização errada (misturadores de cocktails) acima de garrafas de Mountain Dew na prateleira superior do lado direito (severidade média), quarta-feira 19h54, estado warning"
 }

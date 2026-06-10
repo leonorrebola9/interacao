@@ -71,5 +71,6 @@
   "timestamp": "2026-06-10T18:46:58.683229+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0009.jpg",
   "zone_id": "Z_S3",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S3 com fill rate de 92%, detetadas diversas bebidas (energéticas, desportivas, proteicas, águas e refrigerantes). Problemas: espaços vazios em várias prateleiras inferiores (Portas 3, 4, 8, 9, 10) com severidade média, e uma garrafa de água desalinhada na prateleira inferior, centro-direita da Porta 4 com severidade baixa. Inspeção de 10 de junho de 2026 às 18h46, estado geral warning."
 }

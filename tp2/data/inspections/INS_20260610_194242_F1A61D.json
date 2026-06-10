@@ -27,5 +27,6 @@
   "timestamp": "2026-06-10T19:42:42.438680+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0028.jpg",
   "zone_id": "Z_S1",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S1 com fill rate de 95%, produtos de banho e higiene pessoal (sais de banho, sabonetes, esponjas, luvas de banho) detetados, problema de pouco stock (substocking) de sabonetes Dial na quinta prateleira, lado direito, com severidade baixa, quarta-feira 10 de junho 19h42, estado ok."
 }

@@ -22,5 +22,6 @@
   "timestamp": "2026-06-10T19:57:25.032890+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0037.jpg",
   "zone_id": "Z_S3",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S3 com fill rate de 90%, sabonete em barra desalinhado na quinta prateleira de cima (secções central e direita) com severidade média, produtos detetados: sabonete líquido, sabonete em barra e gel de banho, quarta-feira 19h57, estado warning."
 }

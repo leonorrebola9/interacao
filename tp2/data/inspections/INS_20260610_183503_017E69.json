@@ -32,5 +32,6 @@
   "timestamp": "2026-06-10T18:35:03.839975+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0003.jpg",
   "zone_id": "Z_S4",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S4 com fill rate de 95%, medicamentos de venda livre (analgésicos e soníferos) detetados. Prateleira vazia (severidade baixa) na prateleira superior, lado direito, junto à garrafa de ZzzQuil. Quarta-feira 18h35, estado warning."
 }

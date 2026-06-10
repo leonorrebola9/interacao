@@ -15,5 +15,6 @@
   "timestamp": "2026-06-10T19:57:04.513474+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0036.jpg",
   "zone_id": "Z_S2",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S2 com fill rate de 95%, produtos de higiene e limpeza (ambientadores, toalhitas de limpeza, produtos para a roupa, limpa-chãos, ambientadores têxteis, tira-nódoas) detetados. Nenhum problema encontrado. Quarta-feira 19h57, estado ok."
 }

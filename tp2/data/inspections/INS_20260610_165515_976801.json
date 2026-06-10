@@ -49,5 +49,6 @@
   "timestamp": "2026-06-10T16:55:15.123946+00:00",
   "image_path": "data\\images\\IMG_9048.jpg",
   "zone_id": "Z_S5",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Zona Z_S5 com fill rate de 95%, produtos de cereais de pequeno-almoço e biscoitos. Expositor a obstruir cereais na prateleira do meio (baixa severidade), etiqueta de preço desalinhada para cereais na prateleira superior, lado direito (baixa severidade), etiqueta de preço obscurecida para biscoitos na prateleira inferior, lado esquerdo (baixa severidade), e pack familiar (possivelmente higiene/limpeza) fora de lugar na prateleira do meio, lado direito (baixa severidade). Quarta-feira 16h55, estado warning."
 }

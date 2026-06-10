@@ -25,5 +25,6 @@
   "timestamp": "2026-06-10T18:41:18.535564+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0010.jpg",
   "zone_id": "Z_S4",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S4 com fill rate de 94%, exibindo produtos de cuidado para os pés, unhas, ferramentas de cuidado pessoal, vestuário de compressão, acessórios de banho e suplementos de saúde. Problema de prateleira vazia (falta de stock) detetado na prateleira superior, lado direito, com severidade baixa. Quarta-feira 18h, estado warning."
 }

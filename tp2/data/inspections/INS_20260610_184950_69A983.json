@@ -60,5 +60,6 @@
   "timestamp": "2026-06-10T18:49:50.933341+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0018.jpg",
   "zone_id": "Z_S5",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S5 com fill rate de 90%, contendo desodorizantes e produtos de higiene oral. Vários espaços vazios (severidade baixa a média) foram detetados no lado esquerdo das prateleiras superiores (1ª, 2ª, 3ª e 4ª de cima), afetando desodorizantes 'ROCK' e pastas de dentes 'Spry', 'Tom's' e 'Nature's Gate'. Pastas de dentes desalinhadas (severidade baixa) foram observadas em todas as prateleiras de pasta de dentes. Inspeção a quarta-feira 18h49, estado warning."
 }

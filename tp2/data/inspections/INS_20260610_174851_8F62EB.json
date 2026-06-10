@@ -16,5 +16,6 @@
   "timestamp": "2026-06-10T17:48:51.680289+00:00",
   "image_path": "data\\images\\IMG_9069.jpg",
   "zone_id": "Z_S6",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "zona Z_S6 com fill rate de 97%, produtos detetados: bebidas alcoólicas (Gin, Licores, Vinho do Porto, Whisky, Cocktails pré-misturados, Vermute, Espumantes), sem problemas encontrados, quarta-feira 17h48, estado ok"
 }

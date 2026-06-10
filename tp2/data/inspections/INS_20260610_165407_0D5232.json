@@ -80,5 +80,6 @@
   "timestamp": "2026-06-10T16:54:07.317944+00:00",
   "image_path": "data\\images\\IMG_9043.jpg",
   "zone_id": "Z_S5",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Inspeção da zona Z_S5, quarta-feira 16h54, com fill rate de 98%. Produtos detetados: bolachas, biscoitos, wafers, palitos de chocolate, biscoitos cobertos e crackers. Problemas: posição de 'Argolinhas' vazia na Prateleira Meio Superior (Nível 2), lado direito (severidade média); pilha de embalagens inclinada na Prateleira Superior (Nível 1), canto esquerdo (severidade baixa); saco 'ARTIACIO' inclinado na Prateleira Meio Superior (Nível 2), canto esquerdo (severidade baixa); caixa 'Balconi Wafers' recuada na Prateleira Meio Inferior (Nível 3), canto esquerdo (severidade baixa); letreiro 'Bolachas' torto acima da prateleira superior (severidade baixa); sinal '25%' amarrotado no canto superior esquerdo (severidade baixa); expositor 'Nacional' com rasgo perto do cavalo-marinho (severidade baixa). Estado geral: warning."
 }

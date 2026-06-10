@@ -38,5 +38,6 @@
   "timestamp": "2026-06-10T19:56:20.730630+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0034.jpg",
   "zone_id": "Z_S7",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S7 com fill rate de 92%, detetando escovas de dentes. Problemas de desalinhamento de baixa severidade: escova de dentes Systema rosa/roxa na prateleira superior, lado direito; várias escovas de dentes amarelas/douradas na segunda prateleira de cima, secção central; e a bandeira 'Member Price' com produtos adjacentes na terceira prateleira de cima, secção central. Quarta-feira 19h56, estado ok."
 }

@@ -52,5 +52,6 @@
   "timestamp": "2026-06-10T18:34:01.681509+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0000.jpg",
   "zone_id": "Z_S1",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S1 com fill rate de 83%, contendo produtos de café (instantâneo, moído/grão, engarrafado, xaropes, cremes) e chocolate quente. Problemas incluem várias secções vazias (alta severidade na prateleira 4 lado direito, média na prateleira 3 lado direito, baixa na prateleira 2 lado direito) e produtos desalinhados em todas as prateleiras (1 a 5) com severidade baixa. Quarta-feira 18h34, estado warning."
 }

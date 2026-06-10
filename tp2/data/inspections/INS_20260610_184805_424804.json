@@ -42,5 +42,6 @@
   "timestamp": "2026-06-10T18:48:05.884386+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0013.jpg",
   "zone_id": "Z_S7",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S7 com fill rate de 90%, contendo produtos de cuidado pessoal e beleza. Problemas incluem desalinhamento de produtos (Yes To, Olay, Burt's Bees, L'Oreal, Garnier) em várias prateleiras (segunda, terceira e quarta de cima para baixo) com severidade baixa. Adicionalmente, há falta de stock com dois espaços vazios na quarta prateleira de cima para baixo e vários espaços vazios na quinta prateleira de cima para baixo, ambos com severidade média. Inspeção realizada quarta-feira 18h48, estado geral warning."
 }

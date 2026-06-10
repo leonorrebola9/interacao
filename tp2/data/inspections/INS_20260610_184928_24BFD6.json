@@ -21,5 +21,6 @@
   "timestamp": "2026-06-10T18:49:28.201944+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0017.jpg",
   "zone_id": "Z_S4",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Prateleira superior da zona Z_S4 com fill rate de 95%, produtos detetados: refrigerantes e brinquedos. Um produto errado (brinquedos/pistolas de água) fora de posição na secção central, pendurado na borda frontal, com severidade baixa. Quarta-feira, 10 de junho de 2026 às 18h49, estado ok."
 }

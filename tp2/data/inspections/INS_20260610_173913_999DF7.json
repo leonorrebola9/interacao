@@ -30,5 +30,6 @@
   "timestamp": "2026-06-10T17:39:13.859394+00:00",
   "image_path": "data\\images\\IMG_9020.jpg",
   "zone_id": "Z_S1",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "Zona Z_S1 com fill rate de 85%, detetados iogurtes e bebidas lácteas, com pequenos espaços vazios entre produtos e produtos não frontados em várias secções (ambos com severidade baixa), quarta-feira 17h39, estado warning"
 }

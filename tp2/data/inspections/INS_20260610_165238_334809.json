@@ -40,5 +40,6 @@
   "timestamp": "2026-06-10T16:52:38.133378+00:00",
   "image_path": "data\\images\\IMG_9020.jpg",
   "zone_id": "Z_S1",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Zona Z_S1 com fill rate de 92%, detetados iogurtes e bebidas lácteas. Na prateleira superior, uma pilha de iogurtes Yoggi desalinhada no canto esquerdo (severidade baixa) e um espaço vazio na secção Danone 'magro' no lado direito (severidade baixa). Na prateleira inferior, embalagens de Mimosa 'SUPER POUPANÇA' desalinhadas no lado direito (severidade baixa). 10 de junho de 2026 às 16h52, estado ok."
 }

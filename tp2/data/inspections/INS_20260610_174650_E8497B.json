@@ -30,5 +30,6 @@
   "timestamp": "2026-06-10T17:46:50.781465+00:00",
   "image_path": "data\\images\\IMG_9043.jpg",
   "zone_id": "Z_S5",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "zona Z_S5 com fill rate de 92%, biscoitos e bolachas (Bolachas, Wafers, Mikado) detetados, pequena secção vazia (low) na terceira prateleira, secção central direita, quarta-feira 17h46, estado ok"
 }

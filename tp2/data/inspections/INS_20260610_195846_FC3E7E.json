@@ -52,5 +52,6 @@
   "timestamp": "2026-06-10T19:58:46.443623+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0041.jpg",
   "zone_id": "Z_S7",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S7 com fill rate de 88%, detetando medicamentos para constipações, gripes, alergias e cuidado ocular. Quatro pequenas falhas (prateleiras vazias) de baixa severidade foram detetadas, distribuídas da segunda à quinta prateleira de cima para baixo. Quarta-feira 19h58, estado warning."
 }

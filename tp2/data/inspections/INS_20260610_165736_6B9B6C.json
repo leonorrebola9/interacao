@@ -34,5 +34,6 @@
   "timestamp": "2026-06-10T16:57:36.829951+00:00",
   "image_path": "data\\images\\IMG_9072.jpg",
   "zone_id": "Z_S2",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Na zona Z_S2, com fill rate de 67%, foram detetados produtos de padaria/pastelaria pré-embalados e infusões/chás. Foram encontradas duas ruturas de stock (prateleiras vazias) de severidade alta: uma na prateleira 4 (quarta a partir do topo), secções do meio e da direita, e outra na prateleira 5 (inferior), toda a extensão. Inspeção realizada quarta-feira 16h57, estado crítico."
 }

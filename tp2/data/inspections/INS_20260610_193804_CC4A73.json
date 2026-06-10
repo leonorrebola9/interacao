@@ -71,5 +71,6 @@
   "timestamp": "2026-06-10T19:38:04.650650+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0019.jpg",
   "zone_id": "Z_S6",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S6 com fill rate de 88%, detetando produtos de limpeza (ambientadores, casa de banho, panos), corantes para tecido, lâmpadas LED, produtos para calçado e isqueiros, com espaços vazios (low) na prateleira superior (direita) e do meio (esquerda), e um espaço vazio (medium) na prateleira inferior (esquerda); e produtos desalinhados (low) nas prateleiras superior (Domol Raumfrischer), do meio (Domol Mini-Spray) e inferior (Domol WC-Duftsteine), realizada quarta-feira 19h38, estado warning."
 }

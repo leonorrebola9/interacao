@@ -60,5 +60,6 @@
   "timestamp": "2026-06-10T19:04:10.172352+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0023.jpg",
   "zone_id": "Z_S3",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S3 com fill rate de 67%, detetando produtos para bebé e maternidade (higiene, medicamentos, acessórios, algodão). Múltiplos espaços vazios (prateleira vazia) foram detetados: na segunda prateleira (lado direito, severidade média), na terceira prateleira (lado esquerdo e entre Vaseline/Sudocrem, severidade média), na quarta prateleira (lado esquerdo e entre produtos de algodão, severidade média) e na quinta prateleira (metade esquerda, severidade alta). Produtos desalinhados foram também encontrados em várias prateleiras (severidade baixa). Inspeção de 10 de junho de 2026 às 19h04, estado warning."
 }

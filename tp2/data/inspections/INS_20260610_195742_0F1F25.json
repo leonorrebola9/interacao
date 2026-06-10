@@ -29,5 +29,6 @@
   "timestamp": "2026-06-10T19:57:42.332406+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0038.jpg",
   "zone_id": "Z_S4",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S4 com fill rate de 88%, produtos como refrigerantes (Dr. Pepper, Pepsi, Mountain Dew) detetados, problema de prateleira vazia (Pepsi 2L em falta) na primeira prateleira, secção central, com severidade média, quarta-feira 10 de junho de 2026 às 19h57, estado warning."
 }

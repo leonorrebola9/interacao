@@ -33,5 +33,6 @@
   "timestamp": "2026-06-10T16:50:28.328745+00:00",
   "image_path": "data\\images\\IMG_8992.jpg",
   "zone_id": "Z_S4",
-  "strategy": "B"
+  "strategy": "B",
+  "summary": "Prateleira do meio da zona Z_S4 com fill rate de 88%, detetados produtos de incontinência (fraldas, cuecas, toalhitas, cremes de higiene). Problemas encontrados: espaço vazio significativo na secção esquerda da prateleira do meio (severidade média); etiqueta de preço em falta para 'TENA PROskin Slip M' na secção direita da prateleira do meio (severidade baixa). Inspeção realizada quarta-feira 16h50, estado geral warning."
 }

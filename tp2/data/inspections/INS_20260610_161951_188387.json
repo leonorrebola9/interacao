@@ -32,5 +32,6 @@
   "timestamp": "2026-06-10T16:19:51.512257+00:00",
   "image_path": "data/images/IMG_9058.jpg",
   "zone_id": "Z_S6",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "Zona Z_S6 com fill rate de 85%, duas prateleiras vazias no expositor central de Gin Mix (a terceira prateleira com severidade alta e a quarta prateleira com severidade média). Produtos detetados: Gin Mix, Vinho, Vinho do Porto e Copos. Quinta-feira 16h, estado warning."
 }

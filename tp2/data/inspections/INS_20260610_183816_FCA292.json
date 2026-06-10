@@ -69,5 +69,6 @@
   "timestamp": "2026-06-10T18:38:16.781649+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0008.jpg",
   "zone_id": "Z_S2",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S2 com fill rate de 92%, produtos de higiene feminina (pensos higiénicos ABC, Tesco, Pure Skin, Whisper/Always) detetados, problemas de desalinhamento de pacotes de pensos higiénicos ABC no lado direito de todas as prateleiras e de pensos higiénicos Tesco na prateleira inferior esquerda, ambos de baixa severidade, quarta-feira 18h38, estado ok."
 }

@@ -51,5 +51,6 @@
   "timestamp": "2026-06-10T19:58:20.835833+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0040.jpg",
   "zone_id": "Z_S6",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S6 com fill rate de 89%, detetados produtos de cuidado para os pés (palmilhas, cremes, pensos e desodorizantes). Problemas incluem vários espaços vazios de severidade média na segunda, terceira e quarta prateleiras de cima, nas secções central e direita, e produtos desalinhados de severidade baixa na segunda prateleira de cima, secção central. Inspeção realizada terça-feira 19h58, estado warning."
 }

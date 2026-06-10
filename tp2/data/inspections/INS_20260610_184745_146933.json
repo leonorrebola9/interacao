@@ -26,5 +26,6 @@
   "timestamp": "2026-06-10T18:47:45.041326+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0012.jpg",
   "zone_id": "Z_S6",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S6 com fill rate de 95%, vários tipos de refrigerantes (garrafas, latas, diet, ginger ale, root beer, lima-limão, sabores de fruta). Produto desalinhado (latas) na quarta prateleira de cima, secções esquerda e central, com severidade baixa. Quarta-feira 18h47, estado ok."
 }

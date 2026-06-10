@@ -100,5 +100,6 @@
   "timestamp": "2026-06-10T19:56:47.133512+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0035.jpg",
   "zone_id": "Z_S1",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S1 com fill rate de 92%, contendo produtos para café e chocolate (xaropes, leites maltados, cremes, misturas de chocolate quente, café instantâneo, filtros, adoçantes), com falta de stock em três prateleiras superiores direitas (severidade média), desalinhamento de produtos (cremes, chocolate quente, Nesquik) e etiquetas de preço dobradas/tortas em várias prateleiras e lados (severidade baixa), inspecionada na quarta-feira, 10 de junho de 2026, 19h56, estado warning."
 }

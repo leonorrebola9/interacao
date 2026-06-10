@@ -43,5 +43,6 @@
   "timestamp": "2026-06-10T19:54:58.494332+00:00",
   "image_path": "data\\raw\\sku110k\\sku_0032.jpg",
   "zone_id": "Z_S5",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S5 com fill rate de 96%, detetadas bebidas (refrigerantes e similares) e sementes de girassol; problemas incluem desalinhamento de garrafas e packs de 12 em todas as prateleiras (severidade média), e um expositor de sementes de girassol fora de lugar na segunda prateleira, lado direito (severidade baixa); quarta-feira 19h54, estado geral ok."
 }

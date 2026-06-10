@@ -32,5 +32,6 @@
   "timestamp": "2026-06-10T17:47:14.754071+00:00",
   "image_path": "data\\images\\IMG_9047.jpg",
   "zone_id": "Z_S5",
-  "strategy": "C"
+  "strategy": "C",
+  "summary": "Zona Z_S5 com fill rate de 92%, produtos detetados incluem cereais, flocos de chocolate, arroz tufado e cappuccino. Problemas encontrados: Nescafé Cappuccino fora de posição na terceira prateleira, centro-direita (severidade média); embalagens de cereais desalinhadas na prateleira inferior, centro-esquerda (severidade baixa). Inspeção de quarta-feira 17h47, estado warning."
 }
