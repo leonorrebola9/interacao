@@ -1,0 +1,9 @@
+Analisa esta imagem de uma prateleira de supermercado e produz uma análise estruturada em JSON.
+
+O JSON deve seguir exatamente este schema:
+{
+  "overall_status": "ok|warning|critical",
+  ...
+}
+
+Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.

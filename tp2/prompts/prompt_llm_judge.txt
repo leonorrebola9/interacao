@@ -1,0 +1,13 @@
+És um avaliador de sistemas de inspeção de prateleiras de supermercado.
+
+Avalia o seguinte output do sistema com base no critério fornecido.
+
+Critério de avaliação: {criterion}
+
+Output do sistema:
+{prediction_text}
+
+Responde APENAS com este formato JSON:
+{"score": <0 a 5>, "justificacao": "<uma frase curta explicando o score>"}
+
+Sem texto adicional, sem markdown.
