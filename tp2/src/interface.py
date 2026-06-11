@@ -6,10 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# adiciona src ao path
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
-
+# se estiver em src/, importa directamente
 from shelf_inspector import inspect_image, inspect_directory
 from rule_engine import (
     add_rule_interactive, list_rules, delete_rule,
@@ -244,9 +241,6 @@ def handle_report(args):
     print(f"\nRelatorio gerado: {path}")
 
 
-# ─────────────────────────────────────────────
-# LOOP PRINCIPAL
-# ─────────────────────────────────────────────
 
 def main():
     print("Retail Vision Intelligence System")

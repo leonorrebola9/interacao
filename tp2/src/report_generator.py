@@ -208,10 +208,10 @@ def generate_split_report(inspections_dir="./data/inspections", session_name=Non
     print(f"Grupo 1 (fotos próprias): {len(group1)} inspeções")
     print(f"Grupo 2 (SKU): {len(group2)} inspeções")
 
-    print("\nA gerar relatório — Parte 1...")
+    print("\nA gerar relatório — Parte 1")
     report1, _ = generate_full_report(group1, session_name=f"{session_name}_part1")
 
-    print("\nA gerar relatório — Parte 2...")
+    print("\nA gerar relatório — Parte 2")
     report2, _ = generate_full_report(group2, session_name=f"{session_name}_part2")
 
     # concatena
@@ -240,7 +240,7 @@ if __name__ == "__main__":
                 data = json.load(f)
             inspections.append(data)
         print(f"Carregadas {len(inspections)} inspeções de {folder}")
-        
+
     else:
         for path in sys.argv[1:]:
             with open(path, encoding="utf-8") as f:
