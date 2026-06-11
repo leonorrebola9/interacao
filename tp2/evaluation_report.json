@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-06-11T10:38:14.007668+00:00",
+  "images_dir": "data/images",
+  "visual": {
+    "A": {
+      "issue_detection_rate": 0.846,
+      "false_positive_rate": 0.373,
+      "severity_accuracy": 0.708,
+      "json_parse_rate": 1,
+      "images_evaluated": 17
+    },
+    "B": {
+      "issue_detection_rate": 0.692,
+      "false_positive_rate": 0.691,
+      "severity_accuracy": 0.611,
+      "json_parse_rate": 1,
+      "images_evaluated": 17
+    },
+    "C": {
+      "issue_detection_rate": 0.846,
+      "false_positive_rate": 0.186,
+      "severity_accuracy": 0.625,
+      "json_parse_rate": 1,
+      "images_evaluated": 17
+    }
+  },
+  "rag": {
+    "recall_at_k": 0.6,
+    "faithfulness": 4.4,
+    "answer_relevance": 4.8,
+    "k": 3,
+    "queries_evaluated": 5,
+    "hits": 3,
+    "per_query": [
+      {
+        "query": "prateleira vazia zona Z_S1",
+        "relevant_ids": [
+          "INS_20260610_173806_3A2E5E",
+          "INS_20260610_165208_23E58F"
+        ],
+        "retrieved_ids": [
+          "INS_20260610_173652_F27DD9",
+          "INS_20260610_183625_F87085",
+          "INS_20260610_174650_E8497B"
+        ],
+        "hit": false,
+        "faithfulness": 4,
+        "answer_relevance": 5
+      },
+      {
+        "query": "produto fora do lugar cereais wrong product",
+        "relevant_ids": [
+          "INS_20260610_161601_44624E",
+          "INS_20260610_161951_188387"
+        ],
+        "retrieved_ids": [
+          "INS_20260610_174714_F38058",
+          "INS_20260610_165440_9BE711",
+          "INS_20260610_184928_24BFD6"
+        ],
+        "hit": false,
+        "faithfulness": 3,
+        "answer_relevance": 4
+      },
+      {
+        "query": "prateleira vazia zona Z_S2 padaria",
+        "relevant_ids": [
+          "INS_20260610_165736_6B9B6C",
+          "INS_20260610_174914_CE3289"
+        ],
+        "retrieved_ids": [
+          "INS_20260610_174650_E8497B",
+          "INS_20260610_174914_CE3289",
+          "INS_20260610_165736_6B9B6C"
+        ],
+        "hit": true,
+        "faithfulness": 5,
+        "answer_relevance": 5
+      },
+      {
+        "query": "fill rate baixo zona Z_S6 vinhos destilados",
+        "relevant_ids": [
+          "INS_20260610_161601_44624E",
+          "INS_20260610_174851_8F62EB"
+        ],
+        "retrieved_ids": [
+          "INS_20260610_174851_8F62EB",
+          "INS_20260610_165623_1ACCAC",
+          "INS_20260610_161601_44624E"
+        ],
+        "hit": true,
+        "faithfulness": 5,
+        "answer_relevance": 5
+      },
+      {
+        "query": "produto tombado misaligned detergentes limpeza",
+        "relevant_ids": [
+          "INS_20260610_175625_1AD94A",
+          "INS_20260610_175145_08E92A"
+        ],
+        "retrieved_ids": [
+          "INS_20260610_175625_1AD94A",
+          "INS_20260610_175145_08E92A",
+          "INS_20260610_195704_39CC98"
+        ],
+        "hit": true,
+        "faithfulness": 5,
+        "answer_relevance": 5
+      }
+    ]
+  },
+  "rule_engine": {
+    "rule_parse_rate": 0.8,
+    "rule_correctness": 1,
+    "ambiguity_detection": 1,
+    "tests_run": 5
+  },
+  "llm_judge": {
+    "report_evaluated": "report_20260611_091831.md",
+    "average_score": 4.67,
+    "max_score": 5,
+    "criteria_scores": [
+      5,
+      5,
+      4
+    ]
+  }
+}

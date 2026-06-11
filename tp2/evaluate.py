@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-2.5-flash"
 
 VALID_ISSUE_TYPES = ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"]
 SEVERITY_ORDER = {"low": 0, "medium": 1, "high": 2}
@@ -173,31 +173,67 @@ RAG_QUERIES = [
 ]
 
 def evaluate_rag(k=3):
-    from rag_memory import retrieve
+    from rag_memory import retrieve, query_memory
 
     recall_hits = 0
+    faithfulness_scores = []
+    relevance_scores = []
+
     print(f"\nA avaliar RAG com {len(RAG_QUERIES)} queries (Recall@{k})")
 
     results = []
     for item in RAG_QUERIES:
         query = item["query"]
         relevant_ids = item["relevant_ids"]
+
+        # Recall@k
         retrieved = retrieve(query, k=k)
         retrieved_ids = [r["inspection_id"] for r in retrieved]
         hit = any(rid in retrieved_ids for rid in relevant_ids)
         if hit:
             recall_hits += 1
-        print(f"  Query: \"{query[:50]}\" — {'HIT ✓' if hit else 'MISS ✗'}")
+        print(f"  Query: \"{query[:50]}\" — {'HIT ✓' if hit else 'MISS ✗'}", end=" ")
+
+        # gera resposta RAG
+        answer, sources = query_memory(query, k=k)
+
+        # Faithfulness — as afirmações da resposta são suportadas pelos chunks?
+        if sources:
+            context = " ".join([s["summary"] for s in sources])
+            faith_result = llm_judge(
+                f"Resposta: {answer}\n\nChunks recuperados: {context[:1000]}",
+                "As afirmações na resposta são suportadas pelos chunks recuperados? Avalia de 0 (nada suportado) a 5 (tudo suportado)."
+            )
+            faithfulness_scores.append(faith_result["score"])
+            time.sleep(4)
+
+        # Answer Relevance — a resposta responde à query?
+        rel_result = llm_judge(
+            f"Query: {query}\n\nResposta: {answer}",
+            "A resposta responde diretamente à query? Avalia de 0 (não responde) a 5 (responde completamente)."
+        )
+        relevance_scores.append(rel_result["score"])
+        print(f"Faith: {faithfulness_scores[-1] if faithfulness_scores else 'N/A'}/5 | Rel: {rel_result['score']}/5")
+        time.sleep(4)
+
         results.append({
             "query": query,
             "relevant_ids": relevant_ids,
             "retrieved_ids": retrieved_ids,
-            "hit": hit
+            "hit": hit,
+            "answer": answer[:200],
+            "faithfulness": faithfulness_scores[-1] if faithfulness_scores else None,
+            "answer_relevance": rel_result["score"]
         })
 
     recall_at_k = recall_hits / len(RAG_QUERIES) if RAG_QUERIES else 0.0
+    avg_faith = sum(faithfulness_scores) / len(faithfulness_scores) if faithfulness_scores else None
+    avg_rel = sum(relevance_scores) / len(relevance_scores) if relevance_scores else None
+
     return {
         "recall_at_k": round(recall_at_k, 3),
+        "faithfulness": round(avg_faith, 2) if avg_faith is not None else None,
+        "answer_relevance": round(avg_rel, 2) if avg_rel is not None else None,
         "k": k,
         "queries_evaluated": len(RAG_QUERIES),
         "hits": recall_hits,
@@ -418,6 +454,16 @@ def main():
     parser.add_argument("--skip-judge", action="store_true", help="Salta LLM-as-Judge")
     args = parser.parse_args()
 
+    if os.path.exists(args.output):
+        with open(args.output, encoding="utf-8") as f:
+            evaluation_results = json.load(f)
+        print(f"A carregar resultados existentes de {args.output}")
+    else:
+        evaluation_results = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "images_dir": args.images_dir,
+    }
+        
     evaluation_results = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "images_dir": args.images_dir,
