@@ -373,12 +373,16 @@ def evaluate_reports_with_judge(reports_dir="./data/reports"):
         "As recomendações são específicas e ordenadas por urgência?"
     ]
 
-    report_files = list(Path(reports_dir).glob("*.md"))
+    # avalia o relatório mais recente
+    report_files = [
+        p for p in Path(reports_dir).glob("*.md")
+        if "part1" not in p.name and "part2" not in p.name
+    ]
+    
     if not report_files:
-        print("Nenhum relatório encontrado.")
+        print("Nenhum relatório final encontrado.")
         return {}
 
-    # avalia o relatório mais recente
     report_path = sorted(report_files)[-1]
     print(f"\nA avaliar relatório: {report_path.name}")
 
@@ -401,8 +405,6 @@ def evaluate_reports_with_judge(reports_dir="./data/reports"):
         "criteria_scores": scores
     }
 
-
-# ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Harness de avaliação do sistema")
