@@ -53,5 +53,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0041.jpg",
   "zone_id": "Z_S7",
   "strategy": "A",
-  "summary": "Zona Z_S7 com fill rate de 88%, detetando medicamentos para constipações, gripes, alergias e cuidado ocular. Quatro pequenas falhas (prateleiras vazias) de baixa severidade foram detetadas, distribuídas da segunda à quinta prateleira de cima para baixo. Quarta-feira 19h58, estado warning."
+  "summary": "prateleira da zona Z_S7 com fill rate de 88%, contendo produtos de saúde como medicamentos para constipações, gripes, alergias, sprays nasais, produtos para os olhos e lentes de contacto, e alívio para tosse e garganta. Foram detetadas quatro pequenas falhas (espaços vazios) de baixa severidade, distribuídas pela segunda, terceira, quarta e quinta prateleiras de cima para baixo. Inspeção realizada quarta-feira 19h58, estado warning."
 }

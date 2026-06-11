@@ -53,5 +53,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0042.jpg",
   "zone_id": "Z_S1",
   "strategy": "A",
-  "summary": "Zona Z_S1 com fill rate de 79%, com produtos de higiene pessoal (desodorizantes, produtos para cabelo, loções corporais, toalhitas). Prateleiras vazias (severidade média) em várias prateleiras do lado direito, produtos desalinhados (geleias, frascos) em várias prateleiras (severidade baixa), mercadoria pendurada desarrumada (acessórios de cabelo) na área da prateleira 4-5, lado direito (severidade baixa), e uma embalagem grande amarela (toalhitas) fora de lugar na prateleira 9, lado direito (severidade baixa). Quarta-feira 19h59, estado warning."
+  "summary": "Zona Z_S1 com fill rate de 79%, detetados produtos de higiene pessoal e beleza (desodorizantes, produtos para cabelo, loções corporais, toalhitas). Problemas encontrados: prateleiras vazias em múltiplas prateleiras do lado direito (severidade média). Adicionalmente, com severidade baixa, produtos desalinhados em várias prateleiras (especialmente 9 e 10), mercadoria pendurada (acessórios de cabelo) desarrumada na área das prateleiras 4-5, lado direito, e uma embalagem amarela (possivelmente toalhitas) colocada de forma desorganizada na prateleira 9, lado direito. Quarta-feira 19h59, estado warning."
 }

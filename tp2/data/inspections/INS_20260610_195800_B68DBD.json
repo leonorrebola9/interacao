@@ -37,5 +37,5 @@
   "image_path": "data\\raw\\sku110k\\sku_0039.jpg",
   "zone_id": "Z_S5",
   "strategy": "A",
-  "summary": "Prateleira 4 da zona Z_S5 com fill rate de 97%, produtos de ambientação e velas. Problemas: ambientadores em spray desalinhados no lado esquerdo e embalagens de chás de vela desalinhadas no lado direito, ambos com severidade baixa. Quarta-feira 19h58, estado warning."
+  "summary": "Zona Z_S5 com fill rate de 97%, produtos como ambientadores, velas e luzes de chá. Ambientadores em spray desalinhados no lado esquerdo da prateleira 4 e embalagens de luzes de chá desalinhadas no lado direito da prateleira 4, ambos com severidade baixa. Quarta-feira 19h58, estado warning."
 }
