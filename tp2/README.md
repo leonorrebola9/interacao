@@ -15,6 +15,7 @@ Este projeto implementa um sistema de inspeção contínua de prateleiras de sup
 ## Estrutura do trabalho
 ```
 tp2/
+├── archive/
 ├── data/
 │   ├── annotations/        — ground truth das imagens anotadas
 │   ├── images/             — dataset de imagens (SKU-110K + fotos próprias)
