@@ -15,14 +15,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.0-flash"
 
 VALID_ISSUE_TYPES = ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"]
 SEVERITY_ORDER = {"low": 0, "medium": 1, "high": 2}
-GROUND_TRUTH_PATH = "./data/annotations/ground_truth.json"
 
-with open(GROUND_TRUTH_PATH, encoding="utf-8") as f:
-    GROUND_TRUTH = json.load(f)
+# ground truth carregado dinamicamente no main()
+GROUND_TRUTH = {}
+
+def load_ground_truth(path):
+    global GROUND_TRUTH
+    with open(path, encoding="utf-8") as f:
+        GROUND_TRUTH = json.load(f)
+    print(f"Ground truth carregado: {len(GROUND_TRUTH)} imagens de {path}")
 
 
 # ─── GROUND TRUTH ─────────────────────────────────────────────────────────────
@@ -452,8 +457,15 @@ def main():
     parser.add_argument("--skip-rag", action="store_true", help="Salta avaliação RAG")
     parser.add_argument("--skip-rules", action="store_true", help="Salta avaliação Rule Engine")
     parser.add_argument("--skip-judge", action="store_true", help="Salta LLM-as-Judge")
+    parser.add_argument("--ground-truth",
+        default="./data/annotations/ground_truth.json",
+        help="Ficheiro de ground truth para avaliação")
     args = parser.parse_args()
 
+    # carrega ground truth
+    load_ground_truth(args.ground_truth)
+
+    # carrega resultados existentes ou cria novo
     if os.path.exists(args.output):
         with open(args.output, encoding="utf-8") as f:
             evaluation_results = json.load(f)
@@ -462,17 +474,14 @@ def main():
         evaluation_results = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "images_dir": args.images_dir,
-    }
-        
-    evaluation_results = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "images_dir": args.images_dir,
-    }
+        }
 
     # ── avaliação visual ──
     if not args.skip_visual:
-        all_images = list(Path(args.images_dir).glob("*.jpg")) + list(Path(args.images_dir).glob("*.png"))
-        annotated_images = [str(img) for img in all_images if load_annotation(str(img)) is not None]
+        all_images = list(Path(args.images_dir).glob("*.jpg")) + \
+                     list(Path(args.images_dir).glob("*.png"))
+        annotated_images = [str(img) for img in all_images 
+                           if load_annotation(str(img)) is not None]
 
         print(f"\nImagens encontradas: {len(all_images)}")
         print(f"Imagens com anotação: {len(annotated_images)}")
@@ -485,7 +494,8 @@ def main():
                 print(f"\n{'='*50}")
                 print(f"ESTRATÉGIA {strategy}")
                 print(f"{'='*50}")
-                result = evaluate_strategy(annotated_images, strategy, delay=args.delay)
+                result = evaluate_strategy(annotated_images, strategy, 
+                                          delay=args.delay)
                 evaluation_results["visual"][strategy] = result
 
             print(f"\n{'='*50}")
@@ -494,15 +504,19 @@ def main():
             print(f"{'Métrica':<25} {'A':>8} {'B':>8} {'C':>8}")
             print("-" * 50)
 
-            metrics = ["issue_detection_rate", "false_positive_rate", "severity_accuracy", "json_parse_rate"]
-            labels = ["Issue Detection Rate", "False Positive Rate", "Severity Accuracy", "JSON Parse Rate"]
+            metrics = ["issue_detection_rate", "false_positive_rate", 
+                      "severity_accuracy", "json_parse_rate"]
+            labels = ["Issue Detection Rate", "False Positive Rate", 
+                     "Severity Accuracy", "JSON Parse Rate"]
 
             for metric, label in zip(metrics, labels):
                 values = []
                 for s in strategies:
                     v = evaluation_results["visual"].get(s, {}).get(metric)
                     values.append(f"{v:.3f}" if v is not None else " N/A")
-                print(f"{label:<25} {values[0]:>8} {values[1] if len(values) > 1 else 'N/A':>8} {values[2] if len(values) > 2 else 'N/A':>8}")
+                print(f"{label:<25} {values[0]:>8} "
+                      f"{values[1] if len(values) > 1 else 'N/A':>8} "
+                      f"{values[2] if len(values) > 2 else 'N/A':>8}")
 
     # ── avaliação RAG ──
     if not args.skip_rag:
@@ -511,7 +525,8 @@ def main():
         print(f"{'='*50}")
         rag_results = evaluate_rag(k=3)
         evaluation_results["rag"] = rag_results
-        print(f"\nRecall@3: {rag_results['recall_at_k']} ({rag_results['hits']}/{rag_results['queries_evaluated']} queries)")
+        print(f"\nRecall@3: {rag_results['recall_at_k']} "
+              f"({rag_results['hits']}/{rag_results['queries_evaluated']} queries)")
 
     # ── avaliação rule engine ──
     if not args.skip_rules:
@@ -541,6 +556,9 @@ def main():
     print(f"\n{'='*50}")
     print(f"Resultados guardados em: {args.output}")
 
+
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
