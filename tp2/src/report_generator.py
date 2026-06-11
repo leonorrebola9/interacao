@@ -186,17 +186,61 @@ def generate_full_report(inspections, rules=None, session_name=None):
     return report, path
 
 
+def generate_split_report(inspections_dir="./data/inspections", session_name=None):
+    """
+    Gera relatório dividido em dois grupos e concatena num único ficheiro.
+    """
+    all_inspections = []
+    for path in Path(inspections_dir).glob("*.json"):
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        all_inspections.append(data)
+
+    # grupo 1: fotos próprias estratégia B
+    group1 = [i for i in all_inspections 
+              if i.get("strategy") == "B" 
+              and "sku_" not in str(i.get("image_path", ""))]
+
+    # grupo 2: SKU estratégia A
+    group2 = [i for i in all_inspections 
+              if "sku_" in str(i.get("image_path", ""))]
+
+    print(f"Grupo 1 (fotos próprias): {len(group1)} inspeções")
+    print(f"Grupo 2 (SKU): {len(group2)} inspeções")
+
+    print("\nA gerar relatório — Parte 1...")
+    report1, _ = generate_full_report(group1, session_name=f"{session_name}_part1")
+
+    print("\nA gerar relatório — Parte 2...")
+    report2, _ = generate_full_report(group2, session_name=f"{session_name}_part2")
+
+    # concatena
+    if session_name is None:
+        session_name = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    
+    final_report = f"{report1}\n\n---\n\n{report2}"
+    path = save_report(final_report, session_name)
+    print(f"\nRelatório final guardado: {path}")
+    return final_report, path
+
 if __name__ == "__main__":
     import sys
     inspections = []
 
-    if sys.argv[1] == "--dir":
-        folder = sys.argv[2] if len(sys.argv) > 2 else "./data/inspections_rag"
+    if sys.argv[1] == "--split":
+        folder = sys.argv[2] if len(sys.argv) > 2 else "./data/inspections"
+        report, path = generate_split_report(folder)
+        print(f"\nRelatório gerado: {path}")
+        sys.exit(0)  # ← importante!
+
+    elif sys.argv[1] == "--dir":
+        folder = sys.argv[2] if len(sys.argv) > 2 else "./data/inspections"
         for path in Path(folder).glob("*.json"):
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
             inspections.append(data)
         print(f"Carregadas {len(inspections)} inspeções de {folder}")
+        
     else:
         for path in sys.argv[1:]:
             with open(path, encoding="utf-8") as f:
