@@ -1,0 +1,50 @@
+Analisa esta imagem de uma prateleira de supermercado.
+
+Tipos de issue válidos (usa APENAS estes): empty_shelf, wrong_product, damaged, misaligned, label_missing, other
+Valores numéricos: affected_area_pct, shelf_fill_rate e confidence são sempre entre 0.0 e 1.0
+
+Aqui estão dois exemplos de análises anteriores corretas:
+
+EXEMPLO 1 — Prateleira normal:
+Imagem: prateleira de bebidas com garrafas de água alinhadas, etiquetas visíveis, sem espaços vazios.
+JSON:
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": ["água", "bebidas"],
+  "model_reasoning": "Prateleira completamente preenchida, produtos alinhados, sem anomalias visíveis."
+}
+
+EXEMPLO 2 — Prateleira com problemas:
+Imagem: prateleira de cereais com secção central vazia (4-5 posições) e uma caixa tombada no lado direito.
+JSON:
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira central, secção do meio",
+      "severity": "high",
+      "description": "4-5 posições consecutivas sem produto na secção central",
+      "confidence": 0.9,
+      "affected_area_pct": 0.35
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira central, lado direito",
+      "severity": "low",
+      "description": "Caixa de cereais tombada",
+      "confidence": 0.85,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.65,
+  "products_detected": ["cereais"],
+  "model_reasoning": "Secção central vazia e produto tombado identificados."
+}
+
+Agora analisa a imagem submetida e produz o JSON completo seguindo o mesmo padrão.
+Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.
