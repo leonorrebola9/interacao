@@ -1,0 +1,42 @@
+Analisa esta imagem de uma prateleira de supermercado seguindo estes passos de raciocínio obrigatórios:
+
+PASSO 1 — DESCRIÇÃO GERAL
+Descreve o que vês na imagem: quantas prateleiras, que tipo de produtos, contexto geral.
+
+PASSO 2 — ANÁLISE ZONA A ZONA
+Para cada prateleira visível (superior, meio, inferior), descreve:
+- Está cheia, parcialmente vazia ou completamente vazia?
+- Os produtos estão alinhados e bem posicionados?
+- Há produtos tombados, danificados ou fora do lugar?
+- As etiquetas de preço estão presentes e visíveis?
+
+PASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS
+Lista todas as anomalias encontradas com localização exata e severidade estimada.
+Nota: espaço no fim de uma prateleira não é empty_shelf. Só classifica como empty_shelf se houver posições claramente sem produto onde deveria haver.
+
+PASSO 4 — CLASSIFICAÇÃO FINAL
+Com base nos passos anteriores, produz o JSON final seguindo estas regras:
+- "affected_area_pct" entre 0.0 e 1.0 (ex: 0.35 = 35% da área)
+- "shelf_fill_rate" entre 0.0 e 1.0
+- "confidence" entre 0.0 e 1.0
+- Usa APENAS estes tipos: empty_shelf, wrong_product, damaged, misaligned, label_missing, other
+
+{
+  "overall_status": "ok|warning|critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "descrição da localização na imagem",
+      "severity": "low|medium|high",
+      "description": "descrição em linguagem natural do problema",
+      "confidence": 0.0,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.0,
+  "products_detected": ["lista de categorias de produto visíveis"],
+  "model_reasoning": "resumo do raciocínio dos passos anteriores"
+}
+
+Escreve os 4 passos e termina com o JSON. Sem markdown, sem ```json à volta do JSON final.
