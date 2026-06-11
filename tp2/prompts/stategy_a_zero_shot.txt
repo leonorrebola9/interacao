@@ -3,7 +3,28 @@ Analisa esta imagem de uma prateleira de supermercado e produz uma análise estr
 O JSON deve seguir exatamente este schema:
 {
   "overall_status": "ok|warning|critical",
-  ...
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "descrição da localização na imagem",
+      "severity": "low|medium|high",
+      "description": "descrição em linguagem natural do problema",
+      "confidence": 0.0,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.0,
+  "products_detected": ["lista de categorias de produto visíveis"],
+  "model_reasoning": "explica aqui o teu raciocínio antes de classificar"
 }
+
+Regras importantes:
+- "affected_area_pct" é um valor entre 0.0 e 1.0 (ex: 0.35 significa 35% da área)
+- "shelf_fill_rate" é um valor entre 0.0 e 1.0
+- "confidence" é um valor entre 0.0 e 1.0
+- Usa APENAS estes tipos de issue: empty_shelf, wrong_product, damaged, misaligned, label_missing, other
+- Espaço no fim de uma prateleira não é empty_shelf — só classifica como tal se houver posições claramente sem produto onde deveria haver
+- Se não houver problemas, "issues" deve ser lista vazia e "overall_status" deve ser "ok"
 
 Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.
