@@ -15,10 +15,7 @@ MODEL = "gemini-2.5-flash"
 REPORTS_DIR = "./data/reports"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
-# ─────────────────────────────────────────────
-# PROMPT DO RELATÓRIO
-# ─────────────────────────────────────────────
-
+# Prompt para o relatório
 PROMPT_REPORT = """És um sistema de geração de relatórios de inspeção de prateleiras de supermercado.
 
 Gera um relatório de inspeção em Markdown com as seguintes secções obrigatórias:
@@ -54,10 +51,8 @@ Notificações de regras disparadas:
 Gera o relatório completo em Markdown. Sê direto e objetivo.
 """
 
-# ─────────────────────────────────────────────
-# GERAÇÃO DO RELATÓRIO
-# ─────────────────────────────────────────────
 
+# Relatório
 def generate_report(inspections, notifications=None, historical_context=None, max_retries=3):
     """
     Gera um relatório de inspeção em Markdown.
@@ -119,10 +114,11 @@ def generate_report(inspections, notifications=None, historical_context=None, ma
             )
             return response.text.strip()
 
-        except ClientError as e:
-            if e.code in [429, 503]:
+        except Exception as e:
+            err_str = str(e)
+            if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
                 wait = 35 + attempt * 15
-                print(f"  [aviso] Erro {e.code}, a aguardar {wait}s...")
+                print(f"  [aviso] Servidor indisponível, a aguardar {wait}s (tentativa {attempt+1}/{max_retries})...")
                 time.sleep(wait)
             else:
                 raise
@@ -145,10 +141,7 @@ def save_report(report_text, session_name=None):
     return path
 
 
-# ─────────────────────────────────────────────
-# GERAÇÃO DE RELATÓRIO COM CONTEXTO RAG
-# ─────────────────────────────────────────────
-
+# Geração de relatório com contexto RAG
 def generate_full_report(inspections, rules=None, session_name=None):
     """
     Gera relatório completo integrando RAG e Rule Engine.
@@ -193,26 +186,16 @@ def generate_full_report(inspections, rules=None, session_name=None):
     return report, path
 
 
-# ─────────────────────────────────────────────
-# EXECUÇÃO STANDALONE
-# ─────────────────────────────────────────────
-
 if __name__ == "__main__":
     import sys
-
-    if len(sys.argv) < 2:
-        print("Uso:")
-        print("  python src/report_generator.py <inspection.json> [inspection2.json ...]")
-        print("  python src/report_generator.py --dir <pasta_de_inspecoes>")
-        sys.exit(1)
-
     inspections = []
 
     if sys.argv[1] == "--dir":
-        folder = sys.argv[2] if len(sys.argv) > 2 else "./data/inspections"
+        folder = sys.argv[2] if len(sys.argv) > 2 else "./data/inspections_rag"
         for path in Path(folder).glob("*.json"):
             with open(path, encoding="utf-8") as f:
-                inspections.append(json.load(f))
+                data = json.load(f)
+            inspections.append(data)
         print(f"Carregadas {len(inspections)} inspeções de {folder}")
     else:
         for path in sys.argv[1:]:
