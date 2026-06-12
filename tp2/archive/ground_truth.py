@@ -1,3 +1,7 @@
+'''
+Ficheiro para juntar todas as anotações feitas
+'''
+
 import json
 from pathlib import Path
 

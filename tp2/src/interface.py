@@ -42,8 +42,9 @@ Comandos disponíveis:
     exit                                         — sai do sistema
 """
 
+
+# Parseia uma linha de comando
 def parse_command(line):
-    """Parseia uma linha de comando."""
     line = line.strip()
     if not line:
         return None, []

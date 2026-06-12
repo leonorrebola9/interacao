@@ -1,3 +1,10 @@
+'''
+Script de processamento em batch das imagens SKU-110K
+Gera inspeções para as primeiras 50 imagens do dataset com estratégia A,
+distribuindo ciclicamente pelas 7 zonas da loja.
+Usado para enriquecer o índice RAG com histórico adicional.
+'''
+
 from src.shelf_inspector import inspect_image
 from pathlib import Path
 import time

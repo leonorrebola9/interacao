@@ -52,15 +52,11 @@ Gera o relatório completo em Markdown. Sê direto e objetivo.
 """
 
 
-# Relatório
+# Relatório com:
+    # inspections: lista de dicts de inspeção
+    # notifications: lista de notificações geradas pelo rule_engine
+    # historical_context: lista de inspeções recuperadas do RAG
 def generate_report(inspections, notifications=None, historical_context=None, max_retries=3):
-    """
-    Gera um relatório de inspeção em Markdown.
-    
-    inspections: lista de dicts de inspeção
-    notifications: lista de notificações geradas pelo rule_engine
-    historical_context: lista de inspeções recuperadas do RAG
-    """
     if notifications is None:
         notifications = []
     if historical_context is None:
@@ -126,8 +122,8 @@ def generate_report(inspections, notifications=None, historical_context=None, ma
     raise RuntimeError("Limite de tentativas excedido")
 
 
+# Guarda o relatório
 def save_report(report_text, session_name=None):
-    """Guarda o relatório em Markdown."""
     if session_name is None:
         session_name = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     
@@ -141,11 +137,8 @@ def save_report(report_text, session_name=None):
     return path
 
 
-# Geração de relatório com contexto RAG
+# Geração de relatório com contexto RAG e Rule Engine
 def generate_full_report(inspections, rules=None, session_name=None):
-    """
-    Gera relatório completo integrando RAG e Rule Engine.
-    """
     import sys
     import os
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -186,10 +179,8 @@ def generate_full_report(inspections, rules=None, session_name=None):
     return report, path
 
 
+#     Gera relatório dividido em dois grupos e concatena num único ficheiro.
 def generate_split_report(inspections_dir="./data/inspections", session_name=None):
-    """
-    Gera relatório dividido em dois grupos e concatena num único ficheiro.
-    """
     all_inspections = []
     for path in Path(inspections_dir).glob("*.json"):
         with open(path, encoding="utf-8") as f:

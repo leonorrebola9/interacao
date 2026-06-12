@@ -30,8 +30,7 @@ def load_ground_truth(path):
     print(f"Ground truth carregado: {len(GROUND_TRUTH)} imagens de {path}")
 
 
-# ─── GROUND TRUTH ─────────────────────────────────────────────────────────────
-
+# Ground truth
 def load_annotation(image_path):
     image_name = Path(image_path).name
     entry = GROUND_TRUTH.get(image_name)
@@ -53,8 +52,7 @@ def get_zone(image_path):
     return entry.get("zone", "Z_S1") if entry else "Z_S1"
 
 
-# ─── MÉTRICAS ANÁLISE VISUAL ──────────────────────────────────────────────────
-
+# Métricas de análise visual
 def evaluate_inspection(prediction, ground_truth):
     pred_issues = prediction.get("issues", [])
     gt_issues = ground_truth.get("issues", [])
@@ -151,8 +149,7 @@ def evaluate_strategy(images, strategy, delay=6):
     }
 
 
-# ─── MÉTRICAS RAG ─────────────────────────────────────────────────────────────
-
+# Métricas RAG
 # queries com ground truth definido manualmente
 RAG_QUERIES = [
     {
@@ -246,8 +243,7 @@ def evaluate_rag(k=3):
     }
 
 
-# ─── MÉTRICAS RULE ENGINE ─────────────────────────────────────────────────────
-
+# Métricas do rul engine
 # regras de teste com dados sintéticos
 RULE_TESTS = [
     {
@@ -362,8 +358,7 @@ def evaluate_rule_engine(delay=4):
     }
 
 
-# ─── LLM-AS-JUDGE ─────────────────────────────────────────────────────────────
-
+# LLM-as-a-Judge
 def llm_judge(prediction_text, criterion, max_retries=3):
     prompt = f"""És um avaliador de sistemas de inspeção de prateleiras de supermercado.
 
@@ -406,8 +401,8 @@ Sem texto adicional, sem markdown."""
     return {"score": 0, "justificacao": "Limite de tentativas excedido"}
 
 
+# Avalia os relatórios gerados com LLM-as-a-Judge
 def evaluate_reports_with_judge(reports_dir="./data/reports"):
-    """Avalia relatórios gerados com LLM-as-Judge."""
     criteria = [
         "O relatório é claro, direto e acionável para um gestor de loja?",
         "O relatório cita corretamente os inspection_ids e datas?",

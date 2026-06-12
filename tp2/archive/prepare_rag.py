@@ -1,3 +1,11 @@
+'''
+Script de preparação das inspeções para indexação no RAG.
+Copia para data/inspections_rag/ apenas as inspeções relevantes:
+ - Fotos próprias: estratégias B e C (as mais detalhadas e precisas)
+ - Imagens SKU-110K: estratégia A (sem ground truth, não faz sentido comparar estratégias)
+A estratégia A das fotos próprias é excluída por ser redundante face às outras duas.
+'''
+
 import json
 import shutil
 from pathlib import Path

@@ -82,10 +82,8 @@ Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json.
 """
 
 
-# Conversão de regra
-def convert_rule(natural_language_text, max_retries=3):
-    """Converte uma regra em linguagem natural para JSON estruturado."""
-    
+# Conversão de regra de linguagem natural para JSON estruturado
+def convert_rule(natural_language_text, max_retries=3): 
     prompt = f"{PROMPT_RULE_CONVERSION}\n\nRegra do gestor: \"{natural_language_text}\""
 
     for attempt in range(max_retries):
@@ -138,7 +136,6 @@ def save_rule(rule):
 
 # Server para carregar as regras guardadas
 def load_rules():
-    """Carrega todas as regras guardadas."""
     rules = []
     for path in Path(RULES_DIR).glob("*.json"):
         with open(path, encoding="utf-8") as f:
@@ -147,7 +144,6 @@ def load_rules():
 
 # serve para carregar uma regra específica
 def load_rule_by_id(rule_id):
-    """Carrega uma regra específica pelo ID."""
     path = os.path.join(RULES_DIR, f"{rule_id}.json")
     if not os.path.exists(path):
         return None
@@ -156,15 +152,14 @@ def load_rule_by_id(rule_id):
 
 # Serve para apagar uma regra
 def delete_rule(rule_id):
-    """Apaga uma regra pelo ID."""
     path = os.path.join(RULES_DIR, f"{rule_id}.json")
     if os.path.exists(path):
         os.remove(path)
         return True
     return False
 
+# Lista todas as regras com resumo
 def list_rules():
-    """Lista todas as regras com resumo."""
     rules = load_rules()
     if not rules:
         print("Nenhuma regra guardada.")
@@ -176,11 +171,8 @@ def list_rules():
 
 
 # Execução de regras
+# Verifica se uma regra dispara face aos resultados de uma inspeção
 def check_rule(rule, inspection):
-    """
-    Verifica se uma regra dispara face aos resultados de uma inspeção.
-    Retorna (disparou: bool, motivo: str)
-    """
     conditions = rule.get("conditions", {})
 
     # filtro de zona
@@ -234,11 +226,9 @@ def check_rule(rule, inspection):
     return True, matching_issues
 
 
+# Executa todas as regras guardadas contra uma inspeção
+# Retorna lista de notificações geradas
 def execute_rules(inspection, rules=None):
-    """
-    Executa todas as regras guardadas contra uma inspeção.
-    Retorna lista de notificações geradas.
-    """
     if rules is None:
         rules = load_rules()
 

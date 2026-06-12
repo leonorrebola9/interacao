@@ -39,8 +39,7 @@ VALID_SEVERITIES = ["low", "medium", "high"]
 VALID_ISSUE_TYPES = ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"]
 
 
-# ─── PROMPTS ─────────────────────────────────────────────────────────────────
-
+# Prompts
 PROMPT_A_ZERO_SHOT = """Analisa esta imagem de uma prateleira de supermercado e produz uma análise estruturada em JSON.
 
 O JSON deve seguir exatamente este schema:
@@ -167,10 +166,9 @@ Agora analisa a imagem submetida e produz o JSON completo seguindo o mesmo padr�
 Responde APENAS com o JSON. Sem texto adicional, sem markdown, sem ```json."""
 
 
-# ─── ZONA A PARTIR DAS ANOTAÇÕES ─────────────────────────────────────────────
-
+# Zona a partir das anotações
+# Vai buscar a zona da imagem ao ficheiro de anotação correspondente.
 def get_zone_from_annotations(image_path, annotations_dir=ANNOTATIONS_DIR):
-    """Vai buscar a zona da imagem ao ficheiro de anotação correspondente."""
     image_name = Path(image_path).stem
     annotation_path = Path(annotations_dir) / f"{image_name}.json"
     if annotation_path.exists():
@@ -180,8 +178,7 @@ def get_zone_from_annotations(image_path, annotations_dir=ANNOTATIONS_DIR):
     return "Z_UNKNOWN"
 
 
-# ─── NORMALIZAÇÃO ────────────────────────────────────────────────────────────
-
+# Normalização
 def clean_response(data):
     status = data.get("overall_status", "warning").lower()
     data["overall_status"] = status if status in VALID_STATUSES else "warning"
@@ -236,8 +233,7 @@ def clean_response(data):
     return data
 
 
-# ─── CACHE ───────────────────────────────────────────────────────────────────
-
+# Cache
 def get_cache_path(image_path, strategy):
     md5 = hashlib.md5(open(image_path, "rb").read()).hexdigest()
     return os.path.join(CACHE_DIR, f"{md5}_{strategy}.json")
@@ -255,10 +251,8 @@ def save_to_cache(image_path, strategy, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-# ─── PERSISTÊNCIA ────────────────────────────────────────────────────────────
-
+# Guarda inspeção em data/inspections/ para o RAG indexar depois.
 def save_inspection(data):
-    """Guarda inspeção em data/inspections/ para o RAG indexar depois."""
     inspection_id = data.get("inspection_id", f"INS_{uuid.uuid4().hex[:12].upper()}")
     out_path = os.path.join(INSPECTIONS_DIR, f"{inspection_id}.json")
     with open(out_path, "w", encoding="utf-8") as f:
@@ -266,8 +260,7 @@ def save_inspection(data):
     return out_path
 
 
-# ─── PARSING ─────────────────────────────────────────────────────────────────
-
+# Parsing
 def parse_inspection_json(raw_text, image_path, zone_id, strategy):
     cot_reasoning = ""
     if strategy == "B":
@@ -294,7 +287,7 @@ def parse_inspection_json(raw_text, image_path, zone_id, strategy):
     return data
 
 
-# ─── INSPEÇÃO PRINCIPAL ───────────────────────────────────────────────────────
+# Inspeção às imagens
 def inspect_image(image_path, zone_id=None, strategy="A", max_retries=3):
     image_path = str(image_path)
 
@@ -348,10 +341,8 @@ def inspect_image(image_path, zone_id=None, strategy="A", max_retries=3):
     raise RuntimeError("Limite de tentativas excedido")
 
 
-# ─── CORRER AS 3 ESTRATÉGIAS NA MESMA IMAGEM ─────────────────────────────────
-
+# Corre as 3 estratégias na mesma imagem e devolve comparação
 def run_all_strategies(image_path, zone_id=None, delay=4):
-    """Corre as 3 estratégias na mesma imagem e devolve comparação."""
     results = {}
     for strategy in ["A", "B", "C"]:
         print(f"\nEstratégia {strategy}")
@@ -364,8 +355,7 @@ def run_all_strategies(image_path, zone_id=None, delay=4):
     return results
 
 
-# ─── AVALIAÇÃO DO GROUND TRUTH ────────────────────────────────────────────────
-
+# Ground truth
 def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=4):
     with open(gt_path, encoding="utf-8") as f:
         gt = json.load(f)
@@ -392,8 +382,7 @@ def run_ground_truth_eval(gt_path, images_dir, strategy="A", delay=4):
     print("\nConcluído!")
 
 
-# ─── INSPEÇÃO DE PASTA INTEIRA ────────────────────────────────────────────────
-
+# Inspeção da pasta
 def inspect_directory(images_dir, zone_id="Z_UNKNOWN", strategy="A", delay=6):
     images = list(Path(images_dir).glob("*.jpg"))
     print(f"A inspecionar {len(images)} imagens com estratégia {strategy}")
