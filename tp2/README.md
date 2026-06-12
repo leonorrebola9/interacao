@@ -71,6 +71,7 @@ tp2/
 ```bash
 git clone [https://github.com/leonorrebola9/interacao.git](https://github.com/leonorrebola9/interacao.git)
 cd interacao/tp2
+```
 
 2. Instalar os requirements
 ```bash
