@@ -32,5 +32,6 @@
   "timestamp": "2026-06-10T16:13:49.717950+00:00",
   "image_path": "data/images/IMG_9058.jpg",
   "zone_id": "Z_S6",
-  "strategy": "A"
+  "strategy": "A",
+  "summary": "Zona Z_S6 com fill rate de 88%, detetados produtos de Gin, Vinho, Vinho do Porto e sets de oferta. Uma prateleira vazia (severidade alta) na quarta prateleira do expositor central, lado esquerdo, e produtos desalinhados (severidade baixa) em várias prateleiras do expositor central e prateleiras de vinho à esquerda. Quarta-feira 10 de junho às 16h13, estado warning."
 }

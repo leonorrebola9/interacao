@@ -248,7 +248,6 @@ def execute_rules(inspection, rules=None):
             matching_issues = result
             template = rule.get("action", {}).get("notification_message", "Regra {rule_id} disparou na zona {zone_id}.")
 
-            # preenche template
             message = template.format(
                 rule_id=rule.get("rule_id", ""),
                 zone_id=inspection.get("zone_id", ""),
@@ -267,6 +266,21 @@ def execute_rules(inspection, rules=None):
                 "zone_id": inspection.get("zone_id"),
                 "timestamp": datetime.now(timezone.utc).isoformat()
             })
+
+    # guarda logs em disco — fora do loop, uma vez por inspeção
+    logs_dir = "./data/logs"
+    os.makedirs(logs_dir, exist_ok=True)
+    log_entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "inspection_id": inspection.get("inspection_id"),
+        "zone_id": inspection.get("zone_id"),
+        "rules_checked": len(rules),
+        "rules_triggered": [n["rule_id"] for n in notifications],
+        "logs": logs
+    }
+    log_path = os.path.join(logs_dir, f"log_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S_%f')}.json")
+    with open(log_path, "w", encoding="utf-8") as f:
+        json.dump(log_entry, f, indent=2, ensure_ascii=False)
 
     return notifications, logs
 

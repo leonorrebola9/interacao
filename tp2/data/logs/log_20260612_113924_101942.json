@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-06-12T11:39:24.101942+00:00",
+  "inspection_id": "INS_20260610_161349_BABC42",
+  "zone_id": "Z_S6",
+  "rules_checked": 10,
+  "rules_triggered": [],
+  "logs": [
+    "[SKIP] RULE_2DAE98 — regra inválida/ambígua",
+    "[CHECK] RULE_50DB0A — não disparou (zona não corresponde)",
+    "[CHECK] RULE_6B3F9E — não disparou (fill_rate 0.88 acima do threshold 0.5)",
+    "[SKIP] RULE_7B58A5 — regra inválida/ambígua",
+    "[CHECK] RULE_7C0C5B — não disparou (fill_rate 0.88 acima do threshold 0.7)",
+    "[CHECK] RULE_878F3E — não disparou (nenhum issue corresponde às condições)",
+    "[SKIP] RULE_98792B — regra inválida/ambígua",
+    "[CHECK] RULE_DC67B9 — não disparou (zona não corresponde)",
+    "[SKIP] RULE_E43654 — regra inválida/ambígua",
+    "[SKIP] RULE_EB381A — regra inválida/ambígua"
+  ]
+}
