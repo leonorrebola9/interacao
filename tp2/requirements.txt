@@ -1,3 +1,8 @@
 google-genai
 python-dotenv
 requests
+faiss-cpu
+numpy
+pandas
+sentence-transformers
+Pillow
