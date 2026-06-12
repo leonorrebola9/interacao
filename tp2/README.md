@@ -13,7 +13,7 @@
 Este projeto implementa um sistema de inspeção contínua de prateleiras de supermercado com memória histórica, capaz de analisar imagens com um modelo de linguagem multimodal, aprender as regras do gestor em linguagem natural e integrar a análise visual com dados de trajetória do Trabalho Prático 1.
 
 Para as imagens, foram usadas fotografias próprias e imagens provenientes do dataset SKU-110K (Goldman et al., 2019), 
-disponível em https://github.com/eg4000/SKU110K_CVPR19 e acedido via https://huggingface.co/datasets/PrashantDixit0/SKU-110K.
+acedido via https://huggingface.co/datasets/PrashantDixit0/SKU-110K.
 O uso respeita a licença académica do dataset original.
 
 ---
@@ -93,12 +93,18 @@ python src/interface.py
 **Comandos disponíveis na interface:**
 ```
 inspect <imagem.jpg> [zona] [estrategia]   — inspeciona uma imagem
+inspect-dir <pasta> [zona] [estrategia]    — inspeciona uma pasta de imagens
 add rule "<regra em português>"            — adiciona uma regra
 list rules                                 — lista todas as regras
+delete rule                                — elimina uma regra
+test rule                                  — testa uma regra numa imagem
 history "<pergunta>"                       — consulta histórico RAG
+history "<pergunta>" --zone <zona>         — filtra por zona
 report --dir <pasta>                       — gera relatório
 stats                                      — estatísticas do índice
+report <inspecao.json>                     — gera relatorio de inspecoes
 help                                       — mostra todos os comandos
+exit                                       — sai do sistema
 ```
 
 ### Componentes individuais
