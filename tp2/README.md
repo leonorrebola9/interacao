@@ -67,7 +67,12 @@ tp2/
 
 ## Requisitos
 
-1. Instalar os requirements
+1. Clonar o repositório
+```bash
+git clone [https://github.com/leonorrebola9/interacao.git](https://github.com/leonorrebola9/interacao.git)
+cd interacao/tp2
+
+2. Instalar os requirements
 ```bash
 pip install -r requirements.txt
 ```
