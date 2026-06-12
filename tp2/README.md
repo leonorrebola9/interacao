@@ -10,7 +10,9 @@
 ## Descrição do trabalho
 
 Este projeto implementa um sistema de inspeção contínua de prateleiras de supermercado com memória histórica, capaz de analisar imagens com um modelo de linguagem multimodal, aprender as regras do gestor em linguagem natural e integrar a análise visual com dados de trajetória do Trabalho Prático 1.
-Para as imagens, foram usadas fotografias próprias e imagens provenientes do dataset SKU-110 (https://huggingface.co/datasets/PrashantDixit0/SKU-110K)
+
+Para as imagens, foram usadas fotografias próprias e imagens provenientes do dataset SKU-110K (https://huggingface.co/datasets/PrashantDixit0/SKU-110K)
+
 ---
 
 ## Estrutura do trabalho
