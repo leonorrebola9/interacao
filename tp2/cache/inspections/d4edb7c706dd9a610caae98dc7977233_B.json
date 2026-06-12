@@ -1,0 +1,45 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira do meio, à direita, sobre as caixas de leite 'meio gordo'",
+      "severity": "low",
+      "description": "Um saco plástico transparente está solto e amassado em cima das caixas de leite.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira do meio, à direita, entre as caixas de leite Mimosa e as caixas de leite 'meio gordo'",
+      "severity": "medium",
+      "description": "Espaço vazio considerável na prateleira onde deveriam estar produtos.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira do meio, à esquerda, entre as caixas de leite Mimosa",
+      "severity": "low",
+      "description": "Uma caixa de leite Mimosa está ligeiramente tombada ou mal posicionada.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Flocos de Aveia",
+    "Bebidas Vegetais",
+    "Leite"
+  ],
+  "model_reasoning": "A imagem mostra um corredor de supermercado com um expositor central de flocos de aveia e prateleiras laterais com leite e bebidas vegetais. O expositor central está bem abastecido e organizado. As prateleiras do lado direito apresentam algumas anomalias menores, incluindo um espaço vazio notável na prateleira do meio, uma caixa de leite ligeiramente desalinhada e um saco plástico solto. No geral, a loja parece bem mantida, mas há algumas áreas que requerem atenção para otimizar a apresentação e a gestão de stock.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem apresenta um corredor de supermercado, focado num expositor central e em prateleiras adjacentes à direita. O expositor central, de cor branca, possui quatro níveis e está preenchido com sacos de flocos de aveia. Acima deste expositor, encontram-se caixas de bebidas vegetais da marca Alpro. À direita, há um conjunto de prateleiras que exibem caixas de leite (Mimosa, Terra Nostra) e mais bebidas vegetais. O teto do supermercado, com iluminação e sistemas de ventilação visíveis, está no topo da imagem. No lado esquerdo, uma coluna contém um extintor de incêndio e uma mangueira, e uma pessoa é parcialmente visível ao fundo. O chão é revestido com azulejos claros.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nExpositor Central (Flocos de Aveia):\n*   **Nível Superior (acima do expositor, caixas Alpro):** Está parcialmente preenchido, com as caixas de bebidas vegetais Alpro bem posicionadas e alinhadas. Não há produtos tombados ou danificados visíveis, nem etiquetas de preço para estes produtos.\n*   **Prateleira 1 (topo do expositor, sacos de aveia):** Está cheia. Os sacos de flocos de aveia \"Continente Equilíbrio\" estão bem posicionados e alinhados. Não há produtos danificados. Uma etiqueta de preço \"1,59€\" está visível.\n*   **Prateleira 2 (segundo nível do expositor, sacos de aveia):** Está cheia. Os sacos de flocos de aveia estão bem posicionados e alinhados. Não há produtos danificados ou etiquetas de preço visíveis.\n*   **Prateleira 3 (terceiro nível do expositor, sacos de aveia):** Está cheia. Os sacos de flocos de aveia estão bem posicionados e alinhados. Não há produtos danificados ou etiquetas de preço visíveis.\n*   **Prateleira 4 (base do expositor, sacos de aveia):** Está cheia. Os sacos de flocos de aveia estão bem posicionados e alinhados. Não há produtos danificados ou etiquetas de preço visíveis.\n\nPrateleiras à Direita (Leite e Bebidas Vegetais):\n*   **Prateleira Superior (topo, caixas de leite/bebidas):** Está maioritariamente cheia, com caixas de leite \"inteiro\" (Mimosa) e bebidas vegetais (Alpro, Terra Nostra) razoavelmente alinhadas. Não há produtos danificados ou etiquetas de preço visíveis.\n*   **Prateleira do Meio (leite Mimosa e \"meio gordo\"):** Está parcialmente vazia no centro, com um espaço notável sem produtos. As caixas de leite Mimosa à esquerda estão bem alinhadas, mas uma parece ligeiramente tombada. As caixas de leite \"meio gordo\" à direita estão empilhadas em paletes e cobertas por um saco plástico solto. Etiquetas de preço para o leite Mimosa (\"0,99€\" e \"0,95€\") estão visíveis.\n*   **Prateleira Inferior (leite \"meio gordo\"):** Está cheia, com caixas de leite \"meio gordo\" (embalagem verde) bem empilhadas em paletes. Não há produtos danificados ou etiquetas de preço visíveis.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **misaligned**:\n    *   **Localização**: Prateleira do meio, à direita, sobre as caixas de leite \"meio gordo\".\n    *   **Severidade**: low\n    *   **Descrição**: Um saco plástico transparente está solto e amassado em cima das caixas de leite \"meio gordo\", na parte de trás da prateleira.\n    *   **Confiança**: 0.9\n    *   **Área afetada**: 0.01\n\n2.  **empty_shelf**:\n    *   **Localização**: Prateleira do meio, à direita, entre as caixas de leite Mimosa e as caixas de leite \"meio gordo\".\n    *   **Severidade**: medium\n    *   **Descrição**: Há um espaço vazio considerável na prateleira onde deveriam estar produtos, indicando falta de stock ou necessidade de reposição.\n    *   **Confiança**: 0.95\n    *   **Área afetada**: 0.04\n\n3.  **misaligned**:\n    *   **Localização**: Prateleira do meio, à esquerda, entre as caixas de leite Mimosa.\n    *   **Severidade**: low\n    *   **Descrição**: Uma caixa de leite Mimosa está ligeiramente tombada ou mal posicionada em relação às outras.\n    *   **Confiança**: 0.8\n    *   **Área afetada**: 0.005\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira do meio, à direita, sobre as caixas de leite 'meio gordo'\",\n      \"severity\": \"low\",\n      \"description\": \"Um saco plástico transparente está solto e amassado em cima das caixas de leite.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Prateleira do meio, à direita, entre as caixas de leite Mimosa e as caixas de leite 'meio gordo'\",\n      \"severity\": \"medium\",\n      \"description\": \"Espaço vazio considerável na prateleira onde deveriam estar produtos.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.04\n    },",
+  "inspection_id": "INS_20260610_165135_C95A77",
+  "timestamp": "2026-06-10T16:51:35.771530+00:00",
+  "image_path": "data\\images\\IMG_9012.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "B"
+}

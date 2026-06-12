@@ -1,0 +1,30 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira inferior, na caixa de exposição verde de 'Gel Lejía Lixívia', uma garrafa na camada superior está ligeiramente inclinada.",
+      "severity": "low",
+      "description": "Uma garrafa de 'Gel Lejía Lixívia' está ligeiramente inclinada dentro da sua caixa de exposição, não estando perfeitamente na vertical.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "detergente para roupa",
+    "desengordurante",
+    "limpador de forno",
+    "limpador de madeira",
+    "limpador multiusos",
+    "lixívia em gel",
+    "vinagre de limpeza"
+  ],
+  "model_reasoning": "A imagem mostra prateleiras de supermercado bem abastecidas com produtos de limpeza e detergentes. A maioria dos produtos está bem organizada e alinhada. Foi detetada apenas uma pequena anomalia: uma garrafa de 'Gel Lejía Lixívia' na prateleira inferior está ligeiramente inclinada. O nível de preenchimento das prateleiras é muito alto, indicando um bom stock. Não há prateleiras vazias, produtos danificados ou etiquetas em falta visíveis.",
+  "inspection_id": "INS_20260610_163852_A862F3",
+  "timestamp": "2026-06-10T16:38:52.250064+00:00",
+  "image_path": "data\\images\\IMG_9074.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

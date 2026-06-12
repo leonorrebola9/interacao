@@ -1,0 +1,31 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "Prateleira inferior, segunda caixa da esquerda",
+      "severity": "low",
+      "description": "Produto (marshmallows) exposto numa caixa de transporte genérica ('FRAGIL') em vez de uma embalagem ou caixa de exposição de retalho adequada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Haribo",
+    "Minis Kids",
+    "Minis Crunchy",
+    "Chupa Chups",
+    "M&M's",
+    "Marshmallows",
+    "Snacks"
+  ],
+  "model_reasoning": "A imagem mostra uma prateleira de supermercado bem abastecida com doces e snacks em cinco níveis. A maioria dos produtos está bem organizada e com etiquetas de preço visíveis. A única anomalia identificada é a utilização de uma caixa de transporte genérica para expor um produto na prateleira inferior, o que afeta minimamente a apresentação geral.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma prateleira de supermercado dedicada a doces e snacks, localizada num corredor amplo com chão de azulejos claros. No fundo, à esquerda, são visíveis secções de produtos frescos e massas italianas em expositores refrigerados. À direita, um carrinho de compras vermelho está estacionado no corredor. O teto é alto, com estruturas metálicas expostas e iluminação fluorescente. A prateleira principal é composta por cinco níveis, todos bem abastecidos com uma variedade de produtos embalados.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Prateleira Superior (Nível 1):** Está cheia de sacos de \"Minis Kids\" (Os Simpsons). Os produtos estão bem alinhados e posicionados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (3.99€) estão presentes e visíveis para cada tipo de produto.\n*   **Prateleira Meio Superior (Nível 2):** Está cheia de caixas de \"Minis Kids\" e sacos de \"Minis Crunchy\" (Os Simpsons). Os produtos estão bem alinhados e posicionados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (3.99€) estão presentes e visíveis.\n*   **Prateleira Central (Nível 3):** Está cheia de caixas de \"Haribo\" (Funky e Ositos de Oro). Os produtos estão bem alinhados e posicionados dentro das suas caixas de exposição. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (1.84€) estão presentes e visíveis.\n*   **Prateleira Meio Inferior (Nível 4):** Está cheia de caixas de \"Chupa Chups\" (Minis). Os produtos estão bem alinhados e posicionados. Não há produtos tombados, danificados ou fora do lugar. As etiquetas de preço (3.49€) estão presentes e visíveis.\n*   **Prateleira Inferior (Nível 5):** Está cheia de caixas com sacos de \"M&M's\", um saco de marshmallows e outros snacks. Os produtos estão maioritariamente bem alinhados. Não há produtos tombados ou danificados. As etiquetas de preço (2.49€, 1.99€, 5.39€, 3.99€, 5.39€) estão presentes e visíveis.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n*   **ISS_001:** Na prateleira inferior, a segunda caixa da esquerda contém um produto (marshmallows cor-de-rosa) que está exposto numa caixa de transporte genérica de cartão, marcada como \"FRAGIL\", em vez de uma caixa de exposição de retalho padronizada ou embalagem própria.\n    *   Localização: Prateleira inferior, segunda caixa da esquerda.\n    *   Severidade: low (o produto está visível e acessível, mas a apresentação não é a ideal).\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n\n{\n  \"overall_status\": \"ok\",\n  \"issues\": [",
+  "inspection_id": "INS_20260610_165333_244847",
+  "timestamp": "2026-06-10T16:53:33.840638+00:00",
+  "image_path": "data\\images\\IMG_9035.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "B"
+}

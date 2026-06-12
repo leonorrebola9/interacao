@@ -1,0 +1,36 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Quarta prateleira, secção de 'Argolinhas' (caixas amarelas), lado direito.",
+      "severity": "medium",
+      "description": "Há um espaço vazio significativo na prateleira onde deveriam estar mais produtos 'Argolinhas'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Quarta prateleira, secção de 'Filipinos' (caixas rosa), lado direito.",
+      "severity": "medium",
+      "description": "Há um espaço vazio na prateleira onde deveriam estar mais produtos 'Filipinos'.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.04
+    }
+  ],
+  "shelf_fill_rate": 0.93,
+  "products_detected": [
+    "Bolachas",
+    "Wafers",
+    "Biscoitos de Chocolate",
+    "Biscoitos Crocantes"
+  ],
+  "model_reasoning": "A análise da imagem revela que a maioria das prateleiras está bem abastecida e organizada. No entanto, foram identificadas duas áreas com falta de stock na quarta prateleira, especificamente nas secções de 'Argolinhas' e 'Filipinos', resultando em espaços vazios visíveis. Estas lacunas afetam a taxa de preenchimento da prateleira e a apresentação geral. Não foram detetados produtos danificados, produtos errados ou etiquetas em falta. A taxa de preenchimento da prateleira foi calculada com base no número estimado de espaços de produto visíveis e os espaços vazios.",
+  "inspection_id": "INS_20260610_162905_4BE5ED",
+  "timestamp": "2026-06-10T16:29:05.741577+00:00",
+  "image_path": "data\\images\\IMG_9043.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

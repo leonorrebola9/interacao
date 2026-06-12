@@ -1,0 +1,63 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Terceira prateleira a contar do topo, secção central",
+      "severity": "medium",
+      "description": "A secção central da terceira prateleira a contar do topo está significativamente vazia, com apenas alguns produtos Gin Mix nas extremidades.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Primeira prateleira a contar do topo, canto superior direito",
+      "severity": "low",
+      "description": "Uma lata de Gin Mix no canto superior direito da primeira prateleira está ligeiramente desalinhada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Segunda prateleira a contar do topo, lado direito",
+      "severity": "low",
+      "description": "Algumas latas de Gin Mix no lado direito da segunda prateleira estão ligeiramente desalinhadas.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "label_missing",
+      "location": "Quinta prateleira a contar do topo, acima da garrafa de Moscatel (segunda da direita)",
+      "severity": "low",
+      "description": "Falta uma etiqueta de preço para a garrafa de Moscatel na quinta prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "label_missing",
+      "location": "Sexta prateleira a contar do topo, acima da caixa 'Lagrima' (segunda da direita)",
+      "severity": "low",
+      "description": "Falta uma etiqueta de preço para a caixa 'Lagrima' na sexta prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.86,
+  "products_detected": [
+    "Gin Mix (botânicos e kits de oferta)",
+    "Vinhos (Moscatel, Porto, tintos e brancos)",
+    "Kits de oferta Gold Grail"
+  ],
+  "model_reasoning": "O expositor está geralmente bem abastecido, mas uma porção significativa da terceira prateleira a contar do topo está vazia. Existem também alguns desalinhamentos menores e etiquetas de preço em falta. A apresentação geral é aceitável, mas pode ser melhorada com o reabastecimento da prateleira vazia e a correção dos problemas menores.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra um expositor vertical de produtos num corredor de supermercado, focado principalmente em produtos \"Gin Mix\" (botânicos e kits de oferta) e garrafas de vinho. O expositor tem múltiplas prateleiras. Ao fundo, são visíveis prateleiras refrigeradas com uma vasta seleção de garrafas de vinho e uma sinalização superior que indica \"CAVE\" e \"ALENTEJO / OUTRAS REGIÕES\", confirmando o contexto de uma secção de bebidas alcoólicas. No chão, há paletes com caixas de produtos.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Primeira prateleira (topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Parcialmente cheia, com algumas pequenas lacunas.\n    *   **Os produtos estão alinhados e bem posicionados?** Geralmente bem alinhados, com produtos empilhados em algumas secções.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Um produto no canto superior direito parece ligeiramente desalinhado. Não há produtos tombados ou danificados visíveis.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, as etiquetas de preço estão presentes e visíveis para a maioria dos produtos.\n\n*   **Segunda prateleira (a contar do topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Parcialmente cheia, com algumas pequenas lacunas.\n    *   **Os produtos estão alinhados e bem posicionados?** Geralmente bem alinhados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Alguns produtos no lado direito parecem ligeiramente desalinhados. Não há produtos tombados ou danificados visíveis.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, as etiquetas de preço estão presentes e visíveis.\n\n*   **Terceira prateleira (a contar do topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Parcialmente vazia, com uma grande secção central sem produtos.\n    *   **Os produtos estão alinhados e bem posicionados?** Os poucos produtos presentes nas extremidades estão razoavelmente alinhados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não há produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, as etiquetas de preço estão presentes e visíveis para os produtos existentes.\n\n*   **Quarta prateleira (a contar do topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Cheia, com caixas de kits de oferta \"Gin Mix\".\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, as caixas estão bem alinhadas.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não há produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, as etiquetas de preço estão presentes e visíveis.\n\n*   **Quinta prateleira (a contar do topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Cheia, com garrafas de vinho.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, as garrafas estão bem alinhadas.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não há produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** A maioria das etiquetas está presente, mas uma parece estar em falta acima de uma garrafa de Moscatel.\n\n*   **Sexta prateleira (a contar do topo):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Cheia, com garrafas de vinho e caixas de vinho do Porto.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, os produtos estão bem alinhados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não há produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** A maioria das etiquetas está presente, mas uma parece estar em falta acima de uma caixa \"Lagrima\".\n\n*   **Sétima prateleira (inferior):**\n    *   **Cheia, parcialmente vazia ou completamente vazia?** Cheia, com kits de oferta de copos e bebidas.\n    *   **Os produtos estão alinhados e bem posicionados?** Sim, os produtos estão bem alinhados.\n    *   **Há produtos tombados, danificados ou fora do lugar?** Não há produtos tombados, danificados ou fora do lugar.\n    *   **As etiquetas de preço estão presentes e visíveis?** Sim, as etiquetas de preço estão presentes e visíveis.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001**\n    *   **Tipo:** empty_shelf\n    *   **Localização:** Terceira prateleira a contar do topo, secção central.\n    *   **Severidade:** medium\n    *   **Descrição:** A secção central da terceira prateleira a contar do topo está significativamente vazia, com apenas alguns produtos Gin Mix nas extremidades.\n    *   **Estimativa de área afetada:** Aproximadamente 60% da área desta prateleira está vazia.\n\n2.  **ISS_002**\n    *   **Tipo:** misaligned\n    *   **Localização:** Primeira prateleira a contar do topo, canto superior direito.\n    *   **Severidade:** low\n    *   **Descrição:** Uma lata de Gin Mix no canto superior direito da primeira prateleira está ligeiramente desalinhada.\n    *   **Estimativa de área afetada:** Muito pequena, menos de 1% da prateleira.\n\n3.  **ISS_003**\n    *   **Tipo:** misaligned\n    *   **Localização:** Segunda prateleira a contar do topo, lado direito.\n    *   **Severidade:** low\n    *   **Descrição:** Algumas latas de Gin Mix no lado direito da segunda prateleira estão ligeiramente desalinhadas.\n    *   **Estimativa de área afetada:** Pequena, menos de 5% da prateleira.\n\n4.  **ISS_004**\n    *   **Tipo:** label_missing\n    *   **Localização:** Quinta prateleira a contar do topo, acima da garrafa de Moscatel (segunda da direita).\n    *   **Severidade:** low\n    *   **Descrição:** Falta uma etiqueta de preço para a garrafa de Moscatel na quinta prateleira.\n    *   **Estimativa de área afetada:** N/A para produto, mas uma única etiqueta em falta.\n\n5.  **ISS_005**\n    *   **Tipo:** label_missing\n    *   **Localização:** Sexta prateleira a contar do topo, acima da caixa 'Lagrima' (segunda da direita).\n    *   **Severidade:** low\n    *   **Descrição:** Falta uma etiqueta de preço para a caixa 'Lagrima' na sexta prateleira.\n    *   **Estimativa de área afetada:** N/A para produto, mas uma única etiqueta em falta.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Terceira prateleira a contar do topo, secção central\",\n      \"severity\": \"medium\",\n      \"description\": \"A secção central da terceira prateleira a contar do topo está significativamente vazia, com apenas alguns produtos Gin Mix nas extremidades.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.08\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Primeira prateleira a contar do topo, canto superior direito\",\n      \"severity\": \"low\",\n      \"description\": \"Uma lata de Gin Mix no canto superior direito da primeira prateleira está ligeiramente desalinhada.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.001\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"misaligned\",\n      \"location\": \"Segunda prateleira a contar do topo, lado direito\",\n      \"severity\": \"low\",\n      \"description\": \"Algumas latas de Gin Mix no lado direito da segunda prateleira estão ligeiramente desalinhadas.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.002\n    },\n    {\n      \"issue_id\": \"ISS_004\",\n      \"type\": \"label_missing\",\n      \"location\": \"Quinta prateleira a contar do topo, acima da garrafa de Moscatel (segunda da direita)\",\n      \"severity\": \"low\",\n      \"description\": \"Falta uma etiqueta de preço para a garrafa de Moscatel na quinta prateleira.\",\n      \"confidence\": 0.90,\n      \"affected_area_pct\": 0.0001\n    },",
+  "inspection_id": "INS_20260610_161601_44624E",
+  "timestamp": "2026-06-10T16:16:01.798386+00:00",
+  "image_path": "data/images/IMG_9058.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "B"
+}

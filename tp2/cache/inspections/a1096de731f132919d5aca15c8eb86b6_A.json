@@ -1,0 +1,27 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Segunda prateleira de cima para baixo, entre os pacotes 'CONTINENTE Fralda Incontinência S' e 'M'.",
+      "severity": "low",
+      "description": "Um pequeno espaço vazio é visível na prateleira, sugerindo que um pacote de produto pode estar em falta.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Fraldas de Incontinência",
+    "Cuecas de Incontinência",
+    "Toalhetes de Higiene",
+    "Espuma de Limpeza"
+  ],
+  "model_reasoning": "A secção de supermercado está geralmente bem abastecida com uma alta taxa de preenchimento das prateleiras. Os produtos estão bem organizados e as etiquetas de preço são visíveis. Apenas um pequeno espaço vazio foi identificado na segunda prateleira, indicando um único pacote de produto em falta, o que não afeta significativamente a apresentação geral ou a disponibilidade de stock.",
+  "inspection_id": "INS_20260610_162454_3A0E67",
+  "timestamp": "2026-06-10T16:24:54.542708+00:00",
+  "image_path": "data\\images\\IMG_8992.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

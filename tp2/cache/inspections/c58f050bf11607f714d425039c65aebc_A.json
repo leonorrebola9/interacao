@@ -1,0 +1,25 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "Top shelf, center, hanging from the front edge",
+      "severity": "low",
+      "description": "A small display of water guns/toys is hanging from the top shelf, which is otherwise stocked with beverages.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Soft Drinks",
+    "Toys"
+  ],
+  "model_reasoning": "The image shows a well-stocked supermarket aisle with soft drinks. The shelves are nearly full, and products are generally well-organized. The only minor issue detected is the presence of a small display of toys on the top shelf, which is primarily for beverages.",
+  "inspection_id": "INS_20260610_184928_24BFD6",
+  "timestamp": "2026-06-10T18:49:28.201944+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0017.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

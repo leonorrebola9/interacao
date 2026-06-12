@@ -1,0 +1,41 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira 6, seção de água de coco Zico (cartões azuis)",
+      "severity": "low",
+      "description": "Alguns cartões de água de coco Zico estão ligeiramente desalinhados, inclinados para trás ou para a frente, criando pequenas irregularidades na frente da prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira 6, seção de Vitaminwater (garrafas vermelhas, lado direito)",
+      "severity": "low",
+      "description": "Algumas garrafas de Vitaminwater não estão perfeitamente alinhadas na frente da prateleira.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Água de coco",
+    "Água com gás",
+    "Bebidas de Yerba Mate",
+    "Bebidas saborizadas de frutas",
+    "Água de bordo (Maple Water)",
+    "Água de cacto",
+    "Bebidas de caféberry",
+    "Bebidas de Aloe Vera",
+    "Vitaminwater"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas e organizadas. Foram observados apenas pequenos desalinhamentos em alguns produtos numa prateleira, o que não afeta significativamente a apresentação geral ou a disponibilidade dos produtos.",
+  "inspection_id": "INS_20260610_195351_9E6A83",
+  "timestamp": "2026-06-10T19:53:51.830888+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0029.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

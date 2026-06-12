@@ -1,0 +1,75 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira superior, à direita dos produtos Frosch Oa",
+      "severity": "low",
+      "description": "Há um espaço vazio na prateleira superior onde deveriam estar produtos, à direita dos ambientadores Frosch Oa.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Prateleira do meio, à esquerda dos produtos Rubin LED",
+      "severity": "low",
+      "description": "Há um espaço vazio na prateleira do meio, à esquerda dos produtos Rubin LED, indicando falta de stock.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior, à esquerda dos produtos Domestos",
+      "severity": "medium",
+      "description": "Há um espaço considerável vazio na prateleira inferior, à esquerda dos produtos Domestos, sugerindo uma falha de stock mais significativa.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Prateleira superior, produtos Domol Raumfrischer",
+      "severity": "low",
+      "description": "Alguns sprays Domol Raumfrischer estão desalinhados e não estão perfeitamente organizados na prateleira.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Prateleira do meio, produtos Domol Mini-Spray",
+      "severity": "low",
+      "description": "Os produtos Domol Mini-Spray estão ligeiramente desalinhados, com alguns virados para diferentes direções.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Prateleira inferior, produtos Domol WC-Duftsteine",
+      "severity": "low",
+      "description": "Alguns dos blocos sanitários Domol WC-Duftsteine estão desalinhados ou não estão perfeitamente empilhados.",
+      "confidence": 0.65,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Corantes para tecido (Simplicol, Dylon)",
+    "Ambientadores (Frosch Oa, Air Wick, Domol, Glade)",
+    "Panos de limpeza/Recargas (Swiffer)",
+    "Lâmpadas LED (Rubin)",
+    "Produtos de limpeza para casa de banho (Domol, WC Ente, WC Frisch, Domestos, Sagrotan, Rorax, Cillit Bang)",
+    "Produtos para calçado (Rubin)",
+    "Isqueiros/Acendalhas (Stevenson)"
+  ],
+  "model_reasoning": "A análise da imagem revela que a prateleira está geralmente bem abastecida, mas existem algumas lacunas notáveis em várias secções, o que justifica um status de 'warning'. Os produtos estão maioritariamente organizados, mas alguns itens apresentam desalinhamento, indicando a necessidade de reabastecimento e organização. A taxa de preenchimento da prateleira foi calculada com base na proporção de espaço ocupado por produtos em relação ao espaço total disponível, estimando-se uma taxa de 88%. As categorias de produtos foram identificadas com base nos rótulos e embalagens visíveis.",
+  "inspection_id": "INS_20260610_193804_CC4A73",
+  "timestamp": "2026-06-10T19:38:04.650650+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0019.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

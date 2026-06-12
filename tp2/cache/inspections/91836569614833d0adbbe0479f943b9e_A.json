@@ -1,0 +1,15 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Tampons",
+    "Sanitary Pads"
+  ],
+  "model_reasoning": "A imagem mostra prateleiras de supermercado bem abastecidas com produtos de higiene feminina (absorventes e tampões). Não foram detetados espaços vazios significativos, produtos danificados, desalinhados ou etiquetas em falta. Os produtos estão organizados de forma clara e as etiquetas de preço são visíveis para a maioria dos itens. A taxa de preenchimento das prateleiras é muito alta.",
+  "inspection_id": "INS_20260610_184723_DBDF63",
+  "timestamp": "2026-06-10T18:47:23.245454+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0011.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

@@ -1,0 +1,27 @@
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira superior",
+      "severity": "high",
+      "description": "A prateleira superior está quase completamente vazia, com apenas alguns produtos na extremidade esquerda.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.85
+    }
+  ],
+  "shelf_fill_rate": 0.75,
+  "products_detected": [
+    "fraldas de incontinência",
+    "cuecas de incontinência",
+    "toalhitas",
+    "cremes protetores"
+  ],
+  "model_reasoning": "A prateleira superior apresenta uma grande área vazia. As restantes prateleiras estão bem preenchidas e organizadas com produtos de incontinência.",
+  "inspection_id": "INS_20260610_173652_F27DD9",
+  "timestamp": "2026-06-10T17:36:52.834627+00:00",
+  "image_path": "data\\images\\IMG_8992.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "C"
+}

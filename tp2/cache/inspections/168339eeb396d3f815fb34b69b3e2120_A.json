@@ -1,0 +1,75 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Porta 3 (Muscle Milk, Bai, Vitaminwater), prateleira inferior",
+      "severity": "medium",
+      "description": "Várias posições vazias na prateleira inferior, onde deveriam estar garrafas de Bai ou Vitaminwater.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Porta 4 (One, Aquafina, Smartwater), prateleira inferior",
+      "severity": "medium",
+      "description": "Várias posições vazias na prateleira inferior, onde deveriam estar garrafas de água.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Porta 4 (One, Aquafina, Smartwater), prateleira inferior, centro-direita",
+      "severity": "low",
+      "description": "Uma garrafa de água está deitada de lado na prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Porta 8 (Vitaminwater, Aquafina, Smartwater), prateleira inferior",
+      "severity": "medium",
+      "description": "Várias posições vazias na prateleira inferior, onde deveriam estar garrafas de água.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "empty_shelf",
+      "location": "Porta 9 (Propel, Dasani, Aquafina), prateleira inferior",
+      "severity": "medium",
+      "description": "Várias posições vazias na prateleira inferior, onde deveriam estar garrafas de água.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.2
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "empty_shelf",
+      "location": "Porta 10 (Red Bull, Monster), prateleira inferior",
+      "severity": "medium",
+      "description": "Várias posições vazias na prateleira inferior, onde deveriam estar latas de bebidas energéticas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Coffee & Energy Drinks",
+    "Sports Drinks",
+    "Protein Shakes",
+    "Flavored Water",
+    "Coconut Water",
+    "Bottled Water",
+    "Soft Drinks"
+  ],
+  "model_reasoning": "As prateleiras estão geralmente bem abastecidas com uma variedade de bebidas. No entanto, várias prateleiras inferiores em diferentes expositores refrigerados apresentam espaços vazios notáveis, indicando a necessidade de reabastecimento. Uma garrafa também está desalinhada.",
+  "inspection_id": "INS_20260610_184658_F6D71F",
+  "timestamp": "2026-06-10T18:46:58.683229+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0009.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

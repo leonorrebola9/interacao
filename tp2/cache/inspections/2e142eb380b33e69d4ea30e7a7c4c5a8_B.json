@@ -1,0 +1,84 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira Meio Superior (Nível 2), no lado direito, posição de 'Argolinhas'",
+      "severity": "medium",
+      "description": "Uma posição de produto 'Argolinhas' está vazia.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Prateleira Superior (Nível 1), canto esquerdo, pilha de embalagens azuis/amarelas",
+      "severity": "low",
+      "description": "Pilha de embalagens de produto ligeiramente inclinada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira Meio Superior (Nível 2), canto esquerdo, saco 'ARTIACIO'",
+      "severity": "low",
+      "description": "Saco de produto 'ARTIACIO' ligeiramente inclinado.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Prateleira Meio Inferior (Nível 3), canto esquerdo, caixa 'Balconi Wafers'",
+      "severity": "low",
+      "description": "Caixa de 'Balconi Wafers' ligeiramente recuada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "other",
+      "location": "Letreiro 'Bolachas' acima da prateleira superior",
+      "severity": "low",
+      "description": "Letreiro 'Bolachas' está ligeiramente torto/desalinhado.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "damaged",
+      "location": "Sinal amarelo '25%' no canto superior esquerdo",
+      "severity": "low",
+      "description": "Canto inferior do sinal amarelo '25%' está amarrotado/dobrado.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "damaged",
+      "location": "Expositor vertical 'Nacional', perto da imagem do cavalo-marinho",
+      "severity": "low",
+      "description": "Expositor 'Nacional' apresenta um pequeno rasgo/dano.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Bolachas",
+    "Biscoitos",
+    "Wafers",
+    "Palitos de Chocolate",
+    "Biscoitos Cobertos",
+    "Crackers"
+  ],
+  "model_reasoning": "O corredor do supermercado está geralmente bem organizado e abastecido, com a maioria dos produtos alinhados e etiquetas de preço visíveis. No entanto, foi identificada uma posição de produto vazia numa das prateleiras, juntamente com alguns desalinhamentos menores de produtos e elementos de display. Há também pequenos danos em materiais de sinalização. A taxa de preenchimento das prateleiras é elevada, mas as anomalias justificam um estado de 'warning'.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de um corredor de supermercado, focada numa prateleira de bolachas e biscoitos. Há quatro níveis de prateleiras visíveis, repletos de uma variedade de produtos embalados. Acima das prateleiras, um grande letreiro rosa com a palavra \"Bolachas\" indica a categoria dos produtos. À direita, há um expositor vertical da marca \"Nacional\" com a mensagem \"BOAS PARA NAVEGAR ENTRE APETITE\" e \"NAVEGAM BEM EM TODO O LADO\". O teto do supermercado, com a sua estrutura industrial e iluminação fluorescente, é visível na parte superior da imagem.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior (Nível 1):\n- Está cheia, com alguns espaços no extremo direito que parecem ser o fim da secção da prateleira.\n- Os produtos estão geralmente alinhados e bem posicionados, embora uma pilha de embalagens azuis e amarelas no canto esquerdo esteja ligeiramente inclinada.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, como \"Mikado\" (2.39€) e \"Continente Palitos Crocantes\" (1.99€).\n\nPrateleira Meio Superior (Nível 2):\n- Está maioritariamente cheia, mas há uma posição claramente vazia para um produto \"Argolinhas\" no lado direito.\n- Os produtos estão bem alinhados e posicionados, com exceção de um saco de \"ARTIACIO\" no canto esquerdo que está ligeiramente inclinado.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, como \"Continente Seleção\" (2.39€), \"Continente Chocolate Negro\" (1.99€), \"Balconi Wafers\" (3.49€), \"Argolinhas\" (1.99€) e \"Filipinos\" (1.99€).\n\nPrateleira Meio Inferior (Nível 3):\n- Está cheia, com alguns espaços no extremo direito que parecem ser o fim da secção da prateleira.\n- Os produtos estão geralmente bem alinhados e posicionados, embora uma caixa de \"Balconi Wafers\" no canto esquerdo esteja ligeiramente recuada.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, como \"Balconi Wafers\" (1.99€), \"Argolinhas\" (1.99€) e \"Filipinos\" (1.99€).\n\nPrateleira Inferior (Nível 4):\n- Está cheia, com alguns espaços no extremo direito que parecem ser o fim da secção da prateleira.\n- Os produtos estão bem alinhados e posicionados.\n- Não há produtos tombados ou danificados visíveis.\n- As etiquetas de preço estão presentes e visíveis para a maioria dos produtos, como \"Cuetara Wafers\" (1.99€) e \"Fino Filipinos\" (1.99€).\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n1.  **ISS_001 - empty_shelf:**\n    *   **Localização:** Prateleira Meio Superior (Nível 2), no lado direito, entre as caixas de \"Filipinos\" e o expositor \"Nacional\".\n    *   **Severidade:** Medium.\n    *   **Descrição:** Há uma posição claramente vazia onde deveria estar um produto \"Argolinhas\".\n2.  **ISS_002 - misaligned:**\n    *   **Localização:** Prateleira Superior (Nível 1), no canto esquerdo.\n    *   **Severidade:** Low.\n    *   **Descrição:** Uma pilha de embalagens azuis e amarelas (possivelmente wafers) está ligeiramente inclinada.\n3.  **ISS_003 - misaligned:**\n    *   **Localização:** Prateleira Meio Superior (Nível 2), no canto esquerdo.\n    *   **Severidade:** Low.\n    *   **Descrição:** Um saco de \"ARTIACIO\" está ligeiramente inclinado.\n4.  **ISS_004 - misaligned:**\n    *   **Localização:** Prateleira Meio Inferior (Nível 3), no canto esquerdo.\n    *   **Severidade:** Low.\n    *   **Descrição:** Uma caixa de \"Balconi Wafers\" está ligeiramente recuada em relação às outras.\n5.  **ISS_005 - other:**\n    *   **Localização:** Acima da prateleira superior, no letreiro rosa \"Bolachas\".\n    *   **Severidade:** Low.\n    *   **Descrição:** O letreiro \"Bolachas\" está ligeiramente torto/desalinhado.\n6.  **ISS_006 - damaged:**\n    *   **Localização:** No canto superior esquerdo da imagem, no sinal amarelo de \"25%\".\n    *   **Severidade:** Low.\n    *   **Descrição:** O canto inferior do sinal amarelo \"25%\" está ligeiramente amarrotado/dobrado.\n7.  **ISS_007 - damaged:**\n    *   **Localização:** No expositor vertical \"Nacional\", no lado direito da imagem, perto da imagem do cavalo-marinho.\n    *   **Severidade:** Low.\n    *   **Descrição:** O expositor \"Nacional\" apresenta um pequeno rasgo ou dano na parte inferior direita da imagem do cavalo-marinho.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"empty_shelf\",\n      \"location\": \"Prateleira Meio Superior (Nível 2), no lado direito, posição de 'Argolinhas'\",\n      \"severity\": \"medium\",\n      \"description\": \"Uma posição de produto 'Argolinhas' está vazia.\",\n      \"confidence\": 1.0,\n      \"affected_area_pct\": 0.02\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira Superior (Nível 1), canto esquerdo, pilha de embalagens azuis/amarelas\",\n      \"severity\": \"low\",\n      \"description\": \"Pilha de embalagens de produto ligeiramente inclinada.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira Meio Superior (Nível 2), canto esquerdo, saco 'ARTIACIO'\",\n      \"severity\": \"low\",\n      \"description\": \"Saco de produto 'ARTIACIO' ligeiramente inclinado.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_004\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira Meio Inferior (Nível 3), canto esquerdo, caixa 'Balconi Wafers'\",\n      \"severity\": \"low\",\n      \"description\": \"Caixa de 'Balconi Wafers' ligeiramente recuada.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_005\",\n      \"type\": \"other\",\n      \"location\": \"Letreiro 'Bolachas' acima da prateleira superior\",\n      \"severity\": \"low\",\n      \"description\": \"Letreiro 'Bolachas' está ligeiramente torto/desalinhado.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },\n    {\n      \"issue_id\": \"ISS_006\",\n      \"type\": \"damaged\",\n      \"location\": \"Sinal amarelo '25%' no canto superior esquerdo\",\n      \"severity\": \"low\",\n      \"description\": \"Canto inferior do sinal amarelo '25%' está amarrotado/dobrado.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.01\n    },",
+  "inspection_id": "INS_20260610_165407_0D5232",
+  "timestamp": "2026-06-10T16:54:07.317944+00:00",
+  "image_path": "data\\images\\IMG_9043.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "B"
+}

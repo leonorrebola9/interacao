@@ -1,0 +1,75 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Top left shelf, Pina Colada and Maracuja bottles",
+      "severity": "low",
+      "description": "Some bottles on the top left shelf are slightly tilted or not perfectly aligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Middle left shelf, Recompensa ICE boxes",
+      "severity": "low",
+      "description": "The boxes of Recompensa ICE are not perfectly aligned, and some bottles within are askew.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Bottom left shelf, Maronti Vermouth bottles",
+      "severity": "low",
+      "description": "The Maronti Vermouth bottles are not perfectly straight in their display boxes.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Bottom middle shelf, Cremacream and Glívery Dry Gin boxes",
+      "severity": "low",
+      "description": "The Cremacream boxes are slightly pushed back, and the Glívery Dry Gin boxes are not perfectly flush with the shelf edge.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.1
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Bottom right shelf, James Webb Blended Scotch Whisky boxes",
+      "severity": "low",
+      "description": "The James Webb Blended Scotch Whisky boxes are not perfectly aligned.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Multiple shelves, price labels",
+      "severity": "low",
+      "description": "Several price labels across different shelves are slightly tilted, misaligned, or not perfectly centered under their respective products.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Cocktails",
+    "Gin",
+    "Espumante",
+    "Vinho do Porto",
+    "Vermute",
+    "Licor Creme",
+    "Whisky"
+  ],
+  "model_reasoning": "The image displays a well-stocked alcohol section with a high shelf fill rate. All products appear to be in their correct locations, and there are no visible signs of damage or empty shelf spaces. However, a closer inspection reveals several minor aesthetic issues related to product presentation. Multiple bottles and product boxes across various shelves are slightly misaligned or not perfectly straight. Additionally, several price labels are tilted or not perfectly centered, affecting the overall tidiness of the display. These issues are minor in severity but are numerous enough to warrant a 'warning' status for the overall presentation.",
+  "inspection_id": "INS_20260610_163147_75D71F",
+  "timestamp": "2026-06-10T16:31:47.424007+00:00",
+  "image_path": "data\\images\\IMG_9069.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

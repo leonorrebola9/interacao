@@ -1,0 +1,26 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior (8ª prateleira de cima para baixo)",
+      "severity": "high",
+      "description": "A prateleira inferior do expositor refrigerado está maioritariamente vazia, com apenas alguns produtos visíveis nas secções esquerda e central, e quase totalmente vazia na secção direita.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.75
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Iogurte",
+    "Iogurte de Fruta",
+    "Laticínios"
+  ],
+  "model_reasoning": "A maioria das prateleiras está bem abastecida com uma variedade de iogurtes de diferentes marcas e sabores. No entanto, a prateleira inferior apresenta uma escassez significativa de produtos, justificando o estado de 'warning' e a issue de 'empty_shelf'.",
+  "inspection_id": "INS_20260610_162620_5F57E8",
+  "timestamp": "2026-06-10T16:26:20.743510+00:00",
+  "image_path": "data\\images\\IMG_9017.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

@@ -1,0 +1,47 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Across all shelves, particularly noticeable on the top and middle shelves with bottled and canned teas, and the bottom shelf with Pure Leaf bottles.",
+      "severity": "low",
+      "description": "Many bottled and canned tea products are not neatly aligned, creating a somewhat disorganized appearance.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.3
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Bottom shelf, far right side.",
+      "severity": "medium",
+      "description": "A significant portion of the bottom shelf on the far right is empty, indicating a potential stock-out or understocking for gallon-sized beverages.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "other",
+      "location": "Various locations on the middle and bottom shelves.",
+      "severity": "low",
+      "description": "Some price labels are partially obscured by products or other promotional signs, potentially making it difficult for customers to read prices.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Bottled Teas",
+    "Canned Teas",
+    "Gallon Teas",
+    "Aloe Drinks",
+    "Matcha Drinks",
+    "Tortilla Chips"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked, but there are several instances of product misalignment across all levels. A notable empty space is present on the bottom right shelf, indicating a potential stock issue. Additionally, some price labels are partially obscured by products or other signage, which could hinder customer experience. These issues collectively lead to a 'warning' status.",
+  "inspection_id": "INS_20260610_190005_90E98B",
+  "timestamp": "2026-06-10T19:00:05.494954+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0021.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

@@ -1,0 +1,24 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "detergentes para roupa",
+    "desengordurantes",
+    "limpadores de forno",
+    "limpadores de madeira",
+    "limpadores multiusos",
+    "lixívia em gel",
+    "vinagre de limpeza",
+    "limpa-vidros",
+    "limpa-cozinhas",
+    "limpa-casas de banho",
+    "líquido limpa-para-brisas"
+  ],
+  "model_reasoning": "A prateleira está completamente preenchida e bem organizada. Todos os produtos estão alinhados, sem espaços vazios, danos visíveis ou etiquetas em falta. A apresentação geral é excelente.",
+  "inspection_id": "INS_20260610_175145_08E92A",
+  "timestamp": "2026-06-10T17:51:45.191059+00:00",
+  "image_path": "data\\images\\IMG_9074.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "C"
+}

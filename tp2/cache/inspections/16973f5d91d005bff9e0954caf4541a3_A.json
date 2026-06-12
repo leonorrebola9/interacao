@@ -1,0 +1,73 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira superior, secção esquerda, atrás da primeira fila de produtos",
+      "severity": "low",
+      "description": "Existem algumas lacunas visíveis atrás da primeira fila de produtos, indicando que o stock está a diminuir.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.08
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Segunda prateleira de cima para baixo, secção direita, especialmente no lado direito",
+      "severity": "medium",
+      "description": "Várias posições parecem vazias, particularmente para os produtos 'Danone magro', indicando necessidade de reabastecimento.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.15
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Segunda prateleira de cima para baixo, secção direita, produtos 'Danone magro'",
+      "severity": "low",
+      "description": "As embalagens roxas da Danone não estão perfeitamente empilhadas ou alinhadas, algumas estão empurradas para trás.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Terceira prateleira de cima para baixo, secção direita, produtos 'Nestlé Yoggi'",
+      "severity": "low",
+      "description": "As embalagens de Yoggi estão um pouco desorganizadas, não formando filas arrumadas.",
+      "confidence": 0.75,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "Terceira prateleira de cima para baixo, secção centro-direita, iogurtes 'Longa Vida'",
+      "severity": "low",
+      "description": "Os copos individuais de iogurte Longa Vida não estão perfeitamente alinhados, alguns estão tortos.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior, secção esquerda, no canto mais à esquerda",
+      "severity": "low",
+      "description": "Algumas posições no lado esquerdo da prateleira inferior parecem vazias.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.07
+    }
+  ],
+  "shelf_fill_rate": 0.82,
+  "products_detected": [
+    "Iogurtes",
+    "Produtos Lácteos Magros",
+    "Iogurtes de Fruta",
+    "Iogurtes com Cereais",
+    "Iogurtes Líquidos"
+  ],
+  "model_reasoning": "A imagem mostra uma secção refrigerada de um supermercado, predominantemente abastecida com iogurtes e produtos lácteos. Marcas como Nestlé Yoggi, Danone, Mimosa, Longa Vida e Equilíbrio Bem-Estar são visíveis. As prateleiras estão geralmente bem abastecidas, mas existem lacunas notáveis em algumas secções, indicando a necessidade de reabastecimento. Além disso, alguns produtos não estão perfeitamente alinhados, o que é um problema menor comum em expositores de retalho. Não foram observados produtos danificados ou etiquetas em falta. O estado geral é classificado como 'warning' devido a estes problemas menores de stock e alinhamento, impedindo um estado 'ok'.",
+  "inspection_id": "INS_20260610_162649_C18696",
+  "timestamp": "2026-06-10T16:26:49.148655+00:00",
+  "image_path": "data\\images\\IMG_9020.jpg",
+  "zone_id": "Z_S1",
+  "strategy": "A"
+}

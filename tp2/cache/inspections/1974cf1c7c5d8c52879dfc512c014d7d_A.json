@@ -1,0 +1,28 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior, secção central e direita, abaixo das empadas salgadas.",
+      "severity": "high",
+      "description": "Uma porção significativa da prateleira inferior está completamente vazia, indicando uma rutura de stock ou uma área não abastecida.",
+      "confidence": 1.0,
+      "affected_area_pct": 0.6
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Croissants",
+    "Pastéis",
+    "Bolos",
+    "Empadas salgadas (frango e cogumelos, atum)",
+    "Infusões (digestivas, para dormir, tília, menta, rooibos, canela)"
+  ],
+  "model_reasoning": "A maioria das prateleiras está bem abastecida com uma variedade de produtos de padaria e infusões. No entanto, uma grande parte da prateleira inferior está completamente vazia, o que é classificado como uma questão de alta gravidade, levando a um status geral de 'warning'.",
+  "inspection_id": "INS_20260610_175351_00082E",
+  "timestamp": "2026-06-10T17:53:51.913592+00:00",
+  "image_path": "data/images/IMG_9072.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

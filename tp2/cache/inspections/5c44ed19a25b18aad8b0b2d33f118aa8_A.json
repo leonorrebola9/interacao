@@ -1,0 +1,29 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "Far right side of Shelf 3 and Shelf 4",
+      "severity": "low",
+      "description": "A hanging display with leopard print packaging (VELVET brand) partially obscures some Nivea products on Shelf 3 and Shelf 4, making them less visible.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.96,
+  "products_detected": [
+    "Body Lotions & Creams",
+    "Hand Creams",
+    "Facial Care",
+    "Specialty Oils",
+    "Body Mousse",
+    "Wipes"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked and organized with a high fill rate. Products are mostly aligned, and there are no significant empty spaces or damaged items. The primary issue identified is a hanging display on the far right that partially obstructs some products on the third and fourth shelves, which is a minor merchandising concern. All products are identifiable and prices are visible.",
+  "inspection_id": "INS_20260610_195517_106C58",
+  "timestamp": "2026-06-10T19:55:17.097023+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0033.jpg",
+  "zone_id": "Z_S6",
+  "strategy": "A"
+}

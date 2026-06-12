@@ -1,0 +1,25 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "baby wipes",
+    "gripe water",
+    "baby creams",
+    "baby lotions",
+    "baby shampoos",
+    "baby powders",
+    "baby formula",
+    "teething remedies",
+    "baby accessories",
+    "feminine care products",
+    "cotton wool",
+    "sterilizing solutions"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket aisle, primarily featuring baby care products. All shelves appear to be nearly full, with products neatly arranged and no significant empty spaces. Price labels are visible for most items. There are no visible damaged products, misalignments, or products placed in incorrect sections. The overall presentation is orderly and well-maintained, indicating no critical issues.",
+  "inspection_id": "INS_20260610_185944_182279",
+  "timestamp": "2026-06-10T18:59:44.807927+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0020.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "A"
+}

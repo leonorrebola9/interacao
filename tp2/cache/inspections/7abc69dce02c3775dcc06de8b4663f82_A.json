@@ -1,0 +1,29 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, right side",
+      "severity": "low",
+      "description": "Several product slots on the right side of the top shelf are empty, indicating missing stock.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.94,
+  "products_detected": [
+    "Foot care products",
+    "Nail care products",
+    "Personal care tools",
+    "Compression wear",
+    "Bath accessories",
+    "Health supplements"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket aisle primarily featuring foot care products. Most shelves are full and organized. One minor issue was identified: a small section on the top right shelf has empty product slots. No damaged products, misaligned items, or missing labels were observed for the main product displays. The overall presentation is good, with clear pricing and product visibility.",
+  "inspection_id": "INS_20260610_184118_D24CBC",
+  "timestamp": "2026-06-10T18:41:18.535564+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0010.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

@@ -1,0 +1,73 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Right side of the top shelf, ABC mini pads",
+      "severity": "low",
+      "description": "Some packages of ABC mini sanitary pads on the top right shelf are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Right side of the second shelf from top, ABC pads",
+      "severity": "low",
+      "description": "Some packages of ABC sanitary pads on the second shelf from the top right are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Right side of the third shelf from top, ABC pads",
+      "severity": "low",
+      "description": "Some packages of ABC sanitary pads on the third shelf from the top right are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Right side of the fourth shelf from top, ABC pads",
+      "severity": "low",
+      "description": "Some packages of ABC sanitary pads on the fourth shelf from the top right are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Right side of the bottom shelf, ABC pads",
+      "severity": "low",
+      "description": "Some packages of ABC sanitary pads on the bottom right shelf are slightly misaligned.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "Bottom left shelf, Tesco brand pads",
+      "severity": "low",
+      "description": "Tesco brand sanitary pads on the bottom left shelf are loosely stacked and slightly misaligned.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Sanitary Pads (护舒宝/Whisper/Always)",
+    "Sanitary Pads (ABC)",
+    "Sanitary Pads (Pure Skin)",
+    "Sanitary Pads (超薄/Ultra-thin)",
+    "Sanitary Pads (TESCO)"
+  ],
+  "model_reasoning": "The image displays a well-stocked supermarket shelf primarily featuring various brands of sanitary pads. The shelf fill rate is high, indicating good stock levels. Minor misalignments of product packages were observed on several shelves, particularly with ABC brand products on the right side and Tesco brand products on the bottom left. These are minor cosmetic issues and do not affect product availability or quality. No empty shelf spaces, damaged products, wrong products, or missing labels were identified. Therefore, the overall status is classified as 'ok'.",
+  "inspection_id": "INS_20260610_183816_FCA292",
+  "timestamp": "2026-06-10T18:38:16.781649+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0008.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}

@@ -1,0 +1,35 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "damaged",
+      "location": "Top shelf, center-left, display box for 'CHAI VELAS PERFUMADAS'",
+      "severity": "low",
+      "description": "The front flap of the display box for 'CHAI VELAS PERFUMADAS' is torn, affecting the product's presentation.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "Bottom shelf, far right, 'Tradicio Lejía Lixiv' yellow containers",
+      "severity": "low",
+      "description": "The large yellow bleach containers and their display boxes are slightly misaligned and not perfectly stacked, leading to a less tidy appearance.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Home Fragrance (Candles, Air Fresheners, Diffusers)",
+    "Cleaning Supplies (Floor Wipes, Bleach, Cleaning Cloths)",
+    "Pest Control (Insect Repellents, Traps, Sprays)"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked and organized with a high fill rate. However, two minor issues were identified: a damaged display box for scented candles on the top shelf and some misaligned large bleach containers on the bottom shelf, both affecting product presentation slightly.",
+  "inspection_id": "INS_20260610_175423_DCA897",
+  "timestamp": "2026-06-10T17:54:23.887597+00:00",
+  "image_path": "data/images/IMG_9073.jpg",
+  "zone_id": "Z_S4",
+  "strategy": "A"
+}

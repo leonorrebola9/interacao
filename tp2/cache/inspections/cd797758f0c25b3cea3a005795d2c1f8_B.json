@@ -1,0 +1,73 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Prateleira inferior, lado esquerdo",
+      "severity": "medium",
+      "description": "Embalagens de massa empilhadas de forma desorganizada e desalinhada.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.04
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "damaged",
+      "location": "Prateleira inferior, centro",
+      "severity": "high",
+      "description": "Caixa de 'Esparguete Tricolor' danificada, com produto a derramar-se.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "damaged",
+      "location": "Prateleira inferior, centro-direita",
+      "severity": "high",
+      "description": "Caixa de massa danificada, com produto a derramar-se.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "damaged",
+      "location": "Prateleira inferior, lado direito",
+      "severity": "high",
+      "description": "Caixa de massa (embalagens amarelas) danificada, com produto a derramar-se.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "other",
+      "location": "Chão, em frente à prateleira inferior",
+      "severity": "low",
+      "description": "Duas etiquetas de preço caídas no chão.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Lasanha com Ovo",
+    "Ninhos com Ovo",
+    "Macarrão Riscado",
+    "Fusilli Tricolor",
+    "Espirais",
+    "Cotovelos",
+    "Pérolas",
+    "Bagos",
+    "Letras",
+    "Aletria",
+    "Meada",
+    "Esparguete Tricolor",
+    "Esparguete Tinta de Choco"
+  ],
+  "model_reasoning": "As cinco prateleiras superiores estão bem organizadas e cheias. No entanto, a prateleira inferior apresenta múltiplas anomalias graves, incluindo produtos desalinhados, caixas danificadas com massas a derramar-se e etiquetas de preço caídas no chão. A alta severidade e a concentração de problemas na prateleira inferior justificam o estado geral de 'warning'.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de uma prateleira de supermercado dedicada a massas alimentícias. Existem seis prateleiras visíveis, empilhadas verticalmente, todas elas contendo diferentes tipos de massa da marca \"Continente\". O ambiente é de um corredor de supermercado, com iluminação fluorescente e a estrutura do teto industrial visível na parte superior da imagem.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\nPrateleira Superior (Lasanha com Ovo, Ninhos com Ovo):\n- Está cheia.\n- Os produtos estão alinhados e bem posicionados nas suas caixas e embalagens.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis para alguns produtos.\n\nSegunda Prateleira de Cima para Baixo (Macarrão Riscado):\n- Está cheia.\n- Os produtos estão alinhados e bem posicionados nas suas embalagens e expositores.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis (ex: \"0.74C\").\n\nTerceira Prateleira de Cima para Baixo (Fusilli Tricolor):\n- Está cheia.\n- Os produtos estão alinhados e bem posicionados nas suas embalagens e expositores.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis (ex: \"0.99C\").\n\nQuarta Prateleira de Cima para Baixo (Espirais):\n- Está cheia.\n- Os produtos estão alinhados e bem posicionados nas suas embalagens e expositores.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis (ex: \"0.99C\").\n\nQuinta Prateleira de Cima para Baixo (Cotovelos):\n- Está cheia.\n- Os produtos estão alinhados e bem posicionados nas suas embalagens e expositores.\n- Não há produtos tombados, danificados ou fora do lugar.\n- As etiquetas de preço estão presentes e visíveis (ex: \"0.99C\").\n\nPrateleira Inferior (Esparguete Tricolor, Esparguete Tinta de Choco, Pérolas, Bagos, Letras, Aletria, Meada):\n- Está cheia em termos de quantidade de produto, mas muito desorganizada.\n- Os produtos estão desalinhados e mal posicionados, especialmente no lado esquerdo onde as embalagens brancas estão empilhadas de forma caótica.\n- Há vários produtos tombados e caixas danificadas, com massas a derramar-se para fora das embalagens.\n- As etiquetas de preço estão presentes na borda da prateleira, mas duas etiquetas estão caídas no chão em frente a esta prateleira.\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\nISS_001:\n- Tipo: misaligned\n- Localização: Prateleira inferior, lado esquerdo.\n- Severidade: medium\n- Descrição: Embalagens de massa (possivelmente esparguete) empilhadas de forma desorganizada e desalinhada, criando uma pilha instável.\n- Confiança: 0.9\n- Área afetada: 0.04 (aproximadamente 1/4 da prateleira inferior, que é 1/6 da área total visível)\n\nISS_002:\n- Tipo: damaged\n- Localização: Prateleira inferior, centro.\n- Severidade: high\n- Descrição: Caixa de \"Esparguete Tricolor\" danificada, com as embalagens de massa a derramar-se para fora.\n- Confiança: 0.9\n- Área afetada: 0.028 (aproximadamente 1/6 da prateleira inferior, que é 1/6 da área total visível)\n\nISS_003:\n- Tipo: damaged\n- Localização: Prateleira inferior, centro-direita.\n- Severidade: high\n- Descrição: Caixa de massa (ao lado do Esparguete Tricolor) danificada, com as embalagens de massa a derramar-se para fora.\n- Confiança: 0.9\n- Área afetada: 0.028 (aproximadamente 1/6 da prateleira inferior, que é 1/6 da área total visível)\n\nISS_004:\n- Tipo: damaged\n- Localização: Prateleira inferior, lado direito.\n- Severidade: high\n- Descrição: Caixa de massa (embalagens amarelas) danificada, com as embalagens de massa a derramar-se para fora.\n- Confiança: 0.9\n- Área afetada: 0.028 (aproximadamente 1/6 da prateleira inferior, que é 1/6 da área total visível)\n\nISS_005:\n- Tipo: other\n- Localização: Chão, em frente à prateleira inferior.\n- Severidade: low\n- Descrição: Duas etiquetas de preço caídas no chão, em vez de estarem na prateleira.\n- Confiança: 0.9\n- Área afetada: 0.0 (não afeta a área da prateleira)\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"warning\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Prateleira inferior, lado esquerdo\",\n      \"severity\": \"medium\",\n      \"description\": \"Embalagens de massa empilhadas de forma desorganizada e desalinhada.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.04\n    },\n    {\n      \"issue_id\": \"ISS_002\",\n      \"type\": \"damaged\",\n      \"location\": \"Prateleira inferior, centro\",\n      \"severity\": \"high\",\n      \"description\": \"Caixa de 'Esparguete Tricolor' danificada, com produto a derramar-se.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.028\n    },\n    {\n      \"issue_id\": \"ISS_003\",\n      \"type\": \"damaged\",\n      \"location\": \"Prateleira inferior, centro-direita\",\n      \"severity\": \"high\",\n      \"description\": \"Caixa de massa danificada, com produto a derramar-se.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.028\n    },\n    {\n      \"issue_id\": \"ISS_004\",\n      \"type\": \"damaged\",\n      \"location\": \"Prateleira inferior, lado direito\",\n      \"severity\": \"high\",\n      \"description\": \"Caixa de massa (embalagens amarelas) danificada, com produto a derramar-se.\",\n      \"confidence\": 0.9,\n      \"affected_area_pct\": 0.028\n    },",
+  "inspection_id": "INS_20260610_165550_687D2E",
+  "timestamp": "2026-06-10T16:55:50.271603+00:00",
+  "image_path": "data\\images\\IMG_9054.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "B"
+}

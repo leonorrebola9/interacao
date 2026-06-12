@@ -1,0 +1,26 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Fifth shelf from the top, central and right sections",
+      "severity": "medium",
+      "description": "Several packs of bar soap on the fifth shelf are misaligned, not front-faced, and appear messy, affecting product presentation.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.1
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Liquid soap",
+    "Bar soap",
+    "Body wash"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a variety of soaps and body care products. The primary issue observed is product misalignment, particularly on the fifth shelf from the top where multiple brands of bar soap are not neatly arranged or front-faced. Minor misalignments are also present on other shelves, but the fifth shelf is the most prominent. No empty shelf positions, wrong products, damaged items, or missing labels were identified as significant issues. The overall fill rate is high, but the noticeable misalignment on one shelf warrants a 'warning' status.",
+  "inspection_id": "INS_20260610_195725_A64724",
+  "timestamp": "2026-06-10T19:57:25.032890+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0037.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

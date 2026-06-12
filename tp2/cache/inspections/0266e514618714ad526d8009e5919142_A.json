@@ -1,0 +1,29 @@
+{
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Shoe Care",
+    "Feminine Hygiene",
+    "Condoms",
+    "Pregnancy Tests",
+    "Ovulation Tests",
+    "Children's Medicine",
+    "Fertility Products",
+    "Lubricants",
+    "Eye Care",
+    "Nasal Congestion Relief",
+    "Pain Relief",
+    "Smoking Cessation Aids",
+    "Digestive Health",
+    "Allergy Relief",
+    "Hosiery",
+    "Skin Care"
+  ],
+  "model_reasoning": "The image displays a well-organized and fully stocked supermarket aisle. All shelves are consistently filled with products, showing no significant empty spaces or missing items where stock should be present. Products are neatly aligned, and pricing labels are clearly visible for almost all items. There is no visible damage to products or packaging, nor are there any misaligned items that would indicate poor merchandising. The overall presentation suggests excellent stock management and merchandising standards.",
+  "inspection_id": "INS_20260610_183442_088E46",
+  "timestamp": "2026-06-10T18:34:42.646221+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0002.jpg",
+  "zone_id": "Z_S3",
+  "strategy": "A"
+}

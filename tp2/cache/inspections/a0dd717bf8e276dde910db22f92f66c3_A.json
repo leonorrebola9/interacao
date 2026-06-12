@@ -1,0 +1,27 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "wrong_product",
+      "location": "Terceira prateleira, ao centro, entre os sacos de cereais 'Pétalas de Chocolate'.",
+      "severity": "low",
+      "description": "Uma pequena caixa de Nescafé Cappuccino está colocada indevidamente entre os sacos de cereais.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Cereais de chocolate (arroz tufado)",
+    "Cereais de chocolate (pétalas)",
+    "Cereais Chocapic",
+    "Café instantâneo (Nescafé Cappuccino)"
+  ],
+  "model_reasoning": "A maioria das prateleiras está bem abastecida e organizada. Foi detetada uma caixa de café instantâneo (Nescafé Cappuccino) colocada indevidamente entre os sacos de cereais na terceira prateleira. Não foram observados outros problemas significativos como prateleiras vazias, produtos danificados ou desalinhados em grande escala.",
+  "inspection_id": "INS_20260610_162929_6B39F1",
+  "timestamp": "2026-06-10T16:29:29.812428+00:00",
+  "image_path": "data\\images\\IMG_9047.jpg",
+  "zone_id": "Z_S5",
+  "strategy": "A"
+}

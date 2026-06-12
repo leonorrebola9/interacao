@@ -1,0 +1,37 @@
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "Unidade de Congelador 3, prateleira do meio, lado direito",
+      "severity": "low",
+      "description": "As caixas de 'Continente Seleção BIFE DE ATUM' estão ligeiramente inclinadas e desalinhadas.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.01
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "other",
+      "location": "Unidade de Congelador 1, prateleira inferior, lado direito",
+      "severity": "low",
+      "description": "A etiqueta de preço para o produto 'iglo 10 MEDALHÕES PESCADA 1.1KG' está parcialmente obscurecida, mostrando apenas '19'.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Pescada (Medalhões)",
+    "Pescada (Lombos)",
+    "Salmão (Lombos)",
+    "Atum (Bife)"
+  ],
+  "model_reasoning": "A imagem mostra prateleiras de congelador bem abastecidas com produtos de peixe e marisco. A taxa de preenchimento é muito alta. Foram identificadas duas anomalias menores: um ligeiro desalinhamento de algumas caixas de atum e uma etiqueta de preço parcialmente visível. Nenhuma prateleira vazia, produto danificado ou produto errado foi encontrado. O estado geral é bom.",
+  "cot_reasoning": "PASSO 1 — DESCRIÇÃO GERAL\nA imagem mostra uma secção de um corredor de supermercado com três unidades de congeladores verticais, cada uma com portas de vidro. As unidades estão bem iluminadas internamente e contêm várias prateleiras repletas de produtos congelados, predominantemente peixe e marisco em caixas. Há reflexos da iluminação superior nas portas de vidro. Uma placa verde numa das portas incentiva os clientes a fecharem a porta para ajudar o ambiente.\n\nPASSO 2 — ANÁLISE ZONA A ZONA\n\n*   **Unidade de Congelador 1 (mais à esquerda, parcialmente visível)**\n    *   **Prateleira Superior:** Está cheia. Os produtos são \"iglo MEDALHÕES PESCADA\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (10.69€, 7.99€).\n    *   **Prateleira do Meio:** Está cheia. Os produtos são \"iglo LOMBOS PESCADA\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (8.69€).\n    *   **Prateleira Inferior:** Está cheia. Os produtos são \"iglo MEDALHÕES PESCADA\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (14.89€, e uma parcialmente visível \"19.XX€\").\n\n*   **Unidade de Congelador 2 (central)**\n    *   **Prateleira Superior:** Está cheia. Os produtos são \"CONTINENTE Pescada-do-Cabo\" e \"iglo MEDALHÕES PESCADA\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (9.89€, 8.69€).\n    *   **Prateleira do Meio:** Está cheia. Os produtos são \"CONTINENTE Pescada-do-Cabo\" e \"iglo LOMBOS PESCADA\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (9.99€, 8.69€).\n    *   **Prateleira Inferior:** Está cheia. Os produtos são \"CONTINENTE Pescada-do-Cabo\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (3.99€).\n\n*   **Unidade de Congelador 3 (mais à direita, parcialmente visível)**\n    *   **Prateleira Superior:** Está cheia. Os produtos são \"iglo 2 LOMBOS SALMÃO DO ATLÂNTICO\" e \"Continente Seleção BIFE DE ATUM\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (14.49€, 4.89€).\n    *   **Prateleira do Meio:** Está cheia. Os produtos são \"iglo 2 LOMBOS SALMÃO DO ATLÂNTICO\" e \"Continente Seleção BIFE DE ATUM\". Os produtos de salmão estão bem alinhados, mas as caixas de atum à direita estão ligeiramente desalinhadas. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (11.49€, 4.89€).\n    *   **Prateleira Inferior (parcialmente visível):** Está cheia. Os produtos são \"Continente Seleção BIFE DE ATUM\". Estão bem alinhados e posicionados. Não há produtos tombados ou danificados. As etiquetas de preço estão presentes e visíveis (4.89€).\n\nPASSO 3 — IDENTIFICAÇÃO DE ANOMALIAS\n\n*   **ISS_001: misaligned**\n    *   Localização: Unidade de Congelador 3 (mais à direita), prateleira do meio, lado direito.\n    *   Severidade: low\n    *   Descrição: As caixas de \"Continente Seleção BIFE DE ATUM\" estão ligeiramente inclinadas e desalinhadas em relação à frente da prateleira.\n\n*   **ISS_002: other**\n    *   Localização: Unidade de Congelador 1 (mais à esquerda), prateleira inferior, lado direito.\n    *   Severidade: low\n    *   Descrição: A etiqueta de preço para o produto \"iglo 10 MEDALHÕES PESCADA 1.1KG\" está parcialmente obscurecida, mostrando apenas \"19\" e não o preço completo.\n\nPASSO 4 — CLASSIFICAÇÃO FINAL\n{\n  \"overall_status\": \"ok\",\n  \"issues\": [\n    {\n      \"issue_id\": \"ISS_001\",\n      \"type\": \"misaligned\",\n      \"location\": \"Unidade de Congelador 3, prateleira do meio, lado direito\",\n      \"severity\": \"low\",\n      \"description\": \"As caixas de 'Continente Seleção BIFE DE ATUM' estão ligeiramente inclinadas e desalinhadas.\",\n      \"confidence\": 0.95,\n      \"affected_area_pct\": 0.01\n    },",
+  "inspection_id": "INS_20260610_165307_72F306",
+  "timestamp": "2026-06-10T16:53:07.941710+00:00",
+  "image_path": "data\\images\\IMG_9026.jpg",
+  "zone_id": "Z_S7",
+  "strategy": "B"
+}

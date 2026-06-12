@@ -1,0 +1,71 @@
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Top shelf, far right section",
+      "severity": "low",
+      "description": "A small section on the far right of the top shelf appears empty where products could be placed.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Second shelf from top, far right section",
+      "severity": "low",
+      "description": "A small section on the far right of the second shelf from the top appears empty.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Third shelf from top, far right section",
+      "severity": "low",
+      "description": "A small section on the far right of the third shelf from the top appears empty.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Fourth shelf from top, far right section",
+      "severity": "low",
+      "description": "A small section on the far right of the fourth shelf from the top appears empty.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "empty_shelf",
+      "location": "Bottom shelf, far right section",
+      "severity": "low",
+      "description": "A small section on the far right of the bottom shelf appears empty.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.02
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "Various products across all shelves",
+      "severity": "low",
+      "description": "Several product packages, particularly Always and Sofy Hadamoi, are not perfectly aligned with the shelf edge, some are pushed back.",
+      "confidence": 0.8,
+      "affected_area_pct": 0.15
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Sanitary pads",
+    "Adult diapers",
+    "Body wash/lotion"
+  ],
+  "model_reasoning": "The shelves are generally well-stocked with a variety of feminine hygiene products and adult diapers. Minor empty spaces are observed at the far right end of several shelves, indicating a need for replenishment or better space management. Additionally, some product packages show slight misalignment, which could be improved for better presentation. No damaged products or incorrect placements were identified, leading to an overall 'warning' status due to minor stock and alignment issues.",
+  "inspection_id": "INS_20260610_193835_4EE710",
+  "timestamp": "2026-06-10T19:38:35.955640+00:00",
+  "image_path": "data\\raw\\sku110k\\sku_0022.jpg",
+  "zone_id": "Z_S2",
+  "strategy": "A"
+}
