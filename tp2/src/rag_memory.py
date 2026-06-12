@@ -1,6 +1,10 @@
 """
 rag_memory.py
 Componente 3 — Memória histórica de inspeções com FAISS + embeddings Gemini
+
+python src/rag_memory.py index-dir data/inspections_rag
+python src/rag_memory.py query "quando foi a última vez que Z_S1 teve problemas?"
+python src/rag_memory.py stats
 """
 
 import os
@@ -100,7 +104,7 @@ def generate_summary(inspection, max_retries=3):
     # contexto de afluência
     zone_id = inspection.get("zone_id", "")
     timestamp = inspection.get("timestamp", "")
-    
+
     try:
         import sys, os
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

@@ -1,3 +1,9 @@
+'''
+python evaluate.py --images-dir data/images --output evaluation_report.json
+python evaluate.py --images-dir test_images/ --output evaluation_report.json --ground-truth test_ground_truth.json
+'''
+
+
 import os
 import sys
 import json

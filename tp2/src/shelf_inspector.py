@@ -7,6 +7,10 @@ Nota para o relatório: foi usado o modelo gemini-2.5-flash em vez do gemini-1.5
 indicado no enunciado, pois o 1.5 já não estava disponível na API gratuita no momento
 do desenvolvimento. O modelo 2.5 Flash tem melhor capacidade de raciocínio visual,
 o que beneficia especialmente a Estratégia B (chain-of-thought).
+
+python src/shelf_inspector.py data/images/IMG_9058.jpg Z_S6 A
+python src/shelf_inspector.py eval A
+python src/shelf_inspector.py compare data/images/IMG_9058.jpg Z_S6
 """
 
 import os

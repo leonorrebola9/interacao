@@ -1,3 +1,10 @@
+'''
+python src/rule_engine.py add "regra em português"
+python src/rule_engine.py list
+python src/rule_engine.py delete RULE_XXXXXX
+python src/rule_engine.py test RULE_XXXXXX data/inspections/INS_XXX.json
+'''
+
 import os
 import json
 import uuid

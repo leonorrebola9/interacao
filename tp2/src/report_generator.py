@@ -1,3 +1,7 @@
+'''
+python src/report_generator.py --split data/inspections
+'''
+
 import os
 import json
 from datetime import datetime, timezone
